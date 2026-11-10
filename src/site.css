@@ -119,6 +119,11 @@ button.back-btn { border: 0; cursor: pointer; }
 .at-notice { font-size: 15px; color: var(--muted); max-width: 60ch; margin: 0; line-height: 1.5; }
 .at-prev { margin: 0 0 16px; }
 
+/* Test pages sit on a richer purple so a black aura reads clearly */
+body:has(main.at) { background: radial-gradient(1100px 620px at 50% -8%, #5c25a6 0%, rgba(92,37,166,0) 70%), linear-gradient(180deg, #3d1777 0%, #2c0e5c 55%, #200846 100%) fixed; background-color: #2c0e5c; }
+body:has(main.at) .top { background: rgba(20,6,40,.35); border-bottom-color: rgba(233,215,1,.3); }
+body:has(main.at) footer { border-top-color: rgba(233,215,1,.3); }
+
 /* Quiz card */
 .at-quiz { max-width: 900px; margin: clamp(24px, 5vw, 56px) auto; padding: 0 clamp(16px, 4vw, 48px); }
 .at-card { position: relative; background: linear-gradient(180deg, #24104a, #150828); border: 2px solid var(--edge); border-radius: 22px; padding: clamp(22px, 4vw, 44px); box-shadow: 0 0 0 4px rgba(96,0,174,.35), 0 0 60px rgba(176,108,255,.35), 0 30px 80px rgba(0,0,0,.55); }
@@ -140,7 +145,7 @@ button.back-btn { border: 0; cursor: pointer; }
 
 /* Result */
 .at-result { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(24px, 5vw, 60px); align-items: start; max-width: 1200px; margin: 0 auto; padding: clamp(28px, 5vw, 64px) clamp(16px, 4vw, 48px); }
-.at-portrait { margin: 0; position: sticky; top: 16px; border: 3px solid var(--gold); border-radius: 20px; overflow: hidden; background: #f3dfae; box-shadow: 0 0 0 6px rgba(96,0,174,.75), 0 0 70px var(--tint, rgba(233,215,1,.55)), 0 30px 80px rgba(0,0,0,.6); }
+.at-portrait { margin: 0; position: sticky; top: 16px; border: 3px solid var(--gold); border-radius: 20px; overflow: hidden; background: #f3dfae; box-shadow: 0 0 0 6px rgba(96,0,174,.75), 0 0 40px 10px var(--tint, rgba(233,215,1,.55)), 0 0 110px 34px var(--tint, rgba(233,215,1,.4)); }
 .at-portrait img { display: block; width: 100%; height: auto; filter: saturate(1.08) contrast(1.12) brightness(1.05); }
 .at-res-body h1 { font-family: var(--display); font-weight: 400; font-size: clamp(48px, 7vw, 92px); line-height: .95; margin: 0 0 10px; color: var(--gold); text-shadow: 0 0 30px rgba(233,215,1,.45), 0 3px 0 #3d0872; }
 .at-res-body .who { font-style: italic; color: var(--muted); margin: 0 0 6px; font-size: 19px; }

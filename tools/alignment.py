@@ -25,9 +25,12 @@ def tones(slug):
 
 
 def glow(slug):
-    """Portrait glow: purple for Good; otherwise the law/chaos color (black wouldn't show)."""
-    c1, c2 = tones(slug)
-    return c2 if slug.endswith("-good") else c1
+    """Portrait aura: black for Evil, purple for Good, otherwise the law/chaos color."""
+    if slug.endswith("-evil"):
+        return "#000000f2"
+    if slug.endswith("-good"):
+        return "#c58bffbb"
+    return tones(slug)[0] + "99"
 
 
 def tone_style(slug):
@@ -164,7 +167,7 @@ def build_result(slug):
     page += header() + f"""
 <main class="at">
   <section class="at-result">
-    <figure class="at-portrait" style="--tint:{glow(slug)}99"><img src="portrait.jpg" alt="{e(r['host'])}, {e(r['name'])}" width="600" height="800"></figure>
+    <figure class="at-portrait" style="--tint:{glow(slug)}"><img src="portrait.jpg" alt="{e(r['host'])}, {e(r['name'])}" width="600" height="800"></figure>
     <div class="at-res-body">
       <p class="who">An alignment of the Guild</p>
       <h1>{e(r['name'])}</h1>
