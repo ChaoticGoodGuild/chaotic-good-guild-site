@@ -16,6 +16,7 @@ import base64, datetime, html, json, os, shutil, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "tools"))
 import scene  # noqa: E402
+import alignment  # noqa: E402
 
 SITE = os.path.join(ROOT, "site")
 SRC = os.path.join(ROOT, "src")
@@ -263,7 +264,7 @@ def build_404():
 
 def build_meta():
     today = datetime.date.today().isoformat()
-    urls = ["/"] + [f"/{p['slug']}/" for p in PLACES]
+    urls = ["/"] + [f"/{p['slug']}/" for p in PLACES] + [f"/alignment-test/{s}/" for s in alignment.DATA["results"]]
     sm = "".join(f"  <url><loc>{DOMAIN}{u}</loc><lastmod>{today}</lastmod></url>\n" for u in urls)
     write("sitemap.xml", f'<?xml version="1.0" encoding="UTF-8"?>\n'
           f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{sm}</urlset>\n')
@@ -299,7 +300,10 @@ def main():
     build_assets()
     build_home()
     for p in PLACES:
-        build_room(p)
+        if p["slug"] == "alignment-test":
+            alignment.build(p)
+        else:
+            build_room(p)
     build_404()
     build_meta()
     print("Built", len(PLACES) + 2, "pages into", SITE)

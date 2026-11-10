@@ -13,6 +13,11 @@ The website at [www.chaoticgoodguild.com](https://www.chaoticgoodguild.com): an 
 | `tools/scene.py` | The village artwork, drawn in code so every character stays consistent. |
 | `tools/build.py` | Turns `src/` and `tools/scene.py` into the finished `site/`. |
 | `tools/share_images.py` | Renders the preview pictures that appear when a page is shared. |
+| `src/alignment.json` | The alignment test: statements, answer scale, and the nine results. |
+| `src/alignment.js` | How the alignment test runs and scores, entirely in the visitor's browser. |
+| `src/alignments/` | The nine result portraits. |
+| `docs/alignment-items.md` | A readable list of the test's statements for review (generated). |
+| `tools/test_alignment.js` | Checks the scoring: `node tools/test_alignment.js` |
 
 ## Rooms
 
@@ -25,10 +30,11 @@ The website at [www.chaoticgoodguild.com](https://www.chaoticgoodguild.com): an 
 | `/stories/` | Reynard's Stump |
 | `/market/` | The Galleon Market |
 | `/about/` | The Raising |
-| `/alignment-test/` | The City on the Hill |
+| `/alignment-test/` | The City on the Hill: the alignment test |
+| `/alignment-test/<alignment>/` | One page for each of the nine alignments, e.g. `/alignment-test/chaotic-good/` |
 
 ## Making a change
 
 1. Edit the files in `src/` or `tools/`.
-2. Run `python3 tools/build.py` (and `python3 tools/share_images.py` if the artwork changed).
+2. Run `python3 tools/build.py` (and `node tools/test_alignment.js` if you changed the test) (and `python3 tools/share_images.py` if the artwork changed).
 3. Commit and push. Netlify publishes the new version within a minute or two.

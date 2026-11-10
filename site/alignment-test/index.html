@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The City on the Hill · Chaotic Good Guild</title>
-<meta name="description" content="Dare to look toward the red towers. Learn where your heart lands between law and chaos, kindness and coin.">
+<title>The Alignment Test · Chaotic Good Guild</title>
+<meta name="description" content="Are you Reynard or the Corporate Wolf? A free alignment test from the Chaotic Good Guild: 32 statements place you between Lawful and Chaotic, Good and Evil.">
 <link rel="canonical" href="https://www.chaoticgoodguild.com/alignment-test/">
 <link rel="icon" type="image/png" href="/assets/star.png">
 <link rel="apple-touch-icon" href="/assets/star.png">
 <meta name="theme-color" content="#0d0418">
 <meta property="og:site_name" content="Chaotic Good Guild">
 <meta property="og:type" content="website">
-<meta property="og:title" content="The City on the Hill · Chaotic Good Guild">
-<meta property="og:description" content="Dare to look toward the red towers. Learn where your heart lands between law and chaos, kindness and coin.">
+<meta property="og:title" content="The Alignment Test · Chaotic Good Guild">
+<meta property="og:description" content="Are you Reynard or the Corporate Wolf? A free alignment test from the Chaotic Good Guild: 32 statements place you between Lawful and Chaotic, Good and Evil.">
 <meta property="og:url" content="https://www.chaoticgoodguild.com/alignment-test/">
 <meta property="og:image" content="https://www.chaoticgoodguild.com/assets/share/alignment-test.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Alegreya:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "The City on the Hill", "description": "Dare to look toward the red towers. Learn where your heart lands between law and chaos, kindness and coin.", "url": "https://www.chaoticgoodguild.com/alignment-test/", "isPartOf": {"@type": "WebSite", "name": "Chaotic Good Guild", "url": "https://www.chaoticgoodguild.com/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "The Chaotic Good Guild Alignment Test", "description": "Are you Reynard or the Corporate Wolf? A free alignment test from the Chaotic Good Guild: 32 statements place you between Lawful and Chaotic, Good and Evil.", "url": "https://www.chaoticgoodguild.com/alignment-test/", "isPartOf": {"@type": "WebSite", "name": "Chaotic Good Guild", "url": "https://www.chaoticgoodguild.com/"}}</script>
 </head>
 <body>
 
@@ -29,8 +29,8 @@
   <a class="back-link" href="/">&larr; The village</a>
 </header>
 
-<main>
-  <section class="room-hero">
+<main class="at">
+  <section class="room-hero" id="atIntro">
     <figure class="vignette">
       <img src="/assets/village.svg#v-alignment-test" alt="Where the Lion and the Wolf keep count" width="493" height="370">
     </figure>
@@ -38,13 +38,61 @@
       <p class="who">Where the Lion and the Wolf keep count</p>
       <h1>The City on the Hill</h1>
       <p class="desc">Dare to look toward the red towers. Learn where your heart lands between law and chaos, kindness and coin.</p>
-      <p class="raising"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v3" stroke="#e9d701" stroke-width="2"/><path d="M8 7h8l1 12H7z" fill="#e9d701" opacity=".9"/><path d="M6 7h12l-6-3z" fill="#b9a8d6"/><path d="M7 19h10v2H7z" fill="#b9a8d6"/></svg><span>The Bull is still raising the beams of this room. Return when the lanterns are lit.</span></p>
-      <a class="back-btn" href="/">&larr; Back to the village</a>
+      <p class="at-facts"><span>32 statements</span><span>About 5 minutes</span><span>Nothing leaves your device</span></p>
+      <div class="at-actions">
+        <button type="button" class="back-btn" id="atStart">Begin the test &rarr;</button>
+      </div>
+      <p class="at-prev" id="atPrev" hidden>Your last result: <b id="atPrevName"></b>. <button type="button" class="at-link" id="atPrevShow">See it again</button></p>
+      <p class="at-notice">For fun and self-reflection. This isn&#x27;t a psychological assessment or a diagnosis. Your answers never leave your device: the Guild doesn&#x27;t send, collect or store them.</p>
+      <noscript><p class="raising">This test needs JavaScript turned on. You can still read about the nine alignments below.</p></noscript>
     </div>
   </section>
 
-  <h2 class="places-h" style="margin-top:0">Other paths</h2>
-  <ul class="places"><li><a href="/tarot/"><span class="t">The Star Spread</span><span class="w">Mira&#x27;s tent of mirrors</span><span class="d">Cross the candlelight and cut the cards. Mira reads what the mirrors murmur and what the stars are willing to spill.</span></a></li><li><a href="/calendar/"><span class="t">The Guild Calendar</span><span class="w">The moon above the village</span><span class="d">Stay attuned to the phases of the moon, the shifting sands of season, and the fables of the fate of foxes.</span></a></li><li><a href="/notice-board/"><span class="t">The Notice Board</span><span class="w">Where the mischief gathers</span><span class="d">Quills scratch and whispers wander. Pin your plans, pass your notes, and find the friends your fortune favors.</span></a></li><li><a href="/guild-hall/"><span class="t">The Guild Hall</span><span class="w">The door beneath the great cap</span><span class="d">Knock thrice and name yourself. The Hall keeps a hearth, a ledger, and a place for every kind of rebel.</span></a></li><li><a href="/stories/"><span class="t">Reynard&#x27;s Stump</span><span class="w">A fox, a lute, a likely story</span><span class="d">Lend an ear to the lute. The fox has fables to tell, and a few of them are even true.</span></a></li><li><a href="/market/"><span class="t">The Galleon Market</span><span class="w">The Badger&#x27;s stall</span><span class="d">Honest goods for honest galleons. Trade fair, tread kindly, and take a little of the Guild home.</span></a></li><li><a href="/about/"><span class="t">The Raising</span><span class="w">The Bull at his beams</span><span class="d">Beam by beam and day by day, the Bull builds what the village dreams. Ask him what it is all for.</span></a></li></ul>
+  <section class="at-quiz" id="atQuiz" hidden aria-live="polite">
+    <div class="at-progress" id="atProgress" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="32" aria-valuenow="0"><span id="atBar"></span></div>
+    <p class="at-count" id="atCount"></p>
+    <p class="at-statement" id="atStatement"></p>
+    <div class="at-scale" id="atScale" role="group" aria-label="How much do you agree?"></div>
+    <div class="at-nav">
+      <button type="button" class="at-link" id="atBack">&larr; Previous statement</button>
+      <span class="at-tip">Tip: press 1 to 5 on your keyboard</span>
+      <button type="button" class="at-link" id="atQuit">Leave the test</button>
+    </div>
+  </section>
+
+  <section class="at-result" id="atResult" hidden>
+    <figure class="at-portrait"><img id="atResImg" src="" alt="" width="600" height="800"></figure>
+    <div class="at-res-body">
+      <p class="who" id="atResEyebrow">Your alignment</p>
+      <h1 id="atResTitle"></h1>
+      <p class="at-host">In the Guild's tale, you walk with <b id="atResHost"></b></p>
+      <p class="at-res-desc" id="atResDesc"></p>
+      <dl class="at-axes">
+        <div><dt>Law and chaos</dt><dd id="atOrder"></dd></div>
+        <div><dt>Good and evil</dt><dd id="atHeart"></dd></div>
+      </dl>
+      <div class="at-gridwrap">
+  <span class="at-axis at-axis-top">Good</span><span class="at-axis at-axis-bottom">Evil</span>
+  <span class="at-axis at-axis-left">Lawful</span><span class="at-axis at-axis-right">Chaotic</span>
+  <div class="at-grid"><a class="at-cell" data-slug="lawful-good" href="/alignment-test/lawful-good/">Lawful Good</a><a class="at-cell" data-slug="neutral-good" href="/alignment-test/neutral-good/">Neutral Good</a><a class="at-cell" data-slug="chaotic-good" href="/alignment-test/chaotic-good/">Chaotic Good</a><a class="at-cell" data-slug="lawful-neutral" href="/alignment-test/lawful-neutral/">Lawful Neutral</a><a class="at-cell" data-slug="true-neutral" href="/alignment-test/true-neutral/">True Neutral</a><a class="at-cell" data-slug="chaotic-neutral" href="/alignment-test/chaotic-neutral/">Chaotic Neutral</a><a class="at-cell" data-slug="lawful-evil" href="/alignment-test/lawful-evil/">Lawful Evil</a><a class="at-cell" data-slug="neutral-evil" href="/alignment-test/neutral-evil/">Neutral Evil</a><a class="at-cell" data-slug="chaotic-evil" href="/alignment-test/chaotic-evil/">Chaotic Evil</a><span class="at-marker" id="atMarker" aria-hidden="true"></span></div>
+</div>
+      <div class="at-actions">
+        <button type="button" class="back-btn" id="atShare">Share my result</button>
+        <button type="button" class="at-ghost" id="atAgain">Take it again</button>
+        <a class="at-ghost" id="atReadMore" href="#">Read more</a>
+      </div>
+      <p class="at-sharenote" id="atShareNote" role="status"></p>
+      <aside class="at-hall">
+        <h2>The Guild Hall awaits</h2>
+        <p>Soon you'll be able to carry this alignment into the Guild Hall, where it shapes the class you're sorted into.</p>
+        <a class="at-link" href="/guild-hall/">Visit the Guild Hall &rarr;</a>
+      </aside>
+      <p class="at-notice">For fun and self-reflection. This isn&#x27;t a psychological assessment or a diagnosis. Your answers never leave your device: the Guild doesn&#x27;t send, collect or store them. This browser remembers only your final result, so the Guild Hall can offer it to you later. <button type="button" class="at-link" id="atForget">Forget my result</button> <span id="atForgetNote" role="status"></span></p>
+    </div>
+  </section>
+
+  <h2 class="places-h" style="margin-top:0">The nine alignments</h2>
+  <ul class="places at-nine"><li><a href="/alignment-test/lawful-good/"><span class="t">Lawful Good</span><span class="w">The Badger</span></a></li><li><a href="/alignment-test/neutral-good/"><span class="t">Neutral Good</span><span class="w">The Rats of the Guild</span></a></li><li><a href="/alignment-test/chaotic-good/"><span class="t">Chaotic Good</span><span class="w">Reynard</span></a></li><li><a href="/alignment-test/lawful-neutral/"><span class="t">Lawful Neutral</span><span class="w">The Bull</span></a></li><li><a href="/alignment-test/true-neutral/"><span class="t">True Neutral</span><span class="w">Mira</span></a></li><li><a href="/alignment-test/chaotic-neutral/"><span class="t">Chaotic Neutral</span><span class="w">The Hooded Rat</span></a></li><li><a href="/alignment-test/lawful-evil/"><span class="t">Lawful Evil</span><span class="w">The LEO Lion</span></a></li><li><a href="/alignment-test/neutral-evil/"><span class="t">Neutral Evil</span><span class="w">The Corporate Wolf</span></a></li><li><a href="/alignment-test/chaotic-evil/"><span class="t">Chaotic Evil</span><span class="w">The Rat Mob</span></a></li></ul>
 </main>
 
 <footer>
@@ -52,5 +100,7 @@
   <nav aria-label="Rooms of the village"><ul class="foot-nav"><li><a href="/tarot/">The Star Spread</a></li><li><a href="/calendar/">The Guild Calendar</a></li><li><a href="/notice-board/">The Notice Board</a></li><li><a href="/guild-hall/">The Guild Hall</a></li><li><a href="/stories/">Reynard&#x27;s Stump</a></li><li><a href="/market/">The Galleon Market</a></li><li><a href="/about/">The Raising</a></li><li><a href="/alignment-test/">The City on the Hill</a></li></ul></nav>
   &copy; 2026 Chaotic Good Guild. Made by misfits, for misfits.
 </footer>
+<script type="application/json" id="alignment-data">{"version": "1.0-draft", "scale": [{"label": "Strongly disagree", "value": -2}, {"label": "Disagree", "value": -1}, {"label": "Not sure", "value": 0}, {"label": "Agree", "value": 1}, {"label": "Strongly agree", "value": 2}], "neutral_band": 0.25, "items": [{"id": "O01", "axis": "order", "key": -1, "text": "I feel calmer when there's a clear plan to follow."}, {"id": "H01", "axis": "heart", "key": 1, "text": "It bothers me when someone is treated unfairly, even if it doesn't affect me."}, {"id": "O02", "axis": "order", "key": 1, "text": "I often make it up as I go, and it usually works out."}, {"id": "H02", "axis": "heart", "key": -1, "text": "If a deal works out in my favor, it isn't my job to make it fair."}, {"id": "O03", "axis": "order", "key": -1, "text": "Rules usually exist for good reasons, even when I can't see them right away."}, {"id": "H03", "axis": "heart", "key": 1, "text": "I help people even when no one will ever know I did."}, {"id": "O04", "axis": "order", "key": 1, "text": "A rule that makes no sense to me isn't one I feel bound to follow."}, {"id": "H04", "axis": "heart", "key": -1, "text": "Looking out for myself comes before looking out for others."}, {"id": "O05", "axis": "order", "key": -1, "text": "Traditions are worth keeping, even when they feel old-fashioned."}, {"id": "H05", "axis": "heart", "key": 1, "text": "Everyone deserves kindness, no matter their status."}, {"id": "O06", "axis": "order", "key": 1, "text": "I get restless when every day looks the same."}, {"id": "H06", "axis": "heart", "key": -1, "text": "Some people just aren't worth the trouble of helping."}, {"id": "O07", "axis": "order", "key": -1, "text": "People in charge usually got there for a reason."}, {"id": "H07", "axis": "heart", "key": 1, "text": "I'd rather lose a deal than win it by taking advantage of someone."}, {"id": "O08", "axis": "order", "key": 1, "text": "Titles and uniforms don't earn my respect on their own."}, {"id": "H08", "axis": "heart", "key": -1, "text": "Bending the truth is fine if it gets me what I want."}, {"id": "O09", "axis": "order", "key": -1, "text": "I'd rather follow a proven method than experiment with a new one."}, {"id": "H09", "axis": "heart", "key": 1, "text": "The well-being of people I'll never meet matters to me."}, {"id": "O10", "axis": "order", "key": 1, "text": "When a plan falls apart, part of me gets a little excited."}, {"id": "H10", "axis": "heart", "key": -1, "text": "If someone is careless with their things, it's their own fault if they lose them."}, {"id": "O11", "axis": "order", "key": -1, "text": "Things run best when everyone knows their role."}, {"id": "H11", "axis": "heart", "key": 1, "text": "I go out of my way to make newcomers feel welcome."}, {"id": "O12", "axis": "order", "key": 1, "text": "The best ideas come from breaking with how things have always been done."}, {"id": "H12", "axis": "heart", "key": -1, "text": "Getting ahead sometimes means stepping on a few toes."}, {"id": "O13", "axis": "order", "key": -1, "text": "When a rule is broken, there should be consequences, no exceptions."}, {"id": "H13", "axis": "heart", "key": 1, "text": "Sharing what I have feels better than keeping it."}, {"id": "O14", "axis": "order", "key": 1, "text": "I'd rather ask forgiveness than permission."}, {"id": "H14", "axis": "heart", "key": -1, "text": "Being nice is mostly useful for getting people on your side."}, {"id": "O15", "axis": "order", "key": -1, "text": "Once I commit to a routine, I stick to it."}, {"id": "H15", "axis": "heart", "key": 1, "text": "I'd give up something I want if it meant someone else got what they needed."}, {"id": "O16", "axis": "order", "key": 1, "text": "Schedules are more like suggestions to me."}, {"id": "H16", "axis": "heart", "key": -1, "text": "Other people's problems aren't mine to lose sleep over."}], "results": {"lawful-good": {"name": "Lawful Good", "host": "The Badger", "desc": "Ah, a champion of laws and justice. Your sense of order is as keen as your moral compass. You're the one friends call when trouble knocks, and you never hesitate to carry the torch into the dark. Yet, don't forget: rules can be bent just a tad if it means saving the day or having some fun. After all, how could one throw a surprise party or keep confidence of a friend without withholding truth but for a moment?"}, "neutral-good": {"name": "Neutral Good", "host": "The Rats of the Guild", "desc": "You don't care about crowns or chains; you care about what's right. You've a knack for finding the middle path, and helping without making a spectacle. Your compassion drives you, but you won't get mired in squabbles over order or chaos. The coin you carry isn't weighted by law or rebellion, just by the weight of helping hands. That's a wonderful thing, but don't be afraid to enjoy a bit of trickery now and then."}, "chaotic-good": {"name": "Chaotic Good", "host": "Reynard", "desc": "You are a whirlwind of freedom with a heart of gold. You follow your conscience, not dusty rules written by harrowed hands. When something isn't right, you fix it despite procedure or policy. Your mischief might fluster the \u201cproper\u201d folk, but those you help smile a little brighter. Keep dancing to your own song; the world needs your unpredictable kindness."}, "lawful-neutral": {"name": "Lawful Neutral", "host": "The Bull", "desc": "You, my friend, are the steady hand that keeps the ledger balanced. Duty and tradition guide you more than any flashy notion of \u201cgood\u201d or \u201cevil.\u201d You see the world as a set of gears in motion, and you keep them turning even when others squabble about why. There's something reassuring in your predictability, but take care not to become too rigid. Even clocks have their spring days when they tick a little off beat."}, "true-neutral": {"name": "True Neutral", "host": "Mira", "desc": "You are the elusive master of balance. You've learned to stand in the center and weigh both sides, never tipping too far. Some call you indecisive, but you're simply mindful of the scales. You step in when needed and step away when not, keeping harmony without playing favorites. Just remember, neutrality doesn't mean ignoring your own heart's desires."}, "chaotic-neutral": {"name": "Chaotic Neutral", "host": "The Hooded Rat", "desc": "Ah, a true free spirit! You blow like the wind: uncatchable, ever-changing. You answer to no one but your own curiosity and whims. On occasion it's admirable. Others might find your unpredictability maddening, but it keeps them on their toes. Just be sure your escapades leave at least a few bridges unburnt, for yourself and your fellow mischief-makers."}, "lawful-evil": {"name": "Lawful Evil", "host": "The LEO Lion", "desc": "You are a master of structure, and perhaps too skilled at shaping it to suit your wants. You've learned how to climb systems by tightening rules around others while loosening them for yourself. It works, right up until people realize your order is merely a velvet-wrapped cage placed over their choices. Your careful composure can make you powerful, but it can also make you profoundly lonely. After all, control can win compliance, but it rarely wins trust\u2026 and trust is the one currency no empire thrives without."}, "neutral-evil": {"name": "Neutral Evil", "host": "The Corporate Wolf", "desc": "You choose whichever path profits you most, stepping lightly around inconvenience and responsibility alike. It's clever in the moment, yes, but every shortcut you take often sends someone else tumbling into the long way around. You gather advantages quickly, but you lose support just as fast, leaving you surrounded by opportunities and conspicuously short on allies. When everything is transactional, everyone becomes disposable, including you. You may win the game for a while, but the victory feels hollow when there's no one left to celebrate with you."}, "chaotic-evil": {"name": "Chaotic Evil", "host": "The Rat Mob", "desc": "You burn hot and bright, lashing out at limits simply because they exist. Your impulses can feel intoxicating, but the fallout they create scorches more than the world around you; it singes your own chances at connection, safety, and meaning. The thrill of destruction fades quickly; the consequences cling far longer than the chaos that caused them. You may take pride in being unpredictable, but unpredictability often isolates more than it empowers. Even storms must rest eventually\u2026 and when you stop spinning, you deserve a life that hasn't been reduced to ash."}}}</script>
+<script src="/assets/alignment.js"></script>
 </body>
 </html>
