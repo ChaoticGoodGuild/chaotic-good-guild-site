@@ -1,0 +1,6 @@
+# Netlify serves the finished site from the site/ folder.
+# The site is built on your computer or by Claude (python3 tools/build.py) and committed,
+# so Netlify has nothing to build; it just publishes.
+[build]
+  publish = "site"
+  command = ""

@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+.share-tmp/
+.DS_Store
