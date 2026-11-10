@@ -132,7 +132,9 @@ if (typeof module !== "undefined") module.exports = CGGScore;
     $("atHeart").textContent = CGGScore.lean(y, "Evil", "Good", BAND);
     meter($("atOrderFill"), x, "var(--law)", "var(--chaos)");
     meter($("atHeartFill"), y, "var(--evil)", "var(--good)");
-    const tint = { good: "#62ffa1", evil: "#ff6a6a" }[slug.split("-")[1]] || "#e9d701";
+    // Portrait glow: purple for Good, otherwise the law/chaos color (black wouldn't show)
+    const [eth, mor] = slug === "true-neutral" ? ["neutral", "neutral"] : slug.split("-");
+    const tint = mor === "good" ? "#b06cff" : { lawful: "#e0283f", chaotic: "#e9d701" }[eth] || "#cfc8dc";
     $("atResImg").parentNode.style.setProperty("--tint", tint + "99");
     // grid marker: x -1..1 left->right, y +1..-1 top->bottom
     const m = $("atMarker");

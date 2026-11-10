@@ -12,15 +12,22 @@ GRID = [["lawful-good", "neutral-good", "chaotic-good"],
         ["lawful-evil", "neutral-evil", "chaotic-evil"]]
 e = B.e
 
-ETHIC = {"lawful": "#7ec0ff", "neutral": "#e9d701", "chaotic": "#ff82ff"}
-MORAL = {"good": "#62ffa1", "neutral": "#e9d701", "evil": "#ff6a6a"}
+# Lawful red, Chaotic gold, Good purple, Evil black, Neutral silver
+ETHIC = {"lawful": "#e0283f", "neutral": "#cfc8dc", "chaotic": "#e9d701"}
+MORAL = {"good": "#b06cff", "neutral": "#cfc8dc", "evil": "#000000"}
 
 
 def tones(slug):
     if slug == "true-neutral":
-        return "#e9d701", "#e9d701"
+        return "#cfc8dc", "#cfc8dc"
     a, b = slug.split("-")
     return ETHIC[a], MORAL[b]
+
+
+def glow(slug):
+    """Portrait glow: purple for Good; otherwise the law/chaos color (black wouldn't show)."""
+    c1, c2 = tones(slug)
+    return c2 if slug.endswith("-good") else c1
 
 
 def tone_style(slug):
@@ -103,7 +110,7 @@ def build(p):
       <p class="at-res-desc" id="atResDesc"></p>
       <dl class="at-axes">
         <div><dt>Law and chaos</dt><dd><span id="atOrder"></span><span class="at-meter" aria-hidden="true"><i id="atOrderFill"></i></span><span class="at-meter-ends" aria-hidden="true"><span style="color:var(--law)">Lawful</span><span style="color:var(--chaos)">Chaotic</span></span></dd></div>
-        <div><dt>Good and evil</dt><dd><span id="atHeart"></span><span class="at-meter heart" aria-hidden="true"><i id="atHeartFill"></i></span><span class="at-meter-ends" aria-hidden="true"><span style="color:var(--evil)">Evil</span><span style="color:var(--good)">Good</span></span></dd></div>
+        <div><dt>Good and evil</dt><dd><span id="atHeart"></span><span class="at-meter heart" aria-hidden="true"><i id="atHeartFill"></i></span><span class="at-meter-ends" aria-hidden="true"><span class="at-evil">Evil</span><span style="color:var(--good)">Good</span></span></dd></div>
       </dl>
       {grid_html()}
       <div class="at-actions">
@@ -157,7 +164,7 @@ def build_result(slug):
     page += header() + f"""
 <main class="at">
   <section class="at-result">
-    <figure class="at-portrait" style="--tint:{tones(slug)[1]}99"><img src="portrait.jpg" alt="{e(r['host'])}, {e(r['name'])}" width="600" height="800"></figure>
+    <figure class="at-portrait" style="--tint:{glow(slug)}99"><img src="portrait.jpg" alt="{e(r['host'])}, {e(r['name'])}" width="600" height="800"></figure>
     <div class="at-res-body">
       <p class="who">An alignment of the Guild</p>
       <h1>{e(r['name'])}</h1>
