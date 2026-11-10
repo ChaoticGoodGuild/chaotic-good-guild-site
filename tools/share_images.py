@@ -29,7 +29,7 @@ async def main():
 </body></html>""")
             await pg.goto("file://" + tmp)
             await pg.wait_for_timeout(500)
-            await pg.screenshot(path=os.path.join(out, name + ".png"))
+            await pg.screenshot(path=os.path.join(out, name + ".jpg"), type="jpeg", quality=82)
         await b.close()
     os.remove(os.path.join(out, "_render.html"))
     print("Rendered", len(shots), "share images")

@@ -54,7 +54,7 @@ def head(title, desc, path, image, extra=""):
 <meta property="og:title" content="{e(title)}">
 <meta property="og:description" content="{e(desc)}">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="{DOMAIN}/assets/share/{image}.png">
+<meta property="og:image" content="{DOMAIN}/assets/share/{image}.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
