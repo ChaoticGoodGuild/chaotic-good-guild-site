@@ -42,7 +42,7 @@ CAST = [
      "exprs": ["happy", "laugh", "smug", "surprised", "sad", "angry"],
      "palette": [("Fur", "#aeabc0"), ("Fur shadow", "#63607a"), ("Stripes", "#4a4760"), ("Eyes", "#e4ff7a"),
                  ("Hat & scarf", "#7d1fd6"), ("Hat brim", "#2b0a52"), ("Hat band", "#0a0410"), ("Gold trim", "#e9d701")],
-     "always": ["Gray fur with darker stripes, yellow-green eyes with slit pupils",
+     "always": ["Shorter than Reynard, even with her hat on", "Gray fur with darker stripes, yellow-green eyes with slit pupils",
                 "Purple witch hat with a black band and gold buckle",
                 "Purple scarf with gold stripes", "Her frog familiar somewhere nearby",
                 "A hand mirror with a gold frame and a violet jewel"],
@@ -74,7 +74,7 @@ CAST = [
                  ("Ermine", "#f6f1e6"), ("Crown & scepter", "#e9d701"), ("Jewels", "#c0182e"), ("Eyes", "#d9a400")],
      "always": ["A lion, never a human", "Wearing his gold crown (only one crown in any picture)",
                 "Clothed in his red robe with an ermine collar", "Smug, petty and a little ridiculous, never majestic",
-                "His banner is crimson with a gold crown"],
+                "His banner is crimson with a black crown and black outline"],
      "never": ["A human body or human face", "Bare (no robe)", "A second crown elsewhere in the picture"]},
     {"key": "wolf", "name": "The Corporate Wolf", "role": "Greed in a suit. Counts coins, not friends.",
      "suit": "Antagonist (The LEO, Six of Galleons)", "align": "Neutral Evil",
@@ -158,8 +158,8 @@ def props():
         (f'<svg viewBox="-12 -80 64 94">{C.quill()}</svg>', "Quill", "White feather, ink-dark nib"),
         (f'<svg viewBox="-26 -30 52 72">{C.mirror()}</svg>', "Mira's mirror", "Gold frame, violet jewel; the glass shows only what the card needs"),
         (f'<svg viewBox="-60 -60 120 120"><image href="data:image/png;base64,{STAR}" x="-52" y="-50" width="104" height="100"/></svg>', "The Guild star", "From the Guild logo. Use it for stars, lanterns and the Hermit's light"),
-        (f'<svg viewBox="-6 -6 42 74">{C.fox_banner()}</svg>', "Fox banner", "Red with a gold fox. Only when the card asks"),
-        (f'<svg viewBox="-6 -6 42 74">{C.leo_banner()}</svg>', "LEO banner", "Crimson with a gold crown. Lawful Evil city"),
+        (f'<svg viewBox="-6 -6 42 74">{C.fox_banner()}</svg>', "Fox banner", "Purple with a gold fox. Only when the card asks"),
+        (f'<svg viewBox="-6 -6 42 74">{C.leo_banner()}</svg>', "LEO banner", "Crimson with a black crown and black outline. Lawful Evil city"),
         (f'<svg viewBox="-14 -24 62 40">{C.down_arrows()}</svg>', "Losing arrows", "Red down-arrows around the Wolf's head"),
         (f'<svg viewBox="-30 -40 60 46">{C.frog()}</svg>', "Mira's frog", "Her familiar. Bright green, big round eyes"),
     ]
@@ -278,7 +278,7 @@ def build():
 <main>
 <nav class="toc">{toc}</nav>
 <h2 class="sec">Height lineup</h2>
-<p class="note">Everyone at their true size beside each other; the faint lines are a height grid. Rats stand about two thirds as tall as Reynard; the Bull and the Wolf tower over the village.</p>
+<p class="note">Everyone at their true size beside each other; the faint lines are a height grid. Rats stand about two thirds as tall as Reynard, Mira is shorter than him even with her hat, and the Bull and the Wolf tower over the village.</p>
 {lineup()}
 <h2 class="sec">The cast</h2>
 {''.join(panel(c) for c in CAST)}

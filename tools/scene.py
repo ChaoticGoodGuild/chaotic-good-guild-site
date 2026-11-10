@@ -214,8 +214,8 @@ CASTLE=f'''
 <path d="M1273,318 q5,-8 10,0 v12 h-10Z M1397,326 q5,-8 10,0 v12 h-10Z M1334,280 q6,-10 12,0 v14 h-12Z M1273,360 q5,-8 10,0 v12 h-10Z M1397,366 q5,-8 10,0 v12 h-10Z"/>
 <path d="M1296,424 q6,-9 12,0 v16 h-12Z M1372,424 q6,-9 12,0 v16 h-12Z"/></g>
 <path d="M1328,464 v-22 q12,-16 24,0 v22Z" fill="#0c0206"/><g stroke="#3a0c18" stroke-width="1.5"><path d="M1332,464 v-22 M1338,464 v-27 M1344,464 v-27 M1350,464 v-22 M1328,450 h24"/></g>
-<rect x="1300" y="344" width="16" height="42" fill="#a3162c"/><polygon points="1300,386 1308,378 1316,386" fill="#24070f"/><polygon points="{star_poly(1308,360,6,3.6,9)}" fill="#e9d701"/>
-<rect x="1364" y="344" width="16" height="42" fill="#a3162c"/><polygon points="1364,386 1372,378 1380,386" fill="#24070f"/><polygon points="{star_poly(1372,360,6,3.6,9)}" fill="#e9d701"/>
+<rect x="1300" y="344" width="16" height="42" fill="#a3162c"/><polygon points="1300,386 1308,378 1316,386" fill="#24070f"/><rect x="1302" y="347" width="12" height="32" fill="none" stroke="#0a0406" stroke-width="1.5"/><path d="M1302,364 l-1,-8 l4,3 l3,-6 l3,6 l4,-3 l-1,8Z" fill="#0a0406"/>
+<rect x="1364" y="344" width="16" height="42" fill="#a3162c"/><polygon points="1364,386 1372,378 1380,386" fill="#24070f"/><rect x="1366" y="347" width="12" height="32" fill="none" stroke="#0a0406" stroke-width="1.5"/><path d="M1366,364 l-1,-8 l4,3 l3,-6 l3,6 l4,-3 l-1,8Z" fill="#0a0406"/>
 <!-- balcony -->
 <path d="M1290,392 h100 v8 h-100Z" fill="#5a1626"/><g fill="#40101c">{''.join(f'<rect x="{x}" y="400" width="4" height="12"/>' for x in range(1294,1388,9))}</g><rect x="1290" y="410" width="100" height="4" fill="#5a1626"/>
 <!-- LEO Lion -->
@@ -238,7 +238,7 @@ CASTLE=f'''
 <path d="M2,-36 Q12,-32 18,-36 Q10,-30 0,-31Z" fill="#fff"/><path d="M4,-35 l2,3 l2,-3 l2,3 l2,-3 l2,2" stroke="#160a22" stroke-width=".7" fill="none"/>
 <circle cx="19.5" cy="-40" r="2" fill="#160a22"/>
 <circle cx="-3" cy="-42" r="3.6" fill="#0c1a08"/><circle cx="7" cy="-43" r="3.4" fill="#0c1a08"/>
-<text x="-3" y="-39.6" font-size="6.5" font-weight="700" text-anchor="middle" fill="#7CFC00" font-family="Arial, sans-serif">$</text><text x="7" y="-40.6" font-size="6.5" font-weight="700" text-anchor="middle" fill="#7CFC00" font-family="Arial, sans-serif">$</text>
+<text x="-3" y="-39.6" font-size="6.5" font-weight="700" text-anchor="middle" fill="#e9d701" font-family="Arial, sans-serif">$</text><text x="7" y="-40.6" font-size="6.5" font-weight="700" text-anchor="middle" fill="#e9d701" font-family="Arial, sans-serif">$</text>
 <path d="M22,-62 v9 m-3,-3 l3,3 l3,-3 M30,-54 v9 m-3,-3 l3,3 l3,-3 M-16,-60 v9 m-3,-3 l3,3 l3,-3" stroke="#ff3b3b" stroke-width="1.8" fill="none"/>
 <g transform="translate(20,-4) scale(.3)"><use href="#coin" x="0" y="0"/><use href="#coin" x="22" y="2"/><use href="#coin" x="10" y="-16"/></g>
 </g>
@@ -269,7 +269,7 @@ def window(cx,cy,r):
     return f'<circle cx="{cx}" cy="{cy}" r="{r*2.2}" fill="url(#gWarm)"/><circle cx="{cx}" cy="{cy}" r="{r}" fill="#ffd75a"/><path d="M{cx-r},{cy} h{2*r} M{cx},{cy-r} v{2*r}" stroke="#3a2416" stroke-width="3"/><circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="#5a3a22" stroke-width="4.5"/><circle cx="{cx}" cy="{cy}" r="{r+3}" fill="none" stroke="#2a1810" stroke-width="1.5"/><path d="M{cx-r-6},{cy+r+3} h{2*r+12} v6 h-{2*r+12}Z" fill="#5a3a22" {O1}/><g fill="#ff7eb6"><circle cx="{cx-r}" cy="{cy+r+2}" r="3.5"/><circle cx="{cx}" cy="{cy+r+1}" r="3.5"/><circle cx="{cx+r}" cy="{cy+r+2}" r="3.5"/></g><g fill="#3f7a3a"><circle cx="{cx-r/2}" cy="{cy+r+3}" r="3"/><circle cx="{cx+r/2}" cy="{cy+r+3}" r="3"/></g>'
 def banner(x,y,col,emb):
     return f'<path d="M{x-2},{y} h30" stroke="#2a1810" stroke-width="3"/><path d="M{x},{y} h26 v58 l-13,-12 l-13,12Z" fill="{col}" {O1}/><path d="M{x+3},{y+3} h20 v44 l-10,-9 l-10,9Z" fill="none" stroke="#e9d701" stroke-width="1"/>{emb}'
-foxemb=lambda x,y:f'<g transform="translate({x+13} {y+24})"><path d="M-8,-8 L-4,0 L0,-3 L4,0 L8,-8 L6,6 L0,12 L-6,6Z" fill="#e9d701"/><circle cx="-3" cy="3" r="1" fill="#a3162c"/><circle cx="3" cy="3" r="1" fill="#a3162c"/></g>'
+foxemb=lambda x,y:f'<g transform="translate({x+13} {y+24})"><path d="M-8,-8 L-4,0 L0,-3 L4,0 L8,-8 L6,6 L0,12 L-6,6Z" fill="#e9d701"/><circle cx="-3" cy="3" r="1" fill="#3d0872"/><circle cx="3" cy="3" r="1" fill="#3d0872"/></g>'
 staremb=lambda x,y:f'<use href="#sparkle" fill="#e9d701" transform="translate({x+13} {y+24}) scale(.9)"/>'
 HALL=f'''
 <ellipse cx="770" cy="704" rx="150" ry="14" fill="#000" opacity=".4"/>
@@ -286,7 +286,7 @@ HALL=f'''
 {spots}
 {window(726,540,16)}{window(814,540,16)}
 <circle cx="770" cy="446" r="26" fill="url(#gWarm)"/><path d="M756,470 v-22 q14,-18 28,0 v22Z" fill="#ffd75a" stroke="#5a3a22" stroke-width="4"/><path d="M770,438 v32 M756,456 h28" stroke="#3a2416" stroke-width="2.5"/>
-{banner(690,604,'#a3162c',foxemb(690,604))}{banner(824,604,'#6000AE',staremb(824,604))}
+{banner(690,604,'#6000AE',foxemb(690,604))}{banner(824,604,'#6000AE',staremb(824,604))}
 <path d="M708,572 h124 l-6,22 h-112Z" fill="url(#gWoodV)" {O}/><text x="770" y="589" font-family="Pirata One, Georgia, serif" font-size="15" fill="#e9d701" text-anchor="middle" textLength="92" lengthAdjust="spacingAndGlyphs">GUILD HALL</text>
 <g stroke="#2f6b3a" stroke-width="2.5" fill="none"><path d="M684,700 q-6,-60 8,-100 q10,-30 4,-70"/><path d="M858,700 q8,-50 -4,-90 q-6,-30 2,-60"/></g>
 <g fill="#4c9a4a">{''.join(f'<ellipse cx="{x}" cy="{y}" rx="6" ry="3.5" transform="rotate({r} {x} {y})"/>' for x,y,r in [(682,680,30),(688,650,-30),(690,620,40),(698,590,-20),(696,560,30),(862,676,-30),(858,646,30),(852,616,-40),(854,586,20)])}</g>

@@ -191,15 +191,17 @@ def down_arrows():
 
 
 def fox_banner(w=30, h=62):
-    return f'''<path d="M0,0 h{w} v{h} l-{w/2},-{h*0.18:.1f} l-{w/2},{h*0.18:.1f}Z" fill="#c0182e" {O}/>
+    """The Guild's banner: purple with a gold fox."""
+    return f'''<path d="M0,0 h{w} v{h} l-{w/2},-{h*0.18:.1f} l-{w/2},{h*0.18:.1f}Z" fill="#6000AE" {O}/>
 <path d="M3,3 h{w-6} v{h*0.75:.0f} l-{(w-6)/2},-{h*0.13:.1f} l-{(w-6)/2},{h*0.13:.1f}Z" fill="none" stroke="#e9d701" stroke-width="1.2"/>
-<g transform="translate({w/2} {h*0.4:.1f}) scale({w/30:.2f})"><path d="M-9,-9 L-4,0 L0,-3 L4,0 L9,-9 L7,6 L0,12 L-7,6Z" fill="#e9d701"/><circle cx="-3" cy="3" r="1.2" fill="#c0182e"/><circle cx="3" cy="3" r="1.2" fill="#c0182e"/></g>'''
+<g transform="translate({w/2} {h*0.4:.1f}) scale({w/30:.2f})"><path d="M-9,-9 L-4,0 L0,-3 L4,0 L9,-9 L7,6 L0,12 L-7,6Z" fill="#e9d701"/><circle cx="-3" cy="3" r="1.2" fill="#3d0872"/><circle cx="3" cy="3" r="1.2" fill="#3d0872"/></g>'''
 
 
 def leo_banner(w=30, h=62):
-    return f'''<path d="M0,0 h{w} v{h} l-{w/2},-{h*0.18:.1f} l-{w/2},{h*0.18:.1f}Z" fill="#7a0c1c" {O}/>
-<path d="M3,3 h{w-6} v{h*0.75:.0f} l-{(w-6)/2},-{h*0.13:.1f} l-{(w-6)/2},{h*0.13:.1f}Z" fill="none" stroke="#e9d701" stroke-width="1.2"/>
-<g transform="translate({w/2} {h*0.4:.1f}) scale({w/30:.2f})"><path d="M-10,4 L-11,-8 L-5,-2 L0,-11 L5,-2 L11,-8 L10,4Z" fill="#e9d701"/></g>'''
+    """The LEO banner: crimson with a black crown and a black outline."""
+    return f'''<path d="M0,0 h{w} v{h} l-{w/2},-{h*0.18:.1f} l-{w/2},{h*0.18:.1f}Z" fill="#a3162c" {O}/>
+<path d="M3,3 h{w-6} v{h*0.75:.0f} l-{(w-6)/2},-{h*0.13:.1f} l-{(w-6)/2},{h*0.13:.1f}Z" fill="none" stroke="#0a0406" stroke-width="2"/>
+<g transform="translate({w/2} {h*0.4:.1f}) scale({w/30:.2f})"><path d="M-10,4 L-11,-8 L-5,-2 L0,-11 L5,-2 L11,-8 L10,4Z" fill="#0a0406"/></g>'''
 
 
 def frog(expr="happy"):
@@ -264,6 +266,7 @@ def reynard(expr="grin", pose="lute"):
 
 # ---------------------------------------------------------------- Mira
 def mira(expr="happy", prop="mirror"):
+    """prop: "mirror" (left paw raised with her mirror), "pour" (right paw pouring a vial; stream starts at (76,-178)), or None."""
     """Mira, the witchy cat. Gray, purple witch hat with a black band and gold buckle, purple-and-gold scarf."""
     f = face(expr, (71, 142), (105, 142), 10.5, 11.5, 12, 9, (88, 158), 9, iris="#e4ff7a", slit=True,
              lid="url(#gCat)", look=(1, 0.5), far=1.0, brow="#3a3650", brow_w=2.6)
@@ -284,8 +287,15 @@ def mira(expr="happy", prop="mirror"):
 <g fill="#e9d701" opacity=".8"><use href="#sparkle" transform="translate(96 60) scale(.35)"/><use href="#sparkle" transform="translate(104 30) scale(.3)"/><use href="#sparkle" transform="translate(84 76) scale(.28)"/></g>
 </g>'''
     held = ""
+    right_arm = f'''<path d="M26,-138 Q46,-112 40,-84" stroke="{INK}" stroke-width="15" fill="none" stroke-linecap="round"/><path d="M26,-138 Q46,-112 40,-84" stroke="url(#gCat)" stroke-width="11.5" fill="none" stroke-linecap="round"/>
+<circle cx="40" cy="-82" r="7.5" fill="url(#gCat)" {O1}/>'''
     if prop == "mirror":
         held = f'<g transform="translate(-52,-132) rotate(-14)">{mirror(1.15)}</g>'
+    elif prop == "pour":
+        right_arm = ""
+        held = f'''<path d="M24,-140 Q56,-150 72,-174" stroke="{INK}" stroke-width="15" fill="none" stroke-linecap="round"/><path d="M24,-140 Q56,-150 72,-174" stroke="url(#gCat)" stroke-width="11.5" fill="none" stroke-linecap="round"/>
+<g transform="translate(76,-178) rotate(118)"><path d="M-4,0 h8 v6 q7,4 7,13 q0,11 -11,11 q-11,0 -11,-11 q0,-9 7,-13Z" fill="#ffd75a" {O1}/><path d="M-9,18 q9,-5 18,0 v3 q-9,8 -18,0Z" fill="#b06cff" opacity=".8"/><rect x="-4" y="-3" width="8" height="4" fill="#8a6038" {O1}/></g>
+<circle cx="72" cy="-174" r="7.5" fill="url(#gCat)" {O1}/>'''
     body = f'''
 <path d="M24,-30 C74,-28 92,-92 64,-122 C54,-132 42,-122 50,-114 C70,-92 58,-54 22,-52Z" fill="url(#gCat)" {O}/>
 <g stroke="#4a4760" stroke-width="2.4" fill="none" stroke-linecap="round"><path d="M58,-50 l8,-6 M68,-74 l8,-2 M66,-100 l8,2"/></g>
@@ -297,8 +307,7 @@ def mira(expr="happy", prop="mirror"):
 <g transform="translate(-24,-60)"><path d="M-3,0 h6 v6 q5,3 5,9 q0,8 -8,8 q-8,0 -8,-8 q0,-6 5,-9Z" fill="#b06cff" {O1}/><rect x="-2.6" y="-4" width="5.2" height="5" fill="#8a6038" {O1}/></g>
 <path d="M-30,-14 Q-34,0 -18,0 Q-6,0 -6,-10Z M6,-10 Q6,0 18,0 Q34,0 30,-14Z" fill="url(#gCat)" {O}/>
 <path d="M-24,-4 v-4 M-18,-3 v-4 M18,-3 v-4 M24,-4 v-4" stroke="{INK}" stroke-width="1.2"/>
-<path d="M26,-138 Q46,-112 40,-84" stroke="{INK}" stroke-width="15" fill="none" stroke-linecap="round"/><path d="M26,-138 Q46,-112 40,-84" stroke="url(#gCat)" stroke-width="11.5" fill="none" stroke-linecap="round"/>
-<circle cx="40" cy="-82" r="7.5" fill="url(#gCat)" {O1}/>
+{right_arm}
 {head}
 <g transform="translate(-88,-330)">
 <path d="M46,170 Q88,194 130,170 L134,190 Q88,214 42,190Z" fill="url(#gPurple)" {O}/>
@@ -312,7 +321,7 @@ def mira(expr="happy", prop="mirror"):
 
 
 # ---------------------------------------------------------------- Badger
-def badger(expr="happy", prop="herb"):
+def badger(expr="happy", prop="herb", galleon_on_belt=True):
     """The Badger. Leather armor with gold studs, herb pouch, a galleon on her belt, pink flower behind her ear."""
     f = face(expr, (1318, 640), (1352, 640), 6.4, 7.4, 13, 7, (1335, 680), 12, pupil="#3a2408", lid="#1b1b22",
              look=(1.4, 0.8), far=1.0, brow="#f4f1f7", brow_w=2.6, arc="#f4f1f7")
@@ -328,6 +337,7 @@ def badger(expr="happy", prop="herb"):
     held = ""
     if prop == "herb":
         held = f'<g transform="translate(58,-62)"><path d="M0,0 q-4,-16 2,-30 M0,-8 q-12,-6 -14,-16 q10,0 14,12 M2,-18 q10,-6 12,-16 q-10,2 -12,12" stroke="#2f6b3a" stroke-width="2" fill="#5fae4a"/></g>'
+    belt_coin = f'<path d="M30,-51 v10" stroke="#3a2414" stroke-width="2"/><g transform="translate(30,-30)">{galleon(9)}</g>' if galleon_on_belt else ""
     body = f'''
 <path d="M-56,-40 Q-80,-34 -84,-12 Q-70,-18 -58,-26Z" fill="#1b1b22" {O}/>
 <path d="M-44,-46 L-46,-8 L-16,-8 L-14,-46Z M14,-46 L16,-8 L46,-8 L44,-46Z" fill="#2a2a32" {O}/>
@@ -341,7 +351,7 @@ def badger(expr="happy", prop="herb"):
 <path d="M-56,-60 h112 v9 h-112Z" fill="#3a2414" {O}/><rect x="-7" y="-61" width="14" height="11" rx="2" fill="none" stroke="url(#gGold)" stroke-width="2.2"/>
 <path d="M-40,-52 h28 v24 q-14,8 -28,0Z" fill="url(#gGreen)" {O}/><path d="M-40,-52 h28 l-14,10Z" fill="#2f6b3a" {O1}/><path d="M-26,-32 Q-34,-40 -30,-48 Q-20,-44 -26,-32Z" fill="#b8e88a"/>
 <g {O1}><path d="M-34,-52 q-4,-12 2,-16 q4,6 2,16 M-22,-52 q0,-14 6,-16 q2,8 -2,16" fill="#5fae4a"/></g>
-<path d="M30,-51 v10" stroke="#3a2414" stroke-width="2"/><g transform="translate(30,-30)">{galleon(9)}</g>
+{belt_coin}
 <path d="M-66,-104 q-4,-22 22,-24 q10,10 0,26 q-12,6 -22,-2Z M66,-104 q4,-22 -22,-24 q-10,10 0,26 q12,6 22,-2Z" fill="url(#gLeather)" {O}/>
 <path d="M-60,-100 Q-76,-72 -66,-48" stroke="{INK}" stroke-width="20" fill="none" stroke-linecap="round"/><path d="M-60,-100 Q-76,-72 -66,-48" stroke="url(#gBadger)" stroke-width="16" fill="none" stroke-linecap="round"/>
 <path d="M-74,-50 q8,-8 16,0 q2,12 -8,14 q-10,-2 -8,-14Z" fill="#1b1b22" {O1}/>
@@ -551,4 +561,4 @@ CAST = {
 
 
 # Canonical relative sizes: draw every character at CANON_SCALE so heights agree on every card.
-CANON_SCALE = {"reynard": 1.0, "mira": 0.9, "badger": 1.0, "bull": 1.2, "lion": 1.05, "wolf": 1.0, "rat": 0.7, "frog": 0.8}
+CANON_SCALE = {"reynard": 1.0, "mira": 0.65, "badger": 1.0, "bull": 1.2, "lion": 1.05, "wolf": 1.0, "rat": 0.7, "frog": 0.8}
