@@ -12,12 +12,28 @@ GRID = [["lawful-good", "neutral-good", "chaotic-good"],
         ["lawful-evil", "neutral-evil", "chaotic-evil"]]
 e = B.e
 
+ETHIC = {"lawful": "#7ec0ff", "neutral": "#e9d701", "chaotic": "#ff82ff"}
+MORAL = {"good": "#62ffa1", "neutral": "#e9d701", "evil": "#ff6a6a"}
+
+
+def tones(slug):
+    if slug == "true-neutral":
+        return "#e9d701", "#e9d701"
+    a, b = slug.split("-")
+    return ETHIC[a], MORAL[b]
+
+
+def tone_style(slug):
+    c1, c2 = tones(slug)
+    return f'style="--c1:{c1};--c2:{c2}"'
+
+
 NOTICE = ("For fun and self-reflection. This isn't a psychological assessment or a diagnosis. "
           "Your answers never leave your device: the Guild doesn't send, collect or store them.")
 
 
 def grid_html():
-    cells = "".join(f'<a class="at-cell" data-slug="{s}" href="/alignment-test/{s}/">{e(DATA["results"][s]["name"])}</a>'
+    cells = "".join(f'<a class="at-cell" data-slug="{s}" href="/alignment-test/{s}/"><span>{e(DATA["results"][s]["name"])}</span></a>'
                     for row in GRID for s in row)
     return f"""<div class="at-gridwrap">
   <span class="at-axis at-axis-top">Good</span><span class="at-axis at-axis-bottom">Evil</span>
@@ -66,7 +82,7 @@ def build(p):
     </div>
   </section>
 
-  <section class="at-quiz" id="atQuiz" hidden aria-live="polite">
+  <section class="at-quiz" id="atQuiz" hidden aria-live="polite"><div class="at-card">
     <div class="at-progress" id="atProgress" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="{n}" aria-valuenow="0"><span id="atBar"></span></div>
     <p class="at-count" id="atCount"></p>
     <p class="at-statement" id="atStatement"></p>
@@ -76,7 +92,7 @@ def build(p):
       <span class="at-tip">Tip: press 1 to 5 on your keyboard</span>
       <button type="button" class="at-link" id="atQuit">Leave the test</button>
     </div>
-  </section>
+  </div></section>
 
   <section class="at-result" id="atResult" hidden>
     <figure class="at-portrait"><img id="atResImg" src="" alt="" width="600" height="800"></figure>
@@ -86,8 +102,8 @@ def build(p):
       <p class="at-host">In the Guild's tale, you walk with <b id="atResHost"></b></p>
       <p class="at-res-desc" id="atResDesc"></p>
       <dl class="at-axes">
-        <div><dt>Law and chaos</dt><dd id="atOrder"></dd></div>
-        <div><dt>Good and evil</dt><dd id="atHeart"></dd></div>
+        <div><dt>Law and chaos</dt><dd><span id="atOrder"></span><span class="at-meter" aria-hidden="true"><i id="atOrderFill"></i></span><span class="at-meter-ends" aria-hidden="true"><span style="color:var(--law)">Lawful</span><span style="color:var(--chaos)">Chaotic</span></span></dd></div>
+        <div><dt>Good and evil</dt><dd><span id="atHeart"></span><span class="at-meter heart" aria-hidden="true"><i id="atHeartFill"></i></span><span class="at-meter-ends" aria-hidden="true"><span style="color:var(--evil)">Evil</span><span style="color:var(--good)">Good</span></span></dd></div>
       </dl>
       {grid_html()}
       <div class="at-actions">
@@ -106,7 +122,7 @@ def build(p):
   </section>
 
   <h2 class="places-h" style="margin-top:0">The nine alignments</h2>
-  <ul class="places at-nine">{''.join(f'<li><a href="/alignment-test/{s}/"><span class="t">{e(r["name"])}</span><span class="w">{e(r["host"])}</span></a></li>' for s, r in ((s, DATA["results"][s]) for row in GRID for s in row))}</ul>
+  <ul class="places at-nine">{''.join(f'<li><a href="/alignment-test/{s}/" {tone_style(s)}><span class="t">{e(r["name"])}</span><span class="w">{e(r["host"])}</span></a></li>' for s, r in ((s, DATA["results"][s]) for row in GRID for s in row))}</ul>
 </main>
 
 {B.foot()}<script type="application/json" id="alignment-data">{data}</script>
@@ -135,13 +151,13 @@ def build_result(slug):
                    "isPartOf": {"@type": "WebSite", "name": B.NAME, "url": B.DOMAIN + "/"}})
     page = B.head(f"{r['name']} · The Alignment Test · {B.NAME}", desc, path, "alignment-test", ld)
     page = page.replace(f"{B.DOMAIN}/assets/share/alignment-test.jpg", f"{B.DOMAIN}{path}portrait.jpg")
-    others = "".join(f'<li><a href="/alignment-test/{s}/"><span class="t">{e(DATA["results"][s]["name"])}</span>'
+    others = "".join(f'<li><a href="/alignment-test/{s}/" {tone_style(s)}><span class="t">{e(DATA["results"][s]["name"])}</span>'
                      f'<span class="w">{e(DATA["results"][s]["host"])}</span></a></li>'
                      for row in GRID for s in row if s != slug)
     page += header() + f"""
 <main class="at">
   <section class="at-result">
-    <figure class="at-portrait"><img src="portrait.jpg" alt="{e(r['host'])}, {e(r['name'])}" width="600" height="800"></figure>
+    <figure class="at-portrait" style="--tint:{tones(slug)[1]}99"><img src="portrait.jpg" alt="{e(r['host'])}, {e(r['name'])}" width="600" height="800"></figure>
     <div class="at-res-body">
       <p class="who">An alignment of the Guild</p>
       <h1>{e(r['name'])}</h1>

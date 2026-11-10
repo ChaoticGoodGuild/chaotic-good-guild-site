@@ -48,7 +48,7 @@
     </div>
   </section>
 
-  <section class="at-quiz" id="atQuiz" hidden aria-live="polite">
+  <section class="at-quiz" id="atQuiz" hidden aria-live="polite"><div class="at-card">
     <div class="at-progress" id="atProgress" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="32" aria-valuenow="0"><span id="atBar"></span></div>
     <p class="at-count" id="atCount"></p>
     <p class="at-statement" id="atStatement"></p>
@@ -58,7 +58,7 @@
       <span class="at-tip">Tip: press 1 to 5 on your keyboard</span>
       <button type="button" class="at-link" id="atQuit">Leave the test</button>
     </div>
-  </section>
+  </div></section>
 
   <section class="at-result" id="atResult" hidden>
     <figure class="at-portrait"><img id="atResImg" src="" alt="" width="600" height="800"></figure>
@@ -68,13 +68,13 @@
       <p class="at-host">In the Guild's tale, you walk with <b id="atResHost"></b></p>
       <p class="at-res-desc" id="atResDesc"></p>
       <dl class="at-axes">
-        <div><dt>Law and chaos</dt><dd id="atOrder"></dd></div>
-        <div><dt>Good and evil</dt><dd id="atHeart"></dd></div>
+        <div><dt>Law and chaos</dt><dd><span id="atOrder"></span><span class="at-meter" aria-hidden="true"><i id="atOrderFill"></i></span><span class="at-meter-ends" aria-hidden="true"><span style="color:var(--law)">Lawful</span><span style="color:var(--chaos)">Chaotic</span></span></dd></div>
+        <div><dt>Good and evil</dt><dd><span id="atHeart"></span><span class="at-meter heart" aria-hidden="true"><i id="atHeartFill"></i></span><span class="at-meter-ends" aria-hidden="true"><span style="color:var(--evil)">Evil</span><span style="color:var(--good)">Good</span></span></dd></div>
       </dl>
       <div class="at-gridwrap">
   <span class="at-axis at-axis-top">Good</span><span class="at-axis at-axis-bottom">Evil</span>
   <span class="at-axis at-axis-left">Lawful</span><span class="at-axis at-axis-right">Chaotic</span>
-  <div class="at-grid"><a class="at-cell" data-slug="lawful-good" href="/alignment-test/lawful-good/">Lawful Good</a><a class="at-cell" data-slug="neutral-good" href="/alignment-test/neutral-good/">Neutral Good</a><a class="at-cell" data-slug="chaotic-good" href="/alignment-test/chaotic-good/">Chaotic Good</a><a class="at-cell" data-slug="lawful-neutral" href="/alignment-test/lawful-neutral/">Lawful Neutral</a><a class="at-cell" data-slug="true-neutral" href="/alignment-test/true-neutral/">True Neutral</a><a class="at-cell" data-slug="chaotic-neutral" href="/alignment-test/chaotic-neutral/">Chaotic Neutral</a><a class="at-cell" data-slug="lawful-evil" href="/alignment-test/lawful-evil/">Lawful Evil</a><a class="at-cell" data-slug="neutral-evil" href="/alignment-test/neutral-evil/">Neutral Evil</a><a class="at-cell" data-slug="chaotic-evil" href="/alignment-test/chaotic-evil/">Chaotic Evil</a><span class="at-marker" id="atMarker" aria-hidden="true"></span></div>
+  <div class="at-grid"><a class="at-cell" data-slug="lawful-good" href="/alignment-test/lawful-good/"><span>Lawful Good</span></a><a class="at-cell" data-slug="neutral-good" href="/alignment-test/neutral-good/"><span>Neutral Good</span></a><a class="at-cell" data-slug="chaotic-good" href="/alignment-test/chaotic-good/"><span>Chaotic Good</span></a><a class="at-cell" data-slug="lawful-neutral" href="/alignment-test/lawful-neutral/"><span>Lawful Neutral</span></a><a class="at-cell" data-slug="true-neutral" href="/alignment-test/true-neutral/"><span>True Neutral</span></a><a class="at-cell" data-slug="chaotic-neutral" href="/alignment-test/chaotic-neutral/"><span>Chaotic Neutral</span></a><a class="at-cell" data-slug="lawful-evil" href="/alignment-test/lawful-evil/"><span>Lawful Evil</span></a><a class="at-cell" data-slug="neutral-evil" href="/alignment-test/neutral-evil/"><span>Neutral Evil</span></a><a class="at-cell" data-slug="chaotic-evil" href="/alignment-test/chaotic-evil/"><span>Chaotic Evil</span></a><span class="at-marker" id="atMarker" aria-hidden="true"></span></div>
 </div>
       <div class="at-actions">
         <button type="button" class="back-btn" id="atShare">Share my result</button>
@@ -92,7 +92,7 @@
   </section>
 
   <h2 class="places-h" style="margin-top:0">The nine alignments</h2>
-  <ul class="places at-nine"><li><a href="/alignment-test/lawful-good/"><span class="t">Lawful Good</span><span class="w">The Badger</span></a></li><li><a href="/alignment-test/neutral-good/"><span class="t">Neutral Good</span><span class="w">The Rats of the Guild</span></a></li><li><a href="/alignment-test/chaotic-good/"><span class="t">Chaotic Good</span><span class="w">Reynard</span></a></li><li><a href="/alignment-test/lawful-neutral/"><span class="t">Lawful Neutral</span><span class="w">The Bull</span></a></li><li><a href="/alignment-test/true-neutral/"><span class="t">True Neutral</span><span class="w">Mira</span></a></li><li><a href="/alignment-test/chaotic-neutral/"><span class="t">Chaotic Neutral</span><span class="w">The Hooded Rat</span></a></li><li><a href="/alignment-test/lawful-evil/"><span class="t">Lawful Evil</span><span class="w">The LEO Lion</span></a></li><li><a href="/alignment-test/neutral-evil/"><span class="t">Neutral Evil</span><span class="w">The Corporate Wolf</span></a></li><li><a href="/alignment-test/chaotic-evil/"><span class="t">Chaotic Evil</span><span class="w">The Rat Mob</span></a></li></ul>
+  <ul class="places at-nine"><li><a href="/alignment-test/lawful-good/" style="--c1:#7ec0ff;--c2:#62ffa1"><span class="t">Lawful Good</span><span class="w">The Badger</span></a></li><li><a href="/alignment-test/neutral-good/" style="--c1:#e9d701;--c2:#62ffa1"><span class="t">Neutral Good</span><span class="w">The Rats of the Guild</span></a></li><li><a href="/alignment-test/chaotic-good/" style="--c1:#ff82ff;--c2:#62ffa1"><span class="t">Chaotic Good</span><span class="w">Reynard</span></a></li><li><a href="/alignment-test/lawful-neutral/" style="--c1:#7ec0ff;--c2:#e9d701"><span class="t">Lawful Neutral</span><span class="w">The Bull</span></a></li><li><a href="/alignment-test/true-neutral/" style="--c1:#e9d701;--c2:#e9d701"><span class="t">True Neutral</span><span class="w">Mira</span></a></li><li><a href="/alignment-test/chaotic-neutral/" style="--c1:#ff82ff;--c2:#e9d701"><span class="t">Chaotic Neutral</span><span class="w">The Hooded Rat</span></a></li><li><a href="/alignment-test/lawful-evil/" style="--c1:#7ec0ff;--c2:#ff6a6a"><span class="t">Lawful Evil</span><span class="w">The LEO Lion</span></a></li><li><a href="/alignment-test/neutral-evil/" style="--c1:#e9d701;--c2:#ff6a6a"><span class="t">Neutral Evil</span><span class="w">The Corporate Wolf</span></a></li><li><a href="/alignment-test/chaotic-evil/" style="--c1:#ff82ff;--c2:#ff6a6a"><span class="t">Chaotic Evil</span><span class="w">The Rat Mob</span></a></li></ul>
 </main>
 
 <footer>

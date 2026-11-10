@@ -130,6 +130,10 @@ if (typeof module !== "undefined") module.exports = CGGScore;
     $("atResEyebrow").textContent = fresh ? "Your alignment" : "Your last alignment";
     $("atOrder").textContent = CGGScore.lean(x, "Lawful", "Chaotic", BAND);
     $("atHeart").textContent = CGGScore.lean(y, "Evil", "Good", BAND);
+    meter($("atOrderFill"), x, "var(--law)", "var(--chaos)");
+    meter($("atHeartFill"), y, "var(--evil)", "var(--good)");
+    const tint = { good: "#62ffa1", evil: "#ff6a6a" }[slug.split("-")[1]] || "#e9d701";
+    $("atResImg").parentNode.style.setProperty("--tint", tint + "99");
     // grid marker: x -1..1 left->right, y +1..-1 top->bottom
     const m = $("atMarker");
     m.style.left = ((x + 1) / 2 * 100).toFixed(1) + "%";
@@ -138,6 +142,15 @@ if (typeof module !== "undefined") module.exports = CGGScore;
     $("atReadMore").href = "/alignment-test/" + slug + "/";
     result.dataset.slug = slug;
     show(result);
+  }
+
+  // Axis meter: fills outward from the center toward the side you lean
+  function meter(el, v, negColor, posColor) {
+    const w = Math.abs(v) * 50;
+    el.style.left = (v < 0 ? 50 - w : 50) + "%";
+    el.style.width = Math.max(w, 1.5) + "%";
+    el.style.background = Math.abs(v) < BAND ? "var(--neu)" : (v < 0 ? negColor : posColor);
+    el.style.color = el.style.background;
   }
 
   // Share
