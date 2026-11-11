@@ -17,13 +17,17 @@ The website at [www.chaoticgoodguild.com](https://www.chaoticgoodguild.com): an 
 | `src/alignment.js` | How the alignment test runs and scores, entirely in the visitor's browser. |
 | `src/alignments/` | The nine result portraits. |
 | `docs/alignment-items.md` | A readable list of the test's statements for review (generated). |
+| `src/spread.json` | The star spread: position names, questions and on-page prompts (drafts to rewrite). |
+| `src/spread.js` | How the shuffle, deal and card-turning work, entirely in the visitor's browser. |
+| `tools/deck.py`, `tools/deck_lib.py`, `tools/characters.py` | The tarot deck and the cast it's drawn from. |
 | `tools/test_alignment.js` | Checks the scoring: `node tools/test_alignment.js` |
 
 ## Rooms
 
 | Address | Room |
 |---|---|
-| `/tarot/` | The Star Spread |
+| `/tarot/` | The Chaotic Good Spread: shuffle, stop, and deal six cards into the Guild star |
+| `/tarot/cards/<card>.svg` | Every card of the deck, used by the spread |
 | `/calendar/` | The Guild Calendar |
 | `/notice-board/` | The Notice Board |
 | `/guild-hall/` | The Guild Hall |

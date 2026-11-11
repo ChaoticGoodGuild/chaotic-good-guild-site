@@ -1,0 +1,62 @@
+{
+  "name": "The Chaotic Good Spread",
+  "about": "DRAFT text for Ryan to rewrite. Positions are listed in dealing order: the five points follow the single stroke that draws the Guild star (top, lower right, upper left, upper right, lower left), then the heart in the centre. Each point matches a suit's element: Lutes fire, Quills air, Mirrors water, Galleons earth, and the top point spirit. x and y are percentages of the spread's square table.",
+  "card_width": 16,
+  "positions": [
+    {
+      "key": "star",
+      "title": "The Star",
+      "question": "What guides you.",
+      "suit": "major",
+      "x": 50.0,
+      "y": 19.0
+    },
+    {
+      "key": "lute",
+      "title": "The Lute",
+      "question": "What stirs you to act.",
+      "suit": "lutes",
+      "x": 69.98,
+      "y": 80.51
+    },
+    {
+      "key": "quill",
+      "title": "The Quill",
+      "question": "What you tell yourself.",
+      "suit": "quills",
+      "x": 17.66,
+      "y": 42.49
+    },
+    {
+      "key": "mirror",
+      "title": "The Mirror",
+      "question": "What you feel beneath it all.",
+      "suit": "mirrors",
+      "x": 82.34,
+      "y": 42.49
+    },
+    {
+      "key": "galleon",
+      "title": "The Galleon",
+      "question": "What you have to build with.",
+      "suit": "galleons",
+      "x": 30.02,
+      "y": 80.51
+    },
+    {
+      "key": "heart",
+      "title": "The Heart",
+      "question": "Where you stand tonight.",
+      "suit": "major",
+      "x": 50,
+      "y": 53
+    }
+  ],
+  "prompts": {
+    "idle": "Touch the deck, and Mira will start the shuffle.",
+    "shuffling": "Touch the deck again when the cards feel ready.",
+    "dealing": "The star takes shape.",
+    "dealt": "Turn each card to see what it holds.",
+    "done": "The star is read."
+  }
+}

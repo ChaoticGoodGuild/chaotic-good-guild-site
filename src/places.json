@@ -2,11 +2,19 @@
   {
     "key": "tarot",
     "slug": "tarot",
-    "title": "The Star Spread",
+    "title": "The Chaotic Good Spread",
     "who": "Mira's tent of mirrors",
     "desc": "Cross the candlelight and cut the cards. Mira reads what the mirrors murmur and what the stars are willing to spill.",
-    "marker": [246, 418],
-    "view": [0, 400, 500, 375]
+    "marker": [
+      246,
+      418
+    ],
+    "view": [
+      0,
+      400,
+      500,
+      375
+    ]
   },
   {
     "key": "calendar",
@@ -14,8 +22,16 @@
     "title": "The Guild Calendar",
     "who": "The moon above the village",
     "desc": "Stay attuned to the phases of the moon, the shifting sands of season, and the fables of the fate of foxes.",
-    "marker": [330, 36],
-    "view": [40, 0, 380, 285]
+    "marker": [
+      330,
+      36
+    ],
+    "view": [
+      40,
+      0,
+      380,
+      285
+    ]
   },
   {
     "key": "board",
@@ -23,8 +39,16 @@
     "title": "The Notice Board",
     "who": "Where the mischief gathers",
     "desc": "Quills scratch and whispers wander. Pin your plans, pass your notes, and find the friends your fortune favors.",
-    "marker": [518, 508],
-    "view": [340, 480, 340, 255]
+    "marker": [
+      518,
+      508
+    ],
+    "view": [
+      340,
+      480,
+      340,
+      255
+    ]
   },
   {
     "key": "join",
@@ -32,8 +56,16 @@
     "title": "The Guild Hall",
     "who": "The door beneath the great cap",
     "desc": "Knock thrice and name yourself. The Hall keeps a hearth, a ledger, and a place for every kind of rebel.",
-    "marker": [770, 590],
-    "view": [520, 250, 620, 465]
+    "marker": [
+      770,
+      590
+    ],
+    "view": [
+      520,
+      250,
+      620,
+      465
+    ]
   },
   {
     "key": "stories",
@@ -41,8 +73,16 @@
     "title": "Reynard's Stump",
     "who": "A fox, a lute, a likely story",
     "desc": "Lend an ear to the lute. The fox has fables to tell, and a few of them are even true.",
-    "marker": [600, 600],
-    "view": [500, 590, 400, 300]
+    "marker": [
+      600,
+      600
+    ],
+    "view": [
+      500,
+      590,
+      400,
+      300
+    ]
   },
   {
     "key": "shop",
@@ -50,8 +90,16 @@
     "title": "The Galleon Market",
     "who": "The Badger's stall",
     "desc": "Honest goods for honest galleons. Trade fair, tread kindly, and take a little of the Guild home.",
-    "marker": [1470, 524],
-    "view": [1150, 495, 450, 338]
+    "marker": [
+      1470,
+      524
+    ],
+    "view": [
+      1150,
+      495,
+      450,
+      338
+    ]
   },
   {
     "key": "about",
@@ -59,8 +107,16 @@
     "title": "The Raising",
     "who": "The Bull at his beams",
     "desc": "Beam by beam and day by day, the Bull builds what the village dreams. Ask him what it is all for.",
-    "marker": [1084, 474],
-    "view": [895, 470, 333, 250]
+    "marker": [
+      1084,
+      474
+    ],
+    "view": [
+      895,
+      470,
+      333,
+      250
+    ]
   },
   {
     "key": "quiz",
@@ -68,7 +124,15 @@
     "title": "The City on the Hill",
     "who": "Where the Lion and the Wolf keep count",
     "desc": "Dare to look toward the red towers. Learn where your heart lands between law and chaos, kindness and coin.",
-    "marker": [1340, 150],
-    "view": [1100, 110, 493, 370]
+    "marker": [
+      1340,
+      150
+    ],
+    "view": [
+      1100,
+      110,
+      493,
+      370
+    ]
   }
 ]

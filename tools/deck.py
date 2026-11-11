@@ -854,3 +854,19 @@ def build(only=None):
 
 if __name__ == "__main__":
     build(set(sys.argv[1:]) or None)
+
+
+def export(outdir):
+    """Write each card as an SVG fragment (outdir/<id>.svg) for the reading page. The page supplies the shared defs.
+    Returns (card metadata list, shared defs string)."""
+    import random
+    random.seed(78)   # stable output, so rebuilding doesn't change every file
+    os.makedirs(outdir, exist_ok=True)
+    meta = []
+    for i, c in enumerate(all_cards()):
+        svg = frame(i, c["numeral"], c["name"], c["suit"], c["fn"]())
+        svg = svg.replace('<svg class="card"', '<svg xmlns="http://www.w3.org/2000/svg" class="card"', 1)
+        open(os.path.join(outdir, c["id"] + ".svg"), "w").write(svg)
+        meta.append({k: c[k] for k in ("id", "name", "suit", "rank", "numeral", "scene")})
+    defs = scene.DEFS.replace("</defs>", C.EXTRA_DEFS + K.CARD_DEFS + L.DEFS + "</defs>")
+    return meta, defs

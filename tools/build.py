@@ -17,6 +17,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "tools"))
 import scene  # noqa: E402
 import alignment  # noqa: E402
+import tarot_page  # noqa: E402
 
 SITE = os.path.join(ROOT, "site")
 SRC = os.path.join(ROOT, "src")
@@ -302,6 +303,8 @@ def main():
     for p in PLACES:
         if p["slug"] == "alignment-test":
             alignment.build(p)
+        elif p["slug"] == "tarot":
+            tarot_page.build(p)
         else:
             build_room(p)
     build_404()
