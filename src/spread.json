@@ -1,6 +1,6 @@
 {
   "name": "The Chaotic Good Spread",
-  "about": "DRAFT text for Ryan to rewrite. Positions are listed in dealing order: the five points follow the single stroke that draws the Guild star (top, lower right, upper left, upper right, lower left), then the heart in the centre. Each point matches a suit's element: Lutes fire, Quills air, Mirrors water, Galleons earth, and the top point spirit. x and y are percentages of the spread's square table.",
+  "about": "DRAFT text for Ryan to rewrite. Positions are listed in dealing order: the five points follow the single stroke that draws the Guild star (top, lower right, upper left, upper right, lower left), then the heart in the centre. Each point matches a suit's element: Lutes fire, Quills air, Mirrors water, Galleons earth, and the top point spirit. x and y are percentages of the spread's square table. 'suits' and 'numbers' feed the reading summary; edit their wording freely.",
   "card_width": 16,
   "positions": [
     {
@@ -57,6 +57,78 @@
     "shuffling": "Touch the deck again when the cards feel ready.",
     "dealing": "The star takes shape.",
     "dealt": "Turn each card to see what it holds.",
-    "done": "The star is read."
+    "done": "The star is read. Mira's reading waits below."
+  },
+  "suits": {
+    "galleons": {
+      "name": "Galleons",
+      "one": "Galleon",
+      "element": "earth",
+      "theme": "work, home, money and the slow, steady building of things",
+      "absent": "No Galleons appeared, so practical matters are either settled or being overlooked. Worth a glance at the ground beneath your feet."
+    },
+    "lutes": {
+      "name": "Lutes",
+      "one": "Lute",
+      "element": "fire",
+      "theme": "passion, courage and action",
+      "absent": "No Lutes appeared. The fire may need kindling before anything moves."
+    },
+    "quills": {
+      "name": "Quills",
+      "one": "Quill",
+      "element": "air",
+      "theme": "thoughts, words and hard truths",
+      "absent": "No Quills appeared. This is less about thinking it through than feeling and doing."
+    },
+    "mirrors": {
+      "name": "Mirrors",
+      "one": "Mirror",
+      "element": "water",
+      "theme": "feelings, relationships and how you see yourself",
+      "absent": "No Mirrors appeared. Check in with your heart; it may be quieter than it should be."
+    }
+  },
+  "numbers": {
+    "1": [
+      "Aces",
+      "new beginnings"
+    ],
+    "2": [
+      "Twos",
+      "balance and partnership"
+    ],
+    "3": [
+      "Threes",
+      "growth and teamwork"
+    ],
+    "4": [
+      "Fours",
+      "stability, and the risk of standing still"
+    ],
+    "5": [
+      "Fives",
+      "struggle and change"
+    ],
+    "6": [
+      "Sixes",
+      "sharing and recovery"
+    ],
+    "7": [
+      "Sevens",
+      "reflection and testing"
+    ],
+    "8": [
+      "Eights",
+      "effort and movement"
+    ],
+    "9": [
+      "Nines",
+      "being nearly there"
+    ],
+    "10": [
+      "Tens",
+      "endings and completion"
+    ]
   }
 }

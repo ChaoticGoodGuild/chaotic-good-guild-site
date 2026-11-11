@@ -18,6 +18,9 @@ The website at [www.chaoticgoodguild.com](https://www.chaoticgoodguild.com): an 
 | `src/alignments/` | The nine result portraits. |
 | `docs/alignment-items.md` | A readable list of the test's statements for review (generated). |
 | `src/spread.json` | The star spread: position names, questions and on-page prompts (drafts to rewrite). |
+| `src/meanings.json` | Every card's keywords, meaning, counsel and tone (Ryan's words where he wrote them, drafts elsewhere). |
+| `docs/card-meanings.md` | A readable list of all 78 meanings for review (generated). |
+| `tools/test_spread.js` | Checks the reading summary: `node tools/test_spread.js` |
 | `src/spread.js` | How the shuffle, deal and card-turning work, entirely in the visitor's browser. |
 | `tools/deck.py`, `tools/deck_lib.py`, `tools/characters.py` | The tarot deck and the cast it's drawn from. |
 | `tools/test_alignment.js` | Checks the scoring: `node tools/test_alignment.js` |
