@@ -459,16 +459,20 @@ def rat(expr="happy", outfit="plain", prop=None):
         arm_l = arm_l.replace('url(#gRat)" stroke-width="8"', 'url(#gSuit)" stroke-width="8"')
         arm_r = arm_r.replace('url(#gRat)" stroke-width="8"', 'url(#gSuit)" stroke-width="8"')
         held = f'<g transform="translate(40,-62)">{galleon(7)}</g>'
-    if prop == "quill" and not held:
+    if prop == "quill":
         held = f'<g transform="translate(38,-56) rotate(-6)">{quill(.75)}</g>'
+    elif prop == "none":
+        held = ""
     return f'<g>{tail}{legs}{feet}{body}{over_body}{arm_l}{held}{arm_r}{head}{over_head}</g>'
 
 
 # ---------------------------------------------------------------- LEO Lion
-def lion(expr="smug"):
+def lion(expr="smug", crown=True):
     """The LEO Lion, Lawful Evil Overlord. Always a lion, always crowned, always robed. A petty tyrant, not majestic."""
     f = face(expr, (-4, -214), (18, -214), 6, 6.5, 11, 6.5, (14, -184), 10, pupil="#2a1408", iris="#d9a400",
              lid="url(#gLion)", look=(1.2, 0.6), far=1.0, brow="#5a2a0e", brow_w=3.2)
+    crown_svg = f'''<path d="M-18,-236 L-20,-262 L-8,-250 L6,-272 L16,-252 L30,-262 L28,-236 Q6,-242 -18,-236Z" fill="url(#gGold)" {O}/>
+<circle cx="6" cy="-252" r="3.6" fill="#c0182e" {O1}/><circle cx="-12" cy="-246" r="2.4" fill="#3f7fd8"/><circle cx="22" cy="-246" r="2.4" fill="#3f7fd8"/>''' if crown else ""
     mane = []
     for i in range(18):
         a = i * 2 * math.pi / 18
@@ -496,8 +500,7 @@ def lion(expr="smug"):
 <path d="M-2,-194 Q14,-204 32,-194 Q36,-180 26,-172 Q12,-166 0,-172 Q-8,-182 -2,-194Z" fill="#fbe2b0"/>
 <path d="M8,-198 h12 l-6,7Z" fill="#5a2a12" {O1}/>
 {f}
-<path d="M-18,-236 L-20,-262 L-8,-250 L6,-272 L16,-252 L30,-262 L28,-236 Q6,-242 -18,-236Z" fill="url(#gGold)" {O}/>
-<circle cx="6" cy="-252" r="3.6" fill="#c0182e" {O1}/><circle cx="-12" cy="-246" r="2.4" fill="#3f7fd8"/><circle cx="22" cy="-246" r="2.4" fill="#3f7fd8"/>
+{crown_svg}
 </g>'''
 
 

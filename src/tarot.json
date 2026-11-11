@@ -1,0 +1,704 @@
+[
+ {
+  "id": "major-00",
+  "name": "The Fool",
+  "arcana": "major",
+  "suit": "major",
+  "rank": 0,
+  "numeral": "0",
+  "scene": "A brave young rat in a Robin Hood outfit strides out of his shelter at dawn while his mother watches, proud and sad."
+ },
+ {
+  "id": "major-01",
+  "name": "The Magician",
+  "arcana": "major",
+  "suit": "major",
+  "rank": 1,
+  "numeral": "I",
+  "scene": "Reynard stands at a table set with a galleon, a lute, a quill and a mirror, the Guild star above him."
+ },
+ {
+  "id": "major-02",
+  "name": "The High Priestess",
+  "arcana": "major",
+  "suit": "major",
+  "rank": 2,
+  "numeral": "II",
+  "scene": "Mira sits between a purple pillar and a gold one beneath a great moon, mirror in paw, her frog beside her."
+ },
+ {
+  "id": "major-03",
+  "name": "The Empress",
+  "arcana": "major",
+  "suit": "major",
+  "rank": 3,
+  "numeral": "III",
+  "scene": "The Badger tends a garden where every vegetable has its own space, so everybody can eat."
+ },
+ {
+  "id": "major-04",
+  "name": "The President",
+  "arcana": "major",
+  "suit": "major",
+  "rank": 4,
+  "numeral": "IV",
+  "scene": "A rat presides from a soapbox to a cheering crowd while Reynard, in the background, pulls down the LEO's statue."
+ },
+ {
+  "id": "major-05",
+  "name": "The Hierophant",
+  "arcana": "major",
+  "suit": "major",
+  "rank": 5,
+  "numeral": "V",
+  "scene": "A cardinal with a vine-wrapped staff topped by the Guild star teaches two rats in a sunlit forest."
+ },
+ {
+  "id": "major-06",
+  "name": "The Partners",
+  "arcana": "major",
+  "suit": "major",
+  "rank": 6,
+  "numeral": "VI",
+  "scene": "In a dark alley the Badger brings a lantern and bread to a weeping rat; the Guild star shines between the rooftops."
+ },
+ {
+  "id": "major-07",
+  "name": "The Chariot",
+  "arcana": "major",
+  "suit": "major",
+  "rank": 7,
+  "numeral": "VII",
+  "scene": "Reynard walks a hallway of arcade games and slot machines without a glance, toward a lute and a galleon on a pedestal."
+ },
+ {
+  "id": "major-08",
+  "name": "Strength",
+  "arcana": "major",
+  "suit": "major",
+  "rank": 8,
+  "numeral": "VIII",
+  "scene": "The Bull laughs as he shoulders a great beam and the rats raise a house together."
+ },
+ {
+  "id": "major-09",
+  "name": "The Hermit",
+  "arcana": "major",
+  "suit": "major",
+  "rank": 9,
+  "numeral": "IX",
+  "scene": "A robed rat stands on a snowy peak beneath the constellations, holding a lantern lit by the Guild star."
+ },
+ {
+  "id": "major-10",
+  "name": "Chaos!",
+  "arcana": "major",
+  "suit": "major",
+  "rank": 10,
+  "numeral": "X",
+  "scene": "The great wheel spins: Reynard laughs on top while the LEO Lion clings on and the Corporate Wolf tumbles off."
+ },
+ {
+  "id": "major-11",
+  "name": "Justice",
+  "arcana": "major",
+  "suit": "major",
+  "rank": 11,
+  "numeral": "XI",
+  "scene": "The Badger stands beneath golden scales where a single flower outweighs a heap of gold."
+ },
+ {
+  "id": "major-12",
+  "name": "The Hanged Man",
+  "arcana": "major",
+  "suit": "major",
+  "rank": 12,
+  "numeral": "XII",
+  "scene": "Reynard hangs by one ankle from a snare, loot spilled below him, as a friend arrives with a quill to cut the rope."
+ },
+ {
+  "id": "major-13",
+  "name": "Death",
+  "arcana": "major",
+  "suit": "major",
+  "rank": 13,
+  "numeral": "XIII",
+  "scene": "Above, Reynard flees the Lawful Evil city for the woods. Below, the Badger walks toward it as the rats cheer her on."
+ },
+ {
+  "id": "major-14",
+  "name": "Temperance",
+  "arcana": "major",
+  "suit": "major",
+  "rank": 14,
+  "numeral": "XIV",
+  "scene": "Mira pours a potion into a swirling purple-and-gold cauldron while her frog cheers and the Guild star shines."
+ },
+ {
+  "id": "major-15",
+  "name": "The LEO",
+  "arcana": "major",
+  "suit": "major",
+  "rank": 15,
+  "numeral": "XV",
+  "scene": "Reynard and a scribe sit in the stocks while the rat who sold them out holds one coin beside the laughing Lion and Wolf."
+ },
+ {
+  "id": "major-16",
+  "name": "The Tower",
+  "arcana": "major",
+  "suit": "major",
+  "rank": 16,
+  "numeral": "XVI",
+  "scene": "Lightning splits the LEO's tower; Guild stars fly where stones should, and Reynard and a scribe look on, pleased."
+ },
+ {
+  "id": "major-17",
+  "name": "The Star",
+  "arcana": "major",
+  "suit": "major",
+  "rank": 17,
+  "numeral": "XVII",
+  "scene": "Two rats sit by a pond beneath the great Guild star and its seven companions."
+ },
+ {
+  "id": "major-18",
+  "name": "The Moon",
+  "arcana": "major",
+  "suit": "major",
+  "rank": 18,
+  "numeral": "XVIII",
+  "scene": "Under a heavy moon, the Wolf howls and Mira studies her mirror on either side of a winding path; her frog rises from the pond."
+ },
+ {
+  "id": "major-19",
+  "name": "The Sun",
+  "arcana": "major",
+  "suit": "major",
+  "rank": 19,
+  "numeral": "XIX",
+  "scene": "A fox-faced sun winks over a rat bazaar in the LEO's own square; the Lion rages on his balcony and the Wolf is ignored."
+ },
+ {
+  "id": "major-20",
+  "name": "Judgement",
+  "arcana": "major",
+  "suit": "major",
+  "rank": 20,
+  "numeral": "XX",
+  "scene": "Reynard plays from the clouds beside the fox banner; the rats rise, the Lion cowers with his crown on the ground, the Wolf panics."
+ },
+ {
+  "id": "major-21",
+  "name": "The World",
+  "arcana": "major",
+  "suit": "major",
+  "rank": 21,
+  "numeral": "XXI",
+  "scene": "The Guild star in a laurel wreath, with the Badger, Reynard, Mira and a rat at the four corners, above the red city."
+ },
+ {
+  "id": "galleons-01",
+  "name": "Ace of Galleons",
+  "arcana": "minor",
+  "suit": "galleons",
+  "rank": 1,
+  "numeral": "I",
+  "scene": "One dingy galleon lies half-buried at dawn, a sprout beside it, waiting for somebody to find it."
+ },
+ {
+  "id": "galleons-02",
+  "name": "Two of Galleons",
+  "arcana": "minor",
+  "suit": "galleons",
+  "rank": 2,
+  "numeral": "II",
+  "scene": "The Badger trades an herb to a merchant rat for a galleon; both walk away winners."
+ },
+ {
+  "id": "galleons-03",
+  "name": "Three of Galleons",
+  "arcana": "minor",
+  "suit": "galleons",
+  "rank": 3,
+  "numeral": "III",
+  "scene": "The Badger and two rats add their galleons to a pile while the Bull builds them houses."
+ },
+ {
+  "id": "galleons-04",
+  "name": "Four of Galleons",
+  "arcana": "minor",
+  "suit": "galleons",
+  "rank": 4,
+  "numeral": "IV",
+  "scene": "The Badger stands between the Corporate Wolf and two frightened rats clutching their galleons."
+ },
+ {
+  "id": "galleons-05",
+  "name": "Five of Galleons",
+  "arcana": "minor",
+  "suit": "galleons",
+  "rank": 5,
+  "numeral": "V",
+  "scene": "The Badger stands downcast by her collapsed shanty while the Lion and the Wolf laugh over their galleons."
+ },
+ {
+  "id": "galleons-06",
+  "name": "Six of Galleons",
+  "arcana": "minor",
+  "suit": "galleons",
+  "rank": 6,
+  "numeral": "VI",
+  "scene": "The Badger shares her bread with a ragged rat; behind her the Wolf flips a single coin from his hoard to beggars."
+ },
+ {
+  "id": "galleons-07",
+  "name": "Seven of Galleons",
+  "arcana": "minor",
+  "suit": "galleons",
+  "rank": 7,
+  "numeral": "VII",
+  "scene": "The Badger looks over seven small shanties and the rats who live in them, thinking about what comes next."
+ },
+ {
+  "id": "galleons-08",
+  "name": "Eight of Galleons",
+  "arcana": "minor",
+  "suit": "galleons",
+  "rank": 8,
+  "numeral": "VIII",
+  "scene": "The rats raise unfinished mushroom houses while the Badger pulls weeds; hard work, done together."
+ },
+ {
+  "id": "galleons-09",
+  "name": "Nine of Galleons",
+  "arcana": "minor",
+  "suit": "galleons",
+  "rank": 9,
+  "numeral": "IX",
+  "scene": "A feast in the mushroom village: the Badger, Reynard, Mira and the rats celebrate what they built."
+ },
+ {
+  "id": "galleons-10",
+  "name": "Ten of Galleons",
+  "arcana": "minor",
+  "suit": "galleons",
+  "rank": 10,
+  "numeral": "X",
+  "scene": "The Badger looks down from her hill on a bustling village; Reynard plays on a stump and ten galleons shine in the grass."
+ },
+ {
+  "id": "galleons-11",
+  "name": "Neophyte of Galleons",
+  "arcana": "minor",
+  "suit": "galleons",
+  "rank": 11,
+  "numeral": "N",
+  "scene": "A ragged rat plants a first galleon like a seed while the Badger shows the way."
+ },
+ {
+  "id": "galleons-12",
+  "name": "Apprentice of Galleons",
+  "arcana": "minor",
+  "suit": "galleons",
+  "rank": 12,
+  "numeral": "A",
+  "scene": "A rat waters rows of new sprouts, patient and careful."
+ },
+ {
+  "id": "galleons-13",
+  "name": "Journeyman of Galleons",
+  "arcana": "minor",
+  "suit": "galleons",
+  "rank": 13,
+  "numeral": "J",
+  "scene": "A merchant rat keeps an honest stall, trading fair with everyone who comes."
+ },
+ {
+  "id": "galleons-14",
+  "name": "Master of Galleons",
+  "arcana": "minor",
+  "suit": "galleons",
+  "rank": 14,
+  "numeral": "M",
+  "scene": "A prosperous rat hands a galleon to a young one, passing on what was given."
+ },
+ {
+  "id": "lutes-01",
+  "name": "Ace of Lutes",
+  "arcana": "minor",
+  "suit": "lutes",
+  "rank": 1,
+  "numeral": "I",
+  "scene": "A lute rests on a stump in a sunlit clearing, one note hanging in the air."
+ },
+ {
+  "id": "lutes-02",
+  "name": "Two of Lutes",
+  "arcana": "minor",
+  "suit": "lutes",
+  "rank": 2,
+  "numeral": "II",
+  "scene": "Reynard stands at a cliff's edge, lute in hand, looking out over the kingdom of the Lawful Evil overlords."
+ },
+ {
+  "id": "lutes-03",
+  "name": "Three of Lutes",
+  "arcana": "minor",
+  "suit": "lutes",
+  "rank": 3,
+  "numeral": "III",
+  "scene": "Reynard walks through the woods with his lute, thinking hard."
+ },
+ {
+  "id": "lutes-04",
+  "name": "Four of Lutes",
+  "arcana": "minor",
+  "suit": "lutes",
+  "rank": 4,
+  "numeral": "IV",
+  "scene": "Reynard plays atop a stump and rats in every sort of outfit dance."
+ },
+ {
+  "id": "lutes-05",
+  "name": "Five of Lutes",
+  "arcana": "minor",
+  "suit": "lutes",
+  "rank": 5,
+  "numeral": "V",
+  "scene": "Chaos in the street: Reynard plays an inspiring tune as rats with quills and sticks face shouting wolves and a LEO."
+ },
+ {
+  "id": "lutes-06",
+  "name": "Six of Lutes",
+  "arcana": "minor",
+  "suit": "lutes",
+  "rank": 6,
+  "numeral": "VI",
+  "scene": "Reynard rides in triumph, crowned with laurel, playing as cheering rats walk beside his horse."
+ },
+ {
+  "id": "lutes-07",
+  "name": "Seven of Lutes",
+  "arcana": "minor",
+  "suit": "lutes",
+  "rank": 7,
+  "numeral": "VII",
+  "scene": "Reynard holds the high ground on a barricade, the Bull beside him, as the Wolf and the Lion rage below."
+ },
+ {
+  "id": "lutes-08",
+  "name": "Eight of Lutes",
+  "arcana": "minor",
+  "suit": "lutes",
+  "rank": 8,
+  "numeral": "VIII",
+  "scene": "Reynard dances between flying arrows, still playing, still laughing."
+ },
+ {
+  "id": "lutes-09",
+  "name": "Nine of Lutes",
+  "arcana": "minor",
+  "suit": "lutes",
+  "rank": 9,
+  "numeral": "IX",
+  "scene": "Bandaged and weary in an alley, Reynard stands his ground with his lute close by."
+ },
+ {
+  "id": "lutes-10",
+  "name": "Ten of Lutes",
+  "arcana": "minor",
+  "suit": "lutes",
+  "rank": 10,
+  "numeral": "X",
+  "scene": "Reynard trudges uphill in the rain under a heavy bundle of lutes, and does not stop."
+ },
+ {
+  "id": "lutes-11",
+  "name": "Neophyte of Lutes",
+  "arcana": "minor",
+  "suit": "lutes",
+  "rank": 11,
+  "numeral": "N",
+  "scene": "In an alley of the red city, Reynard offers his lute to a young rat in beggar's clothes."
+ },
+ {
+  "id": "lutes-12",
+  "name": "Apprentice of Lutes",
+  "arcana": "minor",
+  "suit": "lutes",
+  "rank": 12,
+  "numeral": "A",
+  "scene": "A rat dressed like Reynard sits beneath the LEO's golden statue, tuning his lute; the notes come out sour."
+ },
+ {
+  "id": "lutes-13",
+  "name": "Journeyman of Lutes",
+  "arcana": "minor",
+  "suit": "lutes",
+  "rank": 13,
+  "numeral": "J",
+  "scene": "The rat plays gleefully on the Guild Hall stage while the audience dances and tosses galleons."
+ },
+ {
+  "id": "lutes-14",
+  "name": "Master of Lutes",
+  "arcana": "minor",
+  "suit": "lutes",
+  "rank": 14,
+  "numeral": "M",
+  "scene": "The rat plays from atop the LEO's statue to a vast crowd under fox banners; on the balcony the Lion and the Wolf worry."
+ },
+ {
+  "id": "quills-01",
+  "name": "Ace of Quills",
+  "arcana": "minor",
+  "suit": "quills",
+  "rank": 1,
+  "numeral": "I",
+  "scene": "A single quill falls from a window of the Lawful Evil castle."
+ },
+ {
+  "id": "quills-02",
+  "name": "Two of Quills",
+  "arcana": "minor",
+  "suit": "quills",
+  "rank": 2,
+  "numeral": "II",
+  "scene": "A scribe sits between two documents, one sealed with a crown and one with a star, two quills crossed above him."
+ },
+ {
+  "id": "quills-03",
+  "name": "Three of Quills",
+  "arcana": "minor",
+  "suit": "quills",
+  "rank": 3,
+  "numeral": "III",
+  "scene": "Three quills pierce a heart-shaped letter while a rat weeps and rain streaks the window."
+ },
+ {
+  "id": "quills-04",
+  "name": "Four of Quills",
+  "arcana": "minor",
+  "suit": "quills",
+  "rank": 4,
+  "numeral": "IV",
+  "scene": "In a corporate cubicle, a scribe uses a quiet moment to draw a flower."
+ },
+ {
+  "id": "quills-05",
+  "name": "Five of Quills",
+  "arcana": "minor",
+  "suit": "quills",
+  "rank": 5,
+  "numeral": "V",
+  "scene": "The Wolf smirks over the quills he has taken as two rats walk away."
+ },
+ {
+  "id": "quills-06",
+  "name": "Six of Quills",
+  "arcana": "minor",
+  "suit": "quills",
+  "rank": 6,
+  "numeral": "VI",
+  "scene": "Three rats row away from the red city toward the Guild star, six quills standing in the bow."
+ },
+ {
+  "id": "quills-07",
+  "name": "Seven of Quills",
+  "arcana": "minor",
+  "suit": "quills",
+  "rank": 7,
+  "numeral": "VII",
+  "scene": "Reynard distracts the Wolf with a heap of spray-painted coins while seven rats each carry a quill out the door."
+ },
+ {
+  "id": "quills-08",
+  "name": "Eight of Quills",
+  "arcana": "minor",
+  "suit": "quills",
+  "rank": 8,
+  "numeral": "VIII",
+  "scene": "A scribe slumps at his desk with one quill in hand and seven broken on the floor."
+ },
+ {
+  "id": "quills-09",
+  "name": "Nine of Quills",
+  "arcana": "minor",
+  "suit": "quills",
+  "rank": 9,
+  "numeral": "IX",
+  "scene": "A rat sits bolt upright in bed beneath nine quills, the red city in the window."
+ },
+ {
+  "id": "quills-10",
+  "name": "Ten of Quills",
+  "arcana": "minor",
+  "suit": "quills",
+  "rank": 10,
+  "numeral": "X",
+  "scene": "A rat weeps at a desk buried in paperwork stuck with ten quills; in the window, dawn and the Guild star."
+ },
+ {
+  "id": "quills-11",
+  "name": "Neophyte of Quills",
+  "arcana": "minor",
+  "suit": "quills",
+  "rank": 11,
+  "numeral": "N",
+  "scene": "A ragged rat draws on an alley wall with a crayon."
+ },
+ {
+  "id": "quills-12",
+  "name": "Apprentice of Quills",
+  "arcana": "minor",
+  "suit": "quills",
+  "rank": 12,
+  "numeral": "A",
+  "scene": "A rat with a pencil sketches plans for a mushroom house."
+ },
+ {
+  "id": "quills-13",
+  "name": "Journeyman of Quills",
+  "arcana": "minor",
+  "suit": "quills",
+  "rank": 13,
+  "numeral": "J",
+  "scene": "A scribe posts pamphlets on a notice board and sends more flying."
+ },
+ {
+  "id": "quills-14",
+  "name": "Master of Quills",
+  "arcana": "minor",
+  "suit": "quills",
+  "rank": 14,
+  "numeral": "M",
+  "scene": "A robed rat with a great quill reads a charter to the crowd."
+ },
+ {
+  "id": "mirrors-01",
+  "name": "Ace of Mirrors",
+  "arcana": "minor",
+  "suit": "mirrors",
+  "rank": 1,
+  "numeral": "I",
+  "scene": "A great mirror rises from a moonlit pond, the Guild star shining in its glass."
+ },
+ {
+  "id": "mirrors-02",
+  "name": "Two of Mirrors",
+  "arcana": "minor",
+  "suit": "mirrors",
+  "rank": 2,
+  "numeral": "II",
+  "scene": "Mira and a rat each look into a mirror and see the other's hat: what we admire in others is in us too."
+ },
+ {
+  "id": "mirrors-03",
+  "name": "Three of Mirrors",
+  "arcana": "minor",
+  "suit": "mirrors",
+  "rank": 3,
+  "numeral": "III",
+  "scene": "Mira laughs at her reflection, delighted with herself, among the creatures of the enchanted forest."
+ },
+ {
+  "id": "mirrors-04",
+  "name": "Four of Mirrors",
+  "arcana": "minor",
+  "suit": "mirrors",
+  "rank": 4,
+  "numeral": "IV",
+  "scene": "Mira pouts beneath a tree before a cracked mirror that shows her older and sadder; three other mirrors lie ignored."
+ },
+ {
+  "id": "mirrors-05",
+  "name": "Five of Mirrors",
+  "arcana": "minor",
+  "suit": "mirrors",
+  "rank": 5,
+  "numeral": "V",
+  "scene": "Mira grieves over three broken mirrors while two still stand whole behind her."
+ },
+ {
+  "id": "mirrors-06",
+  "name": "Six of Mirrors",
+  "arcana": "minor",
+  "suit": "mirrors",
+  "rank": 6,
+  "numeral": "VI",
+  "scene": "Mira gives a mirror to a young rat beneath a tree hung with five more."
+ },
+ {
+  "id": "mirrors-07",
+  "name": "Seven of Mirrors",
+  "arcana": "minor",
+  "suit": "mirrors",
+  "rank": 7,
+  "numeral": "VII",
+  "scene": "Mira floats in a galaxy among seven mirrors of tempting things; in the centre one, the Guild star peeks from a cloud."
+ },
+ {
+  "id": "mirrors-08",
+  "name": "Eight of Mirrors",
+  "arcana": "minor",
+  "suit": "mirrors",
+  "rank": 8,
+  "numeral": "VIII",
+  "scene": "Mira walks away from eight mirrors toward the moonlit mountains, her frog hopping after."
+ },
+ {
+  "id": "mirrors-09",
+  "name": "Nine of Mirrors",
+  "arcana": "minor",
+  "suit": "mirrors",
+  "rank": 9,
+  "numeral": "IX",
+  "scene": "Mira reads tarot at her alley booth in the red city, with her frog, her cauldron and a genie lamp."
+ },
+ {
+  "id": "mirrors-10",
+  "name": "Ten of Mirrors",
+  "arcana": "minor",
+  "suit": "mirrors",
+  "rank": 10,
+  "numeral": "X",
+  "scene": "In the red city, Mira looks into a great mirror and sees a happy hamlet beneath an arc of nine more."
+ },
+ {
+  "id": "mirrors-11",
+  "name": "Neophyte of Mirrors",
+  "arcana": "minor",
+  "suit": "mirrors",
+  "rank": 11,
+  "numeral": "N",
+  "scene": "Under a bright moon, Mira hands blue robes, a hat and a mirror to a rat in a Robin Hood outfit."
+ },
+ {
+  "id": "mirrors-12",
+  "name": "Apprentice of Mirrors",
+  "arcana": "minor",
+  "suit": "mirrors",
+  "rank": 12,
+  "numeral": "A",
+  "scene": "A rat in oversized robes accidentally levitates Reynard upside down; Reynard thinks it's hilarious."
+ },
+ {
+  "id": "mirrors-13",
+  "name": "Journeyman of Mirrors",
+  "arcana": "minor",
+  "suit": "mirrors",
+  "rank": 13,
+  "numeral": "J",
+  "scene": "By a forest pool, a robed rat levitates a mirror that shows the red city; tarot cards lie at his feet."
+ },
+ {
+  "id": "mirrors-14",
+  "name": "Master of Mirrors",
+  "arcana": "minor",
+  "suit": "mirrors",
+  "rank": 14,
+  "numeral": "M",
+  "scene": "In an alley, a rat in purple robes comforts a crying young rat; a mirror shows the village, and a flower grows from a crack."
+ }
+]
