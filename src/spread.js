@@ -18,7 +18,7 @@ const CGGRead = {
     const kw = c => c.keywords;
 
     // 1. The heart anchors the reading
-    paras.push(`At the heart of this reading sits ${heart.name}: ${CGGRead.list(kw(heart))}. This is where you stand tonight, and every other card bends around it.`);
+    paras.push(`At the heart of this reading sits ${heart.name}: ${CGGRead.list(kw(heart))}. This is where you're standing, and every other card bends around it.`);
     notes.push("The Heart sits in the centre of the star, so Mira reads it first. Every other card is read in relation to it.");
 
     // 2. The five points
@@ -86,7 +86,7 @@ const CGGRead = {
       pat.push("The LEOs cast a long shadow over this spread. Name what's weighing on you before you try to fight it.");
       notes.push("Several heavy cards together show a hard season. That's information, not a sentence.");
     } else if (light >= 5) {
-      pat.push("It's a bright star tonight: the cards lean toward hope, warmth and things going right.");
+      pat.push("It's a bright star: the cards lean toward hope, warmth and things going right.");
       notes.push("When nearly every card is a bright one, the reading leans hopeful. Enjoy it, and act on it.");
     }
     if (pat.length) paras.push(pat.join(" "));
