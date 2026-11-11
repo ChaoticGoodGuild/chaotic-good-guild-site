@@ -4,6 +4,14 @@
   "card_width": 16,
   "positions": [
     {
+      "key": "galleon",
+      "title": "The Galleon",
+      "question": "What you have to build with.",
+      "suit": "galleons",
+      "x": 30.02,
+      "y": 80.51
+    },
+    {
       "key": "star",
       "title": "The Star",
       "question": "What guides you.",
@@ -34,14 +42,6 @@
       "suit": "mirrors",
       "x": 82.34,
       "y": 42.49
-    },
-    {
-      "key": "galleon",
-      "title": "The Galleon",
-      "question": "What you have to build with.",
-      "suit": "galleons",
-      "x": 30.02,
-      "y": 80.51
     },
     {
       "key": "heart",

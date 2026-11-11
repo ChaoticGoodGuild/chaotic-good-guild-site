@@ -22,7 +22,9 @@ const CGGRead = {
     notes.push("The Heart sits in the centre of the star, so Mira reads it first. Every other card is read in relation to it.");
 
     // 2. The five points
-    const pts = positions.filter(p => p.key !== "heart").map(p => {
+    // Read the points top-down in the old order, whatever order they were dealt in.
+    const READ = ["star", "lute", "quill", "mirror", "galleon"];
+    const pts = READ.map(key => positions.find(p => p.key === key)).map(p => {
       const c = picks[positions.indexOf(p)];
       const q = p.question.replace(/[.?!]$/, "");
       return `${q.charAt(0).toLowerCase() + q.slice(1)} is ${c.name} (${kw(c)[0]})`;

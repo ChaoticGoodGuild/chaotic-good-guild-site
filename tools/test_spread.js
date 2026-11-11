@@ -14,7 +14,9 @@ for (const c of cards) {
   assert.ok(["light", "mixed", "shadow"].includes(c.tone), c.id);
 }
 const P = D.positions;
-const read = ids => R.summarize(ids.map(i => byId[i]), P, D);
+// ids are given star, lute, quill, mirror, galleon, heart; placed by key, so deal order can change
+const KEYS = ["star", "lute", "quill", "mirror", "galleon", "heart"];
+const read = ids => R.summarize(P.map(p => byId[ids[KEYS.indexOf(p.key)]]), P, D);
 const all = r => r.paras.join("\n");
 
 // positions: star, lute, quill, mirror, galleon, heart
