@@ -1,5 +1,5 @@
 {
-  "_about": "Card meanings for the Chaotic Good Guild tarot. source 'ryan' = meaning taken from Ryan's Tarot Deck Notes (lightly tidied); 'draft' = written by Claude for Ryan to review and rewrite in his own words. tone: light, mixed or shadow (used by the reading summary).",
+  "_about": "Card meanings for the Chaotic Good Guild tarot, edited in Ryan's Google-style sheet 'Chaotic Good Tarot: Keywords & Meanings'. source 'ryan' = Ryan's words. counsel = Ryan's advice line (kept for the guidebook); question = the reflection question the site shows (Claude's drafts from the counsel, for Ryan's review). tone: light, mixed or shadow (used by the reading summary).",
   "major-00": {
     "source": "ryan",
     "tone": "light",
@@ -9,7 +9,8 @@
       "the open road"
     ],
     "meaning": "The Fool is the first step of every journey: leaving what's safe to go make the world a little better, before you feel ready. Fresh feet, full heart, and very little in the sack but hope. Sometimes it's best to not know before you start!",
-    "counsel": "Pack light, step lively, and let the leaving be the lesson."
+    "counsel": "Pack light, step lively, and let the leaving be the lesson.",
+    "question": "What would you set out toward if you didn't need to feel ready first?"
   },
   "major-01": {
     "source": "ryan",
@@ -20,7 +21,8 @@
       "manifesting"
     ],
     "meaning": "The Magician is mystical and mechanical: they know their tools, they can read the environment, and they know how to use what they've got to get the outcome they need.",
-    "counsel": "Trust your talents, snap your fingers,  and make your magic happen!"
+    "counsel": "Trust your talents, snap your fingers, and make your magic happen!",
+    "question": "What talents and tools are already in your hands, and what magic could you make with them?"
   },
   "major-02": {
     "source": "ryan",
@@ -31,7 +33,8 @@
       "subconscious"
     ],
     "meaning": "Some subtle secrets only surface when you're still enough to sit in silence. Her intuition interprets easily.",
-    "counsel": "Sit still and dive deep within to seek within your subconscious."
+    "counsel": "Sit still and dive deep within to seek within your subconscious.",
+    "question": "If you sat in silence long enough, what might your subconscious tell you?"
   },
   "major-03": {
     "source": "ryan",
@@ -42,7 +45,8 @@
       "fertility"
     ],
     "meaning": "She cultivates her garden, so that each vegetable has its space and contributes to the well-being of the others. None are better or worse, as each serves an important purpose. She nurtures each one with grace and tenderness so that everybody can eat.",
-    "counsel": "Tend what's growing, and make room for every row."
+    "counsel": "Tend what's growing, and make room for every row.",
+    "question": "What is growing in your life right now, and have you made room for every row?"
   },
   "major-04": {
     "source": "ryan",
@@ -53,7 +57,8 @@
       "stepping up"
     ],
     "meaning": "Chaotic Good believes in rule by the people. When we cede authority to kings, we make others responsible for our well-being. It makes things simpler, but at what cost? Different times and a changing world require different skills and perspectives. The President presides: not above or below, just serving a specific purpose at a specific time. What job is most important for you right now, and how can you step up to be the best person for it?",
-    "counsel": "Step up, serve well, and step aside when the season changes."
+    "counsel": "Step up, serve well, and step aside when the season changes.",
+    "question": "What job does this season ask of you? How can you step up, serve well, and know when to step aside?"
   },
   "major-05": {
     "source": "ryan",
@@ -64,7 +69,8 @@
       "roots"
     ],
     "meaning": "Look to nature to decode the mysteries of the world and give context to our society and what we're doing. There is a natural order we must accept and acknowledge before we can move forward in changing our society.",
-    "counsel": "Learn the old roots before you plant new rows."
+    "counsel": "Learn the old roots before you plant new rows.",
+    "question": "What old roots do you need to understand before you plant something new?"
   },
   "major-06": {
     "source": "ryan",
@@ -75,7 +81,8 @@
       "decisions"
     ],
     "meaning": "Others can help us through dark times, no matter how difficult. In the pits of despair, it's important that we show up for others, or make the choice to reach out even when it feels hopeless. We can choose to show up for others, or to be kind to ourselves and reach out when we need it.",
-    "counsel": "Reach out, or reach back; nobody walks the dark alone."
+    "counsel": "Reach out, or reach back; nobody walks the dark alone.",
+    "question": "Who could you reach out to, or reach back for, so that nobody walks the dark alone?"
   },
   "major-07": {
     "source": "ryan",
@@ -86,7 +93,8 @@
       "willpower"
     ],
     "meaning": "The Chariot is willpower with aim: using discipline to move toward what you want, and walking past everything built to pull you off track. The games will keep blinking. Let them.",
-    "counsel": "Channel your chase into what serves your spirit. Make your life a game, don't make the games and gambling your life!"
+    "counsel": "Channel your chase into what serves your spirit. Make your life a game, don't make the games and gambling your life!",
+    "question": "Is your chase serving your spirit? Are you making your life a game, or letting the games make your life?"
   },
   "major-08": {
     "source": "ryan",
@@ -97,7 +105,8 @@
       "work as play"
     ],
     "meaning": "Inspiration, not coercion. Strength is about uplifting and inspiring others to their potential. Strength recognizes that when we choose to look at our work as play, we become inspired instead of tired.",
-    "counsel": "LEOs rule through force. They don't inspire, they fire. Don't fight fire with fire - use the fire to fuel your fun!"
+    "counsel": "LEOs rule through force. They don't inspire, they fire. Don't fight fire with fire - use the fire to fuel your fun!",
+    "question": "Where are you fighting fire with fire, and how could you use that fire to fuel your fun instead?"
   },
   "major-09": {
     "source": "ryan",
@@ -108,7 +117,8 @@
       "principles in practice"
     ],
     "meaning": "Life is a journey of exploring and reflecting. We go into the world to learn and apply our wisdom, but sometimes we must retreat to pause, reflect on our lessons and integrate our experiences. The Hermit asks us to reflect on our guiding principles of kindness: intention is important, but without application we are living in a fantasy.",
-    "counsel": "Step back, light the lantern, then step back in."
+    "counsel": "Step back, light the lantern, then step back in.",
+    "question": "What lessons need a quiet, lantern-lit moment to settle in, and when will you step back into the world?"
   },
   "major-10": {
     "source": "ryan",
@@ -119,7 +129,8 @@
       "turning tides"
     ],
     "meaning": "Instead of surrendering to fate, Chaos! celebrates how disruption creates opportunity. It's the wild card that cracks open stuck systems. It reminds you that even when everything's spinning, you are not powerless; in fact, hope, kindness and mischief can turn the tide.",
-    "counsel": "When the world wobbles, wobble it toward kindness. Don't forget - everyday carries the seed of a new adventure!"
+    "counsel": "When the world wobbles, wobble it toward kindness. Don't forget - every day carries the seed of a new adventure!",
+    "question": "When the world wobbles, how could you wobble it toward kindness? What adventure might today's chaos be carrying?"
   },
   "major-11": {
     "source": "ryan",
@@ -130,7 +141,8 @@
       "karma"
     ],
     "meaning": "Justice weighs what truly matters: actions and their consequences, measured honestly. It asks whether you've been fair to others and to yourself, and promises that balance comes back around.",
-    "counsel": "Weigh what matters, not what glitters. Do what's right and know that you'll recieve rewards, even if it's not right away."
+    "counsel": "Weigh what matters, not what glitters. Do what's right and know that you'll receive rewards, even if it's not right away.",
+    "question": "Are you weighing what matters, or what glitters? Where could you do what's right even if the reward comes later?"
   },
   "major-12": {
     "source": "ryan",
@@ -141,7 +153,8 @@
       "new perspective"
     ],
     "meaning": "Sometimes we get trapped, but if we're creative enough, we can always escape. We may not like what we have to do, and sometimes we need to lighten our load to move forward, even if we like our loot. Or sometimes our best bet is to wait it out: you never know when a friend might show up to help.",
-    "counsel": "Sometimes giving up the gold lets you loose from the trap. Perhaps you'll find something greater with a new perspective - so be patient!"
+    "counsel": "Sometimes giving up the gold lets you loose from the trap. Perhaps you'll find something greater with a new perspective - so be patient!",
+    "question": "What gold could you let go of to get loose from the trap, and what might a new perspective show you while you wait?"
   },
   "major-13": {
     "source": "ryan",
@@ -152,7 +165,8 @@
       "compost"
     ],
     "meaning": "Death. Fate. The end. Are you someone who embraces the end as an escape, or tries to escape an inevitable end? Reynard flees where the Badger enters: an ending and a beginning for them both. Remember, fungus feeds to create fertility.",
-    "counsel": "Doors open and close. Allow the rot to fuel fertile new ground."
+    "counsel": "Doors open and close. Allow the rot to fuel fertile new ground.",
+    "question": "Which door is closing, and what fertile ground could grow from what's ending?"
   },
   "major-14": {
     "source": "ryan",
@@ -163,7 +177,8 @@
       "patience"
     ],
     "meaning": "Temperance is the art of the right mix: not too much, not too little, and patient enough to let the brew become itself. Opposites, combined with care, make better magic than either alone.",
-    "counsel": "Stir slowly; the best brews take time. Everything in moderation - including moderation!"
+    "counsel": "Stir slowly; the best brews take time. Everything in moderation - including moderation!",
+    "question": "Where do you need a little more, or a little less? Are you giving the brew the time it needs?"
   },
   "major-15": {
     "source": "ryan",
@@ -174,7 +189,8 @@
       "greed"
     ],
     "meaning": "The pile of coins is tempting. Look how happy the LEOs look, yet they'd turn on each other in a heartbeat the moment they could make a quick buck. They can't trust anybody, because they can't be trusted. Are you selling out your community and friends?",
-    "counsel": "No pile of coins is worth your people."
+    "counsel": "No pile of coins is worth your people.",
+    "question": "Is any pile of coins asking you to trade away your people?"
   },
   "major-16": {
     "source": "ryan",
@@ -185,7 +201,8 @@
       "rug pull"
     ],
     "meaning": "When we become too rigid, we begin to function like the LEOs. Be careful: the Chaotic Good Guild is likely to come by and shake things up!",
-    "counsel": "Bend before you break, or the Guild will help with the breaking."
+    "counsel": "Bend before you break, or the Guild will help with the breaking.",
+    "question": "Where have you grown rigid, and how could you bend before something breaks?"
   },
   "major-17": {
     "source": "ryan",
@@ -196,7 +213,8 @@
       "dreams"
     ],
     "meaning": "In spite of the darkness, we still need to find time to dream: to hope for a better future for those we know and those we don't. Even when life gets heavy, remember how our hope guides us.",
-    "counsel": "Look up; the light is still there."
+    "counsel": "Look up; the light is still there.",
+    "question": "When you look up, what hope is still guiding you?"
   },
   "major-18": {
     "source": "ryan",
@@ -207,7 +225,8 @@
       "instinct"
     ],
     "meaning": "The moon reflects what's hidden in the night - for better and for worse. Dreams, fears, and everything in between. Sometimes the darkness creates shadows that are larger than the rustling leaves.",
-    "counsel": "Don't feed the fears that only grow at night. But don't forget to look at the full moon with wonder when it's dark!"
+    "counsel": "Don't feed the fears that only grow at night. But don't forget to look at the full moon with wonder when it's dark!",
+    "question": "Which fears only grow at night? Can you still find wonder in the dark?"
   },
   "major-19": {
     "source": "ryan",
@@ -218,7 +237,8 @@
       "self expression"
     ],
     "meaning": "The Sun is joy that can't be stopped: warmth, clarity and success shared out in the open. When people trade fair and laugh loud, even the Wolf's cart of gold gets ignored.",
-    "counsel": "Allow your inner radiance to light the room, and let your expression heat the people in your life whom you love"
+    "counsel": "Allow your inner radiance to light the room, and let your expression heat the people in your life whom you love.",
+    "question": "How could you let your inner radiance light the room and warm the people you love?"
   },
   "major-20": {
     "source": "ryan",
@@ -229,7 +249,8 @@
       "rising together"
     ],
     "meaning": "Judgement is the call you can't unhear: an awakening, a reckoning, a moment to answer who you are and what you'll stand for. When enough voices rise, crowns fall. Stand in line with your values.",
-    "counsel": "Call the community together to align around compassion and curiosity."
+    "counsel": "Call the community together to align around compassion and curiosity.",
+    "question": "What values are calling you, and who could you gather around compassion and curiosity?"
   },
   "major-21": {
     "source": "ryan",
@@ -240,7 +261,8 @@
       "level up"
     ],
     "meaning": "The World is completion: a journey finished, lessons learned, a community made whole. Celebrate it, and remember that every finished circle is the start of the next Fool's walk.",
-    "counsel": "Celebrate the circle, then begin again. Don't forget to invite your friends!"
+    "counsel": "Celebrate the circle, then begin again. Don't forget to invite your friends!",
+    "question": "What circle is closing, how will you celebrate it, and who will you invite to the next beginning?"
   },
   "galleons-01": {
     "source": "ryan",
@@ -251,7 +273,8 @@
       "compounding"
     ],
     "meaning": "Start small. Every seed takes consistent watering to grow into a stable tree. Consistent effort compounds. Even a single coin can be polished to perfection.",
-    "counsel": "Polish the one coin you have."
+    "counsel": "Polish the one coin you have.",
+    "question": "What one coin do you already have that's worth polishing?"
   },
   "galleons-02": {
     "source": "ryan",
@@ -262,7 +285,8 @@
       "win-win"
     ],
     "meaning": "Markets aren't the problem; letting them turn our friends and neighbors into dollar signs is. When we have extra of something others need, it makes sense to trade so that both people feel like winners. Money isn't the problem; our relationship with it is.",
-    "counsel": "Trade so both walk away winners."
+    "counsel": "Trade so both walk away winners.",
+    "question": "Where could you trade so that both sides walk away winners?"
   },
   "galleons-03": {
     "source": "ryan",
@@ -273,7 +297,8 @@
       "contribution"
     ],
     "meaning": "Pool what you have so that skilled hands can build what none of you could build alone. Every contribution counts, and so does the craft.",
-    "counsel": "Pitch in, and build together what nobody can alone. Many hands makes for lighter work (and more fun!)"
+    "counsel": "Pitch in, and build together what nobody can alone. Many hands makes for lighter work (and more fun!)",
+    "question": "What could you build together that nobody could build alone?"
   },
   "galleons-04": {
     "source": "ryan",
@@ -284,7 +309,8 @@
       "holding the line"
     ],
     "meaning": "Security, and the question of what it's for: hoarding to keep, or holding the line to protect. Guard what matters, but don't let guarding turn into grasping. Remember that you got to where you are with the help of others.",
-    "counsel": "Make sure to maintain what you need, but don't forget that mountains of money make a moat around you."
+    "counsel": "Make sure to maintain what you need, but don't forget that mountains of money make a moat around you.",
+    "question": "Are you maintaining what you need, or building a moat of money around yourself?"
   },
   "galleons-05": {
     "source": "ryan",
@@ -295,7 +321,8 @@
       "asking for help"
     ],
     "meaning": "Hard times, and the sting of being left out in the cold. It's real, and it isn't the end - you still have time to turn a new leaf if you held on too hard, and there's hope in the future if you caught a bad bounce.",
-    "counsel": "You can weather the storm - it'll make the future foundation that much more meaningful. Remember this moment when you see someone struggling in the future."
+    "counsel": "You can weather the storm - it'll make the future foundation that much more meaningful. Remember this moment when you see someone struggling in the future.",
+    "question": "What will help you weather this storm? How will you remember this moment when you see someone else struggling?"
   },
   "galleons-06": {
     "source": "ryan",
@@ -306,7 +333,8 @@
       "charitable"
     ],
     "meaning": "Sharing a little of what you've got, even if it isn't much, means more than hoarding, and more than handing out a little for power and to look good.",
-    "counsel": "Break the bread; skip the speech. Set hubris aside and accept help when needed, and give without pretense or parade."
+    "counsel": "Break the bread; skip the speech. Set hubris aside and accept help when needed, and give without pretense or parade.",
+    "question": "Where could you give without pretense or parade, and where could you set pride aside and accept help?"
   },
   "galleons-07": {
     "source": "ryan",
@@ -317,7 +345,8 @@
       "enough"
     ],
     "meaning": "Things are built through hard work on strong foundations. We can't rely on chaos, but we embrace it when it falls in our favor. If we want what others have, we don't tear it down; we get inspired, knowing that if we put our minds to it, we can have enough. And we help others. It's also not bad to not have a lot; we don't need to feel behind. Sometimes people have, and sometimes they don't.",
-    "counsel": "Grow at your own pace; enough is enough."
+    "counsel": "Grow at your own pace; enough is enough.",
+    "question": "Are you growing at your own pace? What would \"enough\" look like for you?"
   },
   "galleons-08": {
     "source": "ryan",
@@ -328,7 +357,8 @@
       "joyful work"
     ],
     "meaning": "Work doesn't need to be dreary and drab, even when it's hard. Especially when we're working with our friends and helping others!",
-    "counsel": "Whistle while you weed."
+    "counsel": "Whistle while you weed.",
+    "question": "How could you whistle while you weed, and bring some joy into the hard work?"
   },
   "galleons-09": {
     "source": "ryan",
@@ -339,7 +369,8 @@
       "earned rest"
     ],
     "meaning": "The reward of steady work: comfort, plenty and good company. Enjoy it fully. You planted this.",
-    "counsel": "Feast on what you've grown, and pull up a chair for a friend - their presence is a present for the potluck!"
+    "counsel": "Feast on what you've grown, and pull up a chair for a friend - their presence is a present for the potluck!",
+    "question": "What have you grown that's worth feasting on, and who could you pull up a chair for?"
   },
   "galleons-10": {
     "source": "ryan",
@@ -350,7 +381,8 @@
       "lasting wealth"
     ],
     "meaning": "Wealth that lasts because it's shared: a legacy of homes and habits that outlives any one of us, while the LEOs' city fades to a shadow.",
-    "counsel": "Plant trees whose shade you'll never sit in, not statues that will stand as monuments to cynicism."
+    "counsel": "Plant trees whose shade you'll never sit in, not statues that will stand as monuments to cynicism.",
+    "question": "What trees are you planting whose shade others will sit in?"
   },
   "galleons-11": {
     "source": "ryan",
@@ -361,7 +393,8 @@
       "planting"
     ],
     "meaning": "The eager student of practical things: a new job, a new skill, a first savings jar. Small, sincere beginnings grow into something solid.",
-    "counsel": "Plant your patches in whatever way you're particular."
+    "counsel": "Plant your patches in whatever way you're particular.",
+    "question": "What patch could you plant today, in your own particular way?"
   },
   "galleons-12": {
     "source": "ryan",
@@ -372,7 +405,8 @@
       "slow progress"
     ],
     "meaning": "Dependable effort: the unglamorous routine that compounds over time. It may feel slow. It's working.",
-    "counsel": "Steady steps make sturdy stairs. Keep watering, it's worth it!"
+    "counsel": "Steady steps make sturdy stairs. Keep watering, it's worth it!",
+    "question": "What steady steps are you taking, and what needs a few more days of watering?"
   },
   "galleons-13": {
     "source": "ryan",
@@ -383,7 +417,8 @@
       "good neighbor"
     ],
     "meaning": "Practical care: someone who makes a good living and a good neighborhood at the same time.",
-    "counsel": "Keep your scales honest and your stall open. Bartering makes things better for both parties."
+    "counsel": "Keep your scales honest and your stall open. Bartering makes things better for both parties.",
+    "question": "Are your scales honest and your stall open? Where could a fair trade make things better for both sides?"
   },
   "galleons-14": {
     "source": "ryan",
@@ -394,7 +429,8 @@
       "raising the tide"
     ],
     "meaning": "Someone who has built security and knows what it's for: passing it on, lifting others, raising the tide for all.",
-    "counsel": "Pass the coin and raise the tide. LEOs gobble galleons while we lengthen the table!"
+    "counsel": "Pass the coin and raise the tide. LEOs gobble galleons while we lengthen the table!",
+    "question": "How could you pass the coin, raise the tide, and lengthen the table?"
   },
   "lutes-01": {
     "source": "ryan",
@@ -405,7 +441,8 @@
       "a calling"
     ],
     "meaning": "The spark: a new passion, a creative idea, a call to act that won't leave you alone. One note begins the resonance, and sparks the fuel that's waiting to start the fire.",
-    "counsel": "The first note strummed starts the song. A small spark is all it takes to light the fire."
+    "counsel": "The first note strummed starts the song. A small spark is all it takes to light the fire.",
+    "question": "What small spark is waiting for its first note?"
   },
   "lutes-02": {
     "source": "ryan",
@@ -416,7 +453,8 @@
       "deciding"
     ],
     "meaning": "The view before the venture: big plans, the whole map in front of you, and a choice about where your music goes next.",
-    "counsel": "Look far, then pick a first step. The only bad decision is one you didn't make."
+    "counsel": "Look far, then pick a first step. The only bad decision is one you didn't make.",
+    "question": "When you look far ahead, what first step stands out? What decision have you been putting off?"
   },
   "lutes-03": {
     "source": "ryan",
@@ -427,10 +465,11 @@
       "thinking ahead"
     ],
     "meaning": "The planner on the move: plans underway, ideas expanding, and the patience to think a few steps ahead before the next tune.",
-    "counsel": "Think while you walk; walk while you think. What foundation are you laying?"
+    "counsel": "Think while you walk; walk while you think. What foundation are you laying?",
+    "question": "What foundation are you laying as you walk?"
   },
   "lutes-04": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "light",
     "keywords": [
       "celebration",
@@ -438,32 +477,35 @@
       "homecoming"
     ],
     "meaning": "A celebration of belonging: a safe place, good company and a reason to dance.",
-    "counsel": "Dance with the ones who showed up."
+    "counsel": "Dance with the ones who showed up, and celebrate your successes. Small wins build over time!",
+    "question": "Who showed up for you, and how will you celebrate your small wins together?"
   },
   "lutes-05": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "mixed",
     "keywords": [
       "conflict",
       "struggle",
       "rallying"
     ],
-    "meaning": "Struggle and clashing voices. Not every fight is a bad one, but make sure your music lifts people rather than just raising the noise.",
-    "counsel": "Rally, don't rattle."
+    "meaning": "Struggle and clashing voices. Jazz is an acquired taste. Sitting with the dissonance helps to decide what should stay.",
+    "counsel": "Remember, the resonant tunes rise to the top. Conflict and competition can help create. Keep playing your tune and know that if it's meant to be, it will persist.",
+    "question": "Which tunes in the clash are worth keeping, and are you still playing your own?"
   },
   "lutes-06": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "light",
     "keywords": [
       "victory",
       "recognition",
       "triumph"
     ],
-    "meaning": "Public success and well-earned recognition. Enjoy the parade, and remember who walked beside the horse.",
-    "counsel": "Take the bow, then thank the band."
+    "meaning": "Public success and well-earned recognition. It's okay to enjoy your successes and wins! Everybody gets to play the lead role at some point!",
+    "counsel": "Take the bow, thank the band, and enjoy your time in the spotlight.",
+    "question": "How could you enjoy your time in the spotlight, and who in the band deserves your thanks?"
   },
   "lutes-07": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "mixed",
     "keywords": [
       "standing firm",
@@ -471,7 +513,8 @@
       "conviction"
     ],
     "meaning": "Holding the high ground: defending what you believe in, even when you're outnumbered.",
-    "counsel": "Hold your ground and hold your note."
+    "counsel": "Hold your note, and don't let the line breach. Dramatic tension will soon release. You can persevere under pressure!",
+    "question": "What line are you holding, and what helps you keep your note under pressure?"
   },
   "lutes-08": {
     "source": "ryan",
@@ -482,10 +525,11 @@
       "keep dancing"
     ],
     "meaning": "Life is full of the arrows and slings others shoot at us, on purpose or by accident. The only choice we have is how we respond: do we hear the music and keep dancing?",
-    "counsel": "Hear the music; keep dancing."
+    "counsel": "When you're dodging the slings and arrows of life, focus on the music and keep dancing.",
+    "question": "When the slings and arrows fly, what music keeps you dancing?"
   },
   "lutes-09": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "mixed",
     "keywords": [
       "persistence",
@@ -493,7 +537,8 @@
       "one more push"
     ],
     "meaning": "Resilience near the end of a long fight: wounded, wary and still here. One more push may be all it takes.",
-    "counsel": "Bandage up; the next verse is yours."
+    "counsel": "Bandage your bruises for the final push! You've got this!",
+    "question": "What bruises need bandaging before your final push?"
   },
   "lutes-10": {
     "source": "ryan",
@@ -504,10 +549,11 @@
       "refusing to quit"
     ],
     "meaning": "Even when all seems lost, we can't give up. We don't have the luxury or the option, even when things feel insurmountable. What's our choice: cynicism? To give in? To roll over and let our friends and neighbors suffer needlessly? And to do what, doomscroll and mindlessly play video games?",
-    "counsel": "Carry on, and let someone carry with you."
+    "counsel": "The soreness is strength unrealized. Your mind is the final obstacle. Remember - you're capable of the infinite! Never give up!",
+    "question": "Is your mind the final obstacle? Who could help you carry the load?"
   },
   "lutes-11": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "light",
     "keywords": [
       "joyful expression",
@@ -515,10 +561,11 @@
       "encouragement"
     ],
     "meaning": "A new spark passed to someone ready to catch it: curiosity, eagerness, and the first lesson in courage.",
-    "counsel": "Take the lute; you'll learn by playing."
+    "counsel": "Take the lute; you'll learn by playing.  Some lessons are didactic, but this one is experiential.",
+    "question": "What are you ready to learn by playing, rather than by reading about it?"
   },
   "lutes-12": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "mixed",
     "keywords": [
       "practice",
@@ -526,10 +573,11 @@
       "finding your pitch"
     ],
     "meaning": "Passion still finding its pitch: bold, a bit rash, and practicing in public. Sour notes are part of the song.",
-    "counsel": "Keep tuning; keep trying."
+    "counsel": "The growth is in the path. Savour the sour, and think of times when your journey has been difficult and you've been able to look back with pride. Maybe an adventure will help?",
+    "question": "Can you savor the sour notes? When have you looked back on a hard road with pride?"
   },
   "lutes-13": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "light",
     "keywords": [
       "confidence",
@@ -537,21 +585,23 @@
       "joy"
     ],
     "meaning": "Passion that has found its voice: warm, magnetic and generous with its joy.",
-    "counsel": "Play like the room is yours, because it is."
+    "counsel": "Play like the room is yours, because it is. Your enthusiasm inspires others to find their fortune.",
+    "question": "Where could you play like the room is yours, and whose spark could your enthusiasm light?"
   },
   "lutes-14": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "light",
     "keywords": [
       "leadership",
       "vision",
       "movement"
     ],
-    "meaning": "Leading by inspiration: a vision so clear that others pick up the tune and the overlords start to sweat.",
-    "counsel": "Lead with the song, and the crowd will sing."
+    "meaning": "Inspiration through action: there's a vision so clear that others pick up the tune and the overlords start to sweat. Be bold and be rewarded!",
+    "counsel": "Lead with the song, and the crowd will sing. Command with charisma, and remember - what would Reynard do?",
+    "question": "How could you lead with your song today? What would Reynard do?"
   },
   "quills-01": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "light",
     "keywords": [
       "truth",
@@ -559,21 +609,23 @@
       "a breakthrough idea"
     ],
     "meaning": "A sharp new idea, or a truth set loose: clarity that cuts through confusion. Pick it up and write something brave.",
-    "counsel": "Catch the quill; write it true."
+    "counsel": "Catch the quill; write it true. The hardest step is the first. No need for perfection - you can always change your mind!",
+    "question": "What truth are you ready to write, knowing you can always change your mind?"
   },
   "quills-02": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "mixed",
     "keywords": [
       "a hard choice",
       "stalemate",
       "weighing"
     ],
-    "meaning": "A choice you've been avoiding: two paths held in tense balance. Look honestly at both seals before you sign.",
-    "counsel": "Choose the star, even when the crown pays better."
+    "meaning": "A choice you've been avoiding: two paths held in tense balance. Look honestly at both seals before you sign. It's worth taking a deep breath before a decision.",
+    "counsel": "Choose the star, even when the crown pays better. Sometimes indecision is a decision, but in this case haste makes waste.",
+    "question": "Are you choosing the star or the crown? What might one deep breath before deciding reveal?"
   },
   "quills-03": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "shadow",
     "keywords": [
       "heartbreak",
@@ -581,10 +633,11 @@
       "grief"
     ],
     "meaning": "The sting of hurtful words or hard news. Let it hurt, let it out, and know that grief is love with nowhere to go.",
-    "counsel": "Let the tears write their part, then turn the page."
+    "counsel": "Let the tears write their part, then turn the page. Your journal is part of your journey. Your feelings inform, and you can choose how they fit into your story.",
+    "question": "What are your tears trying to write, and how will this chapter fit into your story?"
   },
   "quills-04": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "light",
     "keywords": [
       "rest",
@@ -592,10 +645,11 @@
       "peace"
     ],
     "meaning": "Rest and recovery: using your downtime to do the things that regenerate your spirit. Even inside the machine, you can tend a little garden.",
-    "counsel": "Steal back a moment; spend it on your spirit."
+    "counsel": "Steal back a moment; spend it on your spirit. You'll need to rest no matter what - you may as well choose when, rather than let your body choose for you through sickness.",
+    "question": "When will you choose to rest, before your body chooses for you?"
   },
   "quills-05": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "shadow",
     "keywords": [
       "hollow victory",
@@ -603,10 +657,11 @@
       "pyrrhic"
     ],
     "meaning": "A win that costs more than it's worth: arguments won by bullying, and the people who leave because of it. Is being right worth being alone?",
-    "counsel": "Lose the argument; keep the friend."
+    "counsel": "Lose the argument; keep the friend.",
+    "question": "Is being right worth losing the friend?"
   },
   "quills-06": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "light",
     "keywords": [
       "moving on",
@@ -614,7 +669,8 @@
       "leaving the rat race"
     ],
     "meaning": "Leaving the rat race: a transition toward calmer water, carrying your words and wits with you. The journey may be quiet, but it's going somewhere better.",
-    "counsel": "Row toward the star."
+    "counsel": "Remember, the rats in the race are scared - when you leave, it's a reminder of what they've invested, not that they're right.",
+    "question": "What calmer water are you rowing toward? If the rats in the race push back, can you hear it as their fear, not proof that they're right?"
   },
   "quills-07": {
     "source": "ryan",
@@ -625,7 +681,8 @@
       "trickery"
     ],
     "meaning": "Greed is not good. The Chaotic Good Guild knows that greed can be blinding, and as long as we're aware of our blind spots, we can navigate them. On the flip side, we need to be honest with ourselves about when we're the ones blinded by greed. Are you Reynard, or are you the Corporate Wolf?",
-    "counsel": "Ask yourself: Reynard, or the Wolf?"
+    "counsel": "Ask yourself: Reynard, or the Wolf?",
+    "question": "Where might greed be blinding you? Are you Reynard, or the Wolf?"
   },
   "quills-08": {
     "source": "ryan",
@@ -636,32 +693,35 @@
       "blind spots"
     ],
     "meaning": "The goal is pleasant, not perfect. How many times have we stopped ourselves before we've even begun because we were afraid of failure? You know who isn't afraid of failure? Lawful Evil. They push on, knowing that progress of any kind beats perfection. We need you to show up imperfectly, because that's what makes you unique and helps make the world a better place!",
-    "counsel": "Pleasant, not perfect."
+    "counsel": "Pleasant, not perfect.",
+    "question": "Where are you holding out for perfect, when pleasant would do?"
   },
   "quills-09": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "shadow",
     "keywords": [
       "anxiety",
       "worry",
       "uncertainty"
     ],
-    "meaning": "The night mind: worries that multiply in the dark. Most of them are louder than they are true. Write them down, then let morning have its say.",
-    "counsel": "Name the nightmare and it shrinks."
+    "meaning": "The night mind: worries that multiply in the dark. It's easy to forget what the light feels like when it's not around. The loudness of fear can distract you from the reality of it.",
+    "counsel": "Sometimes naming the nightmare shrinks it. When we know our greatest fears, it's easy to catastrophize.",
+    "question": "What is your nightmare's name, and does it look as large in the daylight?"
   },
   "quills-10": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "shadow",
     "keywords": [
       "finality",
       "rock bottom",
       "darkest before dawn"
     ],
-    "meaning": "The worst of it, and the end of it: burnout, overload, a thing that's over. The only way left is up, and the sun is already rising.",
-    "counsel": "It's over; let it be over."
+    "meaning": "The worst of it, and the end of it: rock bottom becomes a foundation to push off of on your way back up.",
+    "counsel": "It's over; let it be over. The Earth is the coldest just as the sun rises, and the sky darkest just before dawn.",
+    "question": "What's over, and are you ready to let it be over? What could you push off from on your way back up?"
   },
   "quills-11": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "light",
     "keywords": [
       "curiosity",
@@ -669,43 +729,47 @@
       "inquisitive"
     ],
     "meaning": "A mind waking up: curious, outspoken and full of questions. Every great writer started with crayon on a wall.",
-    "counsel": "Scribble first; refine later."
+    "counsel": "Scribble first; refine later. Let thoughts flow.",
+    "question": "What thoughts want to flow if you scribble first and refine later?"
   },
   "quills-12": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "light",
     "keywords": [
       "planning",
       "ambition",
       "spirited"
     ],
-    "meaning": "Turning ideas into plans: quick, ambitious and eager to draft the future. Measure twice; it's only pencil.",
-    "counsel": "Sketch it, then build it."
+    "meaning": "Turning ideas into plans: quick, ambitious and eager to draft the future. Don't forget to measure twice before cutting, no matter how enthusiastic you are.",
+    "counsel": "Sketch it, then build it. And remember - sometimes there is more than one way to be right.",
+    "question": "What are you sketching, and have you measured twice? Could there be more than one way to be right?"
   },
   "quills-13": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "light",
     "keywords": [
       "honesty",
       "clarity",
       "spreading the word"
     ],
-    "meaning": "Speaking clearly and spreading the word: honest, articulate and unafraid to say what needs saying.",
-    "counsel": "Say it plainly; post it publicly."
+    "meaning": "Speaking clearly and spreading the word: honest, and articulate. The journeyman knows that communication is both an art and a science.",
+    "counsel": "Concise without cutting too much - remember that spells are cast with words.",
+    "question": "What spells are you casting with your words, and are they clear without cutting too much?"
   },
   "quills-14": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "light",
     "keywords": [
       "wisdom",
       "fair judgment",
       "principles"
     ],
-    "meaning": "Wisdom with authority: fair judgment, clear principles, and words that hold a community together.",
-    "counsel": "Write rules that free people, not ones that cage them."
+    "meaning": "Wisdom with authority: fair judgment, clear principles, and words that hold a community together. Ethical and upright. They know how to navigate systems, and know that tearing down without a plan or alternative can be worse than what you've got right now.",
+    "counsel": "Write rules that free people, not ones that cage them. The pen is mightier than the sword, as cliche as that sounds.",
+    "question": "Do the rules you write free people, or cage them?"
   },
   "mirrors-01": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "light",
     "keywords": [
       "connection",
@@ -713,10 +777,11 @@
       "a full heart"
     ],
     "meaning": "An overflowing heart: new love, new compassion, or a fresh look at yourself with kind eyes.",
-    "counsel": "Look with love, starting with yourself."
+    "counsel": "Your cup is worth filling, and your mirror worth mending. Your reflection may look backwards, but it's a part of you!",
+    "question": "Is your cup worth filling and your mirror worth mending? How could you look at yourself with kind eyes?"
   },
   "mirrors-02": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "light",
     "keywords": [
       "projection",
@@ -724,10 +789,11 @@
       "recognition"
     ],
     "meaning": "What we see in each other: often we're drawn to qualities in others that are really parts of ourselves we haven't owned yet. Admire them, then claim them.",
-    "counsel": "What you admire in them lives in you."
+    "counsel": "What you admire in them lives in you, too. Beyond the ace, others are mirrors into ourselves as well. Don't forget to reflect their best back at them so they don't forget!",
+    "question": "What do you admire in others that lives in you, too? How could you reflect their best back to them?"
   },
   "mirrors-03": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "light",
     "keywords": [
       "friendship",
@@ -735,73 +801,80 @@
       "celebration"
     ],
     "meaning": "Delight in being exactly who you are, celebrated among friends who like you that way too.",
-    "counsel": "Be your own favorite company."
+    "counsel": "What is celebration without friends to share in the joy?",
+    "question": "Who shares in your joy, and how will you celebrate together?"
   },
   "mirrors-04": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "mixed",
     "keywords": [
       "mopey",
       "a distorted view",
       "missed gifts"
     ],
-    "meaning": "Discontent: fixating on the cracked reflection and missing what's being offered all around you.",
-    "counsel": "Turn from the crack and look at what's whole."
+    "meaning": "Discontent: fixating on the cracked reflection and missing what's being offered all around you. Losing sight of the bigger picture for a single detail.",
+    "counsel": "Turn from the crack and look at what's whole. Pouting doesn't fix and leaves you feeling dissatisfied.",
+    "question": "What whole thing are you missing while you stare at the crack?"
   },
   "mirrors-05": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "shadow",
     "keywords": [
       "grief",
       "regret",
       "pessimistic"
     ],
-    "meaning": "Loss and regret. Grieve what's broken, then turn around: something still stands, and the way home is still there.",
-    "counsel": "Mourn the three, then turn to the two."
+    "meaning": "Loss and regret. Grieve what's broken, then turn around: something still stands, and the way home is still there. If you've learned your lesson, there's no point in beating yourself up for what you can't change.",
+    "counsel": "Mourn the three, then turn to the two. You're allowed to be disappointed, and it's human to not know what you've got until it's gone.",
+    "question": "What still stands behind you? Can you forgive yourself for what you couldn't change?"
   },
   "mirrors-06": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "light",
     "keywords": [
       "supportive",
       "fond memory",
       "simple gifts"
     ],
-    "meaning": "Innocent generosity and fond memory: gifts given simply, and the childhood joys that still shape us.",
-    "counsel": "Give the gift someone once gave you."
+    "meaning": "Innocent generosity and fond memory: gifts given simply, and the childhood joys that still shape us. Nostalgia can bring comfort and lightness when all feels heavy.",
+    "counsel": "Hold space and find light, even if - ESPECIALLY if - it feels childish.",
+    "question": "Where could you find light in something simple, even if, especially if, it feels childish?"
   },
   "mirrors-07": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "mixed",
     "keywords": [
       "glamour",
       "choices",
       "distraction"
     ],
-    "meaning": "Too many shiny options, most of them distractions. Somewhere among them, half-hidden by cloud, is the one that's actually yours.",
-    "counsel": "Follow the star, not the shine."
+    "meaning": "Is it ADHD, or something deeper? Illusions are a dime a dozen, and capitalism gives you what you want - not what you need. You're allowed to want what you will... but did you make the choice?",
+    "counsel": "Weigh your options. If you're still enough, you'll feel the tug towards your truth.",
+    "question": "Of all the shiny options, which one tugs toward your truth? Did you make the choice, or was it made for you?"
   },
   "mirrors-08": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "mixed",
     "keywords": [
       "heeding the call",
       "searching",
       "deeper meaning"
     ],
-    "meaning": "Walking away from what no longer fulfills you, even if it looks fine from the outside, to search for something deeper.",
-    "counsel": "Leave the mirrors; find the mountain."
+    "meaning": "Walking away from what no longer fulfills you, even if it looks fine from the outside, to search for something deeper. The external trappings become just that - a trap - if you feel emotionally impoverished.",
+    "counsel": "The mirrors will be waiting if it's meant to be. Now that you've had time to reflect, retreat to integrate.",
+    "question": "What looks fine from the outside but leaves you empty inside? What deeper thing are you searching for?"
   },
   "mirrors-09": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "light",
     "keywords": [
       "wishes",
       "contentment",
       "cloud 9"
     ],
-    "meaning": "The wish card: contentment, satisfaction, and a dream within reach. Be specific about what you wish for.",
-    "counsel": "Make the wish, then make the plan."
+    "meaning": "The wish card: contentment, satisfaction, and a dream within reach. Be specific about what you wish for. Remember, genies can be tricky.",
+    "counsel": "Be careful what you wish for... you might just get it! How lucky!",
+    "question": "What are you wishing for, and are you being specific enough for a tricky genie?"
   },
   "mirrors-10": {
     "source": "ryan",
@@ -812,10 +885,11 @@
       "peace"
     ],
     "meaning": "Mira looks into the mirror and sees a happy hamlet, even though she stands in the Lawful Evil city. Things will end well, and it shows the importance of mindset: focusing on what you want in order to manifest it.",
-    "counsel": "See the hamlet, then help build it."
+    "counsel": "Peace and comfort can be built within, and taken with you wherever you go no matter how difficult the circumstances.",
+    "question": "What peace could you build within yourself, to carry wherever you go?"
   },
   "mirrors-11": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "light",
     "keywords": [
       "open heart",
@@ -823,21 +897,23 @@
       "creativity"
     ],
     "meaning": "A heart opening to magic: a new emotional lesson, intuition stirring, a gift you'll grow into.",
-    "counsel": "Try on the robes; they'll fit in time."
+    "counsel": "Be receptive to your gifts and strengths.",
+    "question": "What gifts and strengths are you ready to receive?"
   },
   "mirrors-12": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "light",
     "keywords": [
       "creative inspiration",
       "heartfelt",
       "artist"
     ],
-    "meaning": "Enthusiasm outpacing skill: feelings and magic still wobbly, and friends patient enough to laugh along while you learn.",
-    "counsel": "Practice your magic; laugh at the mishaps."
+    "meaning": "Enthusiasm outpacing skill. The wrong environment is a reflection of just that - not your worth or ability. Keep at it, the discomfort is a sign of growth.",
+    "counsel": "Practice your magic and laugh at the mishaps. Your sensitivity feels like a weakness, but with enough practice it becomes the gift.",
+    "question": "Could the discomfort be a sign of growth, and your sensitivity the gift?"
   },
   "mirrors-13": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "light",
     "keywords": [
       "emotional wisdom",
@@ -845,10 +921,11 @@
       "compassion"
     ],
     "meaning": "The calm to look at hard things clearly and still hold onto compassion.",
-    "counsel": "Look at the hard thing with a soft heart."
+    "counsel": "Look at the hard thing with a soft heart. When someone is struggling, recognize it's a reflection of where they are, not your worth.",
+    "question": "When someone is struggling, can you meet the hard thing with a soft heart and remember it isn't about your worth?"
   },
   "mirrors-14": {
-    "source": "draft",
+    "source": "ryan",
     "tone": "light",
     "keywords": [
       "emotional balance",
@@ -856,6 +933,7 @@
       "compassionate leader"
     ],
     "meaning": "Steady, kind and wise in matters of the heart: someone who can comfort the crying ones and show them the way home.",
-    "counsel": "Hold the crying ones; show them the village."
+    "counsel": "Your presence is a present - grounded and safe. Your sensitivity helps you understand, rather than harm. Share it with those who are suffering.",
+    "question": "How could your grounded presence be a present for someone who is suffering?"
   }
 }

@@ -301,3 +301,11 @@ button.back-btn { border: 0; cursor: pointer; }
 
 /* Sections the page hides stay hidden, whatever their layout rules say */
 [hidden] { display: none !important; }
+
+/* reversed cards: the face lands upside down */
+.sp-card.reversed .sp-front svg, .sp-lightcard.reversed svg { transform: rotate(180deg); }
+.sp-rev { display: inline-block; margin: 0 0 6px; padding: 1px 10px; border-radius: 999px; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; background: #0d0418; border: 1px solid #c9b8ff; color: #e5dcff; }
+.sp-what .sp-rev { margin-left: 10px; vertical-align: middle; }
+.sp-revnote { margin: 0 0 10px; font-size: 15px; line-height: 1.45; color: #e5dcff; border-left: 3px solid #c9b8ff; padding-left: 10px; }
+.sp-sumlede { margin: -6px 0 14px; font-style: italic; color: var(--muted); }
+.sp-sumtext p:last-child { font-style: italic; color: #fff3a0; border-top: 1px solid rgba(233,215,1,.35); padding-top: 12px; }

@@ -25,8 +25,8 @@ def build(p):
     for c in meta:
         m = MEAN[c["id"]]
         cards.append({"id": c["id"], "name": c["name"], "suit": c["suit"], "rank": c["rank"], "scene": c["scene"],
-                      "keywords": m["keywords"], "meaning": m["meaning"], "counsel": m["counsel"], "tone": m["tone"]})
-    data = json.dumps({k: SPREAD[k] for k in ("positions", "card_width", "prompts", "suits", "numbers")} | {"cards": cards})
+                      "keywords": m["keywords"], "meaning": m["meaning"], "question": m["question"], "tone": m["tone"]})
+    data = json.dumps({k: SPREAD[k] for k in ("positions", "card_width", "prompts", "suits", "numbers", "reflection", "reversed")} | {"cards": cards})
     pos = SPREAD["positions"]
     outer = pos[:5]
     segs = "".join(f'<line class="sp-seg" pathLength="1" x1="{a["x"]}" y1="{a["y"]}" x2="{b["x"]}" y2="{b["y"]}"/>'
@@ -63,6 +63,7 @@ def build(p):
 
   <section class="sp-summary" id="spSummary" hidden aria-labelledby="spSumTitle">
     <h2 class="sp-h" id="spSumTitle">Mira's reading</h2>
+    <p class="sp-sumlede">A story for reflection, not a fortune.</p>
     <div class="sp-sumtext" id="spSummaryText"></div>
     <details class="sp-how"><summary>How Mira read this</summary><ul id="spNotes"></ul>
       <p class="sp-howend">These are the threads Mira pulled this time. With practice you'll find your own.</p></details>
@@ -77,10 +78,12 @@ def build(p):
       <div class="sp-lighttext">
         <p class="sp-pos" id="spLightPos"></p>
         <h3 id="spLightTitle"></h3>
+        <p class="sp-rev" id="spLightTag" hidden>Reversed</p>
         <div id="spLightKw"></div>
         <p class="sp-scene" id="spLightScene"></p>
         <p id="spLightMeaning"></p>
-        <p class="sp-counsel"><b>Counsel: </b><span id="spLightCounsel"></span></p>
+        <p class="sp-revnote" id="spLightRev" hidden></p>
+        <p class="sp-counsel"><b>Reflect: </b><span id="spLightCounsel"></span></p>
         <button type="button" class="sp-ghost" id="spLightClose">Close</button>
       </div>
     </div>
@@ -109,7 +112,7 @@ def write_review_doc():
     mine = sum(1 for c in T if M[c["id"]]["source"] == "ryan")
     out = ["# Card meanings", "",
            f"{mine} meanings come from Ryan's Tarot Deck Notes (marked **Ryan**); the other {len(T) - mine} are drafts by Claude "
-           "(marked **Draft**) to rewrite in Ryan's own words. Keywords and counsel are drafts on every card.",
+           "(marked **Draft**) to rewrite in Ryan's own words. The reflection questions are Claude's drafts from Ryan's counsel.",
            "", "Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the reading summary.", ""]
     cur = None
     for c in T:
@@ -118,5 +121,5 @@ def write_review_doc():
         m = M[c["id"]]
         out += [f"### {c['name']} ({'Ryan' if m['source'] == 'ryan' else 'Draft'}, {m['tone']})", "",
                 f"*Scene:* {c['scene']}", "", f"*Keywords:* {', '.join(m['keywords'])}", "",
-                f"*Meaning:* {m['meaning']}", "", f"*Counsel:* {m['counsel']}", ""]
+                f"*Meaning:* {m['meaning']}", "", f"*Counsel:* {m['counsel']}", "", f"*Reflect:* {m['question']}", ""]
     open(os.path.join(B.ROOT, "docs", "card-meanings.md"), "w").write("\n".join(out))

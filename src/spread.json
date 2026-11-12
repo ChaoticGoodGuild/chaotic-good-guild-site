@@ -57,7 +57,7 @@
     "shuffling": "Touch the deck again when the cards feel ready.",
     "dealing": "The star takes shape.",
     "dealt": "Turn each card to see what it holds.",
-    "done": "The star is read. Mira's reading waits below."
+    "done": "The star is turned. Mira's reflection waits below."
   },
   "suits": {
     "galleons": {
@@ -130,5 +130,7 @@
       "Tens",
       "endings and completion"
     ]
-  }
+  },
+  "reflection": "Mira's mirror reflects; it doesn't predict. This reading isn't a fortune, just a story to think with. Notice what sticks out and what feels true for your life right now, and let the rest drift by. And if you don't like what you see, remember: you always have the power to change it.",
+  "reversed": "Mira doesn't read a reversed card as its opposite. She reads its energy as out of balance: too much of it in your life right now, or not enough."
 }

@@ -10,13 +10,13 @@ assert.strictEqual(cards.length, 78);
 for (const c of cards) {
   assert.ok(M[c.id], "missing meaning for " + c.id);
   assert.strictEqual(c.keywords.length, 3, c.id);
-  assert.ok(c.meaning.length > 40 && c.counsel.length > 8, c.id);
+  assert.ok(c.meaning.length > 40 && c.question.trim().endsWith("?"), c.id);
   assert.ok(["light", "mixed", "shadow"].includes(c.tone), c.id);
 }
 const P = D.positions;
 // ids are given star, lute, quill, mirror, galleon, heart; placed by key, so deal order can change
 const KEYS = ["star", "lute", "quill", "mirror", "galleon", "heart"];
-const read = ids => R.summarize(P.map(p => byId[ids[KEYS.indexOf(p.key)]]), P, D);
+const read = (ids, rev = []) => R.summarize(P.map(p => { const id = ids[KEYS.indexOf(p.key)]; return Object.assign({}, byId[id], { reversed: rev.includes(id) }); }), P, D);
 const all = r => r.paras.join("\n");
 
 // positions: star, lute, quill, mirror, galleon, heart
@@ -37,12 +37,23 @@ r = read(["lutes-12", "mirrors-11", "galleons-13", "quills-14", "lutes-02", "mir
 assert.ok(all(r).includes("No Major Arcana"));
 assert.ok(all(r).includes("rats of the Guild"));
 assert.ok(all(r).includes("Two Twos"));
+console.log(all(r), "\n===");
+
+// reversed cards: too much, or not enough
+r = read(["major-17", "lutes-03", "quills-04", "mirrors-02", "galleons-08", "major-19"], ["major-19", "lutes-03"]);
+assert.ok(all(r).includes("The Sun, reversed"));
+assert.ok(all(r).includes("too much of this in your life right now, or not enough"));
+assert.ok(all(r).includes("(foresight, reversed)"));
+assert.ok(all(r).includes("Three of Lutes came reversed. Is there too much of its energy"));
+assert.ok(all(r).includes("too much of the energy of The Sun right now"));
+assert.ok(all(r).includes("Questions to carry"));
+assert.ok(all(r).includes("it doesn't predict"));
 console.log(all(r));
 
 // random readings never throw and always produce 4 paragraphs or fewer, at least 3
 for (let n = 0; n < 2000; n++) {
   const ids = cards.map(c => c.id).sort(() => Math.random() - .5).slice(0, 6);
-  const x = read(ids);
-  assert.ok(x.paras.length >= 3 && x.paras.length <= 4 && !all(x).includes("undefined"));
+  const x = read(ids, ids.filter(() => Math.random() < .5));
+  assert.ok(x.paras.length >= 4 && x.paras.length <= 5 && !all(x).includes("undefined") && x.paras[x.paras.length - 1] === D.reflection);
 }
 console.log("\nall spread tests passed");

@@ -2,7 +2,8 @@
    Everything happens in the visitor's browser; nothing is sent or stored. */
 
 // ---------- The reading engine (pure functions, tested by tools/test_spread.js) ----------
-// picks[k] is the card in positions[k]. Cards carry: id, name, suit, rank, keywords, meaning, counsel, tone.
+// picks[k] is the card in positions[k]. Cards carry: id, name, suit, rank, keywords, meaning, question, tone,
+// and reversed (true when it landed upside down: Mira reads that as too much of its energy, or not enough).
 const CGGRead = {
   list(names) {
     if (names.length < 2) return names.join("");
@@ -18,7 +19,9 @@ const CGGRead = {
     const kw = c => c.keywords;
 
     // 1. The heart anchors the reading
-    paras.push(`At the heart of this reading sits ${heart.name}: ${CGGRead.list(kw(heart))}. This is where you're standing, and every other card bends around it.`);
+    paras.push(heart.reversed
+      ? `At the heart of this reading sits ${heart.name}, reversed: ${CGGRead.list(kw(heart))}, out of balance. There may be too much of this in your life right now, or not enough. This is where you're standing, and every other card bends around it.`
+      : `At the heart of this reading sits ${heart.name}: ${CGGRead.list(kw(heart))}. This is where you're standing, and every other card bends around it.`);
     notes.push("The Heart sits in the centre of the star, so Mira reads it first. Every other card is read in relation to it.");
 
     // 2. The five points
@@ -26,7 +29,7 @@ const CGGRead = {
     const pts = positions.filter(p => p.key !== "heart").map(p => {
       const c = picks[positions.indexOf(p)];
       const q = p.question.replace(/[.?!]$/, "");
-      return `${q.charAt(0).toLowerCase() + q.slice(1)} is ${c.name} (${kw(c)[0]})`;
+      return `${q.charAt(0).toLowerCase() + q.slice(1)} is ${c.name} (${kw(c)[0]}${c.reversed ? ", reversed" : ""})`;
     });
     paras.push(`Around it, the points of the star: ${pts.join("; ")}.`);
 
@@ -81,8 +84,19 @@ const CGGRead = {
       notes.push(`Matching numbers echo. ${plural} speak of ${theme}.`);
     });
 
+    const rev = picks.filter(c => c.reversed);
+    const revPts = rev.filter(c => c !== heart);   // the Heart already spoke for itself
+    if (rev.length >= 4) {
+      pat.push(`${rev.length === 6 ? "Every card" : "Most of the star"} came reversed, so this reading is about balance: where something has grown too loud, and where something is missing.`);
+    } else if (revPts.length) {
+      pat.push(revPts.length === 1
+        ? `${revPts[0].name} came reversed. Is there too much of its energy in your life right now, or not enough?`
+        : `${CGGRead.list(revPts.map(c => c.name))} came reversed. For each, ask: is there too much of its energy in your life right now, or not enough?`);
+    }
+    if (rev.length) notes.push(D.reversed + " Only you can tell which.");
+
     const shadow = picks.filter(c => c.tone === "shadow").length;
-    const light = picks.filter(c => c.tone === "light").length;
+    const light = picks.filter(c => c.tone === "light" && !c.reversed).length;
     if (shadow >= 3) {
       pat.push("The LEOs cast a long shadow over this spread. Name what's weighing on you before you try to fight it.");
       notes.push("Several heavy cards together show a hard season. That's information, not a sentence.");
@@ -92,10 +106,11 @@ const CGGRead = {
     }
     if (pat.length) paras.push(pat.join(" "));
 
-    // 4. Counsel
-    paras.push(star === heart ? `Mira's counsel: ${heart.counsel}` :
-      `Mira's counsel, from the heart: ${heart.counsel} And from the Star above it: ${star.counsel}`);
-    notes.push("Close with counsel: something to carry into the days ahead. Mira takes it from the Heart and the Star.");
+    // 4. Questions to carry, then the mirror
+    const ask = c => c.question + (c.reversed ? ` And since it came reversed: is there too much of the energy of ${c.name} right now, or not enough?` : "");
+    paras.push(`Questions to carry, from the Heart: ${ask(heart)} And from the Star above it: ${ask(star)}`);
+    notes.push("Mira closes with questions, not answers. She takes them from the Heart and the Star; the answers are yours.");
+    paras.push(D.reflection);
     return { paras, notes };
   }
 };
@@ -192,7 +207,7 @@ if (typeof module !== "undefined") module.exports = CGGRead;
   async function deal() {
     state = "dealing"; say("dealing");
     deck.setAttribute("aria-label", "The deck");
-    const picks = order.slice(0, POS.length).map(i => D.cards[i]);
+    const picks = order.slice(0, POS.length).map(i => Object.assign({}, D.cards[i], { reversed: rand(2) === 1 }));
     picks.forEach(c => loadCard(c.id));
     dealt = [];
     const lines = stage.querySelectorAll(".sp-seg");
@@ -229,6 +244,7 @@ if (typeof module !== "undefined") module.exports = CGGRead;
     tip.appendChild(el("p", "sp-tippos", (k + 1) + ". " + d.pos.title + ": " + d.pos.question));
     if (d.turned) {
       tip.appendChild(el("p", "sp-tipname", d.card.name));
+      if (d.card.reversed) tip.appendChild(el("p", "sp-rev", "Reversed"));
       tip.appendChild(chips(d.card.keywords));
       tip.appendChild(el("p", "sp-tipscene", d.card.scene));
       tip.appendChild(el("p", "sp-tiphint", touch ? "Tap again to look closer." : "Click to look closer."));
@@ -263,18 +279,24 @@ if (typeof module !== "undefined") module.exports = CGGRead;
     front.innerHTML = svg || "";
     if (!svg) front.appendChild(el("span", "sp-fallback", d.card.name));
     d.el.classList.add("flipped");
-    d.el.setAttribute("aria-label", d.pos.title + ": " + d.card.name + ". Open it larger.");
+    d.el.classList.toggle("reversed", !!d.card.reversed);
+    d.el.setAttribute("aria-label", d.pos.title + ": " + d.card.name + (d.card.reversed ? ", reversed" : "") + ". Open it larger.");
     const li = list.children[k];
     li.classList.add("turned");
     const what = li.querySelector(".sp-what");
     what.innerHTML = "";
     const nm = el("button", "sp-name", d.card.name); nm.type = "button";
     nm.addEventListener("click", () => openLight(k));
-    what.append(nm, chips(d.card.keywords), el("p", "sp-meaning", d.card.meaning));
-    const cn = el("p", "sp-counsel"); cn.append(el("b", null, "Counsel: "), document.createTextNode(d.card.counsel));
-    what.appendChild(cn);
+    what.appendChild(nm);
+    if (d.card.reversed) what.appendChild(el("p", "sp-rev", "Reversed"));
+    what.append(chips(d.card.keywords), el("p", "sp-meaning", d.card.meaning));
+    if (d.card.reversed) what.appendChild(el("p", "sp-revnote", revNote(d.card)));
+    what.appendChild(reflect(d.card.question));
     if (dealt.every(x => x.turned)) finishReading();
   }
+
+  function revNote(c) { return "Reversed, so its energy is out of balance. Think of " + CGGRead.list(c.keywords) + ": is there too much of that in your life right now, or not enough?"; }
+  function reflect(q) { const p = el("p", "sp-counsel"); p.append(el("b", null, "Reflect: "), document.createTextNode(q)); return p; }
 
   function onCard(k) {
     if (state !== "dealt") return;
@@ -320,12 +342,15 @@ if (typeof module !== "undefined") module.exports = CGGRead;
     const d = dealt[k];
     lastFocus = document.activeElement;
     $("spLightCard").innerHTML = d.el.querySelector(".sp-front").innerHTML;
+    $("spLightCard").classList.toggle("reversed", !!d.card.reversed);
+    const rv = $("spLightRev"); rv.hidden = !d.card.reversed; rv.textContent = d.card.reversed ? revNote(d.card) : "";
     $("spLightPos").textContent = (k + 1) + ". " + d.pos.title + ": " + d.pos.question;
     $("spLightTitle").textContent = d.card.name;
+    $("spLightTag").hidden = !d.card.reversed;
     const kw = $("spLightKw"); kw.innerHTML = ""; kw.appendChild(chips(d.card.keywords));
     $("spLightScene").textContent = d.card.scene;
     $("spLightMeaning").textContent = d.card.meaning;
-    $("spLightCounsel").textContent = d.card.counsel;
+    $("spLightCounsel").textContent = d.card.question;
     light.hidden = false;
     $("spLightClose").focus();
   }
