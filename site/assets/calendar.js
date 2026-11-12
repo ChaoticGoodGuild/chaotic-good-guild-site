@@ -236,11 +236,9 @@
     const facts = el("dl", "cs-facts");
     const fact = (k, v) => { facts.append(el("dt", null, k), el("dd", null, v)); };
     const E = C.elements[s.element];
-    fact("Element", s.element[0].toUpperCase() + s.element.slice(1) + ", the suit of " + E.suit + ": " + E.line);
+    fact("Element", s.element[0].toUpperCase() + s.element.slice(1) + ": " + E.line);
     fact("Mode", C.modes[s.mode]);
     fact("Ruled by", s.ruler);
-    const dd = el("dd"); const a = el("a", null, s.card.name); a.href = "/tarot/"; dd.appendChild(a);
-    facts.append(el("dt", null, "Its card"), dd);
     fact("Growing edge", s.edge);
     box.appendChild(facts);
     box.appendChild(el("p", "cdy-moonline", s.moon));

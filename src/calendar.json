@@ -294,10 +294,6 @@
       "element": "fire",
       "mode": "cardinal",
       "ruler": "Mars",
-      "card": {
-        "id": "major-04",
-        "name": "The President"
-      },
       "text": "Aries charges in first, lute already playing. Bold, honest and quick to defend the underdog, Aries is the courage that gets the whole Guild moving.",
       "gifts": [
         "courage",
@@ -314,10 +310,6 @@
       "element": "earth",
       "mode": "fixed",
       "ruler": "Venus",
-      "card": {
-        "id": "major-05",
-        "name": "The Hierophant"
-      },
       "text": "Taurus plants, tends and waits, and the harvest always comes. Loyal, sensual and steady as old roots, Taurus reminds the Guild that good things grow at their own pace.",
       "gifts": [
         "patience",
@@ -334,10 +326,6 @@
       "element": "air",
       "mode": "mutable",
       "ruler": "Mercury",
-      "card": {
-        "id": "major-06",
-        "name": "The Partners"
-      },
       "text": "Gemini carries a quill in each hand and a question in every pocket. Curious, witty and endlessly connecting, Gemini spreads the Guild's word faster than the LEOs can tear down the posters.",
       "gifts": [
         "curiosity",
@@ -354,10 +342,6 @@
       "element": "water",
       "mode": "cardinal",
       "ruler": "the Moon",
-      "card": {
-        "id": "major-07",
-        "name": "The Chariot"
-      },
       "text": "Cancer builds the shelter and keeps the soup warm. Tender on the inside and fierce about family, found or otherwise, Cancer makes sure the Guild always has a home to come back to.",
       "gifts": [
         "care",
@@ -374,10 +358,6 @@
       "element": "fire",
       "mode": "fixed",
       "ruler": "the Sun",
-      "card": {
-        "id": "major-08",
-        "name": "Strength"
-      },
       "text": "Not every lion is a LEO. The true Leo shines so others can see by the light: generous, playful and warm-hearted, a natural performer who leads by lifting the whole stage.",
       "gifts": [
         "generosity",
@@ -394,10 +374,6 @@
       "element": "earth",
       "mode": "mutable",
       "ruler": "Mercury",
-      "card": {
-        "id": "major-09",
-        "name": "The Hermit"
-      },
       "text": "Virgo notices the cracked beam before it falls and fixes it without a fuss. Thoughtful, skilled and quietly devoted, Virgo is the Guild's healer, mender and keeper of good habits.",
       "gifts": [
         "skill",
@@ -414,10 +390,6 @@
       "element": "air",
       "mode": "cardinal",
       "ruler": "Venus",
-      "card": {
-        "id": "major-11",
-        "name": "Justice"
-      },
       "text": "Libra weighs every side and finds the trade where everyone wins. Graceful, fair and allergic to injustice, Libra is the Guild's peacemaker, and its sharpest eye for beauty.",
       "gifts": [
         "fairness",
@@ -434,10 +406,6 @@
       "element": "water",
       "mode": "fixed",
       "ruler": "Pluto and Mars",
-      "card": {
-        "id": "major-13",
-        "name": "Death"
-      },
       "text": "Scorpio dives where others won't and comes back with treasure. Intense, loyal and unafraid of the dark, Scorpio turns endings into compost and secrets into strength.",
       "gifts": [
         "depth",
@@ -454,10 +422,6 @@
       "element": "fire",
       "mode": "mutable",
       "ruler": "Jupiter",
-      "card": {
-        "id": "major-14",
-        "name": "Temperance"
-      },
       "text": "Sagittarius aims an arrow at the horizon and laughs all the way there. Adventurous, honest and hungry for meaning, Sagittarius brings home stories that make the whole village's world bigger.",
       "gifts": [
         "optimism",
@@ -474,10 +438,6 @@
       "element": "earth",
       "mode": "cardinal",
       "ruler": "Saturn",
-      "card": {
-        "id": "major-04",
-        "name": "The President"
-      },
       "text": "Capricorn climbs the mountain one sure step at a time, then sends a rope back down. Patient, disciplined and quietly hilarious, Capricorn knows that real leadership is service: steady hands that build what lasts, for everyone.",
       "gifts": [
         "discipline",
@@ -494,10 +454,6 @@
       "element": "air",
       "mode": "fixed",
       "ruler": "Uranus and Saturn",
-      "card": {
-        "id": "major-17",
-        "name": "The Star"
-      },
       "text": "Aquarius pours out the water of new ideas for everyone to drink. Inventive, independent and devoted to the common good, Aquarius dreams up the Guild of tomorrow and invites everyone in.",
       "gifts": [
         "vision",
@@ -514,10 +470,6 @@
       "element": "water",
       "mode": "mutable",
       "ruler": "Neptune and Jupiter",
-      "card": {
-        "id": "major-18",
-        "name": "The Moon"
-      },
       "text": "Pisces swims between worlds, carrying dreams from one to the other. Compassionate, imaginative and gently magical, Pisces feels what others feel and paints it into something beautiful.",
       "gifts": [
         "compassion",
@@ -530,19 +482,15 @@
   ],
   "elements": {
     "fire": {
-      "suit": "Lutes",
       "line": "passion, courage and action"
     },
     "earth": {
-      "suit": "Galleons",
       "line": "craft, resources and the work of the hands"
     },
     "air": {
-      "suit": "Quills",
       "line": "thoughts, words and ideas"
     },
     "water": {
-      "suit": "Mirrors",
       "line": "feelings, intuition and relationships"
     }
   },
