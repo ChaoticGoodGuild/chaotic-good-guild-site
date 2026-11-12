@@ -570,7 +570,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Meaning:* A new spark passed to someone ready to catch it: curiosity, eagerness, and the first lesson in courage.
 
-*Counsel:* Take the lute; you'll learn by playing.  Some lessons are didactic, but this one is experiential.
+*Counsel:* Take the lute; you'll learn by playing. Some lessons are didactic, but this one is experiential.
 
 *Reflect:* What are you ready to learn by playing, rather than by reading about it?
 
@@ -860,7 +860,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Keywords:* glamour, choices, distraction
 
-*Meaning:* Is it ADHD, or something deeper? Illusions are a dime a dozen, and capitalism gives you what you want - not what you need. You're allowed to want what you will... but did you make the choice?
+*Meaning:* So many options - should you go deeper? Illusions are a dime a dozen, and capitalism gives you what you want - not what you need. You're allowed to want what you will... but did you make the choice?
 
 *Counsel:* Weigh your options. If you're still enough, you'll feel the tug towards your truth.
 
