@@ -1,241 +1,861 @@
 {
- "_about": "Card meanings for the Chaotic Good Guild tarot. source 'ryan' = meaning taken from Ryan's Tarot Deck Notes (lightly tidied); 'draft' = written by Claude for Ryan to review and rewrite in his own words. tone: light, mixed or shadow (used by the reading summary).",
- "major-00": {"source": "draft", "tone": "light", "keywords": ["beginnings", "courage", "the open road"],
-  "meaning": "The Fool is the first step of every journey: leaving what's safe to go make the world a little better, before you feel ready. Fresh feet, full heart, and very little in the sack but hope.",
-  "counsel": "Pack light, step lively, and let the leaving be the lesson."},
- "major-01": {"source": "draft", "tone": "light", "keywords": ["skill", "resourcefulness", "making magic happen"],
-  "meaning": "Every tool of the Guild sits on one table, and you already hold what you need. Magic is mystical and mechanical: talent, tools and timing, turned toward something worth doing.",
-  "counsel": "Gather your gifts and get going."},
- "major-02": {"source": "draft", "tone": "light", "keywords": ["intuition", "mystery", "quiet knowing"],
-  "meaning": "The High Priestess asks you to listen beneath the noise. Some answers can't be argued into being; they surface when you get still enough to see your own reflection.",
-  "counsel": "Hush the hustle and hear the hunch."},
- "major-03": {"source": "ryan", "tone": "light", "keywords": ["nurture", "abundance", "everyone eats"],
-  "meaning": "She cultivates her garden, so that each vegetable has its space and contributes to the well-being of the others. None are better or worse, as each serves an important purpose. She nurtures each one with grace and tenderness so that everybody can eat.",
-  "counsel": "Tend what's growing, and make room for every row."},
- "major-04": {"source": "ryan", "tone": "light", "keywords": ["service", "rule by the people", "stepping up"],
-  "meaning": "Chaotic Good believes in rule by the people. When we cede authority to kings, we make others responsible for our well-being. It makes things simpler, but at what cost? Different times and a changing world require different skills and perspectives. The President presides: not above or below, just serving a specific purpose at a specific time. What job is most important for you right now, and how can you step up to be the best person for it?",
-  "counsel": "Step up, serve well, and step aside when the season changes."},
- "major-05": {"source": "ryan", "tone": "light", "keywords": ["natural order", "learning", "roots"],
-  "meaning": "Look to nature to decode the mysteries of the world and give context to our society and what we're doing. There is a natural order we must accept and acknowledge before we can move forward in changing our society.",
-  "counsel": "Learn the old roots before you plant new rows."},
- "major-06": {"source": "ryan", "tone": "light", "keywords": ["connection", "showing up", "asking for help"],
-  "meaning": "Others can help us through dark times, no matter how difficult. In the pits of despair, it's important that we show up for others, or make the choice to reach out even when it feels hopeless. We can choose to show up for others, or to be kind to ourselves and reach out when we need it.",
-  "counsel": "Reach out, or reach back; nobody walks the dark alone."},
- "major-07": {"source": "draft", "tone": "light", "keywords": ["discipline", "focus", "willpower"],
-  "meaning": "The Chariot is willpower with aim: using discipline to move toward what you want, and walking past everything built to pull you off track. The games will keep blinking. Let them.",
-  "counsel": "Mind the goal, not the glitter."},
- "major-08": {"source": "ryan", "tone": "light", "keywords": ["inspiration", "gentle power", "work as play"],
-  "meaning": "Inspiration, not coercion. Strength is about uplifting and inspiring others to their potential. Strength recognizes that when we choose to look at our work as play, we become inspired instead of tired.",
-  "counsel": "Lift others and the load gets lighter."},
- "major-09": {"source": "ryan", "tone": "light", "keywords": ["reflection", "solitude", "principles in practice"],
-  "meaning": "Life is a journey of exploring and reflecting. We go into the world to learn and apply our wisdom, but sometimes we must retreat to pause, reflect on our lessons and integrate our experiences. The Hermit asks us to reflect on our guiding principles of kindness: intention is important, but without application we are living in a fantasy.",
-  "counsel": "Step back, light the lantern, then step back in."},
- "major-10": {"source": "ryan", "tone": "mixed", "keywords": ["disruption", "opportunity", "turning tides"],
-  "meaning": "Instead of surrendering to fate, Chaos! celebrates how disruption creates opportunity. It's the wild card that cracks open stuck systems. It reminds you that even when everything's spinning, you are not powerless; in fact, hope, kindness and mischief can turn the tide.",
-  "counsel": "When the world wobbles, wobble it toward kindness."},
- "major-11": {"source": "draft", "tone": "light", "keywords": ["fairness", "accountability", "true weight"],
-  "meaning": "Justice weighs what truly matters: actions and their consequences, measured honestly. It asks whether you've been fair to others and to yourself, and promises that balance comes back around.",
-  "counsel": "Weigh what matters, not what glitters."},
- "major-12": {"source": "ryan", "tone": "mixed", "keywords": ["pause", "letting go", "new perspective"],
-  "meaning": "Sometimes we get trapped, but if we're creative enough, we can always escape. We may not like what we have to do, and sometimes we need to lighten our load to move forward, even if we like our loot. Or sometimes our best bet is to wait it out: you never know when a friend might show up to help.",
-  "counsel": "Let go of the loot to get loose."},
- "major-13": {"source": "ryan", "tone": "mixed", "keywords": ["endings", "transformation", "crossing over"],
-  "meaning": "Death. Fate. The end. Are you someone who embraces the end as an escape, or tries to escape an inevitable end? Reynard flees where the Badger enters: an ending for them both.",
-  "counsel": "Let the door close so the road can open."},
- "major-14": {"source": "draft", "tone": "light", "keywords": ["balance", "blending", "patience"],
-  "meaning": "Temperance is the art of the right mix: not too much, not too little, and patient enough to let the brew become itself. Opposites, combined with care, make better magic than either alone.",
-  "counsel": "Stir slowly; the best brews take time."},
- "major-15": {"source": "ryan", "tone": "shadow", "keywords": ["temptation", "selling out", "greed's trap"],
-  "meaning": "The pile of coins is tempting. Look how happy the LEOs look, yet they'd turn on each other in a heartbeat the moment they could make a quick buck. They can't trust anybody, because they can't be trusted. Are you selling out your community and friends?",
-  "counsel": "No pile of coins is worth your people."},
- "major-16": {"source": "ryan", "tone": "mixed", "keywords": ["upheaval", "rigidity broken", "sudden change"],
-  "meaning": "When we become too rigid, we begin to function like the LEOs. Be careful: the Chaotic Good Guild is likely to come by and shake things up!",
-  "counsel": "Bend before you break, or the Guild will help with the breaking."},
- "major-17": {"source": "ryan", "tone": "light", "keywords": ["hope", "dreaming", "guidance"],
-  "meaning": "In spite of the darkness, we still need to find time to dream: to hope for a better future for those we know and those we don't. Even when life gets heavy, remember how our hope guides us.",
-  "counsel": "Look up; the light is still there."},
- "major-18": {"source": "draft", "tone": "mixed", "keywords": ["illusion", "uncertainty", "instinct"],
-  "meaning": "The Moon is a night of half-seen things: fears that look bigger in the dark, and truths not yet clear. Walk carefully, trust your instincts, and don't believe every shadow.",
-  "counsel": "Don't feed the fears that only grow at night."},
- "major-19": {"source": "draft", "tone": "light", "keywords": ["joy", "success", "community thriving"],
-  "meaning": "The Sun is joy that can't be stopped: warmth, clarity and success shared out in the open. When people trade fair and laugh loud, even the Wolf's cart of gold gets ignored.",
-  "counsel": "Shine where they said you couldn't."},
- "major-20": {"source": "draft", "tone": "light", "keywords": ["awakening", "the call", "rising together"],
-  "meaning": "Judgement is the call you can't unhear: an awakening, a reckoning, a moment to answer who you are and what you'll stand for. When enough voices rise, crowns fall.",
-  "counsel": "Answer the call, and bring your friends."},
- "major-21": {"source": "draft", "tone": "light", "keywords": ["completion", "wholeness", "the circle closes"],
-  "meaning": "The World is completion: a journey finished, lessons learned, a community made whole. Celebrate it, and remember that every finished circle is the start of the next Fool's walk.",
-  "counsel": "Celebrate the circle, then begin again."},
-
- "galleons-01": {"source": "ryan", "tone": "light", "keywords": ["new opportunity", "small starts", "compounding"],
-  "meaning": "Start small. Every seed takes consistent watering to grow into a stable tree. Consistent effort compounds. Even a single coin can be polished to perfection.",
-  "counsel": "Polish the one coin you have."},
- "galleons-02": {"source": "ryan", "tone": "light", "keywords": ["fair trade", "balance", "win-win"],
-  "meaning": "Markets aren't the problem; letting them turn our friends and neighbors into dollar signs is. When we have extra of something others need, it makes sense to trade so that both people feel like winners. Money isn't the problem; our relationship with it is.",
-  "counsel": "Trade so both walk away winners."},
- "galleons-03": {"source": "draft", "tone": "light", "keywords": ["teamwork", "building together", "contribution"],
-  "meaning": "Pool what you have so that skilled hands can build what none of you could build alone. Every contribution counts, and so does the craft.",
-  "counsel": "Pitch in, and build what one can't."},
- "galleons-04": {"source": "draft", "tone": "mixed", "keywords": ["protection", "security", "holding the line"],
-  "meaning": "Security, and the question of what it's for: hoarding to keep, or holding the line to protect. Guard what matters, but don't let guarding turn into grasping.",
-  "counsel": "Hold the line for others, not the lock on your own."},
- "galleons-05": {"source": "draft", "tone": "shadow", "keywords": ["hard times", "being left out", "asking for help"],
-  "meaning": "Hard times, and the sting of being left out in the cold. It's real, and it isn't the end: help is often closer than it feels, and those laughing now won't laugh forever.",
-  "counsel": "Ask for shelter; you were never meant to weather this alone."},
- "galleons-06": {"source": "ryan", "tone": "light", "keywords": ["generosity", "sharing", "giving without show"],
-  "meaning": "Sharing a little of what you've got, even if it isn't much, means more than hoarding, and more than handing out a little for power and to look good.",
-  "counsel": "Break the bread; skip the speech."},
- "galleons-07": {"source": "ryan", "tone": "light", "keywords": ["patience", "perspective", "enough"],
-  "meaning": "Things are built through hard work on strong foundations. We can't rely on chaos, but we embrace it when it falls in our favor. If we want what others have, we don't tear it down; we get inspired, knowing that if we put our minds to it, we can have enough. And we help others. It's also not bad to not have a lot; we don't need to feel behind. Sometimes people have, and sometimes they don't.",
-  "counsel": "Grow at your own pace; enough is enough."},
- "galleons-08": {"source": "ryan", "tone": "light", "keywords": ["craft", "diligence", "joyful work"],
-  "meaning": "Work doesn't need to be dreary and drab, even when it's hard. Especially when we're working with our friends and helping others!",
-  "counsel": "Whistle while you weed."},
- "galleons-09": {"source": "draft", "tone": "light", "keywords": ["abundance", "celebration", "earned rest"],
-  "meaning": "The reward of steady work: comfort, plenty and good company. Enjoy it fully. You planted this.",
-  "counsel": "Feast on what you've grown, and pull up a chair for a friend."},
- "galleons-10": {"source": "draft", "tone": "light", "keywords": ["legacy", "thriving community", "lasting wealth"],
-  "meaning": "Wealth that lasts because it's shared: a legacy of homes and habits that outlives any one of us, while the LEOs' city fades to a shadow.",
-  "counsel": "Plant trees whose shade you'll never sit in."},
- "galleons-11": {"source": "draft", "tone": "light", "keywords": ["first lessons", "potential", "planting"],
-  "meaning": "The eager student of practical things: a new job, a new skill, a first savings jar. Small, sincere beginnings grow into something solid.",
-  "counsel": "Plant it, then keep watering."},
- "galleons-12": {"source": "draft", "tone": "light", "keywords": ["routine", "reliability", "slow progress"],
-  "meaning": "Dependable effort: the unglamorous routine that compounds over time. It may feel slow. It's working.",
-  "counsel": "Steady steps make sturdy stairs."},
- "galleons-13": {"source": "draft", "tone": "light", "keywords": ["honest trade", "practical care", "good neighbor"],
-  "meaning": "Practical care: someone who makes a good living and a good neighborhood at the same time.",
-  "counsel": "Keep your scales honest and your stall open."},
- "galleons-14": {"source": "draft", "tone": "light", "keywords": ["prosperity", "mentorship", "raising the tide"],
-  "meaning": "Someone who has built security and knows what it's for: passing it on, lifting others, raising the tide for all.",
-  "counsel": "Pass the coin; raise the tide."},
-
- "lutes-01": {"source": "draft", "tone": "light", "keywords": ["inspiration", "creative spark", "a calling"],
-  "meaning": "The spark: a new passion, a creative idea, a call to act that won't leave you alone. Pick it up.",
-  "counsel": "Strum the first note before you know the song."},
- "lutes-02": {"source": "draft", "tone": "light", "keywords": ["planning", "the big picture", "deciding"],
-  "meaning": "The view before the venture: big plans, the whole map in front of you, and a choice about where your music goes next.",
-  "counsel": "Look far, then pick a first step."},
- "lutes-03": {"source": "draft", "tone": "light", "keywords": ["foresight", "preparation", "thinking ahead"],
-  "meaning": "The planner on the move: plans underway, ideas expanding, and the patience to think a few steps ahead before the next tune.",
-  "counsel": "Think while you walk; walk while you think."},
- "lutes-04": {"source": "draft", "tone": "light", "keywords": ["celebration", "belonging", "homecoming"],
-  "meaning": "A celebration of belonging: a safe place, good company and a reason to dance.",
-  "counsel": "Dance with the ones who showed up."},
- "lutes-05": {"source": "draft", "tone": "mixed", "keywords": ["conflict", "struggle", "rallying"],
-  "meaning": "Struggle and clashing voices. Not every fight is a bad one, but make sure your music lifts people rather than just raising the noise.",
-  "counsel": "Rally, don't rattle."},
- "lutes-06": {"source": "draft", "tone": "light", "keywords": ["victory", "recognition", "triumph"],
-  "meaning": "Public success and well-earned recognition. Enjoy the parade, and remember who walked beside the horse.",
-  "counsel": "Take the bow, then thank the band."},
- "lutes-07": {"source": "draft", "tone": "mixed", "keywords": ["standing firm", "defense", "conviction"],
-  "meaning": "Holding the high ground: defending what you believe in, even when you're outnumbered.",
-  "counsel": "Hold your ground and hold your note."},
- "lutes-08": {"source": "ryan", "tone": "mixed", "keywords": ["resilience", "grace under fire", "keep dancing"],
-  "meaning": "Life is full of the arrows and slings others shoot at us, on purpose or by accident. The only choice we have is how we respond: do we hear the music and keep dancing?",
-  "counsel": "Hear the music; keep dancing."},
- "lutes-09": {"source": "draft", "tone": "mixed", "keywords": ["persistence", "weariness", "one more push"],
-  "meaning": "Resilience near the end of a long fight: wounded, wary and still here. One more push may be all it takes.",
-  "counsel": "Bandage up; the next verse is yours."},
- "lutes-10": {"source": "ryan", "tone": "shadow", "keywords": ["burden", "perseverance", "refusing to quit"],
-  "meaning": "Even when all seems lost, we can't give up. We don't have the luxury or the option, even when things feel insurmountable. What's our choice: cynicism? To give in? To roll over and let our friends and neighbors suffer needlessly? And to do what, doomscroll and mindlessly play video games?",
-  "counsel": "Carry on, and let someone carry with you."},
- "lutes-11": {"source": "draft", "tone": "light", "keywords": ["a gift", "new passion", "encouragement"],
-  "meaning": "A new spark passed to someone ready to catch it: curiosity, eagerness, and the first lesson in courage.",
-  "counsel": "Take the lute; you'll learn by playing."},
- "lutes-12": {"source": "draft", "tone": "mixed", "keywords": ["practice", "impatience", "finding your pitch"],
-  "meaning": "Passion still finding its pitch: bold, a bit rash, and practicing in public. Sour notes are part of the song.",
-  "counsel": "Keep tuning; keep trying."},
- "lutes-13": {"source": "draft", "tone": "light", "keywords": ["confidence", "charisma", "joy"],
-  "meaning": "Passion that has found its voice: warm, magnetic and generous with its joy.",
-  "counsel": "Play like the room is yours, because it is."},
- "lutes-14": {"source": "draft", "tone": "light", "keywords": ["leadership", "vision", "movement"],
-  "meaning": "Leading by inspiration: a vision so clear that others pick up the tune and the overlords start to sweat.",
-  "counsel": "Lead with the song, and the crowd will sing."},
-
- "quills-01": {"source": "draft", "tone": "light", "keywords": ["truth", "clarity", "a breakthrough idea"],
-  "meaning": "A sharp new idea, or a truth set loose: clarity that cuts through confusion. Pick it up and write something brave.",
-  "counsel": "Catch the quill; write it true."},
- "quills-02": {"source": "draft", "tone": "mixed", "keywords": ["a hard choice", "stalemate", "weighing"],
-  "meaning": "A choice you've been avoiding: two paths held in tense balance. Look honestly at both seals before you sign.",
-  "counsel": "Choose the star, even when the crown pays better."},
- "quills-03": {"source": "draft", "tone": "shadow", "keywords": ["heartbreak", "painful truth", "grief"],
-  "meaning": "The sting of hurtful words or hard news. Let it hurt, let it out, and know that grief is love with nowhere to go.",
-  "counsel": "Let the tears write their part, then turn the page."},
- "quills-04": {"source": "draft", "tone": "light", "keywords": ["rest", "recharging", "small rebellions"],
-  "meaning": "Rest and recovery: using your downtime to do the things that regenerate your spirit. Even inside the machine, you can tend a little garden.",
-  "counsel": "Steal back a moment; spend it on your spirit."},
- "quills-05": {"source": "draft", "tone": "shadow", "keywords": ["hollow victory", "bullying", "what winning costs"],
-  "meaning": "A win that costs more than it's worth: arguments won by bullying, and the people who leave because of it. Is being right worth being alone?",
-  "counsel": "Lose the argument; keep the friend."},
- "quills-06": {"source": "draft", "tone": "light", "keywords": ["moving on", "transition", "leaving the rat race"],
-  "meaning": "Leaving the rat race: a transition toward calmer water, carrying your words and wits with you. The journey may be quiet, but it's going somewhere better.",
-  "counsel": "Row toward the star."},
- "quills-07": {"source": "ryan", "tone": "mixed", "keywords": ["greed", "cunning", "blind spots"],
-  "meaning": "Greed is not good. The Chaotic Good Guild knows that greed can be blinding, and as long as we're aware of our blind spots, we can navigate them. On the flip side, we need to be honest with ourselves about when we're the ones blinded by greed. Are you Reynard, or are you the Corporate Wolf?",
-  "counsel": "Ask yourself: Reynard, or the Wolf?"},
- "quills-08": {"source": "ryan", "tone": "mixed", "keywords": ["self-doubt", "perfectionism", "showing up anyway"],
-  "meaning": "The goal is pleasant, not perfect. How many times have we stopped ourselves before we've even begun because we were afraid of failure? You know who isn't afraid of failure? Lawful Evil. They push on, knowing that progress of any kind beats perfection. We need you to show up imperfectly, because that's what makes you unique and helps make the world a better place!",
-  "counsel": "Pleasant, not perfect."},
- "quills-09": {"source": "draft", "tone": "shadow", "keywords": ["anxiety", "sleepless worry", "night thoughts"],
-  "meaning": "The night mind: worries that multiply in the dark. Most of them are louder than they are true. Write them down, then let morning have its say.",
-  "counsel": "Name the nightmare and it shrinks."},
- "quills-10": {"source": "draft", "tone": "shadow", "keywords": ["burnout", "rock bottom", "an ending"],
-  "meaning": "The worst of it, and the end of it: burnout, overload, a thing that's over. The only way left is up, and the sun is already rising.",
-  "counsel": "It's over; let it be over."},
- "quills-11": {"source": "draft", "tone": "light", "keywords": ["curiosity", "first words", "questions"],
-  "meaning": "A mind waking up: curious, outspoken and full of questions. Every great writer started with crayon on a wall.",
-  "counsel": "Scribble first; refine later."},
- "quills-12": {"source": "draft", "tone": "light", "keywords": ["planning", "ambition", "drafting the future"],
-  "meaning": "Turning ideas into plans: quick, ambitious and eager to draft the future. Measure twice; it's only pencil.",
-  "counsel": "Sketch it, then build it."},
- "quills-13": {"source": "draft", "tone": "light", "keywords": ["honesty", "clear speech", "spreading the word"],
-  "meaning": "Speaking clearly and spreading the word: honest, articulate and unafraid to say what needs saying.",
-  "counsel": "Say it plainly; post it publicly."},
- "quills-14": {"source": "draft", "tone": "light", "keywords": ["wisdom", "fair judgment", "principles"],
-  "meaning": "Wisdom with authority: fair judgment, clear principles, and words that hold a community together.",
-  "counsel": "Write rules that free people, not ones that cage them."},
-
- "mirrors-01": {"source": "draft", "tone": "light", "keywords": ["new love", "compassion", "a full heart"],
-  "meaning": "An overflowing heart: new love, new compassion, or a fresh look at yourself with kind eyes.",
-  "counsel": "Look with love, starting with yourself."},
- "mirrors-02": {"source": "draft", "tone": "light", "keywords": ["projection", "attraction", "recognition"],
-  "meaning": "What we see in each other: often we're drawn to qualities in others that are really parts of ourselves we haven't owned yet. Admire them, then claim them.",
-  "counsel": "What you admire in them lives in you."},
- "mirrors-03": {"source": "draft", "tone": "light", "keywords": ["self-love", "joy", "confidence"],
-  "meaning": "Delight in being exactly who you are, celebrated among friends who like you that way too.",
-  "counsel": "Be your own favorite company."},
- "mirrors-04": {"source": "draft", "tone": "mixed", "keywords": ["discontent", "a distorted view", "missed gifts"],
-  "meaning": "Discontent: fixating on the cracked reflection and missing what's being offered all around you.",
-  "counsel": "Turn from the crack and look at what's whole."},
- "mirrors-05": {"source": "draft", "tone": "shadow", "keywords": ["grief", "regret", "what remains"],
-  "meaning": "Loss and regret. Grieve what's broken, then turn around: something still stands, and the way home is still there.",
-  "counsel": "Mourn the three, then turn to the two."},
- "mirrors-06": {"source": "draft", "tone": "light", "keywords": ["kindness", "fond memory", "simple gifts"],
-  "meaning": "Innocent generosity and fond memory: gifts given simply, and the childhood joys that still shape us.",
-  "counsel": "Give the gift someone once gave you."},
- "mirrors-07": {"source": "draft", "tone": "mixed", "keywords": ["illusion", "too many choices", "distraction"],
-  "meaning": "Too many shiny options, most of them distractions. Somewhere among them, half-hidden by cloud, is the one that's actually yours.",
-  "counsel": "Follow the star, not the shine."},
- "mirrors-08": {"source": "draft", "tone": "mixed", "keywords": ["walking away", "searching", "deeper meaning"],
-  "meaning": "Walking away from what no longer fulfills you, even if it looks fine from the outside, to search for something deeper.",
-  "counsel": "Leave the mirrors; find the mountain."},
- "mirrors-09": {"source": "draft", "tone": "light", "keywords": ["wishes", "contentment", "satisfaction"],
-  "meaning": "The wish card: contentment, satisfaction, and a dream within reach. Be specific about what you wish for.",
-  "counsel": "Make the wish, then make the plan."},
- "mirrors-10": {"source": "ryan", "tone": "light", "keywords": ["happy endings", "mindset", "manifesting"],
-  "meaning": "Mira looks into the mirror and sees a happy hamlet, even though she stands in the Lawful Evil city. Things will end well, and it shows the importance of mindset: focusing on what you want in order to manifest it.",
-  "counsel": "See the hamlet, then help build it."},
- "mirrors-11": {"source": "draft", "tone": "light", "keywords": ["an opening heart", "intuition", "a gift to grow into"],
-  "meaning": "A heart opening to magic: a new emotional lesson, intuition stirring, a gift you'll grow into.",
-  "counsel": "Try on the robes; they'll fit in time."},
- "mirrors-12": {"source": "draft", "tone": "light", "keywords": ["enthusiasm", "learning", "happy accidents"],
-  "meaning": "Enthusiasm outpacing skill: feelings and magic still wobbly, and friends patient enough to laugh along while you learn.",
-  "counsel": "Practice your magic; laugh at the mishaps."},
- "mirrors-13": {"source": "draft", "tone": "light", "keywords": ["emotional maturity", "clear sight", "compassion"],
-  "meaning": "The calm to look at hard things clearly and still hold onto compassion.",
-  "counsel": "Look at the hard thing with a soft heart."},
- "mirrors-14": {"source": "draft", "tone": "light", "keywords": ["emotional wisdom", "comfort", "showing the way home"],
-  "meaning": "Steady, kind and wise in matters of the heart: someone who can comfort the crying ones and show them the way home.",
-  "counsel": "Hold the crying ones; show them the village."}
+  "_about": "Card meanings for the Chaotic Good Guild tarot. source 'ryan' = meaning taken from Ryan's Tarot Deck Notes (lightly tidied); 'draft' = written by Claude for Ryan to review and rewrite in his own words. tone: light, mixed or shadow (used by the reading summary).",
+  "major-00": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "beginnings",
+      "courage",
+      "the open road"
+    ],
+    "meaning": "The Fool is the first step of every journey: leaving what's safe to go make the world a little better, before you feel ready. Fresh feet, full heart, and very little in the sack but hope. Sometimes it's best to not know before you start!",
+    "counsel": "Pack light, step lively, and let the leaving be the lesson."
+  },
+  "major-01": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "showmanship",
+      "resourcefulness",
+      "manifesting"
+    ],
+    "meaning": "The Magician is mystical and mechanical: they know their tools, they can read the environment, and they know how to use what they've got to get the outcome they need.",
+    "counsel": "Trust your talents, snap your fingers,  and make your magic happen!"
+  },
+  "major-02": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "intuition",
+      "mystery",
+      "subconscious"
+    ],
+    "meaning": "Some subtle secrets only surface when you're still enough to sit in silence. Her intuition interprets easily.",
+    "counsel": "Sit still and dive deep within to seek within your subconscious."
+  },
+  "major-03": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "nurture",
+      "abundance",
+      "fertility"
+    ],
+    "meaning": "She cultivates her garden, so that each vegetable has its space and contributes to the well-being of the others. None are better or worse, as each serves an important purpose. She nurtures each one with grace and tenderness so that everybody can eat.",
+    "counsel": "Tend what's growing, and make room for every row."
+  },
+  "major-04": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "service",
+      "rule by the people",
+      "stepping up"
+    ],
+    "meaning": "Chaotic Good believes in rule by the people. When we cede authority to kings, we make others responsible for our well-being. It makes things simpler, but at what cost? Different times and a changing world require different skills and perspectives. The President presides: not above or below, just serving a specific purpose at a specific time. What job is most important for you right now, and how can you step up to be the best person for it?",
+    "counsel": "Step up, serve well, and step aside when the season changes."
+  },
+  "major-05": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "natural order",
+      "learning",
+      "roots"
+    ],
+    "meaning": "Look to nature to decode the mysteries of the world and give context to our society and what we're doing. There is a natural order we must accept and acknowledge before we can move forward in changing our society.",
+    "counsel": "Learn the old roots before you plant new rows."
+  },
+  "major-06": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "connection",
+      "teamwork",
+      "decisions"
+    ],
+    "meaning": "Others can help us through dark times, no matter how difficult. In the pits of despair, it's important that we show up for others, or make the choice to reach out even when it feels hopeless. We can choose to show up for others, or to be kind to ourselves and reach out when we need it.",
+    "counsel": "Reach out, or reach back; nobody walks the dark alone."
+  },
+  "major-07": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "discipline",
+      "focus",
+      "willpower"
+    ],
+    "meaning": "The Chariot is willpower with aim: using discipline to move toward what you want, and walking past everything built to pull you off track. The games will keep blinking. Let them.",
+    "counsel": "Channel your chase into what serves your spirit. Make your life a game, don't make the games and gambling your life!"
+  },
+  "major-08": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "inspiration",
+      "gentle power",
+      "work as play"
+    ],
+    "meaning": "Inspiration, not coercion. Strength is about uplifting and inspiring others to their potential. Strength recognizes that when we choose to look at our work as play, we become inspired instead of tired.",
+    "counsel": "LEOs rule through force. They don't inspire, they fire. Don't fight fire with fire - use the fire to fuel your fun!"
+  },
+  "major-09": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "reflection",
+      "solitude",
+      "principles in practice"
+    ],
+    "meaning": "Life is a journey of exploring and reflecting. We go into the world to learn and apply our wisdom, but sometimes we must retreat to pause, reflect on our lessons and integrate our experiences. The Hermit asks us to reflect on our guiding principles of kindness: intention is important, but without application we are living in a fantasy.",
+    "counsel": "Step back, light the lantern, then step back in."
+  },
+  "major-10": {
+    "source": "ryan",
+    "tone": "mixed",
+    "keywords": [
+      "disruption",
+      "luck!",
+      "turning tides"
+    ],
+    "meaning": "Instead of surrendering to fate, Chaos! celebrates how disruption creates opportunity. It's the wild card that cracks open stuck systems. It reminds you that even when everything's spinning, you are not powerless; in fact, hope, kindness and mischief can turn the tide.",
+    "counsel": "When the world wobbles, wobble it toward kindness. Don't forget - everyday carries the seed of a new adventure!"
+  },
+  "major-11": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "fairness",
+      "accountability",
+      "karma"
+    ],
+    "meaning": "Justice weighs what truly matters: actions and their consequences, measured honestly. It asks whether you've been fair to others and to yourself, and promises that balance comes back around.",
+    "counsel": "Weigh what matters, not what glitters. Do what's right and know that you'll recieve rewards, even if it's not right away."
+  },
+  "major-12": {
+    "source": "ryan",
+    "tone": "mixed",
+    "keywords": [
+      "pause",
+      "surrender",
+      "new perspective"
+    ],
+    "meaning": "Sometimes we get trapped, but if we're creative enough, we can always escape. We may not like what we have to do, and sometimes we need to lighten our load to move forward, even if we like our loot. Or sometimes our best bet is to wait it out: you never know when a friend might show up to help.",
+    "counsel": "Sometimes giving up the gold lets you loose from the trap. Perhaps you'll find something greater with a new perspective - so be patient!"
+  },
+  "major-13": {
+    "source": "ryan",
+    "tone": "mixed",
+    "keywords": [
+      "new beginning",
+      "transformation",
+      "compost"
+    ],
+    "meaning": "Death. Fate. The end. Are you someone who embraces the end as an escape, or tries to escape an inevitable end? Reynard flees where the Badger enters: an ending and a beginning for them both. Remember, fungus feeds to create fertility.",
+    "counsel": "Doors open and close. Allow the rot to fuel fertile new ground."
+  },
+  "major-14": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "balance",
+      "blending",
+      "patience"
+    ],
+    "meaning": "Temperance is the art of the right mix: not too much, not too little, and patient enough to let the brew become itself. Opposites, combined with care, make better magic than either alone.",
+    "counsel": "Stir slowly; the best brews take time. Everything in moderation - including moderation!"
+  },
+  "major-15": {
+    "source": "ryan",
+    "tone": "shadow",
+    "keywords": [
+      "oppression",
+      "tyranny",
+      "greed"
+    ],
+    "meaning": "The pile of coins is tempting. Look how happy the LEOs look, yet they'd turn on each other in a heartbeat the moment they could make a quick buck. They can't trust anybody, because they can't be trusted. Are you selling out your community and friends?",
+    "counsel": "No pile of coins is worth your people."
+  },
+  "major-16": {
+    "source": "ryan",
+    "tone": "mixed",
+    "keywords": [
+      "upheaval",
+      "rigidity broken",
+      "rug pull"
+    ],
+    "meaning": "When we become too rigid, we begin to function like the LEOs. Be careful: the Chaotic Good Guild is likely to come by and shake things up!",
+    "counsel": "Bend before you break, or the Guild will help with the breaking."
+  },
+  "major-17": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "hope",
+      "visionary",
+      "dreams"
+    ],
+    "meaning": "In spite of the darkness, we still need to find time to dream: to hope for a better future for those we know and those we don't. Even when life gets heavy, remember how our hope guides us.",
+    "counsel": "Look up; the light is still there."
+  },
+  "major-18": {
+    "source": "ryan",
+    "tone": "mixed",
+    "keywords": [
+      "illusion",
+      "uncertainty",
+      "instinct"
+    ],
+    "meaning": "The moon reflects what's hidden in the night - for better and for worse. Dreams, fears, and everything in between. Sometimes the darkness creates shadows that are larger than the rustling leaves.",
+    "counsel": "Don't feed the fears that only grow at night. But don't forget to look at the full moon with wonder when it's dark!"
+  },
+  "major-19": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "joy",
+      "success",
+      "self expression"
+    ],
+    "meaning": "The Sun is joy that can't be stopped: warmth, clarity and success shared out in the open. When people trade fair and laugh loud, even the Wolf's cart of gold gets ignored.",
+    "counsel": "Allow your inner radiance to light the room, and let your expression heat the people in your life whom you love"
+  },
+  "major-20": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "awakening",
+      "the call",
+      "rising together"
+    ],
+    "meaning": "Judgement is the call you can't unhear: an awakening, a reckoning, a moment to answer who you are and what you'll stand for. When enough voices rise, crowns fall. Stand in line with your values.",
+    "counsel": "Call the community together to align around compassion and curiosity."
+  },
+  "major-21": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "completion",
+      "wholeness",
+      "level up"
+    ],
+    "meaning": "The World is completion: a journey finished, lessons learned, a community made whole. Celebrate it, and remember that every finished circle is the start of the next Fool's walk.",
+    "counsel": "Celebrate the circle, then begin again. Don't forget to invite your friends!"
+  },
+  "galleons-01": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "new opportunity",
+      "small starts",
+      "compounding"
+    ],
+    "meaning": "Start small. Every seed takes consistent watering to grow into a stable tree. Consistent effort compounds. Even a single coin can be polished to perfection.",
+    "counsel": "Polish the one coin you have."
+  },
+  "galleons-02": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "fair trade",
+      "balance",
+      "win-win"
+    ],
+    "meaning": "Markets aren't the problem; letting them turn our friends and neighbors into dollar signs is. When we have extra of something others need, it makes sense to trade so that both people feel like winners. Money isn't the problem; our relationship with it is.",
+    "counsel": "Trade so both walk away winners."
+  },
+  "galleons-03": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "teamwork",
+      "building together",
+      "contribution"
+    ],
+    "meaning": "Pool what you have so that skilled hands can build what none of you could build alone. Every contribution counts, and so does the craft.",
+    "counsel": "Pitch in, and build together what nobody can alone. Many hands makes for lighter work (and more fun!)"
+  },
+  "galleons-04": {
+    "source": "ryan",
+    "tone": "mixed",
+    "keywords": [
+      "protection",
+      "security",
+      "holding the line"
+    ],
+    "meaning": "Security, and the question of what it's for: hoarding to keep, or holding the line to protect. Guard what matters, but don't let guarding turn into grasping. Remember that you got to where you are with the help of others.",
+    "counsel": "Make sure to maintain what you need, but don't forget that mountains of money make a moat around you."
+  },
+  "galleons-05": {
+    "source": "ryan",
+    "tone": "shadow",
+    "keywords": [
+      "hard times",
+      "being left out",
+      "asking for help"
+    ],
+    "meaning": "Hard times, and the sting of being left out in the cold. It's real, and it isn't the end - you still have time to turn a new leaf if you held on too hard, and there's hope in the future if you caught a bad bounce.",
+    "counsel": "You can weather the storm - it'll make the future foundation that much more meaningful. Remember this moment when you see someone struggling in the future."
+  },
+  "galleons-06": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "generosity",
+      "sharing",
+      "charitable"
+    ],
+    "meaning": "Sharing a little of what you've got, even if it isn't much, means more than hoarding, and more than handing out a little for power and to look good.",
+    "counsel": "Break the bread; skip the speech. Set hubris aside and accept help when needed, and give without pretense or parade."
+  },
+  "galleons-07": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "patience",
+      "perspective",
+      "enough"
+    ],
+    "meaning": "Things are built through hard work on strong foundations. We can't rely on chaos, but we embrace it when it falls in our favor. If we want what others have, we don't tear it down; we get inspired, knowing that if we put our minds to it, we can have enough. And we help others. It's also not bad to not have a lot; we don't need to feel behind. Sometimes people have, and sometimes they don't.",
+    "counsel": "Grow at your own pace; enough is enough."
+  },
+  "galleons-08": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "craft",
+      "diligence",
+      "joyful work"
+    ],
+    "meaning": "Work doesn't need to be dreary and drab, even when it's hard. Especially when we're working with our friends and helping others!",
+    "counsel": "Whistle while you weed."
+  },
+  "galleons-09": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "abundance",
+      "celebration",
+      "earned rest"
+    ],
+    "meaning": "The reward of steady work: comfort, plenty and good company. Enjoy it fully. You planted this.",
+    "counsel": "Feast on what you've grown, and pull up a chair for a friend - their presence is a present for the potluck!"
+  },
+  "galleons-10": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "legacy",
+      "thriving community",
+      "lasting wealth"
+    ],
+    "meaning": "Wealth that lasts because it's shared: a legacy of homes and habits that outlives any one of us, while the LEOs' city fades to a shadow.",
+    "counsel": "Plant trees whose shade you'll never sit in, not statues that will stand as monuments to cynicism."
+  },
+  "galleons-11": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "first lessons",
+      "potential",
+      "planting"
+    ],
+    "meaning": "The eager student of practical things: a new job, a new skill, a first savings jar. Small, sincere beginnings grow into something solid.",
+    "counsel": "Plant your patches in whatever way you're particular."
+  },
+  "galleons-12": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "routine",
+      "reliability",
+      "slow progress"
+    ],
+    "meaning": "Dependable effort: the unglamorous routine that compounds over time. It may feel slow. It's working.",
+    "counsel": "Steady steps make sturdy stairs. Keep watering, it's worth it!"
+  },
+  "galleons-13": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "honest trade",
+      "practical care",
+      "good neighbor"
+    ],
+    "meaning": "Practical care: someone who makes a good living and a good neighborhood at the same time.",
+    "counsel": "Keep your scales honest and your stall open. Bartering makes things better for both parties."
+  },
+  "galleons-14": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "prosperity",
+      "mentorship",
+      "raising the tide"
+    ],
+    "meaning": "Someone who has built security and knows what it's for: passing it on, lifting others, raising the tide for all.",
+    "counsel": "Pass the coin and raise the tide. LEOs gobble galleons while we lengthen the table!"
+  },
+  "lutes-01": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "inspiration",
+      "creative spark",
+      "a calling"
+    ],
+    "meaning": "The spark: a new passion, a creative idea, a call to act that won't leave you alone. One note begins the resonance, and sparks the fuel that's waiting to start the fire.",
+    "counsel": "The first note strummed starts the song. A small spark is all it takes to light the fire."
+  },
+  "lutes-02": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "planning",
+      "the big picture",
+      "deciding"
+    ],
+    "meaning": "The view before the venture: big plans, the whole map in front of you, and a choice about where your music goes next.",
+    "counsel": "Look far, then pick a first step. The only bad decision is one you didn't make."
+  },
+  "lutes-03": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "foresight",
+      "preparation",
+      "thinking ahead"
+    ],
+    "meaning": "The planner on the move: plans underway, ideas expanding, and the patience to think a few steps ahead before the next tune.",
+    "counsel": "Think while you walk; walk while you think. What foundation are you laying?"
+  },
+  "lutes-04": {
+    "source": "draft",
+    "tone": "light",
+    "keywords": [
+      "celebration",
+      "belonging",
+      "homecoming"
+    ],
+    "meaning": "A celebration of belonging: a safe place, good company and a reason to dance.",
+    "counsel": "Dance with the ones who showed up."
+  },
+  "lutes-05": {
+    "source": "draft",
+    "tone": "mixed",
+    "keywords": [
+      "conflict",
+      "struggle",
+      "rallying"
+    ],
+    "meaning": "Struggle and clashing voices. Not every fight is a bad one, but make sure your music lifts people rather than just raising the noise.",
+    "counsel": "Rally, don't rattle."
+  },
+  "lutes-06": {
+    "source": "draft",
+    "tone": "light",
+    "keywords": [
+      "victory",
+      "recognition",
+      "triumph"
+    ],
+    "meaning": "Public success and well-earned recognition. Enjoy the parade, and remember who walked beside the horse.",
+    "counsel": "Take the bow, then thank the band."
+  },
+  "lutes-07": {
+    "source": "draft",
+    "tone": "mixed",
+    "keywords": [
+      "standing firm",
+      "defense",
+      "conviction"
+    ],
+    "meaning": "Holding the high ground: defending what you believe in, even when you're outnumbered.",
+    "counsel": "Hold your ground and hold your note."
+  },
+  "lutes-08": {
+    "source": "ryan",
+    "tone": "mixed",
+    "keywords": [
+      "resilience",
+      "grace under fire",
+      "keep dancing"
+    ],
+    "meaning": "Life is full of the arrows and slings others shoot at us, on purpose or by accident. The only choice we have is how we respond: do we hear the music and keep dancing?",
+    "counsel": "Hear the music; keep dancing."
+  },
+  "lutes-09": {
+    "source": "draft",
+    "tone": "mixed",
+    "keywords": [
+      "persistence",
+      "weariness",
+      "one more push"
+    ],
+    "meaning": "Resilience near the end of a long fight: wounded, wary and still here. One more push may be all it takes.",
+    "counsel": "Bandage up; the next verse is yours."
+  },
+  "lutes-10": {
+    "source": "ryan",
+    "tone": "shadow",
+    "keywords": [
+      "burden",
+      "perseverance",
+      "refusing to quit"
+    ],
+    "meaning": "Even when all seems lost, we can't give up. We don't have the luxury or the option, even when things feel insurmountable. What's our choice: cynicism? To give in? To roll over and let our friends and neighbors suffer needlessly? And to do what, doomscroll and mindlessly play video games?",
+    "counsel": "Carry on, and let someone carry with you."
+  },
+  "lutes-11": {
+    "source": "draft",
+    "tone": "light",
+    "keywords": [
+      "joyful expression",
+      "new passion",
+      "encouragement"
+    ],
+    "meaning": "A new spark passed to someone ready to catch it: curiosity, eagerness, and the first lesson in courage.",
+    "counsel": "Take the lute; you'll learn by playing."
+  },
+  "lutes-12": {
+    "source": "draft",
+    "tone": "mixed",
+    "keywords": [
+      "practice",
+      "impatience",
+      "finding your pitch"
+    ],
+    "meaning": "Passion still finding its pitch: bold, a bit rash, and practicing in public. Sour notes are part of the song.",
+    "counsel": "Keep tuning; keep trying."
+  },
+  "lutes-13": {
+    "source": "draft",
+    "tone": "light",
+    "keywords": [
+      "confidence",
+      "charisma",
+      "joy"
+    ],
+    "meaning": "Passion that has found its voice: warm, magnetic and generous with its joy.",
+    "counsel": "Play like the room is yours, because it is."
+  },
+  "lutes-14": {
+    "source": "draft",
+    "tone": "light",
+    "keywords": [
+      "leadership",
+      "vision",
+      "movement"
+    ],
+    "meaning": "Leading by inspiration: a vision so clear that others pick up the tune and the overlords start to sweat.",
+    "counsel": "Lead with the song, and the crowd will sing."
+  },
+  "quills-01": {
+    "source": "draft",
+    "tone": "light",
+    "keywords": [
+      "truth",
+      "clarity",
+      "a breakthrough idea"
+    ],
+    "meaning": "A sharp new idea, or a truth set loose: clarity that cuts through confusion. Pick it up and write something brave.",
+    "counsel": "Catch the quill; write it true."
+  },
+  "quills-02": {
+    "source": "draft",
+    "tone": "mixed",
+    "keywords": [
+      "a hard choice",
+      "stalemate",
+      "weighing"
+    ],
+    "meaning": "A choice you've been avoiding: two paths held in tense balance. Look honestly at both seals before you sign.",
+    "counsel": "Choose the star, even when the crown pays better."
+  },
+  "quills-03": {
+    "source": "draft",
+    "tone": "shadow",
+    "keywords": [
+      "heartbreak",
+      "painful truth",
+      "grief"
+    ],
+    "meaning": "The sting of hurtful words or hard news. Let it hurt, let it out, and know that grief is love with nowhere to go.",
+    "counsel": "Let the tears write their part, then turn the page."
+  },
+  "quills-04": {
+    "source": "draft",
+    "tone": "light",
+    "keywords": [
+      "rest",
+      "recharging",
+      "peace"
+    ],
+    "meaning": "Rest and recovery: using your downtime to do the things that regenerate your spirit. Even inside the machine, you can tend a little garden.",
+    "counsel": "Steal back a moment; spend it on your spirit."
+  },
+  "quills-05": {
+    "source": "draft",
+    "tone": "shadow",
+    "keywords": [
+      "hollow victory",
+      "bullying",
+      "pyrrhic"
+    ],
+    "meaning": "A win that costs more than it's worth: arguments won by bullying, and the people who leave because of it. Is being right worth being alone?",
+    "counsel": "Lose the argument; keep the friend."
+  },
+  "quills-06": {
+    "source": "draft",
+    "tone": "light",
+    "keywords": [
+      "moving on",
+      "transition",
+      "leaving the rat race"
+    ],
+    "meaning": "Leaving the rat race: a transition toward calmer water, carrying your words and wits with you. The journey may be quiet, but it's going somewhere better.",
+    "counsel": "Row toward the star."
+  },
+  "quills-07": {
+    "source": "ryan",
+    "tone": "mixed",
+    "keywords": [
+      "betrayal",
+      "cunning",
+      "trickery"
+    ],
+    "meaning": "Greed is not good. The Chaotic Good Guild knows that greed can be blinding, and as long as we're aware of our blind spots, we can navigate them. On the flip side, we need to be honest with ourselves about when we're the ones blinded by greed. Are you Reynard, or are you the Corporate Wolf?",
+    "counsel": "Ask yourself: Reynard, or the Wolf?"
+  },
+  "quills-08": {
+    "source": "ryan",
+    "tone": "mixed",
+    "keywords": [
+      "self-doubt",
+      "perfectionism",
+      "blind spots"
+    ],
+    "meaning": "The goal is pleasant, not perfect. How many times have we stopped ourselves before we've even begun because we were afraid of failure? You know who isn't afraid of failure? Lawful Evil. They push on, knowing that progress of any kind beats perfection. We need you to show up imperfectly, because that's what makes you unique and helps make the world a better place!",
+    "counsel": "Pleasant, not perfect."
+  },
+  "quills-09": {
+    "source": "draft",
+    "tone": "shadow",
+    "keywords": [
+      "anxiety",
+      "worry",
+      "uncertainty"
+    ],
+    "meaning": "The night mind: worries that multiply in the dark. Most of them are louder than they are true. Write them down, then let morning have its say.",
+    "counsel": "Name the nightmare and it shrinks."
+  },
+  "quills-10": {
+    "source": "draft",
+    "tone": "shadow",
+    "keywords": [
+      "finality",
+      "rock bottom",
+      "darkest before dawn"
+    ],
+    "meaning": "The worst of it, and the end of it: burnout, overload, a thing that's over. The only way left is up, and the sun is already rising.",
+    "counsel": "It's over; let it be over."
+  },
+  "quills-11": {
+    "source": "draft",
+    "tone": "light",
+    "keywords": [
+      "curiosity",
+      "quick",
+      "inquisitive"
+    ],
+    "meaning": "A mind waking up: curious, outspoken and full of questions. Every great writer started with crayon on a wall.",
+    "counsel": "Scribble first; refine later."
+  },
+  "quills-12": {
+    "source": "draft",
+    "tone": "light",
+    "keywords": [
+      "planning",
+      "ambition",
+      "spirited"
+    ],
+    "meaning": "Turning ideas into plans: quick, ambitious and eager to draft the future. Measure twice; it's only pencil.",
+    "counsel": "Sketch it, then build it."
+  },
+  "quills-13": {
+    "source": "draft",
+    "tone": "light",
+    "keywords": [
+      "honesty",
+      "clarity",
+      "spreading the word"
+    ],
+    "meaning": "Speaking clearly and spreading the word: honest, articulate and unafraid to say what needs saying.",
+    "counsel": "Say it plainly; post it publicly."
+  },
+  "quills-14": {
+    "source": "draft",
+    "tone": "light",
+    "keywords": [
+      "wisdom",
+      "fair judgment",
+      "principles"
+    ],
+    "meaning": "Wisdom with authority: fair judgment, clear principles, and words that hold a community together.",
+    "counsel": "Write rules that free people, not ones that cage them."
+  },
+  "mirrors-01": {
+    "source": "draft",
+    "tone": "light",
+    "keywords": [
+      "connection",
+      "compassion",
+      "a full heart"
+    ],
+    "meaning": "An overflowing heart: new love, new compassion, or a fresh look at yourself with kind eyes.",
+    "counsel": "Look with love, starting with yourself."
+  },
+  "mirrors-02": {
+    "source": "draft",
+    "tone": "light",
+    "keywords": [
+      "projection",
+      "attraction",
+      "recognition"
+    ],
+    "meaning": "What we see in each other: often we're drawn to qualities in others that are really parts of ourselves we haven't owned yet. Admire them, then claim them.",
+    "counsel": "What you admire in them lives in you."
+  },
+  "mirrors-03": {
+    "source": "draft",
+    "tone": "light",
+    "keywords": [
+      "friendship",
+      "joy",
+      "celebration"
+    ],
+    "meaning": "Delight in being exactly who you are, celebrated among friends who like you that way too.",
+    "counsel": "Be your own favorite company."
+  },
+  "mirrors-04": {
+    "source": "draft",
+    "tone": "mixed",
+    "keywords": [
+      "mopey",
+      "a distorted view",
+      "missed gifts"
+    ],
+    "meaning": "Discontent: fixating on the cracked reflection and missing what's being offered all around you.",
+    "counsel": "Turn from the crack and look at what's whole."
+  },
+  "mirrors-05": {
+    "source": "draft",
+    "tone": "shadow",
+    "keywords": [
+      "grief",
+      "regret",
+      "pessimistic"
+    ],
+    "meaning": "Loss and regret. Grieve what's broken, then turn around: something still stands, and the way home is still there.",
+    "counsel": "Mourn the three, then turn to the two."
+  },
+  "mirrors-06": {
+    "source": "draft",
+    "tone": "light",
+    "keywords": [
+      "supportive",
+      "fond memory",
+      "simple gifts"
+    ],
+    "meaning": "Innocent generosity and fond memory: gifts given simply, and the childhood joys that still shape us.",
+    "counsel": "Give the gift someone once gave you."
+  },
+  "mirrors-07": {
+    "source": "draft",
+    "tone": "mixed",
+    "keywords": [
+      "glamour",
+      "choices",
+      "distraction"
+    ],
+    "meaning": "Too many shiny options, most of them distractions. Somewhere among them, half-hidden by cloud, is the one that's actually yours.",
+    "counsel": "Follow the star, not the shine."
+  },
+  "mirrors-08": {
+    "source": "draft",
+    "tone": "mixed",
+    "keywords": [
+      "heeding the call",
+      "searching",
+      "deeper meaning"
+    ],
+    "meaning": "Walking away from what no longer fulfills you, even if it looks fine from the outside, to search for something deeper.",
+    "counsel": "Leave the mirrors; find the mountain."
+  },
+  "mirrors-09": {
+    "source": "draft",
+    "tone": "light",
+    "keywords": [
+      "wishes",
+      "contentment",
+      "cloud 9"
+    ],
+    "meaning": "The wish card: contentment, satisfaction, and a dream within reach. Be specific about what you wish for.",
+    "counsel": "Make the wish, then make the plan."
+  },
+  "mirrors-10": {
+    "source": "ryan",
+    "tone": "light",
+    "keywords": [
+      "happy endings",
+      "contentment",
+      "peace"
+    ],
+    "meaning": "Mira looks into the mirror and sees a happy hamlet, even though she stands in the Lawful Evil city. Things will end well, and it shows the importance of mindset: focusing on what you want in order to manifest it.",
+    "counsel": "See the hamlet, then help build it."
+  },
+  "mirrors-11": {
+    "source": "draft",
+    "tone": "light",
+    "keywords": [
+      "open heart",
+      "intuition",
+      "creativity"
+    ],
+    "meaning": "A heart opening to magic: a new emotional lesson, intuition stirring, a gift you'll grow into.",
+    "counsel": "Try on the robes; they'll fit in time."
+  },
+  "mirrors-12": {
+    "source": "draft",
+    "tone": "light",
+    "keywords": [
+      "creative inspiration",
+      "heartfelt",
+      "artist"
+    ],
+    "meaning": "Enthusiasm outpacing skill: feelings and magic still wobbly, and friends patient enough to laugh along while you learn.",
+    "counsel": "Practice your magic; laugh at the mishaps."
+  },
+  "mirrors-13": {
+    "source": "draft",
+    "tone": "light",
+    "keywords": [
+      "emotional wisdom",
+      "intuition",
+      "compassion"
+    ],
+    "meaning": "The calm to look at hard things clearly and still hold onto compassion.",
+    "counsel": "Look at the hard thing with a soft heart."
+  },
+  "mirrors-14": {
+    "source": "draft",
+    "tone": "light",
+    "keywords": [
+      "emotional balance",
+      "diplomatic wisdom",
+      "compassionate leader"
+    ],
+    "meaning": "Steady, kind and wise in matters of the heart: someone who can comfort the crying ones and show them the way home.",
+    "counsel": "Hold the crying ones; show them the village."
+  }
 }

@@ -1,46 +1,46 @@
 # Card meanings
 
-22 meanings come from Ryan's Tarot Deck Notes (marked **Ryan**); the other 56 are drafts by Claude (marked **Draft**) to rewrite in Ryan's own words. Keywords and counsel are drafts on every card.
+44 meanings come from Ryan's Tarot Deck Notes (marked **Ryan**); the other 34 are drafts by Claude (marked **Draft**) to rewrite in Ryan's own words. Keywords and counsel are drafts on every card.
 
 Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the reading summary.
 
 ## Major Arcana
 
-### The Fool (Draft, light)
+### The Fool (Ryan, light)
 
 *Scene:* A brave young rat in a Robin Hood outfit strides out of his shelter at dawn while his mother watches, proud and sad.
 
 *Keywords:* beginnings, courage, the open road
 
-*Meaning:* The Fool is the first step of every journey: leaving what's safe to go make the world a little better, before you feel ready. Fresh feet, full heart, and very little in the sack but hope.
+*Meaning:* The Fool is the first step of every journey: leaving what's safe to go make the world a little better, before you feel ready. Fresh feet, full heart, and very little in the sack but hope. Sometimes it's best to not know before you start!
 
 *Counsel:* Pack light, step lively, and let the leaving be the lesson.
 
-### The Magician (Draft, light)
+### The Magician (Ryan, light)
 
 *Scene:* Reynard stands at a table set with a galleon, a lute, a quill and a mirror, the Guild star above him.
 
-*Keywords:* skill, resourcefulness, making magic happen
+*Keywords:* showmanship, resourcefulness, manifesting
 
-*Meaning:* Every tool of the Guild sits on one table, and you already hold what you need. Magic is mystical and mechanical: talent, tools and timing, turned toward something worth doing.
+*Meaning:* The Magician is mystical and mechanical: they know their tools, they can read the environment, and they know how to use what they've got to get the outcome they need.
 
-*Counsel:* Gather your gifts and get going.
+*Counsel:* Trust your talents, snap your fingers,  and make your magic happen!
 
-### The High Priestess (Draft, light)
+### The High Priestess (Ryan, light)
 
 *Scene:* Mira sits between a purple pillar and a gold one beneath a great moon, mirror in paw, her frog beside her.
 
-*Keywords:* intuition, mystery, quiet knowing
+*Keywords:* intuition, mystery, subconscious
 
-*Meaning:* The High Priestess asks you to listen beneath the noise. Some answers can't be argued into being; they surface when you get still enough to see your own reflection.
+*Meaning:* Some subtle secrets only surface when you're still enough to sit in silence. Her intuition interprets easily.
 
-*Counsel:* Hush the hustle and hear the hunch.
+*Counsel:* Sit still and dive deep within to seek within your subconscious.
 
 ### The Empress (Ryan, light)
 
 *Scene:* The Badger tends a garden where every vegetable has its own space, so everybody can eat.
 
-*Keywords:* nurture, abundance, everyone eats
+*Keywords:* nurture, abundance, fertility
 
 *Meaning:* She cultivates her garden, so that each vegetable has its space and contributes to the well-being of the others. None are better or worse, as each serves an important purpose. She nurtures each one with grace and tenderness so that everybody can eat.
 
@@ -70,13 +70,13 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Scene:* In a dark alley the Badger brings a lantern and bread to a weeping rat; the Guild star shines between the rooftops.
 
-*Keywords:* connection, showing up, asking for help
+*Keywords:* connection, teamwork, decisions
 
 *Meaning:* Others can help us through dark times, no matter how difficult. In the pits of despair, it's important that we show up for others, or make the choice to reach out even when it feels hopeless. We can choose to show up for others, or to be kind to ourselves and reach out when we need it.
 
 *Counsel:* Reach out, or reach back; nobody walks the dark alone.
 
-### The Chariot (Draft, light)
+### The Chariot (Ryan, light)
 
 *Scene:* Reynard walks a hallway of arcade games and slot machines without a glance, toward a lute and a galleon on a pedestal.
 
@@ -84,7 +84,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Meaning:* The Chariot is willpower with aim: using discipline to move toward what you want, and walking past everything built to pull you off track. The games will keep blinking. Let them.
 
-*Counsel:* Mind the goal, not the glitter.
+*Counsel:* Channel your chase into what serves your spirit. Make your life a game, don't make the games and gambling your life!
 
 ### Strength (Ryan, light)
 
@@ -94,7 +94,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Meaning:* Inspiration, not coercion. Strength is about uplifting and inspiring others to their potential. Strength recognizes that when we choose to look at our work as play, we become inspired instead of tired.
 
-*Counsel:* Lift others and the load gets lighter.
+*Counsel:* LEOs rule through force. They don't inspire, they fire. Don't fight fire with fire - use the fire to fuel your fun!
 
 ### The Hermit (Ryan, light)
 
@@ -110,43 +110,43 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Scene:* The great wheel spins: Reynard laughs on top while the LEO Lion clings on and the Corporate Wolf tumbles off.
 
-*Keywords:* disruption, opportunity, turning tides
+*Keywords:* disruption, luck!, turning tides
 
 *Meaning:* Instead of surrendering to fate, Chaos! celebrates how disruption creates opportunity. It's the wild card that cracks open stuck systems. It reminds you that even when everything's spinning, you are not powerless; in fact, hope, kindness and mischief can turn the tide.
 
-*Counsel:* When the world wobbles, wobble it toward kindness.
+*Counsel:* When the world wobbles, wobble it toward kindness. Don't forget - everyday carries the seed of a new adventure!
 
-### Justice (Draft, light)
+### Justice (Ryan, light)
 
 *Scene:* The Badger stands beneath golden scales where a single flower outweighs a heap of gold.
 
-*Keywords:* fairness, accountability, true weight
+*Keywords:* fairness, accountability, karma
 
 *Meaning:* Justice weighs what truly matters: actions and their consequences, measured honestly. It asks whether you've been fair to others and to yourself, and promises that balance comes back around.
 
-*Counsel:* Weigh what matters, not what glitters.
+*Counsel:* Weigh what matters, not what glitters. Do what's right and know that you'll recieve rewards, even if it's not right away.
 
 ### The Hanged Man (Ryan, mixed)
 
 *Scene:* Reynard hangs by one ankle from a snare, loot spilled below him, as a friend arrives with a quill to cut the rope.
 
-*Keywords:* pause, letting go, new perspective
+*Keywords:* pause, surrender, new perspective
 
 *Meaning:* Sometimes we get trapped, but if we're creative enough, we can always escape. We may not like what we have to do, and sometimes we need to lighten our load to move forward, even if we like our loot. Or sometimes our best bet is to wait it out: you never know when a friend might show up to help.
 
-*Counsel:* Let go of the loot to get loose.
+*Counsel:* Sometimes giving up the gold lets you loose from the trap. Perhaps you'll find something greater with a new perspective - so be patient!
 
 ### Death (Ryan, mixed)
 
 *Scene:* Above, Reynard flees the Lawful Evil city for the woods. Below, the Badger walks toward it as the rats cheer her on.
 
-*Keywords:* endings, transformation, crossing over
+*Keywords:* new beginning, transformation, compost
 
-*Meaning:* Death. Fate. The end. Are you someone who embraces the end as an escape, or tries to escape an inevitable end? Reynard flees where the Badger enters: an ending for them both.
+*Meaning:* Death. Fate. The end. Are you someone who embraces the end as an escape, or tries to escape an inevitable end? Reynard flees where the Badger enters: an ending and a beginning for them both. Remember, fungus feeds to create fertility.
 
-*Counsel:* Let the door close so the road can open.
+*Counsel:* Doors open and close. Allow the rot to fuel fertile new ground.
 
-### Temperance (Draft, light)
+### Temperance (Ryan, light)
 
 *Scene:* Mira pours a potion into a swirling purple-and-gold cauldron while her frog cheers and the Guild star shines.
 
@@ -154,13 +154,13 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Meaning:* Temperance is the art of the right mix: not too much, not too little, and patient enough to let the brew become itself. Opposites, combined with care, make better magic than either alone.
 
-*Counsel:* Stir slowly; the best brews take time.
+*Counsel:* Stir slowly; the best brews take time. Everything in moderation - including moderation!
 
 ### The LEO (Ryan, shadow)
 
 *Scene:* Reynard and a scribe sit in the stocks while the rat who sold them out holds one coin beside the laughing Lion and Wolf.
 
-*Keywords:* temptation, selling out, greed's trap
+*Keywords:* oppression, tyranny, greed
 
 *Meaning:* The pile of coins is tempting. Look how happy the LEOs look, yet they'd turn on each other in a heartbeat the moment they could make a quick buck. They can't trust anybody, because they can't be trusted. Are you selling out your community and friends?
 
@@ -170,7 +170,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Scene:* Lightning splits the LEO's tower; Guild stars fly where stones should, and Reynard and a scribe look on, pleased.
 
-*Keywords:* upheaval, rigidity broken, sudden change
+*Keywords:* upheaval, rigidity broken, rug pull
 
 *Meaning:* When we become too rigid, we begin to function like the LEOs. Be careful: the Chaotic Good Guild is likely to come by and shake things up!
 
@@ -180,51 +180,51 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Scene:* Two rats sit by a pond beneath the great Guild star and its seven companions.
 
-*Keywords:* hope, dreaming, guidance
+*Keywords:* hope, visionary, dreams
 
 *Meaning:* In spite of the darkness, we still need to find time to dream: to hope for a better future for those we know and those we don't. Even when life gets heavy, remember how our hope guides us.
 
 *Counsel:* Look up; the light is still there.
 
-### The Moon (Draft, mixed)
+### The Moon (Ryan, mixed)
 
 *Scene:* Under a heavy moon, the Wolf howls and Mira studies her mirror on either side of a winding path; her frog rises from the pond.
 
 *Keywords:* illusion, uncertainty, instinct
 
-*Meaning:* The Moon is a night of half-seen things: fears that look bigger in the dark, and truths not yet clear. Walk carefully, trust your instincts, and don't believe every shadow.
+*Meaning:* The moon reflects what's hidden in the night - for better and for worse. Dreams, fears, and everything in between. Sometimes the darkness creates shadows that are larger than the rustling leaves.
 
-*Counsel:* Don't feed the fears that only grow at night.
+*Counsel:* Don't feed the fears that only grow at night. But don't forget to look at the full moon with wonder when it's dark!
 
-### The Sun (Draft, light)
+### The Sun (Ryan, light)
 
 *Scene:* A fox-faced sun winks over a rat bazaar in the LEO's own square; the Lion rages on his balcony and the Wolf is ignored.
 
-*Keywords:* joy, success, community thriving
+*Keywords:* joy, success, self expression
 
 *Meaning:* The Sun is joy that can't be stopped: warmth, clarity and success shared out in the open. When people trade fair and laugh loud, even the Wolf's cart of gold gets ignored.
 
-*Counsel:* Shine where they said you couldn't.
+*Counsel:* Allow your inner radiance to light the room, and let your expression heat the people in your life whom you love
 
-### Judgement (Draft, light)
+### Judgement (Ryan, light)
 
 *Scene:* Reynard plays from the clouds beside the fox banner; the rats rise, the Lion cowers with his crown on the ground, the Wolf panics.
 
 *Keywords:* awakening, the call, rising together
 
-*Meaning:* Judgement is the call you can't unhear: an awakening, a reckoning, a moment to answer who you are and what you'll stand for. When enough voices rise, crowns fall.
+*Meaning:* Judgement is the call you can't unhear: an awakening, a reckoning, a moment to answer who you are and what you'll stand for. When enough voices rise, crowns fall. Stand in line with your values.
 
-*Counsel:* Answer the call, and bring your friends.
+*Counsel:* Call the community together to align around compassion and curiosity.
 
-### The World (Draft, light)
+### The World (Ryan, light)
 
 *Scene:* The Guild star in a laurel wreath, with the Badger, Reynard, Mira and a rat at the four corners, above the red city.
 
-*Keywords:* completion, wholeness, the circle closes
+*Keywords:* completion, wholeness, level up
 
 *Meaning:* The World is completion: a journey finished, lessons learned, a community made whole. Celebrate it, and remember that every finished circle is the start of the next Fool's walk.
 
-*Counsel:* Celebrate the circle, then begin again.
+*Counsel:* Celebrate the circle, then begin again. Don't forget to invite your friends!
 
 ## Galleons
 
@@ -248,7 +248,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Counsel:* Trade so both walk away winners.
 
-### Three of Galleons (Draft, light)
+### Three of Galleons (Ryan, light)
 
 *Scene:* The Badger and two rats add their galleons to a pile while the Bull builds them houses.
 
@@ -256,37 +256,37 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Meaning:* Pool what you have so that skilled hands can build what none of you could build alone. Every contribution counts, and so does the craft.
 
-*Counsel:* Pitch in, and build what one can't.
+*Counsel:* Pitch in, and build together what nobody can alone. Many hands makes for lighter work (and more fun!)
 
-### Four of Galleons (Draft, mixed)
+### Four of Galleons (Ryan, mixed)
 
 *Scene:* The Badger stands between the Corporate Wolf and two frightened rats clutching their galleons.
 
 *Keywords:* protection, security, holding the line
 
-*Meaning:* Security, and the question of what it's for: hoarding to keep, or holding the line to protect. Guard what matters, but don't let guarding turn into grasping.
+*Meaning:* Security, and the question of what it's for: hoarding to keep, or holding the line to protect. Guard what matters, but don't let guarding turn into grasping. Remember that you got to where you are with the help of others.
 
-*Counsel:* Hold the line for others, not the lock on your own.
+*Counsel:* Make sure to maintain what you need, but don't forget that mountains of money make a moat around you.
 
-### Five of Galleons (Draft, shadow)
+### Five of Galleons (Ryan, shadow)
 
 *Scene:* The Badger stands downcast by her collapsed shanty while the Lion and the Wolf laugh over their galleons.
 
 *Keywords:* hard times, being left out, asking for help
 
-*Meaning:* Hard times, and the sting of being left out in the cold. It's real, and it isn't the end: help is often closer than it feels, and those laughing now won't laugh forever.
+*Meaning:* Hard times, and the sting of being left out in the cold. It's real, and it isn't the end - you still have time to turn a new leaf if you held on too hard, and there's hope in the future if you caught a bad bounce.
 
-*Counsel:* Ask for shelter; you were never meant to weather this alone.
+*Counsel:* You can weather the storm - it'll make the future foundation that much more meaningful. Remember this moment when you see someone struggling in the future.
 
 ### Six of Galleons (Ryan, light)
 
 *Scene:* The Badger shares her bread with a ragged rat; behind her the Wolf flips a single coin from his hoard to beggars.
 
-*Keywords:* generosity, sharing, giving without show
+*Keywords:* generosity, sharing, charitable
 
 *Meaning:* Sharing a little of what you've got, even if it isn't much, means more than hoarding, and more than handing out a little for power and to look good.
 
-*Counsel:* Break the bread; skip the speech.
+*Counsel:* Break the bread; skip the speech. Set hubris aside and accept help when needed, and give without pretense or parade.
 
 ### Seven of Galleons (Ryan, light)
 
@@ -308,7 +308,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Counsel:* Whistle while you weed.
 
-### Nine of Galleons (Draft, light)
+### Nine of Galleons (Ryan, light)
 
 *Scene:* A feast in the mushroom village: the Badger, Reynard, Mira and the rats celebrate what they built.
 
@@ -316,9 +316,9 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Meaning:* The reward of steady work: comfort, plenty and good company. Enjoy it fully. You planted this.
 
-*Counsel:* Feast on what you've grown, and pull up a chair for a friend.
+*Counsel:* Feast on what you've grown, and pull up a chair for a friend - their presence is a present for the potluck!
 
-### Ten of Galleons (Draft, light)
+### Ten of Galleons (Ryan, light)
 
 *Scene:* The Badger looks down from her hill on a bustling village; Reynard plays on a stump and ten galleons shine in the grass.
 
@@ -326,9 +326,9 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Meaning:* Wealth that lasts because it's shared: a legacy of homes and habits that outlives any one of us, while the LEOs' city fades to a shadow.
 
-*Counsel:* Plant trees whose shade you'll never sit in.
+*Counsel:* Plant trees whose shade you'll never sit in, not statues that will stand as monuments to cynicism.
 
-### Neophyte of Galleons (Draft, light)
+### Neophyte of Galleons (Ryan, light)
 
 *Scene:* A ragged rat plants a first galleon like a seed while the Badger shows the way.
 
@@ -336,9 +336,9 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Meaning:* The eager student of practical things: a new job, a new skill, a first savings jar. Small, sincere beginnings grow into something solid.
 
-*Counsel:* Plant it, then keep watering.
+*Counsel:* Plant your patches in whatever way you're particular.
 
-### Apprentice of Galleons (Draft, light)
+### Apprentice of Galleons (Ryan, light)
 
 *Scene:* A rat waters rows of new sprouts, patient and careful.
 
@@ -346,9 +346,9 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Meaning:* Dependable effort: the unglamorous routine that compounds over time. It may feel slow. It's working.
 
-*Counsel:* Steady steps make sturdy stairs.
+*Counsel:* Steady steps make sturdy stairs. Keep watering, it's worth it!
 
-### Journeyman of Galleons (Draft, light)
+### Journeyman of Galleons (Ryan, light)
 
 *Scene:* A merchant rat keeps an honest stall, trading fair with everyone who comes.
 
@@ -356,9 +356,9 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Meaning:* Practical care: someone who makes a good living and a good neighborhood at the same time.
 
-*Counsel:* Keep your scales honest and your stall open.
+*Counsel:* Keep your scales honest and your stall open. Bartering makes things better for both parties.
 
-### Master of Galleons (Draft, light)
+### Master of Galleons (Ryan, light)
 
 *Scene:* A prosperous rat hands a galleon to a young one, passing on what was given.
 
@@ -366,21 +366,21 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Meaning:* Someone who has built security and knows what it's for: passing it on, lifting others, raising the tide for all.
 
-*Counsel:* Pass the coin; raise the tide.
+*Counsel:* Pass the coin and raise the tide. LEOs gobble galleons while we lengthen the table!
 
 ## Lutes
 
-### Ace of Lutes (Draft, light)
+### Ace of Lutes (Ryan, light)
 
 *Scene:* A lute rests on a stump in a sunlit clearing, one note hanging in the air.
 
 *Keywords:* inspiration, creative spark, a calling
 
-*Meaning:* The spark: a new passion, a creative idea, a call to act that won't leave you alone. Pick it up.
+*Meaning:* The spark: a new passion, a creative idea, a call to act that won't leave you alone. One note begins the resonance, and sparks the fuel that's waiting to start the fire.
 
-*Counsel:* Strum the first note before you know the song.
+*Counsel:* The first note strummed starts the song. A small spark is all it takes to light the fire.
 
-### Two of Lutes (Draft, light)
+### Two of Lutes (Ryan, light)
 
 *Scene:* Reynard stands at a cliff's edge, lute in hand, looking out over the kingdom of the Lawful Evil overlords.
 
@@ -388,9 +388,9 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Meaning:* The view before the venture: big plans, the whole map in front of you, and a choice about where your music goes next.
 
-*Counsel:* Look far, then pick a first step.
+*Counsel:* Look far, then pick a first step. The only bad decision is one you didn't make.
 
-### Three of Lutes (Draft, light)
+### Three of Lutes (Ryan, light)
 
 *Scene:* Reynard walks through the woods with his lute, thinking hard.
 
@@ -398,7 +398,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Meaning:* The planner on the move: plans underway, ideas expanding, and the patience to think a few steps ahead before the next tune.
 
-*Counsel:* Think while you walk; walk while you think.
+*Counsel:* Think while you walk; walk while you think. What foundation are you laying?
 
 ### Four of Lutes (Draft, light)
 
@@ -474,7 +474,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Scene:* In an alley of the red city, Reynard offers his lute to a young rat in beggar's clothes.
 
-*Keywords:* a gift, new passion, encouragement
+*Keywords:* joyful expression, new passion, encouragement
 
 *Meaning:* A new spark passed to someone ready to catch it: curiosity, eagerness, and the first lesson in courage.
 
@@ -546,7 +546,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Scene:* In a corporate cubicle, a scribe uses a quiet moment to draw a flower.
 
-*Keywords:* rest, recharging, small rebellions
+*Keywords:* rest, recharging, peace
 
 *Meaning:* Rest and recovery: using your downtime to do the things that regenerate your spirit. Even inside the machine, you can tend a little garden.
 
@@ -556,7 +556,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Scene:* The Wolf smirks over the quills he has taken as two rats walk away.
 
-*Keywords:* hollow victory, bullying, what winning costs
+*Keywords:* hollow victory, bullying, pyrrhic
 
 *Meaning:* A win that costs more than it's worth: arguments won by bullying, and the people who leave because of it. Is being right worth being alone?
 
@@ -576,7 +576,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Scene:* Reynard distracts the Wolf with a heap of spray-painted coins while seven rats each carry a quill out the door.
 
-*Keywords:* greed, cunning, blind spots
+*Keywords:* betrayal, cunning, trickery
 
 *Meaning:* Greed is not good. The Chaotic Good Guild knows that greed can be blinding, and as long as we're aware of our blind spots, we can navigate them. On the flip side, we need to be honest with ourselves about when we're the ones blinded by greed. Are you Reynard, or are you the Corporate Wolf?
 
@@ -586,7 +586,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Scene:* A scribe slumps at his desk with one quill in hand and seven broken on the floor.
 
-*Keywords:* self-doubt, perfectionism, showing up anyway
+*Keywords:* self-doubt, perfectionism, blind spots
 
 *Meaning:* The goal is pleasant, not perfect. How many times have we stopped ourselves before we've even begun because we were afraid of failure? You know who isn't afraid of failure? Lawful Evil. They push on, knowing that progress of any kind beats perfection. We need you to show up imperfectly, because that's what makes you unique and helps make the world a better place!
 
@@ -596,7 +596,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Scene:* A rat sits bolt upright in bed beneath nine quills, the red city in the window.
 
-*Keywords:* anxiety, sleepless worry, night thoughts
+*Keywords:* anxiety, worry, uncertainty
 
 *Meaning:* The night mind: worries that multiply in the dark. Most of them are louder than they are true. Write them down, then let morning have its say.
 
@@ -606,7 +606,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Scene:* A rat weeps at a desk buried in paperwork stuck with ten quills; in the window, dawn and the Guild star.
 
-*Keywords:* burnout, rock bottom, an ending
+*Keywords:* finality, rock bottom, darkest before dawn
 
 *Meaning:* The worst of it, and the end of it: burnout, overload, a thing that's over. The only way left is up, and the sun is already rising.
 
@@ -616,7 +616,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Scene:* A ragged rat draws on an alley wall with a crayon.
 
-*Keywords:* curiosity, first words, questions
+*Keywords:* curiosity, quick, inquisitive
 
 *Meaning:* A mind waking up: curious, outspoken and full of questions. Every great writer started with crayon on a wall.
 
@@ -626,7 +626,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Scene:* A rat with a pencil sketches plans for a mushroom house.
 
-*Keywords:* planning, ambition, drafting the future
+*Keywords:* planning, ambition, spirited
 
 *Meaning:* Turning ideas into plans: quick, ambitious and eager to draft the future. Measure twice; it's only pencil.
 
@@ -636,7 +636,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Scene:* A scribe posts pamphlets on a notice board and sends more flying.
 
-*Keywords:* honesty, clear speech, spreading the word
+*Keywords:* honesty, clarity, spreading the word
 
 *Meaning:* Speaking clearly and spreading the word: honest, articulate and unafraid to say what needs saying.
 
@@ -658,7 +658,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Scene:* A great mirror rises from a moonlit pond, the Guild star shining in its glass.
 
-*Keywords:* new love, compassion, a full heart
+*Keywords:* connection, compassion, a full heart
 
 *Meaning:* An overflowing heart: new love, new compassion, or a fresh look at yourself with kind eyes.
 
@@ -678,7 +678,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Scene:* Mira laughs at her reflection, delighted with herself, among the creatures of the enchanted forest.
 
-*Keywords:* self-love, joy, confidence
+*Keywords:* friendship, joy, celebration
 
 *Meaning:* Delight in being exactly who you are, celebrated among friends who like you that way too.
 
@@ -688,7 +688,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Scene:* Mira pouts beneath a tree before a cracked mirror that shows her older and sadder; three other mirrors lie ignored.
 
-*Keywords:* discontent, a distorted view, missed gifts
+*Keywords:* mopey, a distorted view, missed gifts
 
 *Meaning:* Discontent: fixating on the cracked reflection and missing what's being offered all around you.
 
@@ -698,7 +698,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Scene:* Mira grieves over three broken mirrors while two still stand whole behind her.
 
-*Keywords:* grief, regret, what remains
+*Keywords:* grief, regret, pessimistic
 
 *Meaning:* Loss and regret. Grieve what's broken, then turn around: something still stands, and the way home is still there.
 
@@ -708,7 +708,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Scene:* Mira gives a mirror to a young rat beneath a tree hung with five more.
 
-*Keywords:* kindness, fond memory, simple gifts
+*Keywords:* supportive, fond memory, simple gifts
 
 *Meaning:* Innocent generosity and fond memory: gifts given simply, and the childhood joys that still shape us.
 
@@ -718,7 +718,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Scene:* Mira floats in a galaxy among seven mirrors of tempting things; in the centre one, the Guild star peeks from a cloud.
 
-*Keywords:* illusion, too many choices, distraction
+*Keywords:* glamour, choices, distraction
 
 *Meaning:* Too many shiny options, most of them distractions. Somewhere among them, half-hidden by cloud, is the one that's actually yours.
 
@@ -728,7 +728,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Scene:* Mira walks away from eight mirrors toward the moonlit mountains, her frog hopping after.
 
-*Keywords:* walking away, searching, deeper meaning
+*Keywords:* heeding the call, searching, deeper meaning
 
 *Meaning:* Walking away from what no longer fulfills you, even if it looks fine from the outside, to search for something deeper.
 
@@ -738,7 +738,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Scene:* Mira reads tarot at her alley booth in the red city, with her frog, her cauldron and a genie lamp.
 
-*Keywords:* wishes, contentment, satisfaction
+*Keywords:* wishes, contentment, cloud 9
 
 *Meaning:* The wish card: contentment, satisfaction, and a dream within reach. Be specific about what you wish for.
 
@@ -748,7 +748,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Scene:* In the red city, Mira looks into a great mirror and sees a happy hamlet beneath an arc of nine more.
 
-*Keywords:* happy endings, mindset, manifesting
+*Keywords:* happy endings, contentment, peace
 
 *Meaning:* Mira looks into the mirror and sees a happy hamlet, even though she stands in the Lawful Evil city. Things will end well, and it shows the importance of mindset: focusing on what you want in order to manifest it.
 
@@ -758,7 +758,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Scene:* Under a bright moon, Mira hands blue robes, a hat and a mirror to a rat in a Robin Hood outfit.
 
-*Keywords:* an opening heart, intuition, a gift to grow into
+*Keywords:* open heart, intuition, creativity
 
 *Meaning:* A heart opening to magic: a new emotional lesson, intuition stirring, a gift you'll grow into.
 
@@ -768,7 +768,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Scene:* A rat in oversized robes accidentally levitates Reynard upside down; Reynard thinks it's hilarious.
 
-*Keywords:* enthusiasm, learning, happy accidents
+*Keywords:* creative inspiration, heartfelt, artist
 
 *Meaning:* Enthusiasm outpacing skill: feelings and magic still wobbly, and friends patient enough to laugh along while you learn.
 
@@ -778,7 +778,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Scene:* By a forest pool, a robed rat levitates a mirror that shows the red city; tarot cards lie at his feet.
 
-*Keywords:* emotional maturity, clear sight, compassion
+*Keywords:* emotional wisdom, intuition, compassion
 
 *Meaning:* The calm to look at hard things clearly and still hold onto compassion.
 
@@ -788,7 +788,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 *Scene:* In an alley, a rat in purple robes comforts a crying young rat; a mirror shows the village, and a flower grows from a crack.
 
-*Keywords:* emotional wisdom, comfort, showing the way home
+*Keywords:* emotional balance, diplomatic wisdom, compassionate leader
 
 *Meaning:* Steady, kind and wise in matters of the heart: someone who can comfort the crying ones and show them the way home.
 
