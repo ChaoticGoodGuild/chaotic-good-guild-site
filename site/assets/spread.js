@@ -314,6 +314,7 @@ if (typeof module !== "undefined") module.exports = CGGRead;
   function finishReading() {
     say("done");
     btnAll.hidden = true; btnRead.hidden = false;
+    document.querySelectorAll("[data-share]").forEach(b => { b.hidden = false; });
     const r = CGGRead.summarize(dealt.map(d => d.card), POS, D);
     const box = $("spSummaryText"); box.innerHTML = "";
     r.paras.forEach(t => box.appendChild(el("p", null, t)));
@@ -331,10 +332,129 @@ if (typeof module !== "undefined") module.exports = CGGRead;
     deck.classList.remove("gone"); deck.classList.add("idle");
     deck.setAttribute("aria-label", "The deck. Touch to shuffle.");
     btnAll.hidden = true; btnAgain.hidden = true; btnRead.hidden = true; summary.hidden = true;
+    document.querySelectorAll("[data-share]").forEach(b => { b.hidden = true; });
     dealt = []; state = "idle";
     buildList(); say("idle");
     stage.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
   });
+
+
+  // ---- share the reading as a picture. It is painted right here in the browser; nothing is uploaded.
+  const shareBox = $("spShareBox"), shareImg = $("spShareImg"), shareGo = $("spShareGo"), shareDl = $("spShareDl"), shareMsg = $("spShareMsg");
+  let fontCSS = null, logoURL = null, shareFile = null, shareURL = null;
+  const xml = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  function b64(buf) {
+    const bytes = new Uint8Array(buf); let s = "";
+    for (let i = 0; i < bytes.length; i += 0x8000) s += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
+    return btoa(s);
+  }
+  async function fonts() {           // the page's own fonts, tucked inside the picture so the lettering matches
+    if (fontCSS !== null) return fontCSS;
+    try {
+      const css = await (await fetch("https://fonts.googleapis.com/css2?family=Pirata+One&family=Alegreya:ital,wght@0,400;1,400&display=swap")).text();
+      const out = [];
+      for (const block of css.split("@font-face").slice(1)) {
+        if (!/U\+0000-00FF/.test(block)) continue;              // the Latin letters are all the picture needs
+        const url = (block.match(/url\((https:[^)]+)\)/) || [])[1];
+        if (!url) continue;
+        const buf = await (await fetch(url)).arrayBuffer();
+        out.push("@font-face" + block.replace(url, "data:font/woff2;base64," + b64(buf)));
+      }
+      fontCSS = out.join("\n");
+    } catch (e) { fontCSS = ""; }
+    return fontCSS;
+  }
+  async function logo() {
+    if (logoURL !== null) return logoURL;
+    try { logoURL = "data:image/png;base64," + b64(await (await fetch("/assets/logo.png")).arrayBuffer()); } catch (e) { logoURL = ""; }
+    return logoURL;
+  }
+
+  async function paintReading() {
+    const W = 1080, H = 1350, S = 860, X0 = (W - S) / 2, Y0 = 178;
+    const px = v => X0 + v / 100 * S, py = v => Y0 + v / 100 * S;
+    const [fcss, lg] = await Promise.all([fonts(), logo()]);
+    const defs = $("spDefs").innerHTML;
+    const when = new Date().toLocaleDateString([], { month: "long", day: "numeric", year: "numeric" });
+    let s = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">` +
+      `<style>${fcss}
+        .d{font-family:"Pirata One",Georgia,serif;fill:#e9d701}
+        .b{font-family:"Alegreya",Georgia,serif;fill:#f3ecff}
+        .m{font-family:"Alegreya",Georgia,serif;fill:#c9b8ee;font-style:italic}</style>` + defs +
+      `<defs><radialGradient id="shBg" cx="50%" cy="38%" r="75%"><stop offset="0" stop-color="#4a1590"/><stop offset=".55" stop-color="#22093f"/><stop offset="1" stop-color="#0d0418"/></radialGradient>
+        <filter id="shGlow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="10"/></filter></defs>` +
+      `<rect width="${W}" height="${H}" fill="url(#shBg)"/>` +
+      `<rect x="16" y="16" width="${W - 32}" height="${H - 32}" rx="34" fill="none" stroke="#e9d701" stroke-width="4"/>` +
+      `<rect x="28" y="28" width="${W - 56}" height="${H - 56}" rx="26" fill="none" stroke="#e9d701" stroke-opacity=".35" stroke-width="1.5" stroke-dasharray="6 6"/>`;
+    if (lg) s += `<image href="${lg}" x="52" y="44" width="104" height="108"/>`;
+    s += `<text class="d" x="${W / 2 + 40}" y="112" text-anchor="middle" font-size="74">The Chaotic Good Spread</text>` +
+         `<text class="m" x="${W / 2 + 40}" y="154" text-anchor="middle" font-size="28">Read in Mira's tent · ${xml(when)}</text>`;
+    // the star: the ring, then the lines in the order the cards were dealt
+    const outer = POS.filter(p => p.key !== "heart"), heart = POS.find(p => p.key === "heart");
+    s += `<circle cx="${px(heart.x)}" cy="${py(heart.y)}" r="${39 / 100 * S}" fill="none" stroke="#e9d701" stroke-opacity=".75" stroke-width="3"/>`;
+    outer.forEach((a, i) => { const b = outer[(i + 1) % outer.length];
+      s += `<line x1="${px(a.x)}" y1="${py(a.y)}" x2="${px(b.x)}" y2="${py(b.y)}" stroke="#e9d701" stroke-opacity=".75" stroke-width="3"/>`; });
+    // the six cards, reversed ones upside down
+    const cw = CW / 100 * S, ch = cw * 1200 / 700;
+    dealt.forEach(d => {
+      const svg = d.el.querySelector(".sp-front svg");
+      const x = px(d.pos.x) - cw / 2, y = py(d.pos.y) - ch / 2;
+      s += `<rect x="${x - 4}" y="${y - 4}" width="${cw + 8}" height="${ch + 8}" rx="12" fill="#e9d701" opacity=".45" filter="url(#shGlow)"/>`;
+      if (!svg) { s += `<rect x="${x}" y="${y}" width="${cw}" height="${ch}" rx="10" fill="#1c0638" stroke="#e9d701" stroke-width="3"/>`; return; }
+      const inner = svg.outerHTML.replace(/^<svg\b/, `<svg x="${x}" y="${y}" width="${cw}" height="${ch}"`);
+      s += d.card.reversed ? `<g transform="rotate(180 ${x + cw / 2} ${y + ch / 2})">${inner}</g>` : inner;
+    });
+    // what was drawn, in the order it was dealt
+    const top = 1066, colW = 470;
+    dealt.forEach((d, i) => {
+      const x = W / 2 - colW + (i % 2) * colW + 24, y = top + Math.floor(i / 2) * 72;
+      s += `<text class="m" x="${x}" y="${y}" font-size="23">${i + 1} · ${xml(d.pos.title)}</text>` +
+           `<text class="d" x="${x}" y="${y + 33}" font-size="34">${xml(d.card.name)}${d.card.reversed ? ' <tspan class="m" font-size="24">reversed</tspan>' : ""}</text>`;
+    });
+    s += `<text class="m" x="${W / 2}" y="${H - 50}" text-anchor="middle" font-size="25">Mira's mirror reflects; it doesn't predict. · chaoticgoodguild.com/tarot</text></svg>`;
+
+    const url = URL.createObjectURL(new Blob([s], { type: "image/svg+xml" }));
+    try {
+      const img = new Image();
+      img.src = url;
+      await img.decode();
+      await sleep(120);                 // give the tucked-in fonts a breath before painting
+      const c = document.createElement("canvas"); c.width = W; c.height = H;
+      const g = c.getContext("2d");
+      g.drawImage(img, 0, 0);
+      await sleep(60); g.drawImage(img, 0, 0);
+      return await new Promise((ok, no) => c.toBlob(b => b ? ok(b) : no(new Error("no picture")), "image/png"));
+    } finally { URL.revokeObjectURL(url); }
+  }
+
+  async function openShare() {
+    if (state !== "dealt" || !dealt.every(d => d.turned)) return;
+    lastFocus = document.activeElement;
+    shareBox.hidden = false; shareMsg.textContent = "Mira is painting your reading…";
+    shareImg.hidden = true; shareGo.hidden = true; shareDl.hidden = true;
+    $("spShareClose").focus();
+    try {
+      const blob = await paintReading();
+      const name = "chaotic-good-spread-" + new Date().toISOString().slice(0, 10) + ".png";
+      shareFile = new File([blob], name, { type: "image/png" });
+      if (shareURL) URL.revokeObjectURL(shareURL);
+      shareURL = URL.createObjectURL(blob);
+      shareImg.src = shareURL; shareImg.hidden = false;
+      shareDl.href = shareURL; shareDl.download = name; shareDl.hidden = false;
+      shareGo.hidden = !(navigator.canShare && navigator.canShare({ files: [shareFile] }));
+      shareMsg.textContent = "Painted here on your device. Nothing is sent anywhere unless you share it.";
+    } catch (e) {
+      shareMsg.textContent = "The mirror fogged over and the picture wouldn't paint on this device. Try another browser?";
+    }
+  }
+  shareGo.addEventListener("click", async () => {
+    try { await navigator.share({ files: [shareFile], title: "My Chaotic Good Spread", text: "Mira read my star at chaoticgoodguild.com/tarot" }); }
+    catch (e) { /* closed the share sheet; nothing to do */ }
+  });
+  function closeShare() { shareBox.hidden = true; if (lastFocus) lastFocus.focus(); }
+  $("spShareClose").addEventListener("click", closeShare);
+  shareBox.addEventListener("click", e => { if (e.target === shareBox) closeShare(); });
+  document.querySelectorAll("[data-share]").forEach(b => b.addEventListener("click", openShare));
 
   // ---- a closer look
   let lastFocus = null;
@@ -359,6 +479,6 @@ if (typeof module !== "undefined") module.exports = CGGRead;
   light.addEventListener("click", e => { if (e.target === light) closeLight(); });
   document.addEventListener("keydown", e => {
     if (e.key !== "Escape") return;
-    if (!light.hidden) closeLight(); else hideTip();
+    if (!shareBox.hidden) closeShare(); else if (!light.hidden) closeLight(); else hideTip();
   });
 })();

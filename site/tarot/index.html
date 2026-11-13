@@ -23,7 +23,7 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "The Chaotic Good Spread", "description": "The Chaotic Good Spread: shuffle the Guild's own tarot deck and lay six cards in the shape of the Guild star. Galleons, Lutes, Quills and Mirrors, with Reynard, Mira and the rats of the Guild.", "url": "https://www.chaoticgoodguild.com/tarot/", "isPartOf": {"@type": "WebSite", "name": "Chaotic Good Guild", "url": "https://www.chaoticgoodguild.com/"}}</script>
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<svg id="spDefs" width="0" height="0" style="position:absolute" aria-hidden="true">
 <defs>
 <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05010c"/><stop offset=".5" stop-color="#1c0838"/><stop offset="1" stop-color="#43116a"/></linearGradient>
 <linearGradient id="gGround" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d0d38"/><stop offset="1" stop-color="#0b0416"/></linearGradient>
@@ -135,6 +135,7 @@
   <div class="sp-actions">
     <button type="button" class="back-btn" id="spAll" hidden>Turn them all</button>
     <button type="button" class="back-btn" id="spRead" hidden>Read Mira's reading &darr;</button>
+    <button type="button" class="back-btn" data-share hidden>Share your reading</button>
     <button type="button" class="sp-ghost" id="spAgain" hidden>Shuffle again</button>
   </div>
   <noscript><p class="raising">The spread needs JavaScript turned on.</p></noscript>
@@ -145,10 +146,24 @@
     <div class="sp-sumtext" id="spSummaryText"></div>
     <details class="sp-how"><summary>How Mira read this</summary><ul id="spNotes"></ul>
       <p class="sp-howend">These are the threads Mira pulled this time. With practice you'll find your own.</p></details>
+    <p class="sp-sharerow"><button type="button" class="back-btn" data-share hidden>Share this reading as a picture</button></p>
   </section>
 
   <h2 class="sp-h">Card by card</h2>
   <ol class="sp-list" id="spList"></ol>
+
+  <div class="sp-light" id="spShareBox" role="dialog" aria-modal="true" aria-labelledby="spShareTitle" hidden>
+    <div class="sp-sharebox">
+      <h3 class="sp-h" id="spShareTitle">Your reading, painted</h3>
+      <img id="spShareImg" alt="A picture of your Chaotic Good Spread: the six cards laid in a star, with their names" hidden>
+      <p class="sp-sharemsg" id="spShareMsg" aria-live="polite"></p>
+      <div class="sp-sharebtns">
+        <button type="button" class="back-btn" id="spShareGo" hidden>Share</button>
+        <a class="back-btn" id="spShareDl" hidden>Download</a>
+        <button type="button" class="sp-ghost" id="spShareClose">Close</button>
+      </div>
+    </div>
+  </div>
 
   <div class="sp-light" id="spLight" role="dialog" aria-modal="true" aria-labelledby="spLightTitle" hidden>
     <div class="sp-lightbox">

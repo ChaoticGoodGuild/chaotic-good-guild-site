@@ -451,3 +451,12 @@ aside.cal-day:hover { border-color: var(--gold); }
   .cal-wheellist li { grid-template-columns: 1fr auto; }
   .wl-line { grid-column: 1 / -1; margin-top: -6px; }
 }
+
+/* sharing a reading as a picture */
+.sp-sharerow { text-align: center; margin: 18px 0 0; }
+.sp-sharebox { width: min(520px, 100%); max-height: 100%; overflow: auto; background: var(--dusk); border: 2px solid var(--gold); border-radius: 18px; padding: 20px; text-align: center; box-shadow: 0 0 0 6px rgba(96,0,174,.5), 0 30px 80px rgba(0,0,0,.7); }
+.sp-sharebox .sp-h { margin: 0 0 12px; }
+.sp-sharebox img { display: block; width: 100%; max-height: 62vh; object-fit: contain; border-radius: 10px; margin: 0 auto; }
+.sp-sharemsg { margin: 12px 0; font-style: italic; color: var(--muted); font-size: 16px; }
+.sp-sharebtns { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.sp-sharebtns a.back-btn { text-decoration: none; }

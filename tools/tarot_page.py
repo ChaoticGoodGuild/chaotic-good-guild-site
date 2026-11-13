@@ -33,7 +33,7 @@ def build(p):
                    for a, b in zip(outer, outer[1:] + outer[:1]))
     cx, cy = pos[5]["x"], pos[5]["y"]
     page = B.head(f"{p['title']} · {B.NAME}", desc, path, p["slug"], ld)
-    page += f"""<svg width="0" height="0" style="position:absolute" aria-hidden="true">{defs}</svg>
+    page += f"""<svg id="spDefs" width="0" height="0" style="position:absolute" aria-hidden="true">{defs}</svg>
 <header class="top">
   <a class="brand" href="/" aria-label="{B.NAME} home"><img src="/assets/logo.png" alt="{B.NAME}" width="345" height="360"></a>
   <a class="back-link" href="/">&larr; The village</a>
@@ -57,6 +57,7 @@ def build(p):
   <div class="sp-actions">
     <button type="button" class="back-btn" id="spAll" hidden>Turn them all</button>
     <button type="button" class="back-btn" id="spRead" hidden>Read Mira's reading &darr;</button>
+    <button type="button" class="back-btn" data-share hidden>Share your reading</button>
     <button type="button" class="sp-ghost" id="spAgain" hidden>Shuffle again</button>
   </div>
   <noscript><p class="raising">The spread needs JavaScript turned on.</p></noscript>
@@ -67,10 +68,24 @@ def build(p):
     <div class="sp-sumtext" id="spSummaryText"></div>
     <details class="sp-how"><summary>How Mira read this</summary><ul id="spNotes"></ul>
       <p class="sp-howend">These are the threads Mira pulled this time. With practice you'll find your own.</p></details>
+    <p class="sp-sharerow"><button type="button" class="back-btn" data-share hidden>Share this reading as a picture</button></p>
   </section>
 
   <h2 class="sp-h">Card by card</h2>
   <ol class="sp-list" id="spList"></ol>
+
+  <div class="sp-light" id="spShareBox" role="dialog" aria-modal="true" aria-labelledby="spShareTitle" hidden>
+    <div class="sp-sharebox">
+      <h3 class="sp-h" id="spShareTitle">Your reading, painted</h3>
+      <img id="spShareImg" alt="A picture of your Chaotic Good Spread: the six cards laid in a star, with their names" hidden>
+      <p class="sp-sharemsg" id="spShareMsg" aria-live="polite"></p>
+      <div class="sp-sharebtns">
+        <button type="button" class="back-btn" id="spShareGo" hidden>Share</button>
+        <a class="back-btn" id="spShareDl" hidden>Download</a>
+        <button type="button" class="sp-ghost" id="spShareClose">Close</button>
+      </div>
+    </div>
+  </div>
 
   <div class="sp-light" id="spLight" role="dialog" aria-modal="true" aria-labelledby="spLightTitle" hidden>
     <div class="sp-lightbox">
