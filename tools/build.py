@@ -278,8 +278,9 @@ def build_meta():
           "The Chaotic Good Guild is a creative universe about living Chaotic Good: kind, free-spirited "
           "and playfully rebellious, in contrast to the Lawful Evil Overlords (LEOs). Its characters include "
           "Reynard the fox, Mira the witchy cat, the Badger, the Bull, the rats of the Guild, the LEO Lion "
-          "and the Corporate Wolf.\n\n## Rooms\n\n" + rooms + "\n\n## Essays\n\n" + "\n".join(
-          f"- [{x['title']}]({DOMAIN}/stories/{x['slug']}/): {x['summary']}" for x in stump_page.load_essays()) + "\n")
+          "and the Corporate Wolf.\n\n## Rooms\n\n" + rooms + "\n" + ("\n## Essays by Reynard the Fox\n\n" + "\n".join(
+          f"- [{x['title']}]({DOMAIN}/stories/{x['slug']}/): {x['summary']}" for x in stump_page.load_essays()) + "\n"
+          if stump_page.load_essays() else ""))
 
 
 def build_assets():

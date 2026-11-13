@@ -7,7 +7,7 @@ Essays: one Markdown file per essay in src/essays/, with a short header:
     ---
     title: The essay's title
     date: 2026-11-13
-    author: Ryan A. Stewart
+    author: Reynard the Fox        (optional; Reynard the Fox is the default)
     summary: One or two sentences for the list and for link previews.
     ---
     The essay, in plain paragraphs. Blank lines between paragraphs.
@@ -59,7 +59,7 @@ def load_essays():
     d = os.path.join(B.SRC, "essays")
     essays = []
     for f in sorted(os.listdir(d)) if os.path.isdir(d) else []:
-        if not f.endswith(".md"): continue
+        if not f.endswith(".md") or f.lower() == "readme.md": continue
         raw = open(os.path.join(d, f), encoding="utf-8").read()
         meta, body = {}, raw
         m = re.match(r"^---\s*\n(.*?)\n---\s*\n(.*)$", raw, re.S)
@@ -71,7 +71,7 @@ def load_essays():
         slug = f[:-3]
         words = len(re.findall(r"\w+", body))
         essays.append({"slug": slug, "title": meta.get("title", slug.replace("-", " ").title()), "date": meta.get("date", ""),
-                       "author": meta.get("author", B.NAME), "summary": meta.get("summary", ""), "body": body,
+                       "author": meta.get("author", "Reynard the Fox"), "summary": meta.get("summary", ""), "body": body,
                        "minutes": max(1, round(words / 230))})
     essays.sort(key=lambda x: x["date"], reverse=True)
     return essays
@@ -137,7 +137,7 @@ def build(p):
       <p class="who">{E(p['who'])}</p>
       <h1>{E(p['title'])}</h1>
       <p class="desc">{E(p['desc'])}</p>
-      <p class="st-jump"><a class="back-btn" href="#watch">Watch the fox</a> <a class="sp-ghost" href="#read">Read the essays</a></p>
+      <p class="st-jump"><a class="back-btn" href="#watch">Watch the fox</a> <a class="sp-ghost" href="#read">{"Read the essays" if essays else "Essays, coming soon"}</a></p>
     </div>
   </section>
 
@@ -154,9 +154,7 @@ def build(p):
 
   <section id="read" class="st-read" aria-labelledby="stReadH">
     <h2 class="places-h" id="stReadH">Read</h2>
-    <ul class="st-essays">
-{essay_list}
-    </ul>
+    {'<ul class="st-essays">' + chr(10) + essay_list + chr(10) + '</ul>' if essays else '<p class="st-soon">Reynard is still sharpening his quill. His essays will gather here, one by one, by lantern light.</p>'}
   </section>
 
   <div class="sp-light" id="stPlayer" role="dialog" aria-modal="true" aria-labelledby="stPTitle" hidden>

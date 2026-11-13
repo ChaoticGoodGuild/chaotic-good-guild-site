@@ -529,3 +529,4 @@ aside.cal-day:hover { border-color: var(--gold); }
   .st-plinks { flex-direction: row; justify-content: center; gap: 14px; }
   .st-body { font-size: 18px; }
 }
+.st-soon { font-style: italic; color: #fff3a0; font-size: 19px; margin: 0; }
