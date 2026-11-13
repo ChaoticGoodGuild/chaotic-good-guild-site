@@ -19,6 +19,7 @@ import scene  # noqa: E402
 import alignment  # noqa: E402
 import tarot_page  # noqa: E402
 import calendar_page  # noqa: E402
+import stump_page  # noqa: E402
 
 SITE = os.path.join(ROOT, "site")
 SRC = os.path.join(ROOT, "src")
@@ -267,6 +268,7 @@ def build_404():
 def build_meta():
     today = datetime.date.today().isoformat()
     urls = ["/"] + [f"/{p['slug']}/" for p in PLACES] + [f"/alignment-test/{s}/" for s in alignment.DATA["results"]]
+    urls += [f"/stories/{x['slug']}/" for x in stump_page.load_essays()]
     sm = "".join(f"  <url><loc>{DOMAIN}{u}</loc><lastmod>{today}</lastmod></url>\n" for u in urls)
     write("sitemap.xml", f'<?xml version="1.0" encoding="UTF-8"?>\n'
           f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{sm}</urlset>\n')
@@ -276,7 +278,8 @@ def build_meta():
           "The Chaotic Good Guild is a creative universe about living Chaotic Good: kind, free-spirited "
           "and playfully rebellious, in contrast to the Lawful Evil Overlords (LEOs). Its characters include "
           "Reynard the fox, Mira the witchy cat, the Badger, the Bull, the rats of the Guild, the LEO Lion "
-          "and the Corporate Wolf.\n\n## Rooms\n\n" + rooms + "\n")
+          "and the Corporate Wolf.\n\n## Rooms\n\n" + rooms + "\n\n## Essays\n\n" + "\n".join(
+          f"- [{x['title']}]({DOMAIN}/stories/{x['slug']}/): {x['summary']}" for x in stump_page.load_essays()) + "\n")
 
 
 def build_assets():
@@ -308,6 +311,8 @@ def main():
             tarot_page.build(p)
         elif p["slug"] == "calendar":
             calendar_page.build(p)
+        elif p["slug"] == "stories":
+            stump_page.build(p)
         else:
             build_room(p)
     build_404()

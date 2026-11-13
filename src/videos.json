@@ -1,0 +1,1479 @@
+{
+ "_about": "Videos shown in Reynard's Stump (/stories/). Each video lives on TikTok (and on YouTube when 'youtube' is set). 'segment' is one of the keys in 'segments'. Newest first. Sorted by Claude from the titles and the CGG Scripts doc; move any video by changing its segment.",
+ "channels": {
+  "youtube": "https://www.youtube.com/@Chaotic_Good_Guild",
+  "tiktok": "https://www.tiktok.com/@chaotic_good_guild"
+ },
+ "segments": [
+  {
+   "key": "way",
+   "name": "The Chaotic Good Way",
+   "line": "Curiosity, compassion and clever courage, one lesson at a time."
+  },
+  {
+   "key": "leos",
+   "name": "Defense Against the LEOs",
+   "line": "How the overlords cast their spells, and how to break them."
+  },
+  {
+   "key": "songs",
+   "name": "Ballads & Shanties",
+   "line": "Songs, rhymes and limericks from the fox with the lute."
+  },
+  {
+   "key": "heart",
+   "name": "Heart & Hope",
+   "line": "For the days that feel heavy. You're not walking alone."
+  },
+  {
+   "key": "trouble",
+   "name": "Good Trouble",
+   "line": "Calls to action, Guild summons, and small acts of mighty mischief."
+  },
+  {
+   "key": "radio",
+   "name": "Rogue Radio",
+   "line": "Broadcasting from the edge of the ordinary."
+  },
+  {
+   "key": "buffs",
+   "name": "Buffs & Charms",
+   "line": "Feeling low, lost or tired? Take a buff and carry on."
+  },
+  {
+   "key": "lists",
+   "name": "Lists from the Lodge",
+   "line": "Books, heroes, tools and tricks, three at a time."
+  },
+  {
+   "key": "tale",
+   "name": "The Fox Who Asked",
+   "line": "Reynard's first tale, told in nine parts."
+  },
+  {
+   "key": "sparks",
+   "name": "First Sparks",
+   "line": "Where it began: the Guild's earliest whispers, spring 2025."
+  }
+ ],
+ "videos": [
+  {
+   "tiktok": "7581870955757063438",
+   "date": "2025-12-09",
+   "title": "Magic in the Minutia",
+   "segment": "songs",
+   "youtube": "yJ65qydYx4w"
+  },
+  {
+   "tiktok": "7581254439986613518",
+   "date": "2025-12-07",
+   "title": "Everything is Made Up",
+   "segment": "radio",
+   "youtube": "kAgec9yFGxk"
+  },
+  {
+   "tiktok": "7580865739133816078",
+   "date": "2025-12-06",
+   "title": "BREAKING NEWS: Alchemy Lives Again!",
+   "segment": "radio",
+   "youtube": "rL2r8i0IZC0"
+  },
+  {
+   "tiktok": "7579751929232788749",
+   "date": "2025-12-03",
+   "title": "Are You Chaotic Good?",
+   "segment": "trouble",
+   "youtube": "-9OLLBKdotQ"
+  },
+  {
+   "tiktok": "7579363129432231182",
+   "date": "2025-12-02",
+   "title": "Ballad of the Borrowed Hour",
+   "segment": "songs",
+   "youtube": "Cj__yVx79GM"
+  },
+  {
+   "tiktok": "7578910418932878605",
+   "date": "2025-12-01",
+   "title": "The Freedom to Ask",
+   "segment": "trouble",
+   "youtube": "eJGhZGiSiTM",
+   "pinned": true
+  },
+  {
+   "tiktok": "7578651918982073613",
+   "date": "2025-11-30",
+   "title": "Attention Vampire",
+   "segment": "songs",
+   "youtube": "TkpfTeFS0t8"
+  },
+  {
+   "tiktok": "7578225798847466765",
+   "date": "2025-11-29",
+   "title": "The Mirage of Being Right",
+   "segment": "way",
+   "youtube": "FENznoTotno"
+  },
+  {
+   "tiktok": "7577789593244716301",
+   "date": "2025-11-28",
+   "title": "Resentful Architects of Avarice",
+   "segment": "leos",
+   "youtube": "LBmnURE9BLY"
+  },
+  {
+   "tiktok": "7577612676507929887",
+   "date": "2025-11-28",
+   "title": "Controlling Cowards",
+   "segment": "leos",
+   "youtube": "qoFZVUEklu8"
+  },
+  {
+   "tiktok": "7577105834509913399",
+   "date": "2025-11-26",
+   "title": "The Comedy of Contrast",
+   "segment": "way",
+   "youtube": "aJcRwGLWzac"
+  },
+  {
+   "tiktok": "7576815408561261837",
+   "date": "2025-11-25",
+   "title": "The Keepers of Continuity",
+   "segment": "trouble",
+   "youtube": "gHqQRhBZ4oM"
+  },
+  {
+   "tiktok": "7576387588194340127",
+   "date": "2025-11-24",
+   "title": "The Fox and the Fickle Fortune",
+   "segment": "songs",
+   "youtube": "P8pyOeg0sDg"
+  },
+  {
+   "tiktok": "7576096919710092558",
+   "date": "2025-11-24",
+   "title": "The Balance of Builders",
+   "segment": "way",
+   "youtube": "Mgx5B9hTXzY"
+  },
+  {
+   "tiktok": "7575646816058838303",
+   "date": "2025-11-22",
+   "title": "The Pity of Power",
+   "segment": "way",
+   "youtube": "WmoCPtQdWhU"
+  },
+  {
+   "tiktok": "7575251913474723085",
+   "date": "2025-11-21",
+   "title": "The Ease of Envy",
+   "segment": "way",
+   "youtube": "_1y9QpgFt2k"
+  },
+  {
+   "tiktok": "7574920303524990239",
+   "date": "2025-11-20",
+   "title": "The Simulacrum Labyrinth",
+   "segment": "way",
+   "youtube": "K9moFk22-Bg"
+  },
+  {
+   "tiktok": "7574454250424634637",
+   "date": "2025-11-19",
+   "title": "The Everyday Hero",
+   "segment": "heart",
+   "youtube": "qovXw7Qewj0"
+  },
+  {
+   "tiktok": "7574139342805847351",
+   "date": "2025-11-18",
+   "title": "False Fires",
+   "segment": "songs",
+   "youtube": "d2p7q47hKfY"
+  },
+  {
+   "tiktok": "7573796772384918798",
+   "date": "2025-11-17",
+   "title": "Science of Self-Discovery",
+   "segment": "way",
+   "youtube": "9Ldq08pfTKM"
+  },
+  {
+   "tiktok": "7573497474317389070",
+   "date": "2025-11-17",
+   "title": "The Taste of True Compassion",
+   "segment": "way",
+   "youtube": "MRfFyHADAbw"
+  },
+  {
+   "tiktok": "7573463395819654431",
+   "date": "2025-11-16",
+   "title": "The Subtle Snare of Suggestion",
+   "segment": "leos",
+   "youtube": "FSKliLUyza8"
+  },
+  {
+   "tiktok": "7572600825428708622",
+   "date": "2025-11-14",
+   "title": "Boardroom Bard Bullshit",
+   "segment": "songs",
+   "youtube": "3HTEfnQkwR0"
+  },
+  {
+   "tiktok": "7571941875444206862",
+   "date": "2025-11-12",
+   "title": "The Choice Within",
+   "segment": "heart",
+   "youtube": "kLZX8EDqV68"
+  },
+  {
+   "tiktok": "7571579558017633550",
+   "date": "2025-11-11",
+   "title": "Future Friends",
+   "segment": "heart",
+   "youtube": "x8h00Vc626c"
+  },
+  {
+   "tiktok": "7571186998463991054",
+   "date": "2025-11-10",
+   "title": "Ease the Room",
+   "segment": "songs",
+   "youtube": "E44oziSyxHE"
+  },
+  {
+   "tiktok": "7570781663546985741",
+   "date": "2025-11-09",
+   "title": "The Next Small Step",
+   "segment": "heart",
+   "youtube": "ihWaBGbBdGE"
+  },
+  {
+   "tiktok": "7570002792845217037",
+   "date": "2025-11-07",
+   "title": "The Whistleblower’s Shanty",
+   "segment": "songs",
+   "youtube": "Qcj1CCwIcDA"
+  },
+  {
+   "tiktok": "7569645093934632222",
+   "date": "2025-11-06",
+   "title": "Winning What, Exactly?",
+   "segment": "way",
+   "youtube": "wwpCHGk27_c"
+  },
+  {
+   "tiktok": "7569390692565323038",
+   "date": "2025-11-05",
+   "title": "Guy Fox Day",
+   "segment": "trouble",
+   "youtube": "Dfep8ZrnHds"
+  },
+  {
+   "tiktok": "7568928607167433998",
+   "date": "2025-11-04",
+   "title": "Nowhere to Go? Nonsense!",
+   "segment": "trouble",
+   "youtube": "XFZeaCDtQcs"
+  },
+  {
+   "tiktok": "7568530868092800270",
+   "date": "2025-11-03",
+   "title": "The Shape of Society",
+   "segment": "trouble",
+   "youtube": "I_1HQXvNP3c"
+  },
+  {
+   "tiktok": "7568275670569209118",
+   "date": "2025-11-02",
+   "title": "Policy and Law",
+   "segment": "songs",
+   "youtube": "cDC5qRkWmlY"
+  },
+  {
+   "tiktok": "7567456577116998926",
+   "date": "2025-10-31",
+   "title": "Flood the Airwaves!",
+   "segment": "trouble",
+   "youtube": "cQLdWStSbcM"
+  },
+  {
+   "tiktok": "7567024270656802062",
+   "date": "2025-10-30",
+   "title": "The Lexicon and the Blade",
+   "segment": "way",
+   "youtube": "R3QN0JsPKMY"
+  },
+  {
+   "tiktok": "7566738304385715486",
+   "date": "2025-10-29",
+   "title": "The Cost of Covering",
+   "segment": "leos",
+   "youtube": "nsOaJv0M2Ew"
+  },
+  {
+   "tiktok": "7566315356311080223",
+   "date": "2025-10-28",
+   "title": "The Four Powers",
+   "segment": "way",
+   "youtube": "4zWNlPuLFQs"
+  },
+  {
+   "tiktok": "7565899721798176030",
+   "date": "2025-10-27",
+   "title": "Breathe Brave",
+   "segment": "heart",
+   "youtube": "K9JlkgIRK9c",
+   "pinned": true
+  },
+  {
+   "tiktok": "7565214084656844045",
+   "date": "2025-10-25",
+   "title": "Flirting with the World",
+   "segment": "way",
+   "youtube": "ZbkUXuL5y8c"
+  },
+  {
+   "tiktok": "7564822431769103671",
+   "date": "2025-10-24",
+   "title": "Bullshit Jobs",
+   "segment": "songs",
+   "youtube": "FjXE21Fz78o"
+  },
+  {
+   "tiktok": "7559642078842588471",
+   "date": "2025-10-10",
+   "title": "Chaotic Good at School",
+   "segment": "trouble",
+   "youtube": "HctjtaELIfg"
+  },
+  {
+   "tiktok": "7559320914358258999",
+   "date": "2025-10-09",
+   "title": "3 Chaotic Good Ways to Manage Your Emotions",
+   "segment": "lists",
+   "youtube": "67IpN4i3O8U"
+  },
+  {
+   "tiktok": "7558953648479325454",
+   "date": "2025-10-08",
+   "title": "Feeling thrown off course? Take this adaptability buff!",
+   "segment": "buffs",
+   "youtube": "dqV9dhx-Los"
+  },
+  {
+   "tiktok": "7558488561389964575",
+   "date": "2025-10-07",
+   "title": "Feeling discouraged? Take this resilience buff.",
+   "segment": "buffs",
+   "youtube": "rKirXON8y6c"
+  },
+  {
+   "tiktok": "7558216599908453645",
+   "date": "2025-10-06",
+   "title": "You’re Arguing with Bots",
+   "segment": "songs",
+   "youtube": "ajss3kbuAlk"
+  },
+  {
+   "tiktok": "7557818483082333453",
+   "date": "2025-10-05",
+   "title": "Entitlement, the Engine of Evil",
+   "segment": "leos",
+   "youtube": "0ClXai8lgis"
+  },
+  {
+   "tiktok": "7557433620965723406",
+   "date": "2025-10-04",
+   "title": "The Perils of the Push",
+   "segment": "leos",
+   "youtube": "0xMXlg2Yoms"
+  },
+  {
+   "tiktok": "7557012594511400222",
+   "date": "2025-10-03",
+   "title": "Rogue Radio: The Secret Trick",
+   "segment": "radio",
+   "youtube": "ZLQgOtbBCnk"
+  },
+  {
+   "tiktok": "7556638600591330574",
+   "date": "2025-10-02",
+   "title": "Press On, Friends!",
+   "segment": "heart"
+  },
+  {
+   "tiktok": "7556285325203623223",
+   "date": "2025-10-01",
+   "title": "The Power of Your Creativity",
+   "segment": "trouble"
+  },
+  {
+   "tiktok": "7555917934770523405",
+   "date": "2025-09-30",
+   "title": "The Guild We’re Building",
+   "segment": "trouble"
+  },
+  {
+   "tiktok": "7555466681917771063",
+   "date": "2025-09-29",
+   "title": "Take this perseverance buff.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7555288267420110111",
+   "date": "2025-09-28",
+   "title": "Wisdom Buff",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7554855501385780511",
+   "date": "2025-09-27",
+   "title": "Chaotic Good Communication Tools",
+   "segment": "lists"
+  },
+  {
+   "tiktok": "7554412442885819678",
+   "date": "2025-09-26",
+   "title": "Fiction Books for the Chaotic Good",
+   "segment": "lists"
+  },
+  {
+   "tiktok": "7554195766105918734",
+   "date": "2025-09-26",
+   "title": "Take this mischief buff.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7553761867554983198",
+   "date": "2025-09-24",
+   "title": "Take this rebel buff.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7553436906931948830",
+   "date": "2025-09-23",
+   "title": "Boundaries, Not Blades",
+   "segment": "way"
+  },
+  {
+   "tiktok": "7553011717920296205",
+   "date": "2025-09-22",
+   "title": "Careful, Not Careless",
+   "segment": "way"
+  },
+  {
+   "tiktok": "7552542954410331422",
+   "date": "2025-09-21",
+   "title": "3 Chaotic Good Role Models",
+   "segment": "lists"
+  },
+  {
+   "tiktok": "7552376131890973983",
+   "date": "2025-09-21",
+   "title": "Chaotic Cantrip",
+   "segment": "way"
+  },
+  {
+   "tiktok": "7551877917156986142",
+   "date": "2025-09-19",
+   "title": "Grind of the Gig Worker",
+   "segment": "songs"
+  },
+  {
+   "tiktok": "7551466351454342413",
+   "date": "2025-09-18",
+   "title": "Shake the Script",
+   "segment": "songs"
+  },
+  {
+   "tiktok": "7551105651179539726",
+   "date": "2025-09-17",
+   "title": "No NPCs",
+   "segment": "way"
+  },
+  {
+   "tiktok": "7550722124835589407",
+   "date": "2025-09-16",
+   "title": "The Comfort of Conspiracies",
+   "segment": "leos"
+  },
+  {
+   "tiktok": "7550412999572344077",
+   "date": "2025-09-15",
+   "title": "Limitations Light the Way",
+   "segment": "way"
+  },
+  {
+   "tiktok": "7550037601399426334",
+   "date": "2025-09-14",
+   "title": "Optimism Is Our Edge",
+   "segment": "heart"
+  },
+  {
+   "tiktok": "7549710181697867039",
+   "date": "2025-09-13",
+   "title": "Three Spells Lawful Evil Oversystems Cast on Us Daily",
+   "segment": "lists"
+  },
+  {
+   "tiktok": "7549297917262056735",
+   "date": "2025-09-12",
+   "title": "Careful What You Wish For!",
+   "segment": "songs"
+  },
+  {
+   "tiktok": "7548903996702903582",
+   "date": "2025-09-11",
+   "title": "Agents of Change",
+   "segment": "trouble"
+  },
+  {
+   "tiktok": "7548522050185334030",
+   "date": "2025-09-10",
+   "title": "Fabricated Fears in the Fog of War",
+   "segment": "leos"
+  },
+  {
+   "tiktok": "7548101596698234142",
+   "date": "2025-09-09",
+   "title": "You’re More Than a Cog",
+   "segment": "songs"
+  },
+  {
+   "tiktok": "7547743919396752695",
+   "date": "2025-09-08",
+   "title": "You’re the Spark",
+   "segment": "heart"
+  },
+  {
+   "tiktok": "7547018499286174989",
+   "date": "2025-09-06",
+   "title": "Golden Handcuffs",
+   "segment": "leos"
+  },
+  {
+   "tiktok": "7546644736187075870",
+   "date": "2025-09-05",
+   "title": "Virtue vs. Villainy",
+   "segment": "songs"
+  },
+  {
+   "tiktok": "7546367354888817934",
+   "date": "2025-09-04",
+   "title": "Better Off, Still Burned Out",
+   "segment": "leos"
+  },
+  {
+   "tiktok": "7545906376841661751",
+   "date": "2025-09-03",
+   "title": "The Toolbox of the Trickster",
+   "segment": "way"
+  },
+  {
+   "tiktok": "7545589804126326046",
+   "date": "2025-09-02",
+   "title": "The Trick of Truth",
+   "segment": "way"
+  },
+  {
+   "tiktok": "7545190497623608590",
+   "date": "2025-09-01",
+   "title": "Rogue Radio",
+   "segment": "radio"
+  },
+  {
+   "tiktok": "7544805712313027854",
+   "date": "2025-08-31",
+   "title": "What Rules Are You Carrying?",
+   "segment": "leos"
+  },
+  {
+   "tiktok": "7544438364770979103",
+   "date": "2025-08-30",
+   "title": "Not Cogs, But Sparks",
+   "segment": "heart"
+  },
+  {
+   "tiktok": "7544100969521417486",
+   "date": "2025-08-29",
+   "title": "We Haven’t Given Up on You",
+   "segment": "heart"
+  },
+  {
+   "tiktok": "7543679574295497998",
+   "date": "2025-08-28",
+   "title": "Shallow Knowing Builds Shaky Bridges",
+   "segment": "way"
+  },
+  {
+   "tiktok": "7543297726801317134",
+   "date": "2025-08-27",
+   "title": "The Raid of the Laughing Kind",
+   "segment": "songs"
+  },
+  {
+   "tiktok": "7543008096751324471",
+   "date": "2025-08-26",
+   "title": "The Rat, the Cat, and the Bell",
+   "segment": "leos"
+  },
+  {
+   "tiktok": "7542640534842592526",
+   "date": "2025-08-25",
+   "title": "The Confidence Crash",
+   "segment": "songs"
+  },
+  {
+   "tiktok": "7542276861598993695",
+   "date": "2025-08-24",
+   "title": "This Is Your Summons",
+   "segment": "trouble"
+  },
+  {
+   "tiktok": "7541916887937027341",
+   "date": "2025-08-23",
+   "title": "Don't Play Their Pantomime",
+   "segment": "leos"
+  },
+  {
+   "tiktok": "7541435885942770999",
+   "date": "2025-08-22",
+   "title": "Loopholes & Laughter",
+   "segment": "songs"
+  },
+  {
+   "tiktok": "7541276299415932174",
+   "date": "2025-08-22",
+   "title": "Need to feel fierce? Take this berserker buff.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7540711007052647693",
+   "date": "2025-08-20",
+   "title": "Words for the Willing",
+   "segment": "trouble",
+   "pinned": true
+  },
+  {
+   "tiktok": "7540330508027170078",
+   "date": "2025-08-19",
+   "title": "Waiting for Perfect? That's a Trap.",
+   "segment": "trouble"
+  },
+  {
+   "tiktok": "7540103417335745822",
+   "date": "2025-08-19",
+   "title": "Bureaucrats, Bots, and the Boldness to Break Free",
+   "segment": "leos"
+  },
+  {
+   "tiktok": "7539291795172150583",
+   "date": "2025-08-16",
+   "title": "3 Chaotic Good Philosophy Books",
+   "segment": "lists"
+  },
+  {
+   "tiktok": "7538867063629122871",
+   "date": "2025-08-15",
+   "title": "Feeling scattered? Take this focus buff!",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7538507746610548023",
+   "date": "2025-08-14",
+   "title": "Chaotic Good Vessel",
+   "segment": "trouble"
+  },
+  {
+   "tiktok": "7538108101082287374",
+   "date": "2025-08-13",
+   "title": "You're the Protagonist. Act Like It.",
+   "segment": "trouble"
+  },
+  {
+   "tiktok": "7537775486894705934",
+   "date": "2025-08-12",
+   "title": "Feeling ordinary? Take this enchantment buff.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7537500636225490206",
+   "date": "2025-08-12",
+   "title": "You Matter More Than You Know",
+   "segment": "heart"
+  },
+  {
+   "tiktok": "7535916867601321230",
+   "date": "2025-08-07",
+   "title": "Airwave Alchemy",
+   "segment": "songs"
+  },
+  {
+   "tiktok": "7535436196097412407",
+   "date": "2025-08-06",
+   "title": "Feeling blocked? Take this creativity buff.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7534888841686027575",
+   "date": "2025-08-05",
+   "title": "3 Chaotic Good Video Game Heroes",
+   "segment": "lists"
+  },
+  {
+   "tiktok": "7534489437124840717",
+   "date": "2025-08-03",
+   "title": "Baited by the Buzzfeed Berserkers",
+   "segment": "leos"
+  },
+  {
+   "tiktok": "7534057974310931726",
+   "date": "2025-08-02",
+   "title": "Do-It-Yourself Justice (Some Assembly Required)",
+   "segment": "songs"
+  },
+  {
+   "tiktok": "7533570678558117134",
+   "date": "2025-08-01",
+   "title": "Feeling awkward? Take this charisma buff.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7532969772187667725",
+   "date": "2025-07-30",
+   "title": "Freedom Ain't Free",
+   "segment": "way"
+  },
+  {
+   "tiktok": "7532581108643351863",
+   "date": "2025-07-29",
+   "title": "3 Chaotic Good Ways to Manage Your Emotions",
+   "segment": "lists"
+  },
+  {
+   "tiktok": "7532288506496830734",
+   "date": "2025-07-29",
+   "title": "Fee-Fi-Faux-Fairness",
+   "segment": "leos"
+  },
+  {
+   "tiktok": "7531915034696355086",
+   "date": "2025-07-27",
+   "title": "3 Chaotic Good Philosophy Books",
+   "segment": "lists"
+  },
+  {
+   "tiktok": "7531449483616390431",
+   "date": "2025-07-26",
+   "title": "The Rising Tide",
+   "segment": "trouble"
+  },
+  {
+   "tiktok": "7531195641746263309",
+   "date": "2025-07-26",
+   "title": "Feeling stuck? Take this momentum buff.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7530752576682200333",
+   "date": "2025-07-24",
+   "title": "Need to blend in? Here's a glamourcloak buff.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7530311802199067959",
+   "date": "2025-07-23",
+   "title": "Congratulations! You've Been Selected to Miss the Point",
+   "segment": "leos"
+  },
+  {
+   "tiktok": "7529938931496914231",
+   "date": "2025-07-22",
+   "title": "Feeling too serious? Take this playfulness buff.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7529626904786128142",
+   "date": "2025-07-21",
+   "title": "Call to Courage",
+   "segment": "songs"
+  },
+  {
+   "tiktok": "7527643511596846350",
+   "date": "2025-07-16",
+   "title": "3 Chaotic Good Questions to Ask Yourself Before You Act",
+   "segment": "lists"
+  },
+  {
+   "tiktok": "7527441481573944631",
+   "date": "2025-07-15",
+   "title": "Feeling unsure of your place? Take this leadership buff.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7527034748481309983",
+   "date": "2025-07-14",
+   "title": "3 Chaotic Good Communication Tools",
+   "segment": "lists"
+  },
+  {
+   "tiktok": "7526606548076924191",
+   "date": "2025-07-13",
+   "title": "Call Your Chaos Crew",
+   "segment": "trouble"
+  },
+  {
+   "tiktok": "7526179548111670541",
+   "date": "2025-07-12",
+   "title": "Need to disappear? Take this invisibility buff.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7525912215052979511",
+   "date": "2025-07-11",
+   "title": "Layers of Legal Lint",
+   "segment": "leos"
+  },
+  {
+   "tiktok": "7525531962627607822",
+   "date": "2025-07-10",
+   "title": "3 Chaotic Good Ways to Spread the Message",
+   "segment": "lists"
+  },
+  {
+   "tiktok": "7525193949661711629",
+   "date": "2025-07-09",
+   "title": "Feeling exposed? Take this protection buff.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7525018718548610335",
+   "date": "2025-07-09",
+   "title": "Freedom: Now in Five Convenient Sizes",
+   "segment": "leos"
+  },
+  {
+   "tiktok": "7524504160943738167",
+   "date": "2025-07-08",
+   "title": "Demon Loot Casino",
+   "segment": "leos"
+  },
+  {
+   "tiktok": "7524127547857128717",
+   "date": "2025-07-07",
+   "title": "Sunk Cost Cogs",
+   "segment": "leos"
+  },
+  {
+   "tiktok": "7523665326907706637",
+   "date": "2025-07-05",
+   "title": "Freedom's a Little Messy",
+   "segment": "way"
+  },
+  {
+   "tiktok": "7523268285735931149",
+   "date": "2025-07-04",
+   "title": "Here, take this veilpiercer buff. Stay sharp out there.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7522949114947030303",
+   "date": "2025-07-03",
+   "title": "3 Chaotic Good Role Models",
+   "segment": "lists"
+  },
+  {
+   "tiktok": "7522550162561060151",
+   "date": "2025-07-02",
+   "title": "Feeling scattered? Take this bubble of calm.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7522140212865158414",
+   "date": "2025-07-01",
+   "title": "The Overlords Built a Slot Machine",
+   "segment": "leos"
+  },
+  {
+   "tiktok": "7521901276557217038",
+   "date": "2025-07-01",
+   "title": "3 Chaotic Good Video Game Groups",
+   "segment": "lists"
+  },
+  {
+   "tiktok": "7521510331336674573",
+   "date": "2025-06-29",
+   "title": "3 Books to Get You Thinking Chaotic Good",
+   "segment": "lists"
+  },
+  {
+   "tiktok": "7521164168297286925",
+   "date": "2025-06-29",
+   "title": "Feeling burnt out? Take this inspiration buff!",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7520733253376986382",
+   "date": "2025-06-27",
+   "title": "Feeling unlucky? Take this luck buff.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7520271144268614967",
+   "date": "2025-06-26",
+   "title": "Why the Guild Is a Collage, Not a Machine",
+   "segment": "trouble"
+  },
+  {
+   "tiktok": "7520072556871683342",
+   "date": "2025-06-26",
+   "title": "Feeling lost? Take this compass buff.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7519612904098909495",
+   "date": "2025-06-24",
+   "title": "Their System Runs on Soggy Pizza & Fear",
+   "segment": "leos"
+  },
+  {
+   "tiktok": "7519145628283309343",
+   "date": "2025-06-23",
+   "title": "4 Chaotic Good Skills to Train",
+   "segment": "lists"
+  },
+  {
+   "tiktok": "7518752763988282654",
+   "date": "2025-06-22",
+   "title": "Of Overlords and NPC Clowns",
+   "segment": "leos"
+  },
+  {
+   "tiktok": "7518570163675893022",
+   "date": "2025-06-22",
+   "title": "Rewriting the Stage",
+   "segment": "way"
+  },
+  {
+   "tiktok": "7518224898179779871",
+   "date": "2025-06-21",
+   "title": "Steal This Message",
+   "segment": "trouble"
+  },
+  {
+   "tiktok": "7517825800163331358",
+   "date": "2025-06-20",
+   "title": "True Trick of the Gadfly",
+   "segment": "way"
+  },
+  {
+   "tiktok": "7516984885525875998",
+   "date": "2025-06-17",
+   "title": "Need to sneak by? Here's a lightfoot charm.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7516664083668569357",
+   "date": "2025-06-16",
+   "title": "3 Ways to Chaotically Defeat the LEOs",
+   "segment": "lists"
+  },
+  {
+   "tiktok": "7516290022153162014",
+   "date": "2025-06-15",
+   "title": "Feeling low? Take this morale buff.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7515894027259022634",
+   "date": "2025-06-14",
+   "title": "Life's Not Chess. It's a Rigged Card Table.",
+   "segment": "leos"
+  },
+  {
+   "tiktok": "7515498948337962282",
+   "date": "2025-06-13",
+   "title": "3 Ways to Be Chaotic Good in a Lawful Evil Oversystem",
+   "segment": "lists"
+  },
+  {
+   "tiktok": "7515037289148452126",
+   "date": "2025-06-12",
+   "title": "Feeling stuck in the script? Take this mischief buff.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7513958359679143210",
+   "date": "2025-06-09",
+   "title": "The World Needs You. And That's Not a Metaphor.",
+   "segment": "heart",
+   "line": "Your hope, your heart, your refusal to quit. You're not a mistake, you're a missing piece. Stay kind. Stay with us."
+  },
+  {
+   "tiktok": "7513617127002180907",
+   "date": "2025-06-08",
+   "title": "The Guild Is Open. Join the Mischief.",
+   "segment": "trouble"
+  },
+  {
+   "tiktok": "7513384345491737902",
+   "date": "2025-06-08",
+   "title": "Feeling overwhelmed? Take this clarity buff.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7512850787366636843",
+   "date": "2025-06-06",
+   "title": "Strike When the Stars Say To",
+   "segment": "way"
+  },
+  {
+   "tiktok": "7512629294741409067",
+   "date": "2025-06-06",
+   "title": "Feeling tired? Take this energy buff.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7512123146284272942",
+   "date": "2025-06-04",
+   "title": "Chaotic Good Rises in the Storm",
+   "segment": "heart"
+  },
+  {
+   "tiktok": "7511847049332018475",
+   "date": "2025-06-03",
+   "title": "Feeling disconnected? Take this love buff.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7511446051329559854",
+   "date": "2025-06-02",
+   "title": "Chaotic Good Speaks with Care",
+   "segment": "way",
+   "line": "We speak to lift, to free, to forge futures. The first spell you ever cast was believing that something better was possible."
+  },
+  {
+   "tiktok": "7510665061136878879",
+   "date": "2025-05-31",
+   "title": "Feeling distant? Take this connection buff.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7510271781329046830",
+   "date": "2025-05-30",
+   "title": "It Started with One Question",
+   "segment": "tale",
+   "line": "It grew into a Guild. And now the story is yours. The final chapter, and really just the beginning.",
+   "part": 9
+  },
+  {
+   "tiktok": "7509964457569799466",
+   "date": "2025-05-29",
+   "title": "No Battles. No Violence.",
+   "segment": "tale",
+   "line": "Just people remembering the door was always open.",
+   "part": 8
+  },
+  {
+   "tiktok": "7509545855704141102",
+   "date": "2025-05-28",
+   "title": "Feeling unsure? Take this wisdom buff.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7507671530139045162",
+   "date": "2025-05-23",
+   "title": "\"Why Are We Still Doing This?\"",
+   "segment": "tale",
+   "line": "It spread like wildfire. The momentum builds.",
+   "part": 7
+  },
+  {
+   "tiktok": "7507473671787744555",
+   "date": "2025-05-23",
+   "title": "Feeling hopeless? Take this hope buff.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7506959891165383982",
+   "date": "2025-05-21",
+   "title": "Feeling nervous? Take this serenity buff.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7506601424953036078",
+   "date": "2025-05-20",
+   "title": "No Invite. No Title.",
+   "segment": "tale",
+   "line": "Just a fox, a clipboard, and one question.",
+   "part": 6
+  },
+  {
+   "tiktok": "7506248122067062058",
+   "date": "2025-05-19",
+   "title": "Feeling lost? Take this compass buff.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7505863502431604014",
+   "date": "2025-05-18",
+   "title": "Was It Ever Really a Rule?",
+   "segment": "leos",
+   "line": "If the rich can break it and no one blinks... was it ever really a rule?"
+  },
+  {
+   "tiktok": "7505422732725865774",
+   "date": "2025-05-17",
+   "title": "Feeling heavy? Take this joy buff.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7505180283709197611",
+   "date": "2025-05-16",
+   "title": "You Were Chaotic Good Without Realizing It",
+   "segment": "sparks"
+  },
+  {
+   "tiktok": "7504716320508857646",
+   "date": "2025-05-15",
+   "title": "Feeling afraid? Take this courage buff.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7504339297324027182",
+   "date": "2025-05-14",
+   "title": "The Points Were Always Fake",
+   "segment": "sparks",
+   "line": "We're not here to win arguments. We're here to change the world."
+  },
+  {
+   "tiktok": "7503958030413729066",
+   "date": "2025-05-13",
+   "title": "Leadership Isn't Loud",
+   "segment": "sparks",
+   "line": "It's kind, clever, and doesn't ask for permission."
+  },
+  {
+   "tiktok": "7503647317405224222",
+   "date": "2025-05-12",
+   "title": "Some Thrones Are Empty",
+   "segment": "tale",
+   "line": "And some were never filled to begin with.",
+   "part": 5
+  },
+  {
+   "tiktok": "7503511119097629983",
+   "date": "2025-05-12",
+   "title": "Feeling uncertain? Take this intuition buff.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7503295492999318830",
+   "date": "2025-05-11",
+   "title": "What Would Reynard Do?",
+   "segment": "sparks",
+   "line": "The answer is already in you."
+  },
+  {
+   "tiktok": "7502944609136282922",
+   "date": "2025-05-10",
+   "title": "Feeling hopeless? Take this hope buff.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7502523785912929567",
+   "date": "2025-05-09",
+   "title": "Feeling small? Take this confidence buff.",
+   "segment": "buffs"
+  },
+  {
+   "tiktok": "7502021122993540394",
+   "date": "2025-05-08",
+   "title": "Find a Friend Where You Expected a Foe",
+   "segment": "sparks",
+   "line": "That's how the towers fall."
+  },
+  {
+   "tiktok": "7501801195011329326",
+   "date": "2025-05-07",
+   "title": "They Buried Brilliance in Busywork",
+   "segment": "leos",
+   "line": "We broke the spell. Help us enchant something better."
+  },
+  {
+   "tiktok": "7501343360523832618",
+   "date": "2025-05-06",
+   "title": "The Blueprint Broke. You Didn't.",
+   "segment": "heart",
+   "line": "Start again."
+  },
+  {
+   "tiktok": "7500945037547736366",
+   "date": "2025-05-05",
+   "title": "No Crowns. No Cages.",
+   "segment": "sparks",
+   "line": "Just barefoot roads and honest grace."
+  },
+  {
+   "tiktok": "7500632123469073695",
+   "date": "2025-05-04",
+   "title": "Slogans Are Easy",
+   "segment": "sparks",
+   "line": "Kindness is harder, and worth it."
+  },
+  {
+   "tiktok": "7500265314819575086",
+   "date": "2025-05-03",
+   "title": "A Second Chance",
+   "segment": "heart",
+   "line": "We've all needed one. Chaotic Good gives it before it's earned."
+  },
+  {
+   "tiktok": "7499886146730675487",
+   "date": "2025-05-02",
+   "title": "Don't Scream at the Fire",
+   "segment": "sparks",
+   "line": "Stop feeding it."
+  },
+  {
+   "tiktok": "7499479714877181214",
+   "date": "2025-05-01",
+   "title": "All This Order. All These Rules.",
+   "segment": "tale",
+   "line": "And no one knows who's in charge.",
+   "part": 4
+  },
+  {
+   "tiktok": "7499098561586449710",
+   "date": "2025-04-30",
+   "title": "This Isn't a Trend",
+   "segment": "trouble",
+   "line": "It's a pledge. I am Chaotic Good."
+  },
+  {
+   "tiktok": "7498870700241997087",
+   "date": "2025-04-29",
+   "title": "When You Ask",
+   "segment": "tale",
+   "part": 3
+  },
+  {
+   "tiktok": "7498724709077421343",
+   "date": "2025-04-29",
+   "title": "We Bend. We Build.",
+   "segment": "sparks",
+   "line": "Disobey with dignity."
+  },
+  {
+   "tiktok": "7498519178568060206",
+   "date": "2025-04-29",
+   "title": "Trapped in a Loop You Can't See",
+   "segment": "tale",
+   "line": "Not all prisons have bars. Some just have long lines, longer waits, and forgotten dreams.",
+   "part": 2
+  },
+  {
+   "tiktok": "7498386776415849759",
+   "date": "2025-04-28",
+   "title": "One Question. One Crack.",
+   "segment": "sparks",
+   "line": "Lies tremble. Truth stands."
+  },
+  {
+   "tiktok": "7497971193975278878",
+   "date": "2025-04-27",
+   "title": "Imagine What You Could Fix",
+   "segment": "heart",
+   "line": "Fear lies. Your courage is real."
+  },
+  {
+   "tiktok": "7497765970140728618",
+   "date": "2025-04-26",
+   "title": "What Happens When a Fox Asks?",
+   "segment": "tale",
+   "line": "The one question no one dares to. The system blinked, and that's when the story began.",
+   "part": 1
+  },
+  {
+   "tiktok": "7497681120083954974",
+   "date": "2025-04-26",
+   "title": "Cruelty Isn't Strength",
+   "segment": "heart",
+   "line": "Kindness is. Rise, and let others lift you."
+  },
+  {
+   "tiktok": "7497244222475554094",
+   "date": "2025-04-25",
+   "title": "One Spark. One Soul.",
+   "segment": "heart",
+   "line": "That's how the best stories begin."
+  },
+  {
+   "tiktok": "7496910648782179614",
+   "date": "2025-04-24",
+   "title": "They Point and Deflect",
+   "segment": "leos",
+   "line": "But we see the game. And we're not in it."
+  },
+  {
+   "tiktok": "7496535765745175838",
+   "date": "2025-04-23",
+   "title": "We Don't Lie. We Layer.",
+   "segment": "sparks",
+   "line": "Speak less. Mean more."
+  },
+  {
+   "tiktok": "7496172085186759967",
+   "date": "2025-04-22",
+   "title": "Pretty Pleases. Quiet Smiles.",
+   "segment": "leos",
+   "line": "That's how they hush heroes. But kindness fights back."
+  },
+  {
+   "tiktok": "7495794811841056043",
+   "date": "2025-04-21",
+   "title": "I'm a Clever Problem",
+   "segment": "sparks",
+   "line": "I'm not a warrior. I'm not a king. I'm a clever problem. And I'm back."
+  },
+  {
+   "tiktok": "7495444903661456682",
+   "date": "2025-04-20",
+   "title": "You Already Know What's Wrong",
+   "segment": "sparks",
+   "line": "You don't need permission to care. Just one moment, one choice to be kind, clever and brave."
+  },
+  {
+   "tiktok": "7495060072536591662",
+   "date": "2025-04-19",
+   "title": "The Story Was Waiting for You",
+   "segment": "heart",
+   "line": "Not someday. Now. Light the lantern. Spark the change."
+  },
+  {
+   "tiktok": "7494675266451574047",
+   "date": "2025-04-18",
+   "title": "The Lion Ruled. The Fox Smiled.",
+   "segment": "sparks",
+   "line": "No battle, just presence. The forest remembers who stayed."
+  },
+  {
+   "tiktok": "7494310890490154270",
+   "date": "2025-04-17",
+   "title": "PowerPoints Aren't Potions",
+   "segment": "leos",
+   "line": "Mission statements aren't meaning. Scribble. Laugh. Plant wildflowers in cubicles."
+  },
+  {
+   "tiktok": "7493939678513548587",
+   "date": "2025-04-16",
+   "title": "Joy Confuses Them",
+   "segment": "sparks",
+   "line": "So laugh louder. You're the color they can't code."
+  },
+  {
+   "tiktok": "7493555775097392427",
+   "date": "2025-04-15",
+   "title": "He Offered a Lantern",
+   "segment": "sparks",
+   "line": "She lit a revolution. One spark is all it takes."
+  },
+  {
+   "tiktok": "7493188034440105262",
+   "date": "2025-04-14",
+   "title": "They Fear Laughter",
+   "segment": "sparks",
+   "line": "We wield it. A giggle can crack the chains."
+  },
+  {
+   "tiktok": "7492939707408731438",
+   "date": "2025-04-13",
+   "title": "Labels Are Lanterns",
+   "segment": "sparks",
+   "line": "Until they're locks. You're not a brand. You're a poem."
+  },
+  {
+   "tiktok": "7492435249482321198",
+   "date": "2025-04-12",
+   "title": "Switches and Stories",
+   "segment": "sparks",
+   "line": "Lawful Evil sees switches. Chaotic Good sees stories. Progress isn't a parade. It's a patchwork."
+  },
+  {
+   "tiktok": "7492051605244644650",
+   "date": "2025-04-11",
+   "title": "The System Only Works If You Play",
+   "segment": "leos",
+   "line": "Trade songs. Trade seeds. Stop believing their coins are real."
+  },
+  {
+   "tiktok": "7491690426320145694",
+   "date": "2025-04-10",
+   "title": "They Sold You",
+   "segment": "leos"
+  },
+  {
+   "tiktok": "7491305754238979359",
+   "date": "2025-04-09",
+   "title": "Different Tools. Same Revolution.",
+   "segment": "trouble",
+   "line": "Six hundred years ago: books. Today: AI. Use it to spread stories faster than fear."
+  },
+  {
+   "tiktok": "7490941054565272878",
+   "date": "2025-04-08",
+   "title": "Chaos Isn't the Goal",
+   "segment": "sparks",
+   "line": "Goodness is. Roar when needed. Whisper when wise."
+  },
+  {
+   "tiktok": "7490580938783542559",
+   "date": "2025-04-07",
+   "title": "If It Feels Cruel, Look Closer",
+   "segment": "sparks",
+   "line": "Most people aren't cruel. The filter is. Real rebellion is seeing clearly."
+  },
+  {
+   "tiktok": "7490233280441126175",
+   "date": "2025-04-06",
+   "title": "They Build It for Control",
+   "segment": "sparks",
+   "line": "We build it for wonder. Don't waste the wish on bitterness."
+  },
+  {
+   "tiktok": "7489840861652536607",
+   "date": "2025-04-05",
+   "title": "Rebel with Reason",
+   "segment": "sparks",
+   "line": "We don't hunt humans; we hammer harmful frameworks. We don't burn bridges; we build better ones."
+  },
+  {
+   "tiktok": "7489478901576650014",
+   "date": "2025-04-04",
+   "title": "A Little Good Trouble",
+   "segment": "trouble",
+   "line": "Feeling off? Rearrange the signs. Juggle the spoons. Lighten the heavy days."
+  },
+  {
+   "tiktok": "7489124530657561887",
+   "date": "2025-04-03",
+   "title": "Some Heroes Wear Armor",
+   "segment": "heart",
+   "line": "Others just listen when it's hard. The world doesn't need you to fix it. It just needs you to care."
+  },
+  {
+   "tiktok": "7488738067923209502",
+   "date": "2025-04-02",
+   "title": "You Already Know",
+   "segment": "sparks",
+   "line": "This isn't rebellion for the sake of it. This is kindness with intent, cleverness with conviction."
+  },
+  {
+   "tiktok": "7488374579748982059",
+   "date": "2025-04-01",
+   "title": "The Biggest Lie",
+   "segment": "leos",
+   "line": "\"Follow the rules and you'll be safe.\""
+  }
+ ]
+}
