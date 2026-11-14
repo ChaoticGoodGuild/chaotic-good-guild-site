@@ -195,7 +195,7 @@
   "suit": "major",
   "rank": 21,
   "numeral": "XXI",
-  "scene": "The Guild star in a laurel wreath, with the Badger, Reynard, Mira and a rat at the four corners, above the red city."
+  "scene": "The Guild star in a laurel wreath, with the Badger, Reynard, Mira and a rat at the four corners, above The Red City."
  },
  {
   "id": "galleons-01",
@@ -420,7 +420,7 @@
   "suit": "lutes",
   "rank": 11,
   "numeral": "N",
-  "scene": "In an alley of the red city, Reynard offers his lute to a young rat in beggar's clothes."
+  "scene": "In an alley of The Red City, Reynard offers his lute to a young rat in beggar's clothes."
  },
  {
   "id": "lutes-12",
@@ -501,7 +501,7 @@
   "suit": "quills",
   "rank": 6,
   "numeral": "VI",
-  "scene": "Three rats row away from the red city toward the Guild star, six quills standing in the bow."
+  "scene": "Three rats row away from The Red City toward the Guild star, six quills standing in the bow."
  },
  {
   "id": "quills-07",
@@ -528,7 +528,7 @@
   "suit": "quills",
   "rank": 9,
   "numeral": "IX",
-  "scene": "A rat sits bolt upright in bed beneath nine quills, the red city in the window."
+  "scene": "A rat sits bolt upright in bed beneath nine quills, The Red City in the window."
  },
  {
   "id": "quills-10",
@@ -654,7 +654,7 @@
   "suit": "mirrors",
   "rank": 9,
   "numeral": "IX",
-  "scene": "Mira reads tarot at her alley booth in the red city, with her frog, her cauldron and a genie lamp."
+  "scene": "Mira reads tarot at her alley booth in The Red City, with her frog, her cauldron and a genie lamp."
  },
  {
   "id": "mirrors-10",
@@ -663,7 +663,7 @@
   "suit": "mirrors",
   "rank": 10,
   "numeral": "X",
-  "scene": "In the red city, Mira looks into a great mirror and sees a happy hamlet beneath an arc of nine more."
+  "scene": "In The Red City, Mira looks into a great mirror and sees a happy hamlet beneath an arc of nine more."
  },
  {
   "id": "mirrors-11",
@@ -690,7 +690,7 @@
   "suit": "mirrors",
   "rank": 13,
   "numeral": "J",
-  "scene": "By a forest pool, a robed rat levitates a mirror that shows the red city; tarot cards lie at his feet."
+  "scene": "By a forest pool, a robed rat levitates a mirror that shows The Red City; tarot cards lie at his feet."
  },
  {
   "id": "mirrors-14",

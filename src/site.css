@@ -595,3 +595,10 @@ aside.cal-day:hover { border-color: var(--gold); }
   .ab-card { grid-template-columns: 88px 1fr; }
   .ab-port { height: 124px; } .ab-port .ab-fig { max-height: 124px; max-width: 88px; }
 }
+.ab-photo { margin: 0; }
+.ab-photo img { display: block; width: 100%; height: auto; border-radius: 20px; border: 3px solid var(--gold); box-shadow: 0 0 0 6px rgba(96,0,174,.45), 0 0 40px rgba(233,215,1,.25); }
+.ab-card.pair { grid-column: 1 / -1; grid-template-columns: 280px 1fr; }
+.ab-card.pair .ab-port { gap: 12px; height: 170px; }
+.ab-card.pair .ab-port .ab-fig { max-width: 124px; max-height: 170px; }
+.ab-card.pair p:last-child { max-width: 62ch; }
+@media (max-width: 420px) { .ab-card.pair { grid-template-columns: 1fr; } .ab-card.pair .ab-port { justify-content: center; } }

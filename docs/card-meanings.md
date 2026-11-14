@@ -260,7 +260,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 ### The World (Ryan, light)
 
-*Scene:* The Guild star in a laurel wreath, with the Badger, Reynard, Mira and a rat at the four corners, above the red city.
+*Scene:* The Guild star in a laurel wreath, with the Badger, Reynard, Mira and a rat at the four corners, above The Red City.
 
 *Keywords:* completion, wholeness, level up
 
@@ -564,7 +564,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 ### Neophyte of Lutes (Ryan, light)
 
-*Scene:* In an alley of the red city, Reynard offers his lute to a young rat in beggar's clothes.
+*Scene:* In an alley of The Red City, Reynard offers his lute to a young rat in beggar's clothes.
 
 *Keywords:* joyful expression, new passion, encouragement
 
@@ -674,7 +674,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 ### Six of Quills (Ryan, light)
 
-*Scene:* Three rats row away from the red city toward the Guild star, six quills standing in the bow.
+*Scene:* Three rats row away from The Red City toward the Guild star, six quills standing in the bow.
 
 *Keywords:* moving on, transition, leaving the rat race
 
@@ -710,7 +710,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 ### Nine of Quills (Ryan, shadow)
 
-*Scene:* A rat sits bolt upright in bed beneath nine quills, the red city in the window.
+*Scene:* A rat sits bolt upright in bed beneath nine quills, The Red City in the window.
 
 *Keywords:* anxiety, worry, uncertainty
 
@@ -880,7 +880,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 ### Nine of Mirrors (Ryan, light)
 
-*Scene:* Mira reads tarot at her alley booth in the red city, with her frog, her cauldron and a genie lamp.
+*Scene:* Mira reads tarot at her alley booth in The Red City, with her frog, her cauldron and a genie lamp.
 
 *Keywords:* wishes, contentment, cloud 9
 
@@ -892,7 +892,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 ### Ten of Mirrors (Ryan, light)
 
-*Scene:* In the red city, Mira looks into a great mirror and sees a happy hamlet beneath an arc of nine more.
+*Scene:* In The Red City, Mira looks into a great mirror and sees a happy hamlet beneath an arc of nine more.
 
 *Keywords:* happy endings, contentment, peace
 
@@ -928,7 +928,7 @@ Edit them in `src/meanings.json`. `tone` (light, mixed, shadow) helps the readin
 
 ### Journeyman of Mirrors (Ryan, light)
 
-*Scene:* By a forest pool, a robed rat levitates a mirror that shows the red city; tarot cards lie at his feet.
+*Scene:* By a forest pool, a robed rat levitates a mirror that shows The Red City; tarot cards lie at his feet.
 
 *Keywords:* emotional wisdom, intuition, compassion
 

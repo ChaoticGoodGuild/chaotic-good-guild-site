@@ -459,6 +459,16 @@ def rat(expr="happy", outfit="plain", prop=None):
         arm_l = arm_l.replace('url(#gRat)" stroke-width="8"', 'url(#gSuit)" stroke-width="8"')
         arm_r = arm_r.replace('url(#gRat)" stroke-width="8"', 'url(#gSuit)" stroke-width="8"')
         held = f'<g transform="translate(40,-62)">{galleon(7)}</g>'
+    elif outfit == "crook":   # a Red City rat gone bad: striped sweater, flat cap, burglar's mask, crowbar
+        over_body = f'''<path d="M-27,-48 Q-30,-96 4,-100 Q34,-96 31,-48 Q4,-38 -27,-48Z" fill="#1d1a26" {O}/>
+<g stroke="#c9c2d6" stroke-width="4.5" opacity=".9"><path d="M-28,-88 Q4,-80 34,-88"/><path d="M-29,-74 Q4,-66 33,-74"/><path d="M-29,-60 Q4,-52 32,-60"/></g>
+<path d="M-27,-48 Q-30,-96 4,-100 Q34,-96 31,-48 Q4,-38 -27,-48Z" fill="none" {O}/>'''
+        arm_l = arm_l.replace('url(#gRat)" stroke-width="8"', '#1d1a26" stroke-width="8"')
+        arm_r = arm_r.replace('url(#gRat)" stroke-width="8"', '#1d1a26" stroke-width="8"')
+        over_head = f'''<path d="M2,-147 Q22,-154 44,-146 Q48,-138 44,-131 Q22,-126 2,-131 Q-2,-139 2,-147Z M12,-138 m-6.5,0 a6.5,7.5 0 1,0 13,0 a6.5,7.5 0 1,0 -13,0 M30,-137 m-6.5,0 a6.5,7.5 0 1,0 13,0 a6.5,7.5 0 1,0 -13,0" fill="#0d0a14" fill-rule="evenodd" {O1}/>
+<path d="M-4,-140 L-12,-134 M-4,-142 L-14,-142" stroke="#0d0a14" stroke-width="3" stroke-linecap="round"/>
+<path d="M-18,-150 Q8,-176 42,-160 L56,-152 Q50,-148 40,-150 Q10,-160 -18,-144Z" fill="#3a3448" {O}/><path d="M-6,-160 Q12,-170 30,-162" stroke="#2a2436" stroke-width="2" fill="none"/>'''
+        held = f'<g transform="translate(37,-52) rotate(34)"><path d="M0,0 L0,-62 Q0,-72 8,-74 L14,-72" fill="none" stroke="{INK}" stroke-width="7" stroke-linecap="round"/><path d="M0,0 L0,-62 Q0,-72 8,-74 L14,-72" fill="none" stroke="#7a7f8c" stroke-width="4" stroke-linecap="round"/><path d="M0,0 l-5,7" stroke="{INK}" stroke-width="5" stroke-linecap="round"/></g>'
     if prop == "quill":
         held = f'<g transform="translate(38,-56) rotate(-6)">{quill(.75)}</g>'
     elif prop == "none":

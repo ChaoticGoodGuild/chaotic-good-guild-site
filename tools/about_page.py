@@ -23,6 +23,12 @@ def portrait(key):
     return M.char_svg(key, draw(), M.BOX[key], pad=10, cls="ab-fig")
 
 
+def red_city_rats():
+    """Two rats of The Red City: one in the Wolf's suit and tie, one dressed for a break-in."""
+    box = (-72, -198, 172, 198)
+    return "".join(M.char_svg("rat", g, box, pad=8, cls="ab-fig") for g in (C.rat("smug", "suit"), C.rat("smug", "crook")))
+
+
 def paras(ps):
     return "".join(f"<p>{E(p)}</p>" for p in ps)
 
@@ -61,14 +67,11 @@ def build(p):
     tenets = "".join(f'<li><h3>{E(t["name"])}</h3><p>{E(t["text"])}</p></li>' for t in cr["tenets"])
 
     def card(c, foe=False):
-        return (f'<li class="ab-card{" foe" if foe else ""}"><div class="ab-port">{portrait(c["key"])}</div>'
+        art = red_city_rats() if c["key"] == "rats" else portrait(c["key"])
+        return (f'<li class="ab-card{" foe" if foe else ""}{" pair" if c["key"] == "rats" else ""}"><div class="ab-port">{art}</div>'
                 f'<div><h3>{E(c["name"])}</h3><p class="ab-align">{E(c["align"])}</p><p>{E(c["text"])}</p></div></li>')
     cast = A["cast"]
-    ways = "".join(f'<li><a class="ab-way" href="{w["href"]}"><span class="ab-wname">{E(w["name"])}</span>'
-                   f'<span>{E(w["text"])}</span></a></li>' for w in A["join"]["ways"])
     faq = "".join(f'<details class="ab-faq"><summary>{E(f["q"])}</summary><p>{E(f["a"])}</p></details>' for f in A["faq"])
-    follow = E(A["join"]["follow"]).replace("TikTok", f'<a href="{ch["tiktok"]}" rel="me noopener">TikTok</a>', 1) \
-                                    .replace("YouTube", f'<a href="{ch["youtube"]}" rel="me noopener">YouTube</a>', 1)
 
     page = B.head(f"{p['title']} · {B.NAME}", desc, path, p["slug"], ld)
     page += f"""<svg width="0" height="0" style="position:absolute" aria-hidden="true">{defs}</svg>
@@ -117,7 +120,7 @@ def build(p):
   </section>
 
   <section class="ab-sec ab-fox">
-    <div class="ab-foxart">{portrait('reynard')}</div>
+    <figure class="ab-foxart ab-photo"><img src="/assets/reynard-market.jpg" alt="{E(A['why_fox']['image_alt'])}" width="475" height="570" loading="lazy"></figure>
     <div class="ab-text">
       <h2 class="places-h">{E(A['why_fox']['title'])}</h2>
       {paras(A['why_fox']['paras'])}
@@ -137,13 +140,6 @@ def build(p):
     {paras(A['vessel']['paras'])}
   </section>
 
-  <section class="ab-sec" aria-labelledby="abJoin">
-    <h2 class="places-h" id="abJoin">{E(A['join']['title'])}</h2>
-    <p class="ab-intro">{E(A['join']['intro'])}</p>
-    <ul class="ab-ways">{ways}</ul>
-    <p class="ab-follow">{follow}</p>
-  </section>
-
   <section class="ab-sec" aria-labelledby="abFaq">
     <h2 class="places-h" id="abFaq">Questions at the raising</h2>
     {faq}
@@ -158,3 +154,4 @@ def build(p):
 </html>
 """
     B.write("about/index.html", page)
+    B.write("assets/reynard-market.jpg", open(os.path.join(B.SRC, "reynard-market.jpg"), "rb").read(), binary=True)

@@ -1,95 +1,155 @@
 {
   "_about": "Words for The Raising (/about/), the Guild's About page. Claude's drafts in the Guild voice, built from Ryan's scripts, the TikTok bio and the book's founding idea; for Ryan to rewrite. History in 'why_fox' and the FAQ was checked against published sources (Nov 2026).",
-
   "lede": "You asked the Bull what it is all for. He sets down his mallet, wipes his brow, and grins like he's been waiting all day for someone to ask.",
-
   "raising": {
     "title": "What we're raising",
     "paras": [
       "A village. Not just of timber and thatch, though there's plenty of both, but of people: neighbors who look out for one another, who question the rules that hurt and keep the ones that help, and who only make mischief when it makes the world a little kinder.",
-      "The Chaotic Good Guild is a home for anyone who has ever felt like a cog and suspected they were meant to be a spark. We trade in stories, songs, small rebellions and second chances. We build more than we break. And we'd rather lift a neighbor than win an argument.",
-      "Every beam goes up the same way: one kind, clever, slightly brave choice at a time. Grab a mallet. There's room on the roof."
+      "The Chaotic Good Guild is a home for anyone who has ever felt like a cog and suspected they were meant to be a spark. We trade in stories, songs, small acts of mischief and second chances. We build before we break. We don't leave people behind. And we'd rather lift a neighbor than win an argument.",
+      "Every beam looks a little different, and that's a good thing. Diversity builds strength, because it takes all kinds to build a village: the bold, the careful, the wise (and even the rule followers have a place!). What matters is that it's for The Good, rooted in compassion and kindness to help your friends and neighbors."
     ]
   },
-
   "creed": {
     "title": "The Guild's creed",
-    "lines": ["Kindness calls.", "Chaos clears.", "Clever courage fights fear."],
+    "lines": [
+      "Kindness calls.",
+      "Chaos clears.",
+      "Clever courage fights fear."
+    ],
     "motto": "Stay clever. Stay kind. Stay Chaotic Good.",
     "tenets": [
-      {"name": "Rebellion through kindness", "text": "The softest hammer still drives the nail. We push back with care, not cruelty."},
-      {"name": "Careful, not careless", "text": "Chaos is our creed, but we guard what we love: our friendships, our neighbors, each other."},
-      {"name": "Boundaries, not blades", "text": "Revenge is a rot. We hold our lines and keep our hearts unchained by hatred."},
-      {"name": "Pleasant, not perfect", "text": "Begin before you're ready. Forward beats flawless."},
-      {"name": "There are no NPCs", "text": "Every stranger is the main character of their own story, and a friend we haven't met yet."},
-      {"name": "Build, don't just break", "text": "Tearing down without a plan can be worse than what stood before. We raise something better."}
+      {
+        "name": "Rebellion through kindness",
+        "text": "The softest hammer still drives the nail. We push back with care, not cruelty."
+      },
+      {
+        "name": "Careful, not careless",
+        "text": "Chaos is our creed, but we guard what we love: our friendships, our neighbors, each other."
+      },
+      {
+        "name": "Boundaries, not blades",
+        "text": "Revenge is a rot. We hold our lines and keep our hearts unchained by hatred."
+      },
+      {
+        "name": "Pleasant, not perfect",
+        "text": "Begin before you're ready. Forward beats flawless."
+      },
+      {
+        "name": "There are no NPCs",
+        "text": "Every stranger is the main character of their own story, and a friend we haven't met yet."
+      },
+      {
+        "name": "Build, don't just break",
+        "text": "Tearing down without a plan can be worse than what stood before. We raise something better."
+      }
     ]
   },
-
   "chaotic_good": {
     "title": "What is Chaotic Good?",
     "paras": [
-      "Chaotic Good comes from the old game of dragons and dice, where every character is measured on two lines. One runs from Lawful to Chaotic: how you feel about rules and the people who make them. The other runs from Good to Evil: whether you act for others, or only for yourself.",
-      "Chaotic Good sits where freedom meets kindness. It's doing what's right even when the rulebook says otherwise, and doing it for others rather than for yourself. When the game first drew that line, its example was Robin Hood.",
+      "Chaotic Good comes from a long tradition of tabletop gaming, where every character makes a choice about what they believe about their fellow humans, and the strategies they use to demonstrate those beliefs. Those choices fall along two lines. One runs from Lawful to Chaotic: how you feel about rules and the people who make them. The other runs from Good to Evil: whether you act for others, or at great expense to other people, especially those who cannot defend themselves.",
+      "Chaotic Good sits where freedom meets kindness. It's doing what's right even when the rulebook says otherwise, and doing it for others rather than for yourself. You've heard of those who embody those traits in the stories you love: Robin Hood, Batman, the Weasley twins. But don't forget those who have shown up in real life to do the same: people like Martin Luther King Jr., Harriet Tubman, Upton Sinclair, and Jesus.",
       "Chaos isn't the goal. Goodness is. The chaos is just the courage to color outside lines that were drawn to keep people small."
     ],
     "grid_note": "Where do you land? Every alignment has its place in the village story."
   },
-
   "why_fox": {
-    "title": "Why a fox?",
+    "title": "Why Reynard?",
+    "image_alt": "Reynard the Fox in a red cowl and brown tunic, smiling in a busy medieval market",
     "paras": [
-      "Reynard is older than he looks. His tales first appeared in the twelfth century: a trickster fox outwitting a court of talking animals, mocking the lords and clergy who ruled over ordinary folk. He became a peasant hero, the clever underdog who always talked his way free.",
-      "In those old stories, the king was a lion and the fox's great rival was a wolf. Sound familiar?",
-      "Reynard came to life in a tumultuous time to point a light at the people society left behind. We brought him back for the same reason. He puts people before profits, and he remembers that rules were meant to protect us from the systems we build, not the other way around."
+      "Reynard is older than he looks. His tales first appeared in the twelfth century. He was a cruel trickster who outwitted a court of talking animals, mocking the lords and clergy who ruled over ordinary folk. He became a peasant hero, the clever underdog who could always talk his way free. He became so popular that the French language changed its word for fox from \"goupil\" to \"renard,\" although his name originally came from the German name \"Reginhard,\" which was used to describe someone who was brave and gave good advice.",
+      "Reynard came to life in a time when people were desperate, and life was hard. And now he's back, but with one condition: that he trade in his cruel ways for a lute, so that his words can inspire those who have been left behind or tossed aside. He was a product of his time, but now it's a new time, and he's promised to make the most of his second chance."
     ]
   },
-
   "cast": {
     "title": "Who's in the village",
     "folk": [
-      {"key": "reynard", "name": "Reynard the Fox", "align": "Chaotic Good", "text": "Bard, trickster and the Guild's voice. He plays the lute, asks the questions nobody dares to, and outfoxes crowns with a grin."},
-      {"key": "mira", "name": "Mira", "align": "True Neutral", "text": "The witchy cat who keeps the tent of mirrors. Her readings reflect rather than predict, and her frog is never far behind."},
-      {"key": "badger", "name": "The Badger", "align": "Lawful Good", "text": "Gardener and keeper of the village. Patient, steady and generous: she makes sure there's room in every row, so everybody eats."},
-      {"key": "bull", "name": "The Bull", "align": "Lawful Neutral", "text": "The builder. He raises the village beam by beam and turns hard work into play. (He's the one telling you all this.)"},
-      {"key": "rat", "name": "The village folk", "align": "Every alignment", "text": "The rats who build, trade, dance and dream in the mushroom village. Scribes, merchants, bards in training: the Guild is made of them."}
+      {
+        "key": "reynard",
+        "name": "Reynard the Fox",
+        "align": "Chaotic Good",
+        "text": "Bard, trickster and the Guild's voice. He plays the lute, asks the questions nobody dares to, and outfoxes crowns with a grin."
+      },
+      {
+        "key": "mira",
+        "name": "Mira",
+        "align": "True Neutral",
+        "text": "The witchy cat who keeps the tent of mirrors. Her readings reflect rather than predict, and her frog is never far behind."
+      },
+      {
+        "key": "badger",
+        "name": "The Badger",
+        "align": "Lawful Good",
+        "text": "Gardener and keeper of the village. Patient, steady and generous: she makes sure there's room in every row, so everybody eats."
+      },
+      {
+        "key": "bull",
+        "name": "The Bull",
+        "align": "Lawful Neutral",
+        "text": "The builder. He raises the village beam by beam and turns hard work into play. (He's the one telling you all this.)"
+      },
+      {
+        "key": "rat",
+        "name": "The village folk",
+        "align": "Neutral Good",
+        "text": "The rats who build, trade, dance and dream in the mushroom village. Scribes, merchants, bards in training: the Guild is made of them."
+      }
     ],
-    "foes_title": "Across the river, in the red city",
-    "foes_note": "The LEOs are the Lawful Evil Overlords, and the oversystems they run: the towers, ledgers and rules built to keep everyone else small.",
+    "foes_title": "Across the river, in The Red City",
+    "foes_note": "The Red City is where old fantasy meets modern corporate brutalism: stone keeps and concrete towers, gargoyles over glass, guild halls turned into boardrooms. Its masters are the LEOs, the Lawful Evil Overlords. They created the oversystems, and they run them: the towers, ledgers and rules built to keep everyone else small.",
     "foes": [
-      {"key": "lion", "name": "The LEO Lion", "align": "Lawful Evil", "text": "A petty tyrant on a golden throne who hoards galleons and calls his cage \"order.\""},
-      {"key": "wolf", "name": "The Corporate Wolf", "align": "Neutral Evil", "text": "Greed in a suit. He counts coins, not friends, and would sell the whole forest for a quarterly bonus."}
+      {
+        "key": "lion",
+        "name": "The LEO Lion",
+        "align": "Lawful Evil",
+        "text": "A petty tyrant on a golden throne who hoards galleons and calls his cage \"order.\""
+      },
+      {
+        "key": "wolf",
+        "name": "The Corporate Wolf",
+        "align": "Neutral Evil",
+        "text": "Greed in a suit. He counts coins, not friends, and would sell the whole forest for a quarterly bonus."
+      },
+      {
+        "key": "rats",
+        "name": "The Rats of The Red City",
+        "align": "Varying Evil",
+        "text": "Some wear the suit and some wear the mask. Most of them are a product of the Lawful Evil systems they operate inside of, doing what the ledgers demand to keep a roof overhead. But a couple of them would take the Corporate Wolf's job, or the LEO Lion's crown, in a heartbeat if given the chance."
+      }
     ]
   },
-
   "vessel": {
-    "title": "Behind the fox",
+    "title": "Behind Reynard the Fox",
     "paras": [
       "The fox is just a vessel. Behind him are ordinary humans living busy lives, trying to remind everybody how important they are in a world that sometimes feels like a lifeless machine.",
       "It's the Chaotic Good ideas that bring us together, not the mask. So rather than focusing on our differences, let's focus on what we have in common, give one another grace and forgiveness, and keep smiling, even when things get tough."
     ]
   },
-
-  "join": {
-    "title": "Lend a hand",
-    "intro": "The raising never really ends. Here's where to pick up a beam.",
-    "ways": [
-      {"href": "/alignment-test/", "name": "Find your alignment", "text": "Walk toward the red towers and learn where your heart lands."},
-      {"href": "/tarot/", "name": "Draw the star", "text": "Sit with Mira for the Chaotic Good Spread."},
-      {"href": "/calendar/", "name": "Keep the calendar", "text": "Moons, festivals, and Guy Fox Day on the fifth of November."},
-      {"href": "/stories/", "name": "Watch the fox", "text": "Two hundred tales from Reynard's Stump."}
-    ],
-    "follow": "Follow along on TikTok and YouTube. The Guild Hall, with a place for your name, is still being raised."
-  },
-
   "faq": [
-    {"q": "What does Chaotic Good mean?", "a": "Chaotic Good describes someone who does what's right for others even when the rules say otherwise. It pairs freedom (chaotic) with kindness (good): questioning rules that hurt people, keeping the ones that help, and acting out of care rather than self-interest."},
-    {"q": "Where does the term Chaotic Good come from?", "a": "It comes from the alignment system of Dungeons & Dragons. The original 1974 game sorted characters as Lawful, Neutral or Chaotic; in 1977 and the years after, a second line from Good to Evil was added, making nine alignments. Chaotic Good's classic example was Robin Hood."},
-    {"q": "Is Chaotic Good the same as being chaotic?", "a": "No. Chaos isn't the goal; goodness is. Chaotic Good isn't about causing disorder for its own sake. It's the courage to step outside rules that keep people small, in order to do more good."},
-    {"q": "What is the Chaotic Good Guild?", "a": "The Chaotic Good Guild is a story-world and community about living Chaotic Good: rebellion through kindness. It shares short tales from Reynard the Fox, a tarot deck and star spread for reflection, a calendar of moons and festivals, and an alignment quiz."},
-    {"q": "Who is Reynard the Fox?", "a": "Reynard is a trickster fox from European tales first written down in the twelfth century, a clever underdog who mocked the lords and clergy of his day. He's the Chaotic Good Guild's narrator and mascot, and the pen name behind its essays."},
-    {"q": "What does LEO mean in the Chaotic Good Guild?", "a": "LEO stands for the Lawful Evil Overlords, and the oversystems they run: the rules, ledgers and institutions that put profit and control ahead of people. In the Guild's stories they're led by the LEO Lion and the Corporate Wolf."}
+    {
+      "q": "What does Chaotic Good mean?",
+      "a": "Chaotic Good describes someone who does what's right for others even when the rules say otherwise. It pairs freedom (chaotic) with kindness (good): questioning rules that hurt people, keeping the ones that help, and acting out of care rather than self-interest."
+    },
+    {
+      "q": "Where does the term Chaotic Good come from?",
+      "a": "It comes from the alignment system of Dungeons & Dragons. The original 1974 game sorted characters as Lawful, Neutral or Chaotic; in 1977 and the years after, a second line from Good to Evil was added, making nine alignments. Chaotic Good's classic example was Robin Hood."
+    },
+    {
+      "q": "Is Chaotic Good the same as being chaotic?",
+      "a": "No. Chaos isn't the goal; goodness is. Chaotic Good isn't about causing disorder for its own sake. It's the courage to step outside rules that keep people small, in order to do more good."
+    },
+    {
+      "q": "What is the Chaotic Good Guild?",
+      "a": "The Chaotic Good Guild is a story-world and community about living Chaotic Good: rebellion through kindness. It shares short tales from Reynard the Fox, a tarot deck and star spread for reflection, a calendar of moons and festivals, and an alignment quiz."
+    },
+    {
+      "q": "Who is Reynard the Fox?",
+      "a": "Reynard is a trickster fox from European tales first written down in the twelfth century, a clever underdog who mocked the lords and clergy of his day. He's the Chaotic Good Guild's narrator and mascot, and the pen name behind its essays."
+    },
+    {
+      "q": "What does LEO mean in the Chaotic Good Guild?",
+      "a": "LEO stands for the Lawful Evil Overlords, and the oversystems they run: the rules, ledgers and institutions that put profit and control ahead of people. In the Guild's stories they're led by the LEO Lion and the Corporate Wolf."
+    }
   ],
-
   "fine": "Chaotic Good Guild® is a registered trademark."
 }
