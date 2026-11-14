@@ -20,6 +20,7 @@ import alignment  # noqa: E402
 import tarot_page  # noqa: E402
 import calendar_page  # noqa: E402
 import stump_page  # noqa: E402
+import about_page  # noqa: E402
 
 SITE = os.path.join(ROOT, "site")
 SRC = os.path.join(ROOT, "src")
@@ -314,6 +315,8 @@ def main():
             calendar_page.build(p)
         elif p["slug"] == "stories":
             stump_page.build(p)
+        elif p["slug"] == "about":
+            about_page.build(p)
         else:
             build_room(p)
     build_404()
