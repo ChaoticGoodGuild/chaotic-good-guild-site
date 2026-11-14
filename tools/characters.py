@@ -459,16 +459,21 @@ def rat(expr="happy", outfit="plain", prop=None):
         arm_l = arm_l.replace('url(#gRat)" stroke-width="8"', 'url(#gSuit)" stroke-width="8"')
         arm_r = arm_r.replace('url(#gRat)" stroke-width="8"', 'url(#gSuit)" stroke-width="8"')
         held = f'<g transform="translate(40,-62)">{galleon(7)}</g>'
-    elif outfit == "crook":   # a Red City rat gone bad: striped sweater, flat cap, burglar's mask, crowbar
-        over_body = f'''<path d="M-27,-48 Q-30,-96 4,-100 Q34,-96 31,-48 Q4,-38 -27,-48Z" fill="#1d1a26" {O}/>
-<g stroke="#c9c2d6" stroke-width="4.5" opacity=".9"><path d="M-28,-88 Q4,-80 34,-88"/><path d="M-29,-74 Q4,-66 33,-74"/><path d="M-29,-60 Q4,-52 32,-60"/></g>
-<path d="M-27,-48 Q-30,-96 4,-100 Q34,-96 31,-48 Q4,-38 -27,-48Z" fill="none" {O}/>'''
-        arm_l = arm_l.replace('url(#gRat)" stroke-width="8"', '#1d1a26" stroke-width="8"')
-        arm_r = arm_r.replace('url(#gRat)" stroke-width="8"', '#1d1a26" stroke-width="8"')
-        over_head = f'''<path d="M2,-147 Q22,-154 44,-146 Q48,-138 44,-131 Q22,-126 2,-131 Q-2,-139 2,-147Z M12,-138 m-6.5,0 a6.5,7.5 0 1,0 13,0 a6.5,7.5 0 1,0 -13,0 M30,-137 m-6.5,0 a6.5,7.5 0 1,0 13,0 a6.5,7.5 0 1,0 -13,0" fill="#0d0a14" fill-rule="evenodd" {O1}/>
-<path d="M-4,-140 L-12,-134 M-4,-142 L-14,-142" stroke="#0d0a14" stroke-width="3" stroke-linecap="round"/>
-<path d="M-18,-150 Q8,-176 42,-160 L56,-152 Q50,-148 40,-150 Q10,-160 -18,-144Z" fill="#3a3448" {O}/><path d="M-6,-160 Q12,-170 30,-162" stroke="#2a2436" stroke-width="2" fill="none"/>'''
-        held = f'<g transform="translate(37,-52) rotate(34)"><path d="M0,0 L0,-62 Q0,-72 8,-74 L14,-72" fill="none" stroke="{INK}" stroke-width="7" stroke-linecap="round"/><path d="M0,0 L0,-62 Q0,-72 8,-74 L14,-72" fill="none" stroke="#7a7f8c" stroke-width="4" stroke-linecap="round"/><path d="M0,0 l-5,7" stroke="{INK}" stroke-width="5" stroke-linecap="round"/></g>'
+    elif outfit == "crook":   # a dangerous Red City rat: black hooded cloak, black/yellow emblem, blackjack
+        over_body = f'''<path d="M-29,-44 Q-33,-98 4,-104 Q38,-98 34,-44 L36,-14 Q4,-6 -30,-14Z" fill="#14111c" {O}/>
+<path d="M-8,-102 Q4,-90 16,-102" stroke="#2c2738" stroke-width="3" fill="none"/>
+<path d="M-2,-94 l-2,16 M10,-94 l2,16" stroke="#e9d701" stroke-width="1.8" stroke-linecap="round"/>
+<circle cx="4" cy="-58" r="12" fill="#e9d701" stroke="{INK}" stroke-width="1.6"/>
+<path d="M-4,-65 l5,13 M2,-67 l5,14 M8,-65 l4,12" stroke="#14111c" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M-29,-28 Q4,-20 35,-28" stroke="#e9d701" stroke-width="2" fill="none" opacity=".85"/>'''
+        arm_l = arm_l.replace('url(#gRat)" stroke-width="8"', '#14111c" stroke-width="8"')
+        arm_r = arm_r.replace('url(#gRat)" stroke-width="8"', '#14111c" stroke-width="8"')
+        over_head = f'''<path d="M-32,-100 Q-44,-140 -30,-170 Q-34,-186 -40,-200 Q-12,-200 12,-190 Q40,-180 50,-150 Q40,-151 30,-154 Q12,-158 1,-151 Q-7,-136 -2,-118 Q4,-108 12,-100 Q-10,-94 -32,-100Z" fill="#14111c" {O}/>
+<path d="M-28,-176 Q2,-192 34,-176" stroke="#2c2738" stroke-width="2.4" fill="none"/><path d="M-30,-130 Q-26,-112 -18,-104" stroke="#2c2738" stroke-width="2" fill="none"/>
+<path d="M2,-150 Q14,-157 30,-153 Q40,-151 49,-149 L46,-142 Q30,-146 14,-146 Q6,-144 3,-140Z" fill="#0a0810" opacity=".7"/>'''
+        held = f'''<g transform="translate(36,-56) rotate(28)"><path d="M-2,0 Q-6,10 0,14 Q6,10 2,0" fill="none" stroke="#3a2a1a" stroke-width="2"/>
+<path d="M-3,0 L-4,-22 Q-11,-30 -9,-40 Q0,-50 9,-40 Q11,-30 4,-22 L3,0Z" fill="#1a1410" stroke="{INK}" stroke-width="1.8"/>
+<path d="M0,-4 L0,-28 M-5,-40 Q0,-46 5,-40" stroke="#6a5038" stroke-width="1" stroke-dasharray="2 2" fill="none"/></g>'''
     if prop == "quill":
         held = f'<g transform="translate(38,-56) rotate(-6)">{quill(.75)}</g>'
     elif prop == "none":

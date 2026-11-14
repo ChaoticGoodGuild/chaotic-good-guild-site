@@ -24,8 +24,8 @@ def portrait(key):
 
 
 def red_city_rats():
-    """Two rats of The Red City: one in the Wolf's suit and tie, one dressed for a break-in."""
-    box = (-72, -198, 172, 198)
+    """Two rats of The Red City: one in the Wolf's suit and tie, one in a black hood with a blackjack."""
+    box = (-72, -204, 172, 204)
     return "".join(M.char_svg("rat", g, box, pad=8, cls="ab-fig") for g in (C.rat("smug", "suit"), C.rat("smug", "crook")))
 
 
