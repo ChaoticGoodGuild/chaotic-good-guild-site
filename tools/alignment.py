@@ -39,8 +39,7 @@ def tone_style(slug):
 
 
 NOTICE = ("For fun and self-reflection. This isn't a psychological assessment or a diagnosis. "
-          "Your answers are scored on your device. Unless you turn it off, the Guild collects them anonymously "
-          "(no name, no email) to improve the test.")
+          "Your answers are scored on your device.")
 
 
 def grid_html():
@@ -84,12 +83,19 @@ def build(p):
       <h1>{e(p['title'])}</h1>
       <p class="desc">{e(p['desc'])}</p>
       <p class="at-facts"><span>{n} statements</span><span>About 5 minutes</span><span>No name, no email</span></p>
+      <p class="at-age"><label id="atAgeAsk" for="atAge">Before you begin, your age:</label>
+        <select id="atAge"><option value="">Choose one</option><option value="under-18">Under 18</option><option value="18-24">18 to 24</option>
+        <option value="25-34">25 to 34</option><option value="35-44">35 to 44</option><option value="45-54">45 to 54</option>
+        <option value="55-plus">55 or older</option><option value="rather-not-say">I'd rather not say</option></select></p>
       <div class="at-actions">
         <button type="button" class="back-btn" id="atStart">Begin the test &rarr;</button>
       </div>
-      <label class="at-optin"><input type="checkbox" id="atShareData" checked> Share my answers anonymously to help improve the test</label>
-      <p class="at-datanote">To improve the test, the Guild collects anonymous data: your answers and your result, with no name, no email,
-        and nothing that points back to you. Uncheck the box to keep your answers on your device. <a href="/privacy/">Privacy</a></p>
+      <div id="atOptRow" hidden>
+        <label class="at-optin"><input type="checkbox" id="atShareData" checked> Share my answers anonymously to help improve the test</label>
+        <p class="at-datanote">To improve the test, the Guild collects anonymous data: your age range, your answers and your result, with no name,
+          no email, and nothing that points back to you. Uncheck the box to keep your answers on your device. <a href="/privacy/">Privacy</a></p>
+      </div>
+      <p class="at-datanote" id="atAgeNote" hidden>Your answers stay on your device. Nothing is collected.</p>
       <p class="at-prev" id="atPrev" hidden>Your last result: <b id="atPrevName"></b>. <button type="button" class="at-link" id="atPrevShow">See it again</button></p>
       <p class="at-notice">{e(NOTICE)}</p>
       <noscript><p class="raising">This test needs JavaScript turned on. You can still read about the nine alignments below.</p></noscript>
@@ -110,7 +116,7 @@ def build(p):
 
   <form name="alignment-stats" data-netlify="true" netlify-honeypot="bot-field" hidden>
     <input type="hidden" name="form-name" value="alignment-stats">
-    <input name="version"><input name="month"><input name="result"><input name="x"><input name="y"><input name="answers"><input name="bot-field">
+    <input name="version"><input name="age"><input name="month"><input name="result"><input name="x"><input name="y"><input name="answers"><input name="bot-field">
   </form>
 
   <section class="at-result" id="atResult" hidden>
@@ -212,7 +218,9 @@ def write_review_doc():
             if it["axis"] == axis:
                 lines.append(f"| {it['id']} | {it['text']} | {pos if it['key'] > 0 else neg} |")
         lines.append("")
-    lines += ["## Scoring", "",
+    lines += ["## Attention check", "", "Not scored. Answers are collected only from people who disagree with it.", ""]
+    lines += [f"- **{it['id']}** (statement {k + 1}): {it['text']}" for k, it in enumerate(DATA["items"]) if it["axis"] == "check"]
+    lines += ["", "## Scoring", "",
               "Each axis score is the sum of (answer x direction) divided by the maximum possible, giving -1 to +1.",
               f"Scores within {DATA['neutral_band']} of zero count as Neutral on that axis. Both axes Neutral = True Neutral.",
               "Agreeing with every statement lands exactly at True Neutral, because each axis has 8 statements keyed each way.", ""]

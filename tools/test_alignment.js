@@ -35,3 +35,16 @@ assert.strictEqual(S.label(-0.3, 0.1, 0.25), "lawful-neutral");
 for (const [, , slug] of cases) assert.ok(data.results[slug] && data.results[slug].desc.length > 50);
 console.log("lean:", S.lean(0.4, "Lawful", "Chaotic", .25), "|", S.lean(-0.1, "Evil", "Good", .25));
 console.log("all scoring tests passed");
+// attention check: not scored, and catches careless or automated answering
+{
+  const ci = data.items.findIndex(i => i.axis === "check");
+  assert.ok(ci > 0);
+  const base = pattern(1, 1);
+  const pass = base.slice(); pass[ci] = -2;
+  const fail = base.slice(); fail[ci] = 2;
+  assert.strictEqual(S.score(data, pass).slug, S.score(data, fail).slug);   // the check never moves the result
+  assert.ok(S.attentive(data, pass)); assert.ok(!S.attentive(data, fail));
+  const unsure = base.slice(); unsure[ci] = 0; assert.ok(!S.attentive(data, unsure));
+  assert.ok(!S.attentive(data, new Array(N).fill(-2)));                    // same answer to everything
+  console.log("all attention-check tests passed");
+}

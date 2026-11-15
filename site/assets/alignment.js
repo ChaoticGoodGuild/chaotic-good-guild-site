@@ -24,6 +24,12 @@ const CGGScore = {
     if (ethic === "neutral" && moral === "neutral") return "true-neutral";
     return ethic + "-" + moral;
   },
+  // Attention checks: every 'check' item answered with one of its passing values, and not the same answer to everything.
+  attentive(data, answers) {
+    const ok = data.items.every((it, i) => it.axis !== "check" || (it.pass || []).includes(answers[i]));
+    const real = answers.filter((a, i) => data.items[i].axis !== "check" && typeof a === "number");
+    return ok && new Set(real).size > 1;
+  },
   score(data, answers) {
     const x = CGGScore.axisScore(data.items, answers, "order");
     const y = CGGScore.axisScore(data.items, answers, "heart");
@@ -107,16 +113,27 @@ if (typeof module !== "undefined") module.exports = CGGScore;
   }
   // Anonymous answers for improving the test: the answers, the result, the test version and the month. No name,
   // no email. They go through the site's own relay (netlify/functions/stats.mjs), so the visitor's address isn't kept.
-  const optIn = $("atShareData");
+  const optIn = $("atShareData"), ageSel = $("atAge"), ADULT = ["18-24", "25-34", "35-44", "45-54", "55-plus"];
   try { if (localStorage.getItem("cgg.sharedata") === "no") optIn.checked = false; } catch (e) {}
+  // A neutral age question. Under 18 or "rather not say": nothing is collected, and the Guild's signup steps aside.
+  try { const a = localStorage.getItem("cgg.age"); if (a) ageSel.value = a; } catch (e) {}
+  function ageChanged() {
+    const adult = ADULT.includes(ageSel.value);
+    $("atOptRow").hidden = !adult;
+    $("atAgeNote").hidden = !ageSel.value || adult;
+    try { if (ageSel.value) localStorage.setItem("cgg.age", ageSel.value); } catch (e) {}
+    document.dispatchEvent(new Event("cgg:alignment"));
+  }
+  ageSel.addEventListener("change", ageChanged); ageChanged();
   optIn.addEventListener("change", () => { try { localStorage.setItem("cgg.sharedata", optIn.checked ? "yes" : "no"); } catch (e) {} });
   function sendStats(r) {
-    if (!optIn.checked) return;
-    const body = JSON.stringify({ version: DATA.version, result: r.slug, x: +r.x.toFixed(3), y: +r.y.toFixed(3),
-                                  answers: answers.map(a => (typeof a === "number" ? a : "")) });
+    if (!optIn.checked || !ADULT.includes(ageSel.value) || !CGGScore.attentive(DATA, answers)) return;
+    const body = JSON.stringify({ version: DATA.version, age: ageSel.value, result: r.slug, x: +r.x.toFixed(3), y: +r.y.toFixed(3),
+                                  answers: answers.filter((a, i) => ITEMS[i].axis !== "check").map(a => (typeof a === "number" ? a : "")) });
     fetch("/.netlify/functions/stats", { method: "POST", headers: { "Content-Type": "application/json" }, body, keepalive: true }).catch(() => {});
   }
   function start() {
+    if (!ageSel.value) { ageSel.focus(); $("atAgeAsk").classList.add("at-nudge"); return; }
     answers = new Array(N).fill(null); idx = 0;
     show(quiz); renderQ();
     scaleBox.querySelector(".at-opt").focus({ preventScroll: true });

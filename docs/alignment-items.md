@@ -48,6 +48,12 @@ Scale: Strongly disagree (-2) / Disagree (-1) / Not sure (+0) / Agree (+1) / Str
 | H15 | I'd give up something I want if it meant someone else got what they needed. | Good |
 | H16 | Other people's problems aren't mine to lose sleep over. | Evil |
 
+## Attention check
+
+Not scored. Answers are collected only from people who disagree with it.
+
+- **C01** (statement 21): I ride a dragon to work most mornings.
+
 ## Scoring
 
 Each axis score is the sum of (answer x direction) divided by the maximum possible, giving -1 to +1.

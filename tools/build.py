@@ -88,6 +88,7 @@ def signup(source, title="Join the Guild", line="Leave your name at the Guild's 
   </form>
  </div>
  {second_chance(hidden=True)}
+ {too_young()}
 </section>
 """
 
@@ -95,11 +96,17 @@ def signup(source, title="Join the Guild", line="Leave your name at the Guild's 
 def second_chance(hidden=False):
     """What someone whose alignment came out Evil sees where the signup would be. join.js swaps it in."""
     return f"""<div class="cj-evil"{" hidden" if hidden else ""}>
-  <h2 class="cj-h">The door stays shut, for now</h2>
-  <p class="cj-line">Evil walked out of the test with you this time, and the Guild's letters go to those walking toward the good.
-  But nobody is only their worst answer. People change, and the Guild believes in second chances.</p>
-  <p class="cj-line">Go do one kind thing nobody asked you to do. Then come back and take the test again. The door will be here.</p>
+  <p class="cj-say">Things must have been tough for you. We're working to make sure our world doesn't keep harming others.
+  Your identity isn't set in stone - we wish you the best in your growth.</p>
   <p><a class="back-btn" href="/alignment-test/">Take the test again &rarr;</a></p>
+ </div>"""
+
+
+def too_young(hidden=True):
+    """What someone who said they're under 18 sees where the signup would be. join.js swaps it in."""
+    return f"""<div class="cj-young"{" hidden" if hidden else ""}>
+  <p class="cj-say">Joining the Guild is for those 18 and older. Until then, the whole village is yours to wander:
+  the tales, the cards, the calendar and the test. We'll hold your place.</p>
  </div>"""
 
 
@@ -127,7 +134,6 @@ def head(title, desc, path, image, extra=""):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Alegreya:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
-<script>try{{if(localStorage.getItem("cgg.adult")!=="yes"&&location.pathname.indexOf("/privacy/")!==0)document.documentElement.classList.add("cgg-gate")}}catch(e){{}}</script>
 {site_tags()}{extra}</head>
 <body>
 """
@@ -142,7 +148,6 @@ def foot():
   &copy; {datetime.date.today().year} {NAME}. Made by misfits, for misfits.
 </footer>
 <script src="/assets/join.js" defer></script>
-<script src="/assets/gate.js" defer></script>
 """
 
 
@@ -356,7 +361,6 @@ def build_assets():
     write("assets/star.png", base64.b64decode(open(os.path.join(SRC, "star.b64")).read()), binary=True)
     write("assets/village.svg", scene.make_svg(PLACES, standalone=True))
     write("assets/join.js", open(os.path.join(SRC, "join.js")).read())
-    write("assets/gate.js", open(os.path.join(SRC, "gate.js")).read())
     write("BingSiteAuth.xml", open(os.path.join(SRC, "BingSiteAuth.xml")).read())
     # share images are rendered separately by tools/share_images.py and kept between builds
 

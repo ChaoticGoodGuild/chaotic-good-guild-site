@@ -51,8 +51,9 @@ you joined from and that you said you're 18 or older. We use this only to send y
 Netlify, and copied into the service we use to send letters. Every letter has an unsubscribe link at the bottom.</p>
 
 <h2>The alignment test and the tarot</h2>
-<p>Your answers are scored in your own browser. To improve the test, the Guild collects anonymous data when you finish: your answers, your result,
-the version of the test and the month, with no name, no email and no IP address. You can turn this off with the checkbox before you begin.
+<p>Your answers are scored in your own browser. The test asks your age range first. If you're 18 or older, the Guild collects anonymous data
+when you finish, to improve the test: your age range, your answers, your result, the version of the test and the month, with no name, no email
+and no IP address. You can turn this off with the checkbox before you begin. If you're under 18 or would rather not say, nothing is collected.
 Your browser also remembers your final alignment so the Guild Hall can offer it to you later; you can clear it from the result page with
 "Forget my result." Tarot readings are dealt in your browser and aren't saved anywhere.
 A reading or result you share as a picture is made on your device and goes only where you send it.</p>
@@ -65,9 +66,9 @@ pages are read and which countries visitors come from, never who you are. We don
 <p>Videos on Reynard's Stump come from YouTube and TikTok. Nothing loads from them until you press play. Once you do, that service's own privacy
 policy applies to what you watch.</p>
 
-<h2>Adults only</h2>
-<p>The Chaotic Good Guild is for people 18 and older, and some of its tales are written for adults. We don't knowingly collect anything from anyone
-under 18. If you think someone younger has signed up, write to us and we'll remove them.</p>
+<h2>Younger visitors</h2>
+<p>Anyone can explore the village. Joining the Guild's letters and sharing test answers are for people 18 and older, and we don't knowingly
+collect anything from anyone under 18. If you think someone younger has signed up, write to us and we'll remove them.</p>
 
 <h2>Removing your information</h2>
 <p>To leave, use the unsubscribe link in any letter. To have everything we hold about you deleted, or to ask what we hold, write to
