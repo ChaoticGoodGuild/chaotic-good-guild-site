@@ -1,7 +1,12 @@
 {
-  "_about": "Site settings. Leave a value empty to turn that feature off. cloudflare_token: the token from Cloudflare Web Analytics (cookieless page counts). google / bing: the verification codes from Google Search Console and Bing Webmaster Tools (the 'content' value of their meta tag). contact_email: shown on the privacy page for questions and removal requests. mailing_address: needed in every letter you send, not on the site.",
-  "analytics": {"cloudflare_token": ""},
-  "verify": {"google": "", "bing": ""},
+  "_about": "Site settings. Leave a value empty to turn that feature off. cloudflare_token: the token from Cloudflare Web Analytics (cookieless page counts). google / bing: the meta-tag verification codes, if you ever use that method (the site is verified with a DNS record for Google and src/BingSiteAuth.xml for Bing) from Google Search Console and Bing Webmaster Tools (the 'content' value of their meta tag). contact_email: shown on the privacy page for questions and removal requests. mailing_address: needed in every letter you send, not on the site.",
+  "analytics": {
+    "cloudflare_token": "0cc72f44bfaa43f4986030ab58707e35"
+  },
+  "verify": {
+    "google": "",
+    "bing": ""
+  },
   "contact_email": "chaoticgoodguild@gmail.com",
   "privacy_updated": "2026-11-15"
 }

@@ -1,12 +1,22 @@
-/* Join the Guild: sends the signup form to Netlify Forms without leaving the page, and fills in the
-   visitor's alignment if they've taken the test on this device. Nothing is sent until they press the button. */
+/* Join the Guild: sends the signup form to Netlify Forms without leaving the page, and fills in the visitor's
+   alignment if they've taken the test on this device. Nothing is sent until they press the button.
+   If the test last came out Evil, the form steps aside for a second-chance letter instead. */
 (function () {
-  let saved = null;
-  try { saved = JSON.parse(localStorage.getItem("cgg.alignment")); } catch (e) {}
+  const saved = () => { try { return JSON.parse(localStorage.getItem("cgg.alignment")); } catch (e) { return null; } };
+  function apply() {
+    const s = saved(), evil = !!(s && /-evil$/.test(s.slug || ""));
+    document.querySelectorAll("section.cj").forEach(sec => {
+      const open = sec.querySelector(".cj-open"), shut = sec.querySelector(".cj-evil");
+      if (!open || !shut || sec.querySelector(".cgg-join.done")) return;
+      open.hidden = evil; shut.hidden = !evil;
+      const sel = sec.querySelector('select[name="alignment"]');
+      if (sel && !evil) sel.value = (s && s.slug) || sec.querySelector("form").dataset.alignment || "";
+    });
+  }
+  apply();
+  document.addEventListener("cgg:alignment", apply);
+
   document.querySelectorAll("form.cgg-join").forEach(form => {
-    const sel = form.querySelector('select[name="alignment"]');
-    const page = form.dataset.alignment;                    // a result page names its own alignment
-    if (sel && !sel.value) sel.value = (saved && saved.slug) || page || "";
     const msg = form.querySelector(".cj-msg"), btn = form.querySelector("button[type=submit]");
     form.addEventListener("submit", async e => {
       e.preventDefault();

@@ -636,3 +636,26 @@ aside.cal-day:hover { border-color: var(--gold); }
 .foot-join { margin: 0 0 10px; font-family: var(--display); font-size: 19px; }
 .foot-join a { text-decoration: none; }
 @media (max-width: 760px) { .cj-row { grid-template-columns: 1fr; } }
+
+/* ---------- Second chance (Evil results) ---------- */
+.cj-evil .cj-h { color: var(--ink); }
+.cj-evil p:last-child { margin: 18px 0 0; }
+
+/* ---------- Anonymous test answers ---------- */
+.at-optin { display: flex; gap: 10px; align-items: flex-start; margin: 18px 0 4px; font-size: 16px; }
+.at-optin input { width: 18px; height: 18px; margin-top: 3px; accent-color: var(--gold); flex: none; }
+.at-datanote { color: var(--muted); font-size: 14px; max-width: 58ch; margin: 0 0 10px 28px; }
+
+/* ---------- Age check ---------- */
+html.cgg-gate body { overflow: hidden; }
+.gate { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 20px;
+  background: rgba(13,4,24,.82); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.gate-card { max-width: 440px; text-align: center; padding: 28px 26px 22px; border: 1px solid rgba(233,215,1,.45); border-radius: 20px;
+  background: radial-gradient(120% 120% at 50% 0%, rgba(96,0,174,.55), rgba(27,11,51,.96) 65%); box-shadow: 0 20px 60px rgba(0,0,0,.6); }
+.gate-card img { width: 96px; height: auto; }
+.gate-card h2 { font-family: var(--display); font-weight: 400; color: var(--gold); font-size: 34px; margin: 6px 0 8px; outline: none; }
+.gate-card p { margin: 0 0 18px; }
+.gate-go { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.gate-go button { border: 0; cursor: pointer; }
+.gate-go .sp-ghost { border: 2px solid var(--gold); }
+.gate-fine { font-size: 14px; margin: 16px 0 0 !important; }

@@ -20,6 +20,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Alegreya:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
+<script>try{if(localStorage.getItem("cgg.adult")!=="yes"&&location.pathname.indexOf("/privacy/")!==0)document.documentElement.classList.add("cgg-gate")}catch(e){}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "0cc72f44bfaa43f4986030ab58707e35"}'></script>
 </head>
 <body>
 
@@ -37,12 +39,14 @@
 
 <h2>If you join the Guild</h2>
 <p>We keep your email address, and, only if you give them, the name you'd like us to call you and your alignment. We also note which page
-you joined from and that you said you're 13 or older. We use this only to send you letters from the Guild. Signups are stored by our web host,
+you joined from and that you said you're 18 or older. We use this only to send you letters from the Guild. Signups are stored by our web host,
 Netlify, and copied into the service we use to send letters. Every letter has an unsubscribe link at the bottom.</p>
 
 <h2>The alignment test and the tarot</h2>
-<p>Your answers are scored in your own browser and never sent to us. Your browser remembers your final alignment so the Guild Hall can offer it
-to you later; you can clear it from the result page with "Forget my result." Tarot readings are dealt in your browser and aren't saved anywhere.
+<p>Your answers are scored in your own browser. To improve the test, the Guild collects anonymous data when you finish: your answers, your result,
+the version of the test and the month, with no name, no email and no IP address. You can turn this off with the checkbox before you begin.
+Your browser also remembers your final alignment so the Guild Hall can offer it to you later; you can clear it from the result page with
+"Forget my result." Tarot readings are dealt in your browser and aren't saved anywhere.
 A reading or result you share as a picture is made on your device and goes only where you send it.</p>
 
 <h2>Visits to the site</h2>
@@ -53,8 +57,9 @@ pages are read and which countries visitors come from, never who you are. We don
 <p>Videos on Reynard's Stump come from YouTube and TikTok. Nothing loads from them until you press play. Once you do, that service's own privacy
 policy applies to what you watch.</p>
 
-<h2>Children</h2>
-<p>The Guild's letters are for people 13 and older. If you're a parent and think a younger child has signed up, write to us and we'll remove them.</p>
+<h2>Adults only</h2>
+<p>The Chaotic Good Guild is for people 18 and older, and some of its tales are written for adults. We don't knowingly collect anything from anyone
+under 18. If you think someone younger has signed up, write to us and we'll remove them.</p>
 
 <h2>Removing your information</h2>
 <p>To leave, use the unsubscribe link in any letter. To have everything we hold about you deleted, or to ask what we hold, write to
@@ -69,5 +74,6 @@ policy applies to what you watch.</p>
   &copy; 2026 Chaotic Good Guild. Made by misfits, for misfits.
 </footer>
 <script src="/assets/join.js" defer></script>
+<script src="/assets/gate.js" defer></script>
 </body>
 </html>

@@ -20,6 +20,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Alegreya:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
+<script>try{if(localStorage.getItem("cgg.adult")!=="yes"&&location.pathname.indexOf("/privacy/")!==0)document.documentElement.classList.add("cgg-gate")}catch(e){}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "0cc72f44bfaa43f4986030ab58707e35"}'></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Neutral Evil \u00b7 Alignment", "description": "Neutral Evil in the Chaotic Good Guild: You choose whichever path profits you most, stepping lightly around inconvenience and responsibility alike.", "url": "https://www.chaoticgoodguild.com/alignment-test/neutral-evil/", "isPartOf": {"@type": "WebSite", "name": "Chaotic Good Guild", "url": "https://www.chaoticgoodguild.com/"}}</script>
 </head>
 <body>
@@ -47,24 +49,13 @@
       </div>
     </div>
   </section>
-  <section class="cj" aria-labelledby="cj-alignment-neutral-evil">
-  <h2 class="cj-h" id="cj-alignment-neutral-evil">Join the Guild</h2>
-  <p class="cj-line">Leave your name at the Guild&#x27;s door, and Reynard will write. Now and then: new tales from the Stump, festivals on the wheel, and first word when the Guild Hall opens and the deck goes to print.</p>
-  <form class="cgg-join" name="guild-signup" method="POST" action="/join/thanks/" data-netlify="true" netlify-honeypot="bot-field" data-alignment="neutral-evil">
-    <input type="hidden" name="form-name" value="guild-signup">
-    <input type="hidden" name="source" value="alignment-neutral-evil">
-    <p class="cj-hp" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-    <div class="cj-row">
-      <label class="cj-f"><span>Email</span><input type="email" name="email" required autocomplete="email" placeholder="you@example.com"></label>
-      <label class="cj-f"><span>What should Reynard call you? <i>(optional)</i></span><input type="text" name="name" maxlength="60" autocomplete="given-name"></label>
-      <label class="cj-f"><span>Your alignment <i>(optional)</i></span><select name="alignment"><option value="">Not sure yet</option><option value="lawful-good">Lawful Good</option><option value="neutral-good">Neutral Good</option><option value="chaotic-good">Chaotic Good</option><option value="lawful-neutral">Lawful Neutral</option><option value="true-neutral">True Neutral</option><option value="chaotic-neutral">Chaotic Neutral</option><option value="lawful-evil">Lawful Evil</option><option value="neutral-evil">Neutral Evil</option><option value="chaotic-evil">Chaotic Evil</option></select></label>
-    </div>
-    <label class="cj-consent"><input type="checkbox" name="consent" value="13-plus-and-agrees" required> I'm 13 or older, and I'd like letters from the Guild. I can unsubscribe anytime.</label>
-    <div class="cj-go"><button type="submit" class="back-btn">Join the Guild</button>
-      <span class="cj-fine">We'll never sell or share your email. <a href="/privacy/">Privacy</a></span></div>
-    <p class="cj-msg" role="status" aria-live="polite"></p>
-  </form>
-</section>
+  <section class="cj"><div class="cj-evil">
+  <h2 class="cj-h">The door stays shut, for now</h2>
+  <p class="cj-line">Evil walked out of the test with you this time, and the Guild's letters go to those walking toward the good.
+  But nobody is only their worst answer. People change, and the Guild believes in second chances.</p>
+  <p class="cj-line">Go do one kind thing nobody asked you to do. Then come back and take the test again. The door will be here.</p>
+  <p><a class="back-btn" href="/alignment-test/">Take the test again &rarr;</a></p>
+ </div></section>
 
   <h2 class="places-h" style="margin-top:0">The other eight</h2>
   <ul class="places at-nine"><li><a href="/alignment-test/lawful-good/" style="--c1:#e0283f;--c2:#b06cff"><span class="t">Lawful Good</span><span class="w">The Badger</span></a></li><li><a href="/alignment-test/neutral-good/" style="--c1:#cfc8dc;--c2:#b06cff"><span class="t">Neutral Good</span><span class="w">The Rats of the Guild</span></a></li><li><a href="/alignment-test/chaotic-good/" style="--c1:#e9d701;--c2:#b06cff"><span class="t">Chaotic Good</span><span class="w">Reynard</span></a></li><li><a href="/alignment-test/lawful-neutral/" style="--c1:#e0283f;--c2:#cfc8dc"><span class="t">Lawful Neutral</span><span class="w">The Bull</span></a></li><li><a href="/alignment-test/true-neutral/" style="--c1:#cfc8dc;--c2:#cfc8dc"><span class="t">True Neutral</span><span class="w">Mira</span></a></li><li><a href="/alignment-test/chaotic-neutral/" style="--c1:#e9d701;--c2:#cfc8dc"><span class="t">Chaotic Neutral</span><span class="w">The Hooded Rat</span></a></li><li><a href="/alignment-test/lawful-evil/" style="--c1:#e0283f;--c2:#000000"><span class="t">Lawful Evil</span><span class="w">The LEO Lion</span></a></li><li><a href="/alignment-test/chaotic-evil/" style="--c1:#e9d701;--c2:#000000"><span class="t">Chaotic Evil</span><span class="w">The Rat Mob</span></a></li></ul>
@@ -77,5 +68,6 @@
   &copy; 2026 Chaotic Good Guild. Made by misfits, for misfits.
 </footer>
 <script src="/assets/join.js" defer></script>
+<script src="/assets/gate.js" defer></script>
 </body>
 </html>

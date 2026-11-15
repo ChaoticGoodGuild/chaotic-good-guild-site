@@ -39,7 +39,8 @@ def tone_style(slug):
 
 
 NOTICE = ("For fun and self-reflection. This isn't a psychological assessment or a diagnosis. "
-          "Your answers never leave your device: the Guild doesn't send, collect or store them.")
+          "Your answers are scored on your device. Unless you turn it off, the Guild collects them anonymously "
+          "(no name, no email) to improve the test.")
 
 
 def grid_html():
@@ -82,10 +83,13 @@ def build(p):
       <p class="who">{e(p['who'])}</p>
       <h1>{e(p['title'])}</h1>
       <p class="desc">{e(p['desc'])}</p>
-      <p class="at-facts"><span>{n} statements</span><span>About 5 minutes</span><span>Nothing leaves your device</span></p>
+      <p class="at-facts"><span>{n} statements</span><span>About 5 minutes</span><span>No name, no email</span></p>
       <div class="at-actions">
         <button type="button" class="back-btn" id="atStart">Begin the test &rarr;</button>
       </div>
+      <label class="at-optin"><input type="checkbox" id="atShareData" checked> Share my answers anonymously to help improve the test</label>
+      <p class="at-datanote">To improve the test, the Guild collects anonymous data: your answers and your result, with no name, no email,
+        and nothing that points back to you. Uncheck the box to keep your answers on your device. <a href="/privacy/">Privacy</a></p>
       <p class="at-prev" id="atPrev" hidden>Your last result: <b id="atPrevName"></b>. <button type="button" class="at-link" id="atPrevShow">See it again</button></p>
       <p class="at-notice">{e(NOTICE)}</p>
       <noscript><p class="raising">This test needs JavaScript turned on. You can still read about the nine alignments below.</p></noscript>
@@ -103,6 +107,11 @@ def build(p):
       <button type="button" class="at-link" id="atQuit">Leave the test</button>
     </div>
   </div></section>
+
+  <form name="alignment-stats" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="alignment-stats">
+    <input name="version"><input name="month"><input name="result"><input name="x"><input name="y"><input name="answers"><input name="bot-field">
+  </form>
 
   <section class="at-result" id="atResult" hidden>
     <figure class="at-portrait"><img id="atResImg" src="" alt="" width="600" height="800"></figure>

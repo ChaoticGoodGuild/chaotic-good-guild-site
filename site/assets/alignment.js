@@ -1,5 +1,6 @@
 /* Chaotic Good Guild alignment test, Version 1.
-   Everything happens in the visitor's browser. Nothing is sent anywhere.
+   Scoring happens in the visitor's browser. If the visitor leaves the box checked, their answers and result are sent
+   anonymously to netlify/functions/stats.mjs when they finish; nothing else is sent.
    The only thing kept is the final result, in this browser's own storage,
    so the Guild Hall can offer to carry it into a profile later. */
 
@@ -101,6 +102,19 @@ if (typeof module !== "undefined") module.exports = CGGScore;
     const r = CGGScore.score(DATA, answers);
     store.set({ slug: r.slug, x: +r.x.toFixed(3), y: +r.y.toFixed(3), version: DATA.version, date: new Date().toISOString().slice(0, 10) });
     renderResult(r.x, r.y, r.slug, true);
+    sendStats(r);
+    document.dispatchEvent(new Event("cgg:alignment"));
+  }
+  // Anonymous answers for improving the test: the answers, the result, the test version and the month. No name,
+  // no email. They go through the site's own relay (netlify/functions/stats.mjs), so the visitor's address isn't kept.
+  const optIn = $("atShareData");
+  try { if (localStorage.getItem("cgg.sharedata") === "no") optIn.checked = false; } catch (e) {}
+  optIn.addEventListener("change", () => { try { localStorage.setItem("cgg.sharedata", optIn.checked ? "yes" : "no"); } catch (e) {} });
+  function sendStats(r) {
+    if (!optIn.checked) return;
+    const body = JSON.stringify({ version: DATA.version, result: r.slug, x: +r.x.toFixed(3), y: +r.y.toFixed(3),
+                                  answers: answers.map(a => (typeof a === "number" ? a : "")) });
+    fetch("/.netlify/functions/stats", { method: "POST", headers: { "Content-Type": "application/json" }, body, keepalive: true }).catch(() => {});
   }
   function start() {
     answers = new Array(N).fill(null); idx = 0;
@@ -176,5 +190,6 @@ if (typeof module !== "undefined") module.exports = CGGScore;
     store.clear();
     $("atPrev").hidden = true;
     $("atForgetNote").textContent = "Forgotten. This browser no longer remembers your result.";
+    document.dispatchEvent(new Event("cgg:alignment"));
   });
 })();

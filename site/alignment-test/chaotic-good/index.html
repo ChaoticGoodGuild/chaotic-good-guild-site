@@ -20,6 +20,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Alegreya:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
+<script>try{if(localStorage.getItem("cgg.adult")!=="yes"&&location.pathname.indexOf("/privacy/")!==0)document.documentElement.classList.add("cgg-gate")}catch(e){}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "0cc72f44bfaa43f4986030ab58707e35"}'></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Chaotic Good \u00b7 Alignment", "description": "Chaotic Good in the Chaotic Good Guild: You are a whirlwind of freedom with a heart of gold.", "url": "https://www.chaoticgoodguild.com/alignment-test/chaotic-good/", "isPartOf": {"@type": "WebSite", "name": "Chaotic Good Guild", "url": "https://www.chaoticgoodguild.com/"}}</script>
 </head>
 <body>
@@ -48,6 +50,7 @@
     </div>
   </section>
   <section class="cj" aria-labelledby="cj-alignment-chaotic-good">
+ <div class="cj-open">
   <h2 class="cj-h" id="cj-alignment-chaotic-good">Join the Guild</h2>
   <p class="cj-line">Leave your name at the Guild&#x27;s door, and Reynard will write. Now and then: new tales from the Stump, festivals on the wheel, and first word when the Guild Hall opens and the deck goes to print.</p>
   <form class="cgg-join" name="guild-signup" method="POST" action="/join/thanks/" data-netlify="true" netlify-honeypot="bot-field" data-alignment="chaotic-good">
@@ -57,13 +60,21 @@
     <div class="cj-row">
       <label class="cj-f"><span>Email</span><input type="email" name="email" required autocomplete="email" placeholder="you@example.com"></label>
       <label class="cj-f"><span>What should Reynard call you? <i>(optional)</i></span><input type="text" name="name" maxlength="60" autocomplete="given-name"></label>
-      <label class="cj-f"><span>Your alignment <i>(optional)</i></span><select name="alignment"><option value="">Not sure yet</option><option value="lawful-good">Lawful Good</option><option value="neutral-good">Neutral Good</option><option value="chaotic-good">Chaotic Good</option><option value="lawful-neutral">Lawful Neutral</option><option value="true-neutral">True Neutral</option><option value="chaotic-neutral">Chaotic Neutral</option><option value="lawful-evil">Lawful Evil</option><option value="neutral-evil">Neutral Evil</option><option value="chaotic-evil">Chaotic Evil</option></select></label>
+      <label class="cj-f"><span>Your alignment <i>(optional)</i></span><select name="alignment"><option value="">Not sure yet</option><option value="lawful-good">Lawful Good</option><option value="neutral-good">Neutral Good</option><option value="chaotic-good">Chaotic Good</option><option value="lawful-neutral">Lawful Neutral</option><option value="true-neutral">True Neutral</option><option value="chaotic-neutral">Chaotic Neutral</option></select></label>
     </div>
-    <label class="cj-consent"><input type="checkbox" name="consent" value="13-plus-and-agrees" required> I'm 13 or older, and I'd like letters from the Guild. I can unsubscribe anytime.</label>
+    <label class="cj-consent"><input type="checkbox" name="consent" value="18-plus-and-agrees" required> I'm 18 or older, and I'd like letters from the Guild. I can unsubscribe anytime.</label>
     <div class="cj-go"><button type="submit" class="back-btn">Join the Guild</button>
       <span class="cj-fine">We'll never sell or share your email. <a href="/privacy/">Privacy</a></span></div>
     <p class="cj-msg" role="status" aria-live="polite"></p>
   </form>
+ </div>
+ <div class="cj-evil" hidden>
+  <h2 class="cj-h">The door stays shut, for now</h2>
+  <p class="cj-line">Evil walked out of the test with you this time, and the Guild's letters go to those walking toward the good.
+  But nobody is only their worst answer. People change, and the Guild believes in second chances.</p>
+  <p class="cj-line">Go do one kind thing nobody asked you to do. Then come back and take the test again. The door will be here.</p>
+  <p><a class="back-btn" href="/alignment-test/">Take the test again &rarr;</a></p>
+ </div>
 </section>
 
   <h2 class="places-h" style="margin-top:0">The other eight</h2>
@@ -77,5 +88,6 @@
   &copy; 2026 Chaotic Good Guild. Made by misfits, for misfits.
 </footer>
 <script src="/assets/join.js" defer></script>
+<script src="/assets/gate.js" defer></script>
 </body>
 </html>

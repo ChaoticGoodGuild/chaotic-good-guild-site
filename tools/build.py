@@ -63,9 +63,13 @@ def site_tags():
 
 def signup(source, title="Join the Guild", line="Leave your name at the Guild's door, and Reynard will write.", alignment="", more=True):
     """The Join the Guild form. Netlify Forms keeps the signups (Netlify dashboard, Forms)."""
-    opts = '<option value="">Not sure yet</option>' + "".join(f'<option value="{s}">{n}</option>' for s, n in ALIGNMENTS)
+    opts = '<option value="">Not sure yet</option>' + "".join(f'<option value="{s}">{n}</option>' for s, n in ALIGNMENTS
+                                                               if not s.endswith("-evil"))
     uid = source.replace("/", "-")
+    if alignment.endswith("-evil"):          # an Evil result page gets the second-chance letter, not the form
+        return f'<section class="cj">{second_chance()}</section>\n'
     return f"""<section class="cj" aria-labelledby="cj-{uid}">
+ <div class="cj-open">
   <h2 class="cj-h" id="cj-{uid}">{e(title)}</h2>
   <p class="cj-line">{e(line)}{" Now and then: new tales from the Stump, festivals on the wheel, and first word when the Guild Hall opens and the deck goes to print." if more else ""}</p>
   <form class="cgg-join" name="guild-signup" method="POST" action="/join/thanks/" data-netlify="true" netlify-honeypot="bot-field"{f' data-alignment="{alignment}"' if alignment else ""}>
@@ -77,13 +81,26 @@ def signup(source, title="Join the Guild", line="Leave your name at the Guild's 
       <label class="cj-f"><span>What should Reynard call you? <i>(optional)</i></span><input type="text" name="name" maxlength="60" autocomplete="given-name"></label>
       <label class="cj-f"><span>Your alignment <i>(optional)</i></span><select name="alignment">{opts}</select></label>
     </div>
-    <label class="cj-consent"><input type="checkbox" name="consent" value="13-plus-and-agrees" required> I'm 13 or older, and I'd like letters from the Guild. I can unsubscribe anytime.</label>
+    <label class="cj-consent"><input type="checkbox" name="consent" value="18-plus-and-agrees" required> I'm 18 or older, and I'd like letters from the Guild. I can unsubscribe anytime.</label>
     <div class="cj-go"><button type="submit" class="back-btn">Join the Guild</button>
       <span class="cj-fine">We'll never sell or share your email. <a href="/privacy/">Privacy</a></span></div>
     <p class="cj-msg" role="status" aria-live="polite"></p>
   </form>
+ </div>
+ {second_chance(hidden=True)}
 </section>
 """
+
+
+def second_chance(hidden=False):
+    """What someone whose alignment came out Evil sees where the signup would be. join.js swaps it in."""
+    return f"""<div class="cj-evil"{" hidden" if hidden else ""}>
+  <h2 class="cj-h">The door stays shut, for now</h2>
+  <p class="cj-line">Evil walked out of the test with you this time, and the Guild's letters go to those walking toward the good.
+  But nobody is only their worst answer. People change, and the Guild believes in second chances.</p>
+  <p class="cj-line">Go do one kind thing nobody asked you to do. Then come back and take the test again. The door will be here.</p>
+  <p><a class="back-btn" href="/alignment-test/">Take the test again &rarr;</a></p>
+ </div>"""
 
 
 def head(title, desc, path, image, extra=""):
@@ -110,6 +127,7 @@ def head(title, desc, path, image, extra=""):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Alegreya:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
+<script>try{{if(localStorage.getItem("cgg.adult")!=="yes"&&location.pathname.indexOf("/privacy/")!==0)document.documentElement.classList.add("cgg-gate")}}catch(e){{}}</script>
 {site_tags()}{extra}</head>
 <body>
 """
@@ -124,6 +142,7 @@ def foot():
   &copy; {datetime.date.today().year} {NAME}. Made by misfits, for misfits.
 </footer>
 <script src="/assets/join.js" defer></script>
+<script src="/assets/gate.js" defer></script>
 """
 
 
@@ -337,6 +356,8 @@ def build_assets():
     write("assets/star.png", base64.b64decode(open(os.path.join(SRC, "star.b64")).read()), binary=True)
     write("assets/village.svg", scene.make_svg(PLACES, standalone=True))
     write("assets/join.js", open(os.path.join(SRC, "join.js")).read())
+    write("assets/gate.js", open(os.path.join(SRC, "gate.js")).read())
+    write("BingSiteAuth.xml", open(os.path.join(SRC, "BingSiteAuth.xml")).read())
     # share images are rendered separately by tools/share_images.py and kept between builds
 
 

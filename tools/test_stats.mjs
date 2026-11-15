@@ -1,0 +1,11 @@
+import assert from "assert";
+import { clean } from "../netlify/functions/stats.mjs";
+const good = { version: "1.0-draft", result: "chaotic-good", x: 0.5, y: 0.75, answers: Array(32).fill(1) };
+const r = clean(good);
+assert.strictEqual(r["form-name"], "alignment-stats"); assert.strictEqual(r.answers.split(",").length, 32);
+assert.ok(/^\d{4}-\d{2}$/.test(r.month)); assert.ok(!("ip" in r) && !("email" in r));
+assert.strictEqual(clean({ ...good, result: "evil-overlord" }), null);
+assert.strictEqual(clean({ ...good, answers: [9, 9, 9, 9, 9, 9, 9, 9] }), null);
+assert.strictEqual(clean({ ...good, x: 4 }), null);
+assert.strictEqual(clean({ ...good, answers: Array(32).fill("") }).answers, ",".repeat(31));
+console.log("all stats tests passed");

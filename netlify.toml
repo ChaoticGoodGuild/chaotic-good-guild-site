@@ -4,3 +4,8 @@
 [build]
   publish = "site"
   command = ""
+
+# One small function: relays anonymous alignment-test answers into the "alignment-stats" form,
+# so Netlify stores the answers without the visitor's IP address.
+[functions]
+  directory = "netlify/functions"
