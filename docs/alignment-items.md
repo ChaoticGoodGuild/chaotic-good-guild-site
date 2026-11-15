@@ -52,7 +52,7 @@ Scale: Strongly disagree (-2) / Disagree (-1) / Not sure (+0) / Agree (+1) / Str
 
 Not scored. Answers are collected only from people who disagree with it.
 
-- **C01** (statement 21): I ride a dragon to work most mornings.
+- **C01** (statement 21): I have never drunk a glass of water before.
 
 ## Scoring
 

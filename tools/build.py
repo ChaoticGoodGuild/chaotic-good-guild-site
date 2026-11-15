@@ -98,7 +98,6 @@ def second_chance(hidden=False):
     return f"""<div class="cj-evil"{" hidden" if hidden else ""}>
   <p class="cj-say">Things must have been tough for you. We're working to make sure our world doesn't keep harming others.
   Your identity isn't set in stone - we wish you the best in your growth.</p>
-  <p><a class="back-btn" href="/alignment-test/">Take the test again &rarr;</a></p>
  </div>"""
 
 

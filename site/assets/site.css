@@ -639,7 +639,6 @@ aside.cal-day:hover { border-color: var(--gold); }
 
 /* ---------- Second chance (Evil results) and younger visitors ---------- */
 .cj-say { font-size: clamp(19px, 2.1vw, 22px); line-height: 1.5; max-width: 54ch; margin: 0; }
-.cj-evil p:last-child { margin: 20px 0 0; }
 
 /* ---------- Anonymous test answers ---------- */
 .at-optin { display: flex; gap: 10px; align-items: flex-start; margin: 18px 0 4px; font-size: 16px; }

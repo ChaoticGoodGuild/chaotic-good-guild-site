@@ -159,6 +159,7 @@ if (typeof module !== "undefined") module.exports = CGGScore;
     img.src = "/alignment-test/" + slug + "/portrait.jpg";
     img.alt = res.host + ", " + res.name;
     $("atResEyebrow").textContent = fresh ? "Your alignment" : "Your last alignment";
+    $("atAgain").hidden = /-evil$/.test(slug);   // no nudge to retake until the result changes
     $("atOrder").textContent = CGGScore.lean(x, "Lawful", "Chaotic", BAND);
     $("atHeart").textContent = CGGScore.lean(y, "Evil", "Good", BAND);
     meter($("atOrderFill"), x, "var(--law)", "var(--chaos)");
