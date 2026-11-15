@@ -169,6 +169,8 @@ def build(p):
     </div>
   </div>
 
+  {B.signup("stump", "Hear when Reynard writes", "New tales and essays from the Stump, sent to you when the fox has something to say.")}
+
   <h2 class="places-h">Other paths</h2>
   {B.directory(exclude=p['slug'])}
 </main>
@@ -202,6 +204,7 @@ def build(p):
     </div>
   </article>
   <p class="st-back"><a class="back-btn" href="{path}#read">&larr; Back to the Stump</a></p>
+  {B.signup("essay-" + x['slug'], "Hear when Reynard writes", "New essays from the Stump, sent to you when the fox has something to say.")}
   {more}
 </main>
 

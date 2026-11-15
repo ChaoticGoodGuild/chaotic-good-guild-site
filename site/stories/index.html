@@ -286,6 +286,26 @@
     </div>
   </div>
 
+  <section class="cj" aria-labelledby="cj-stump">
+  <h2 class="cj-h" id="cj-stump">Hear when Reynard writes</h2>
+  <p class="cj-line">New tales and essays from the Stump, sent to you when the fox has something to say. Now and then: new tales from the Stump, festivals on the wheel, and first word when the Guild Hall opens and the deck goes to print.</p>
+  <form class="cgg-join" name="guild-signup" method="POST" action="/join/thanks/" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="guild-signup">
+    <input type="hidden" name="source" value="stump">
+    <p class="cj-hp" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+    <div class="cj-row">
+      <label class="cj-f"><span>Email</span><input type="email" name="email" required autocomplete="email" placeholder="you@example.com"></label>
+      <label class="cj-f"><span>What should Reynard call you? <i>(optional)</i></span><input type="text" name="name" maxlength="60" autocomplete="given-name"></label>
+      <label class="cj-f"><span>Your alignment <i>(optional)</i></span><select name="alignment"><option value="">Not sure yet</option><option value="lawful-good">Lawful Good</option><option value="neutral-good">Neutral Good</option><option value="chaotic-good">Chaotic Good</option><option value="lawful-neutral">Lawful Neutral</option><option value="true-neutral">True Neutral</option><option value="chaotic-neutral">Chaotic Neutral</option><option value="lawful-evil">Lawful Evil</option><option value="neutral-evil">Neutral Evil</option><option value="chaotic-evil">Chaotic Evil</option></select></label>
+    </div>
+    <label class="cj-consent"><input type="checkbox" name="consent" value="13-plus-and-agrees" required> I'm 13 or older, and I'd like letters from the Guild. I can unsubscribe anytime.</label>
+    <div class="cj-go"><button type="submit" class="back-btn">Join the Guild</button>
+      <span class="cj-fine">We'll never sell or share your email. <a href="/privacy/">Privacy</a></span></div>
+    <p class="cj-msg" role="status" aria-live="polite"></p>
+  </form>
+</section>
+
+
   <h2 class="places-h">Other paths</h2>
   <ul class="places"><li><a href="/tarot/"><span class="t">The Chaotic Good Spread</span><span class="w">Mira&#x27;s tent of mirrors</span><span class="d">Cross the candlelight and cut the cards. Mira reads what the mirrors murmur and what the stars are willing to spill.</span></a></li><li><a href="/calendar/"><span class="t">The Guild Calendar</span><span class="w">The moon above the village</span><span class="d">Stay attuned to the phases of the moon, the shifting sands of season, and the fables of the fate of foxes.</span></a></li><li><a href="/notice-board/"><span class="t">The Notice Board</span><span class="w">Where the mischief gathers</span><span class="d">Quills scratch and whispers wander. Pin your plans, pass your notes, and find the friends your fortune favors.</span></a></li><li><a href="/guild-hall/"><span class="t">The Guild Hall</span><span class="w">The door beneath the great cap</span><span class="d">Knock thrice and name yourself. The Hall keeps a hearth, a ledger, and a place for every kind of rebel.</span></a></li><li><a href="/market/"><span class="t">The Galleon Market</span><span class="w">The Badger&#x27;s stall</span><span class="d">Honest goods for honest galleons. Trade fair, tread kindly, and take a little of the Guild home.</span></a></li><li><a href="/about/"><span class="t">The Raising</span><span class="w">The Bull at his beams</span><span class="d">Beam by beam and day by day, the Bull builds what the village dreams. Ask him what it is all for.</span></a></li><li><a href="/alignment-test/"><span class="t">The City on the Hill</span><span class="w">Where the Lion and the Wolf keep count</span><span class="d">Dare to look toward the red towers. Learn where your heart lands between law and chaos, kindness and coin.</span></a></li></ul>
 </main>
@@ -293,8 +313,10 @@
 <footer>
   <a href="/" aria-label="Chaotic Good Guild home"><img class="foot-logo" src="/assets/logo.png" alt="Chaotic Good Guild" width="345" height="360" loading="lazy"></a>
   <nav aria-label="Rooms of the village"><ul class="foot-nav"><li><a href="/tarot/">The Chaotic Good Spread</a></li><li><a href="/calendar/">The Guild Calendar</a></li><li><a href="/notice-board/">The Notice Board</a></li><li><a href="/guild-hall/">The Guild Hall</a></li><li><a href="/stories/">Reynard&#x27;s Stump</a></li><li><a href="/market/">The Galleon Market</a></li><li><a href="/about/">The Raising</a></li><li><a href="/alignment-test/">The City on the Hill</a></li></ul></nav>
+  <p class="foot-join"><a href="/join/">Join the Guild</a> · <a href="/privacy/">Privacy</a></p>
   &copy; 2026 Chaotic Good Guild. Made by misfits, for misfits.
 </footer>
+<script src="/assets/join.js" defer></script>
 <script src="/assets/stump.js"></script>
 </body>
 </html>

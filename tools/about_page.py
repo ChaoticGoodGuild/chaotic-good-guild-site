@@ -52,7 +52,7 @@ def build(p):
     ch = V["channels"]
     path = "/about/"
     desc = ("The Chaotic Good Guild: rebellion through kindness. What Chaotic Good means, why Reynard the Fox, "
-            "the Guild's creed and cast, and how to lend a hand.")
+            "the Guild's creed and its cast.")
     ld = B.jsonld([
         {"@context": "https://schema.org", "@type": "AboutPage", "name": p["title"], "description": desc, "url": B.DOMAIN + path,
          "isPartOf": {"@type": "WebSite", "name": B.NAME, "url": B.DOMAIN + "/"}},

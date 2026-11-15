@@ -21,6 +21,7 @@ import tarot_page  # noqa: E402
 import calendar_page  # noqa: E402
 import stump_page  # noqa: E402
 import about_page  # noqa: E402
+import join_page  # noqa: E402
 
 SITE = os.path.join(ROOT, "site")
 SRC = os.path.join(ROOT, "src")
@@ -39,6 +40,50 @@ def write(rel, text, binary=False):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "wb" if binary else "w") as f:
         f.write(text)
+
+
+CONFIG = json.load(open(os.path.join(SRC, "config.json"), encoding="utf-8"))
+ALIGNMENTS = [("lawful-good", "Lawful Good"), ("neutral-good", "Neutral Good"), ("chaotic-good", "Chaotic Good"),
+              ("lawful-neutral", "Lawful Neutral"), ("true-neutral", "True Neutral"), ("chaotic-neutral", "Chaotic Neutral"),
+              ("lawful-evil", "Lawful Evil"), ("neutral-evil", "Neutral Evil"), ("chaotic-evil", "Chaotic Evil")]
+
+
+def site_tags():
+    """Search-console verification and cookieless analytics, only when their codes are set in src/config.json."""
+    out = ""
+    v = CONFIG.get("verify", {})
+    if v.get("google"): out += f'<meta name="google-site-verification" content="{e(v["google"])}">\n'
+    if v.get("bing"): out += f'<meta name="msvalidate.01" content="{e(v["bing"])}">\n'
+    tok = CONFIG.get("analytics", {}).get("cloudflare_token")
+    if tok:
+        out += ("<script defer src=\"https://static.cloudflareinsights.com/beacon.min.js\" "
+                f"data-cf-beacon='{{\"token\": \"{e(tok)}\"}}'></script>\n")
+    return out
+
+
+def signup(source, title="Join the Guild", line="Leave your name at the Guild's door, and Reynard will write.", alignment="", more=True):
+    """The Join the Guild form. Netlify Forms keeps the signups (Netlify dashboard, Forms)."""
+    opts = '<option value="">Not sure yet</option>' + "".join(f'<option value="{s}">{n}</option>' for s, n in ALIGNMENTS)
+    uid = source.replace("/", "-")
+    return f"""<section class="cj" aria-labelledby="cj-{uid}">
+  <h2 class="cj-h" id="cj-{uid}">{e(title)}</h2>
+  <p class="cj-line">{e(line)}{" Now and then: new tales from the Stump, festivals on the wheel, and first word when the Guild Hall opens and the deck goes to print." if more else ""}</p>
+  <form class="cgg-join" name="guild-signup" method="POST" action="/join/thanks/" data-netlify="true" netlify-honeypot="bot-field"{f' data-alignment="{alignment}"' if alignment else ""}>
+    <input type="hidden" name="form-name" value="guild-signup">
+    <input type="hidden" name="source" value="{e(source)}">
+    <p class="cj-hp" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+    <div class="cj-row">
+      <label class="cj-f"><span>Email</span><input type="email" name="email" required autocomplete="email" placeholder="you@example.com"></label>
+      <label class="cj-f"><span>What should Reynard call you? <i>(optional)</i></span><input type="text" name="name" maxlength="60" autocomplete="given-name"></label>
+      <label class="cj-f"><span>Your alignment <i>(optional)</i></span><select name="alignment">{opts}</select></label>
+    </div>
+    <label class="cj-consent"><input type="checkbox" name="consent" value="13-plus-and-agrees" required> I'm 13 or older, and I'd like letters from the Guild. I can unsubscribe anytime.</label>
+    <div class="cj-go"><button type="submit" class="back-btn">Join the Guild</button>
+      <span class="cj-fine">We'll never sell or share your email. <a href="/privacy/">Privacy</a></span></div>
+    <p class="cj-msg" role="status" aria-live="polite"></p>
+  </form>
+</section>
+"""
 
 
 def head(title, desc, path, image, extra=""):
@@ -65,7 +110,7 @@ def head(title, desc, path, image, extra=""):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Alegreya:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
-{extra}</head>
+{site_tags()}{extra}</head>
 <body>
 """
 
@@ -75,8 +120,10 @@ def foot():
     return f"""<footer>
   <a href="/" aria-label="{NAME} home"><img class="foot-logo" src="/assets/logo.png" alt="{NAME}" width="345" height="360" loading="lazy"></a>
   <nav aria-label="Rooms of the village"><ul class="foot-nav">{links}</ul></nav>
+  <p class="foot-join"><a href="/join/">Join the Guild</a> · <a href="/privacy/">Privacy</a></p>
   &copy; {datetime.date.today().year} {NAME}. Made by misfits, for misfits.
 </footer>
+<script src="/assets/join.js" defer></script>
 """
 
 
@@ -268,7 +315,7 @@ def build_404():
 
 def build_meta():
     today = datetime.date.today().isoformat()
-    urls = ["/"] + [f"/{p['slug']}/" for p in PLACES] + [f"/alignment-test/{s}/" for s in alignment.DATA["results"]]
+    urls = ["/"] + [f"/{p['slug']}/" for p in PLACES] + [f"/alignment-test/{s}/" for s in alignment.DATA["results"]] + ["/join/", "/privacy/"]
     urls += [f"/stories/{x['slug']}/" for x in stump_page.load_essays()]
     sm = "".join(f"  <url><loc>{DOMAIN}{u}</loc><lastmod>{today}</lastmod></url>\n" for u in urls)
     write("sitemap.xml", f'<?xml version="1.0" encoding="UTF-8"?>\n'
@@ -289,6 +336,7 @@ def build_assets():
     write("assets/logo.png", base64.b64decode(open(os.path.join(SRC, "logo.b64")).read()), binary=True)
     write("assets/star.png", base64.b64decode(open(os.path.join(SRC, "star.b64")).read()), binary=True)
     write("assets/village.svg", scene.make_svg(PLACES, standalone=True))
+    write("assets/join.js", open(os.path.join(SRC, "join.js")).read())
     # share images are rendered separately by tools/share_images.py and kept between builds
 
 
@@ -319,6 +367,7 @@ def main():
             about_page.build(p)
         else:
             build_room(p)
+    join_page.build()
     build_404()
     build_meta()
     print("Built", len(PLACES) + 2, "pages into", SITE)

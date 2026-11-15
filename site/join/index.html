@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join the Guild · Chaotic Good Guild</title>
+<meta name="description" content="Join the Chaotic Good Guild: letters from Reynard the Fox, new tales from the Stump, festivals on the Wheel of the Year, and first word when the Guild Hall opens.">
+<link rel="canonical" href="https://www.chaoticgoodguild.com/join/">
+<link rel="icon" type="image/png" href="/assets/star.png">
+<link rel="apple-touch-icon" href="/assets/star.png">
+<meta name="theme-color" content="#0d0418">
+<meta property="og:site_name" content="Chaotic Good Guild">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Join the Guild · Chaotic Good Guild">
+<meta property="og:description" content="Join the Chaotic Good Guild: letters from Reynard the Fox, new tales from the Stump, festivals on the Wheel of the Year, and first word when the Guild Hall opens.">
+<meta property="og:url" content="https://www.chaoticgoodguild.com/join/">
+<meta property="og:image" content="https://www.chaoticgoodguild.com/assets/share/about.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Alegreya:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="/" aria-label="Chaotic Good Guild home"><img src="/assets/logo.png" alt="Chaotic Good Guild" width="345" height="360"></a>
+  <a class="back-link" href="/">&larr; The village</a>
+</header>
+<main class="cj-page">
+<p class="who">The Guild's door</p>
+<h1>Join the Guild</h1>
+<p class="cj-lede">There's no oath and no dues. Leave your name, and now and then a letter will find you: a new tale from Reynard's Stump,
+a festival turning on the wheel, a card worth sitting with, and first word when the Guild Hall opens its doors and the deck goes to print.</p>
+<p class="cj-lede">No more than a couple of letters a month. Every one has a way out at the bottom, and leaving is as easy as joining.</p>
+<section class="cj" aria-labelledby="cj-join-page">
+  <h2 class="cj-h" id="cj-join-page">Leave your name at the door</h2>
+  <p class="cj-line">Rebels, misfits and good-hearted troublemakers welcome.</p>
+  <form class="cgg-join" name="guild-signup" method="POST" action="/join/thanks/" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="guild-signup">
+    <input type="hidden" name="source" value="join-page">
+    <p class="cj-hp" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+    <div class="cj-row">
+      <label class="cj-f"><span>Email</span><input type="email" name="email" required autocomplete="email" placeholder="you@example.com"></label>
+      <label class="cj-f"><span>What should Reynard call you? <i>(optional)</i></span><input type="text" name="name" maxlength="60" autocomplete="given-name"></label>
+      <label class="cj-f"><span>Your alignment <i>(optional)</i></span><select name="alignment"><option value="">Not sure yet</option><option value="lawful-good">Lawful Good</option><option value="neutral-good">Neutral Good</option><option value="chaotic-good">Chaotic Good</option><option value="lawful-neutral">Lawful Neutral</option><option value="true-neutral">True Neutral</option><option value="chaotic-neutral">Chaotic Neutral</option><option value="lawful-evil">Lawful Evil</option><option value="neutral-evil">Neutral Evil</option><option value="chaotic-evil">Chaotic Evil</option></select></label>
+    </div>
+    <label class="cj-consent"><input type="checkbox" name="consent" value="13-plus-and-agrees" required> I'm 13 or older, and I'd like letters from the Guild. I can unsubscribe anytime.</label>
+    <div class="cj-go"><button type="submit" class="back-btn">Join the Guild</button>
+      <span class="cj-fine">We'll never sell or share your email. <a href="/privacy/">Privacy</a></span></div>
+    <p class="cj-msg" role="status" aria-live="polite"></p>
+  </form>
+</section>
+
+</main>
+
+<footer>
+  <a href="/" aria-label="Chaotic Good Guild home"><img class="foot-logo" src="/assets/logo.png" alt="Chaotic Good Guild" width="345" height="360" loading="lazy"></a>
+  <nav aria-label="Rooms of the village"><ul class="foot-nav"><li><a href="/tarot/">The Chaotic Good Spread</a></li><li><a href="/calendar/">The Guild Calendar</a></li><li><a href="/notice-board/">The Notice Board</a></li><li><a href="/guild-hall/">The Guild Hall</a></li><li><a href="/stories/">Reynard&#x27;s Stump</a></li><li><a href="/market/">The Galleon Market</a></li><li><a href="/about/">The Raising</a></li><li><a href="/alignment-test/">The City on the Hill</a></li></ul></nav>
+  <p class="foot-join"><a href="/join/">Join the Guild</a> · <a href="/privacy/">Privacy</a></p>
+  &copy; 2026 Chaotic Good Guild. Made by misfits, for misfits.
+</footer>
+<script src="/assets/join.js" defer></script>
+</body>
+</html>

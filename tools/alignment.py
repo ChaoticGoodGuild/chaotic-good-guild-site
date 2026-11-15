@@ -130,6 +130,7 @@ def build(p):
       <p class="at-notice">{e(NOTICE)} This browser remembers only your final result, so the Guild Hall can offer it to you later. <button type="button" class="at-link" id="atForget">Forget my result</button> <span id="atForgetNote" role="status"></span></p>
     </div>
   </section>
+  {B.signup("alignment-test", "Carry your alignment into the Guild", "Bring your alignment with you, and Reynard will write.")}
 
   <h2 class="places-h" style="margin-top:0">The nine alignments</h2>
   <ul class="places at-nine">{''.join(f'<li><a href="/alignment-test/{s}/" {tone_style(s)}><span class="t">{e(r["name"])}</span><span class="w">{e(r["host"])}</span></a></li>' for s, r in ((s, DATA["results"][s]) for row in GRID for s in row))}</ul>
@@ -179,6 +180,7 @@ def build_result(slug):
       </div>
     </div>
   </section>
+  {B.signup("alignment-" + slug, "Join the Guild", "Leave your name at the Guild's door, and Reynard will write.", alignment=slug)}
   <h2 class="places-h" style="margin-top:0">The other eight</h2>
   <ul class="places at-nine">{others}</ul>
 </main>

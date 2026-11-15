@@ -104,6 +104,7 @@ def build(p):
     </div>
   </div>
   <template id="spBackTpl">{back}</template>
+  {B.signup("tarot", "Join the Guild", "Mira deals a new festival card each turn of the wheel. Leave your name, and Reynard will write when she does.", more=False)}
 
   <h2 class="places-h">Other paths</h2>
   {B.directory(exclude=p['slug'])}
