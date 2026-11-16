@@ -37,7 +37,7 @@ The website at [www.chaoticgoodguild.com](https://www.chaoticgoodguild.com): an 
 | `/stories/` | Reynard's Stump |
 | `/market/` | The Galleon Market |
 | `/about/` | The Raising |
-| `/alignment-test/` | The Red City: the alignment test |
+| `/alignment-test/` | The City of Red: the alignment test |
 | `/alignment-test/<alignment>/` | One page for each of the nine alignments, e.g. `/alignment-test/chaotic-good/` |
 
 ## Making a change

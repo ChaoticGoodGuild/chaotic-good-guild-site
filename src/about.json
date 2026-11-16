@@ -95,8 +95,8 @@
         "text": "The rats who build, trade, dance and dream in the mushroom village. Scribes, merchants, bards in training: the Guild is made of them."
       }
     ],
-    "foes_title": "Across the river, in The Red City",
-    "foes_note": "The Red City is where old fantasy meets modern corporate brutalism: stone keeps and concrete towers, gargoyles over glass, guild halls turned into boardrooms. Its masters are the LEOs, the Lawful Evil Overlords. They created the oversystems, and they run them: the towers, ledgers and rules built to keep everyone else small.",
+    "foes_title": "Across the river, in The City of Red",
+    "foes_note": "The City of Red is where old fantasy meets modern corporate brutalism: stone keeps and concrete towers, gargoyles over glass, guild halls turned into boardrooms. Its masters are the LEOs, the Lawful Evil Overlords. They created the oversystems, and they run them: the towers, ledgers and rules built to keep everyone else small.",
     "foes": [
       {
         "key": "lion",
@@ -112,7 +112,7 @@
       },
       {
         "key": "rats",
-        "name": "The Rats of The Red City",
+        "name": "The Rats of The City of Red",
         "align": "Varying Evil",
         "text": "Some wear the suit and some wear the hood. Most of them are a product of the Lawful Evil systems they operate inside of, doing what the ledgers demand to keep a roof overhead. But a couple of them would take the Corporate Wolf's job, or the LEO Lion's crown, in a heartbeat if given the chance."
       }

@@ -459,7 +459,7 @@ def rat(expr="happy", outfit="plain", prop=None):
         arm_l = arm_l.replace('url(#gRat)" stroke-width="8"', 'url(#gSuit)" stroke-width="8"')
         arm_r = arm_r.replace('url(#gRat)" stroke-width="8"', 'url(#gSuit)" stroke-width="8"')
         held = f'<g transform="translate(40,-62)">{galleon(7)}</g>'
-    elif outfit == "crook":   # a dangerous Red City rat: black hooded cloak, black/yellow emblem, blackjack
+    elif outfit == "crook":   # a dangerous City of Red rat: black hooded cloak, black/yellow emblem, blackjack
         over_body = f'''<path d="M-29,-44 Q-33,-98 4,-104 Q38,-98 34,-44 L36,-14 Q4,-6 -30,-14Z" fill="#14111c" {O}/>
 <path d="M-8,-102 Q4,-90 16,-102" stroke="#2c2738" stroke-width="3" fill="none"/>
 <path d="M-2,-94 l-2,16 M10,-94 l2,16" stroke="#e9d701" stroke-width="1.8" stroke-linecap="round"/>
