@@ -5,30 +5,33 @@ const CGGMoon = require("../src/moonwindow.js");
 const P = require("../src/priestess.js");
 const D = Object.assign(require("../src/priestess.json"), { suits: require("../src/spread.json").suits });
 const M = require("../src/meanings.json"), T = require("../src/tarot.json");
-const H = D.window_hours;
-
-// The full moon of 24 November 2026 is at 14:53 UTC.
-let w = CGGMoon.window(Sky, new Date("2026-11-18T12:00:00Z"), H);
-assert.ok(!w.open); assert.strictEqual(w.full.toISOString().slice(0, 13), "2026-11-24T14");
-assert.strictEqual(w.opens.toISOString().slice(0, 13), "2026-11-23T02");
-assert.ok(CGGMoon.window(Sky, new Date("2026-11-24T14:53:00Z"), H).open);
-assert.ok(CGGMoon.window(Sky, new Date("2026-11-23T03:00:00Z"), H).open);
-assert.ok(CGGMoon.window(Sky, new Date("2026-11-26T02:00:00Z"), H).open);
-assert.ok(!CGGMoon.window(Sky, new Date("2026-11-26T04:00:00Z"), H).open);
-// open on roughly three nights a month, every month for two years
-let open = 0;
-for (let t = Date.parse("2027-01-01"); t < Date.parse("2029-01-01"); t += 3600000) if (CGGMoon.window(Sky, new Date(t), H).open) open++;
-const perMonth = open / 24 / 24;
-assert.ok(perMonth > 2.9 && perMonth < 3.1, perMonth);
+// Run in Michigan time (tools run this with TZ=America/Detroit). The full moon of 24 November 2026 is 9:53 AM there.
+process.env.TZ = process.env.TZ || "America/Detroit";
+const local = s => new Date(s);   // a time with no zone is read as local
+let w = CGGMoon.window(Sky, local("2026-11-18T12:00:00"));
+assert.ok(!w.open); assert.strictEqual(CGGMoon.dayKey(w.full), "2026-11-24");
+assert.strictEqual(+w.opens, +local("2026-11-24T00:00:00"));
+assert.ok(!CGGMoon.window(Sky, local("2026-11-23T23:59:00")).open);
+assert.ok(CGGMoon.window(Sky, local("2026-11-24T00:01:00")).open);
+assert.ok(CGGMoon.window(Sky, local("2026-11-24T23:59:00")).open);
+assert.ok(!CGGMoon.window(Sky, local("2026-11-25T00:01:00")).open);
+// exactly one day for each full moon, for two years
+const days = new Set();
+for (let t = +local("2027-01-01T00:30:00"); t < +local("2029-01-01T00:00:00"); t += 3600000) {
+  const x = CGGMoon.window(Sky, new Date(t)); if (x.open) days.add(CGGMoon.dayKey(new Date(t)));
+}
+const fulls = Sky.phasesBetween(local("2027-01-01T00:00:00"), local("2029-01-01T00:00:00")).filter(p => p.phase === "full").length;
+assert.strictEqual(days.size, fulls);
 
 // the reading engine
 assert.strictEqual(D.positions.length, 9);
-assert.strictEqual(D.positions[8].key, "secret"); assert.ok(D.positions[8].upright && D.positions[1].upright);
+assert.deepStrictEqual(D.positions.map(p => p.key), ["self", "crossing", "waning", "full", "waxing", "dark", "light", "sum", "secret"]);
+assert.ok(D.positions[2].x < 50 && D.positions[4].x > 50);   // waning on the left, waxing on the right
 const deck = T.map(c => ({ id: c.id, name: c.name, suit: c.suit, rank: c.rank, ...M[c.id] }));
 let seed = 3; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
 for (let i = 0; i < 3000; i++) {
   const pool = deck.slice(); const picks = [];
-  for (let k = 0; k < 9; k++) picks.push({ ...pool.splice(Math.floor(rnd() * pool.length), 1)[0], reversed: !D.positions[k].upright && rnd() < .5 });
+  for (let k = 0; k < 9; k++) picks.push({ ...pool.splice(Math.floor(rnd() * pool.length), 1)[0], reversed: rnd() < .5 });
   const shown = P.isMajor(picks[8]);
   const r = P.summarize(picks, D.positions, D, shown);
   const text = r.paras.join(" ");
@@ -37,5 +40,6 @@ for (let i = 0; i < 3000; i++) {
   if (shown) assert.ok(text.includes("showed you her secret") && text.includes(picks[8].name));
   else assert.ok(text.includes("kept her secret") && !text.includes(picks[8].name + ","), "a kept secret must stay hidden");
   assert.ok(!/rebellion/i.test(text));
+  assert.ok(text.indexOf("waning moon holds") < text.indexOf("full moon holds") && text.indexOf("full moon holds") < text.indexOf("waxing moon holds"));
 }
 console.log("all priestess tests passed");

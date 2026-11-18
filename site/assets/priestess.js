@@ -29,9 +29,9 @@ const CGGPriestess = {
 
     // 2. The three moons, in the order they were dealt
     const pk = c => `${c.name} (${kw0(c)}${c.reversed ? ", reversed" : ""})`;
-    let p2 = `Above her, the three moons: the lenses you see it all through. The waxing moon holds ${pk(wax)}, `
-      + `the next step the path suggests. The full moon holds ${pk(full)}, the lens you're looking through now. `
-      + `The waning moon holds ${pk(wane)}, the way you've seen what came before.`;
+    let p2 = `Above her, the three moons: the lenses you see it all through. The waning moon holds ${pk(wane)}, `
+      + `the way you've seen what came before. The full moon holds ${pk(full)}, the lens you're looking through now. `
+      + `The waxing moon holds ${pk(wax)}, the next step the path suggests.`;
     p2 += full.reversed
       ? ` The full moon came reversed, so ask whether this lens is magnifying things right now, or hiding them.`
       : ` The moon only reflects, so ask whether ${full.name} is showing things as they are, or larger than life.`;
@@ -102,12 +102,10 @@ if (typeof module !== "undefined") module.exports = CGGPriestess;
 
   // ---- is the moon full? (?preview=fullmoon opens it any time, for checking the page)
   const preview = /[?&]preview=fullmoon\b/.test(location.search);
-  const w = CGGMoon.window(Sky, new Date(), D.window_hours);
+  const w = CGGMoon.window(Sky, new Date());
   if (!w.open && !preview) {
     $("hpSealed").hidden = false;
-    const when = w.opens.toLocaleString(undefined, { weekday: "long", month: "long", day: "numeric", hour: "numeric", minute: "2-digit" });
-    $("hpNext").textContent = `${D.sealed.next} ${w.full.toLocaleDateString(undefined, { month: "long", day: "numeric" })}. `
-      + `The path opens ${when}.`;
+    $("hpNext").textContent = `${D.sealed.next} ${w.full.toLocaleDateString(undefined, { weekday: "long", month: "long", day: "numeric" })}.`;
     return;
   }
   $("hpOpen").hidden = false;
@@ -156,7 +154,7 @@ if (typeof module !== "undefined") module.exports = CGGPriestess;
 
   async function deal() {
     state = "dealing"; say("dealing"); deck.setAttribute("aria-label", "The deck");
-    const picks = order.slice(0, POS.length).map((i, k) => Object.assign({}, D.cards[i], { reversed: !POS[k].upright && rand(2) === 1 }));
+    const picks = order.slice(0, POS.length).map(i => Object.assign({}, D.cards[i], { reversed: rand(2) === 1 }));
     picks.forEach(c => loadCard(c.id));
     dealt = [];
     for (let k = 0; k < POS.length; k++) {
@@ -228,15 +226,16 @@ if (typeof module !== "undefined") module.exports = CGGPriestess;
     msg.textContent = D.secret.weighing; more.textContent = "";
     ov.className = "hp-rite"; ov.hidden = false; void ov.offsetWidth;
     ov.classList.add("in");
-    await sleep(500); ov.classList.add("weigh");
+    const cue = n => { if (window.CGGSound) window.CGGSound.cue(n); };
+    await sleep(500); ov.classList.add("weigh"); cue("weigh");
     await sleep(3000);
     if (shown) {
-      ov.classList.add("reveal"); msg.textContent = D.secret.revealed;
+      ov.classList.add("reveal"); msg.textContent = D.secret.revealed; cue("reveal");
       await sleep(1700);
       ov.classList.remove("in"); await sleep(600); ov.hidden = true;
       await turn(SECRET); d.el.classList.add("revealed");
     } else {
-      ov.classList.add("keep"); msg.textContent = D.secret.kept; more.textContent = D.secret.kept_more;
+      ov.classList.add("keep"); msg.textContent = D.secret.kept; more.textContent = D.secret.kept_more; cue("keep");
       await sleep(3600);
       ov.classList.remove("in"); await sleep(600); ov.hidden = true;
       d.turned = true; d.kept = true; d.el.classList.add("kept");

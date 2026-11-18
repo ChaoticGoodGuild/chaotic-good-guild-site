@@ -1,7 +1,7 @@
 """The secret full-moon reading (/tarot/full-moon/): The High Priestess Spread, in an enchanted forest.
 
-Not linked from the menus, the sitemap or llms.txt. The tarot page shows a small moon that leads here, but only while the
-moon is full (src/moonwindow.js). Words in src/priestess.json; behavior in src/priestess.js.
+Not linked from the menus, the sitemap or llms.txt. The tarot page shows a small moon that leads here, but only on the day of the
+full moon (src/moonwindow.js). Words in src/priestess.json; behavior in src/priestess.js.
 Preview it outside a full moon at /tarot/full-moon/?preview=fullmoon
 """
 import json, os, random
@@ -47,7 +47,7 @@ def table_art():
   <rect x="150" y="186" width="340" height="330" rx="10" fill="url(#hpVeil)" opacity=".42"/>
   <rect width="640" height="750" fill="url(#hpGlow)"/>
   {pillar(95, True, "B")}{pillar(545, False, "J")}
-  {moon(66, 40, "wax")}{moon(320, 18, "full")}{moon(574, 40, "wane")}
+  {moon(66, 40, "wane")}{moon(320, 18, "full")}{moon(574, 40, "wax")}
   <path d="M250 742 q70 -36 140 0 q-70 -18 -140 0" fill="#e8f6f8" opacity=".55"/>
 </svg>"""
 
@@ -90,7 +90,7 @@ def build(cards, back, defs):
     P = json.load(open(os.path.join(B.SRC, "priestess.json")))
     S = json.load(open(os.path.join(B.SRC, "spread.json")))
     e = B.e
-    data = json.dumps({k: P[k] for k in ("positions", "card_width", "window_hours", "prompts", "secret", "sealed", "reflection", "reversed")}
+    data = json.dumps({k: P[k] for k in ("positions", "card_width", "prompts", "secret", "sealed", "reflection", "reversed")}
                       | {"suits": S["suits"], "cards": cards})
     first = P["positions"][0]
     page = B.head(f"{P['title']} · {B.NAME}", P["desc"], PATH, "tarot", '<meta name="robots" content="noindex">\n')
@@ -158,16 +158,21 @@ def build(cards, back, defs):
   {rite()}
   <template id="hpBackTpl">{back}</template>
 </main>
+<button type="button" class="hp-sound" id="hpSound" aria-pressed="false" title="The forest at night: soft sound, made right here in your browser">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path class="hp-waves" d="M16 8.5a4.5 4.5 0 0 1 0 7M18.5 6a8 8 0 0 1 0 12"/></svg>
+  <span class="hp-sound-label">Sound off</span>
+</button>
 
 {B.foot()}<script type="application/json" id="priestess-data">{data}</script>
 <script src="/assets/sky.js"></script>
 <script src="/assets/moonwindow.js"></script>
 <script src="/assets/priestess.js"></script>
+<script src="/assets/forestsound.js"></script>
 </body>
 </html>
 """
     B.write("tarot/full-moon/index.html", page)
-    for f in ("priestess.js", "moonwindow.js"):
+    for f in ("priestess.js", "moonwindow.js", "forestsound.js"):
         B.write("assets/" + f, open(os.path.join(B.SRC, f)).read())
     os.makedirs(os.path.join(B.SITE, "assets"), exist_ok=True)
     with open(os.path.join(B.SRC, "forest-night.webp"), "rb") as fi, open(os.path.join(B.SITE, "assets", "forest-night.webp"), "wb") as fo:

@@ -13,7 +13,6 @@ import priestess_page
 
 def build(p):
     SPREAD = json.load(open(os.path.join(B.SRC, "spread.json")))
-    HOURS = json.load(open(os.path.join(B.SRC, "priestess.json")))["window_hours"]
     e = B.e
     meta, defs = deck.export(os.path.join(B.SITE, "tarot", "cards"))
     back = K.card_back()
@@ -121,7 +120,7 @@ def build(p):
 <script>
   // Under a full moon (and only then) a small moon rises over the table. It leads to the Priestess.
   try {{
-    if (CGGMoon.window(Sky, new Date(), {HOURS}).open || /[?&]preview=fullmoon(&|$)/.test(location.search))
+    if (CGGMoon.window(Sky, new Date()).open || /[?&]preview=fullmoon(&|$)/.test(location.search))
       document.getElementById("spMoon").hidden = false;
   }} catch (e) {{}}
 </script>

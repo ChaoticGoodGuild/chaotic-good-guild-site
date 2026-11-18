@@ -245,7 +245,7 @@
 <script>
   // Under a full moon (and only then) a small moon rises over the table. It leads to the Priestess.
   try {
-    if (CGGMoon.window(Sky, new Date(), 36).open || /[?&]preview=fullmoon(&|$)/.test(location.search))
+    if (CGGMoon.window(Sky, new Date()).open || /[?&]preview=fullmoon(&|$)/.test(location.search))
       document.getElementById("spMoon").hidden = false;
   } catch (e) {}
 </script>

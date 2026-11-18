@@ -723,3 +723,12 @@ body:has(main.hp-page) footer { background: rgba(2,12,16,.85); border-top-color:
 .hp-page .sp-lightbox { background: #06222a; border-color: #cfeef2; box-shadow: 0 0 0 6px rgba(40,120,130,.45), 0 30px 80px rgba(0,0,0,.7); }
 .hp-page .sp-name { text-decoration-color: rgba(207,238,242,.6); }
 .hp-page .sp-ghost { color: #dff6f2; border-color: #dff6f2; }
+/* the forest's sound switch */
+.hp-sound { position: fixed; z-index: 45; right: 16px; bottom: 16px; display: flex; align-items: center; gap: 8px; padding: 9px 14px 9px 11px;
+  font: inherit; font-size: 16px; color: #dff6f2; background: rgba(4,20,26,.82); border: 1px solid rgba(207,238,242,.45); border-radius: 999px;
+  cursor: pointer; backdrop-filter: blur(4px); box-shadow: 0 6px 20px rgba(0,0,0,.4); }
+.hp-sound svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.hp-sound svg path:first-child { fill: currentColor; }
+.hp-sound[aria-pressed="false"] .hp-waves { opacity: .25; }
+.hp-sound[aria-pressed="true"] { border-color: #dff6f2; box-shadow: 0 0 18px rgba(160,240,255,.45); }
+.hp-sound:focus-visible { outline: 2px solid #dff6f2; outline-offset: 3px; }
