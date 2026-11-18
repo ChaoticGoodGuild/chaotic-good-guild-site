@@ -7,11 +7,13 @@ import json, os
 import build as B
 import deck
 import cards as K
+import priestess_page
 
 
 
 def build(p):
     SPREAD = json.load(open(os.path.join(B.SRC, "spread.json")))
+    HOURS = json.load(open(os.path.join(B.SRC, "priestess.json")))["window_hours"]
     e = B.e
     meta, defs = deck.export(os.path.join(B.SITE, "tarot", "cards"))
     back = K.card_back()
@@ -52,6 +54,8 @@ def build(p):
       <circle class="sp-ring" pathLength="1" cx="{cx}" cy="{cy}" r="39"/>{segs}
     </svg>
     <div class="sp-tip" id="spTip" role="tooltip" hidden></div>
+    <a class="sp-fullmoon" id="spMoon" href="/tarot/full-moon/" hidden aria-label="The moon is full. Follow it into the forest."
+       title="The moon is full. Someone is waiting in the forest."><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="15"/></svg></a>
     <button type="button" class="sp-deck idle" id="spDeck" style="left:{cx}%;top:{cy}%;width:{SPREAD['card_width']}%" aria-label="The deck. Touch to shuffle."></button>
   </div>
   <div class="sp-actions">
@@ -112,10 +116,20 @@ def build(p):
 
 {B.foot()}<script type="application/json" id="spread-data">{data}</script>
 <script src="/assets/spread.js"></script>
+<script src="/assets/sky.js"></script>
+<script src="/assets/moonwindow.js"></script>
+<script>
+  // Under a full moon (and only then) a small moon rises over the table. It leads to the Priestess.
+  try {{
+    if (CGGMoon.window(Sky, new Date(), {HOURS}).open || /[?&]preview=fullmoon(&|$)/.test(location.search))
+      document.getElementById("spMoon").hidden = false;
+  }} catch (e) {{}}
+</script>
 </body>
 </html>
 """
     B.write("tarot/index.html", page)
+    priestess_page.build(cards, back, defs)
     B.write("assets/spread.js", open(os.path.join(B.SRC, "spread.js")).read())
     write_review_doc()
 

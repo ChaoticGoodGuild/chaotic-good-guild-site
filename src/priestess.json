@@ -1,0 +1,52 @@
+{
+  "_about": "The secret full-moon reading: The High Priestess Spread, laid like the High Priestess card itself (the cross at her heart, three moons above, a pillar on each side, the scroll in her lap, the crescent at her feet). Ryan's spread; words are drafts for Ryan to rewrite. Positions: x and y are percent of the table, rot is the card's tilt in degrees. The reading only opens within window_hours of the exact full moon. Preview it any time with ?preview=fullmoon on the page's address.",
+  "name": "The High Priestess Spread",
+  "title": "The Priestess by Moonlight",
+  "who": "A secret reading, under a full moon",
+  "desc": "Deep in the forest, by the still water, Mira sits as the High Priestess between her pillars. Nine cards, laid the way she sits. The last is her secret, and she shares it only when she chooses.",
+  "card_width": 15,
+  "window_hours": 36,
+  "positions": [
+    {"key": "self", "title": "The Self", "question": "Where you are right now.", "x": 50, "y": 44, "rot": 0,
+     "how": "The Self sits at the Priestess's heart, so Mira reads it first."},
+    {"key": "crossing", "title": "The Crossing", "question": "What surrounds you right now.", "x": 50, "y": 44, "rot": 90, "upright": true,
+     "how": "The Crossing lies across the Self: the situation pressing in around you right now. It's laid sideways, so it never lands reversed."},
+    {"key": "waxing", "title": "The Waxing Moon", "question": "The next step the path suggests.", "x": 20.3, "y": 18.7, "rot": -30,
+     "how": "The three moons are lenses, not events. The waxing moon isn't a prediction: it's the next logical step, given the steps that came before."},
+    {"key": "full", "title": "The Full Moon", "question": "The lens you're looking through now.", "x": 50, "y": 14.7, "rot": 0,
+     "how": "The full moon is the lens you're looking through now. The moon only reflects light, so this lens can magnify a feeling or bend it out of shape."},
+    {"key": "waning", "title": "The Waning Moon", "question": "The lens you've seen the past through.", "x": 79.7, "y": 18.7, "rot": 30,
+     "how": "The waning moon is the lens you've been seeing what came before through."},
+    {"key": "dark", "title": "The Dark Pillar", "question": "What moves you beneath your awareness.", "x": 14.8, "y": 44, "rot": 0,
+     "how": "The dark pillar holds what drives you without your noticing: the motives under your actions, beliefs and interpretations."},
+    {"key": "light", "title": "The Light Pillar", "question": "What moves you that you can see.", "x": 85.2, "y": 44, "rot": 0,
+     "how": "The light pillar holds the drives you already know about."},
+    {"key": "sum", "title": "The Crescent", "question": "How the pieces fit together.", "x": 50, "y": 87.3, "rot": 0,
+     "how": "The crescent at the Priestess's feet is the sum of the reading: how the pieces fit together."},
+    {"key": "secret", "title": "The Scroll", "question": "The Priestess's secret.", "x": 50, "y": 66.7, "rot": 90, "upright": true,
+     "how": "The scroll in the Priestess's lap holds her secret: the deeper lesson in why you're where you are. She reveals it only when it's a Major Arcana card."}
+  ],
+  "prompts": {
+    "idle": "The moon is full, and the Priestess is waiting by the water. Touch the deck to shuffle.",
+    "shuffling": "The cards are turning in the moonlight. Touch again when it feels right.",
+    "dealing": "Nine cards, laid the way the Priestess sits: between her pillars, beneath her moons.",
+    "dealt": "Turn the cards in any order. The scroll in her lap stays sealed until the rest are read.",
+    "early": "Not yet. The Priestess keeps her scroll until the other eight are turned.",
+    "ready": "Eight are turned. One card remains: the Priestess's secret. Touch the scroll when you're ready.",
+    "done": "The reading is laid bare. Mira's reflection waits below."
+  },
+  "secret": {
+    "weighing": "The Priestess weighs her secret…",
+    "revealed": "She shows you.",
+    "kept": "She keeps it tonight.",
+    "kept_more": "Not every lesson is ready to be told. Sit with the other eight; the moon will come round again.",
+    "kept_card": "Sealed. The Priestess kept this one."
+  },
+  "sealed": {
+    "title": "The forest path is dark",
+    "text": "The Priestess reads only beneath a full moon. Come back when the moon is round and bright, and she'll be waiting by the water.",
+    "next": "The next full moon rises"
+  },
+  "reflection": "This mirror reflects; it doesn't predict. The moon only borrows its light, and so does this reading: it can make a feeling look larger than life, or bend it out of shape. Take what rings true, leave what doesn't, and remember that the next step is always yours to choose.",
+  "reversed": "A reversed card means its energy is out of balance: too much of it, or not enough."
+}
