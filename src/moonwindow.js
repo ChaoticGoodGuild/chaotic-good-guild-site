@@ -1,6 +1,6 @@
 /* Whether the Priestess is receiving: only on the day of the full moon, by the visitor's own calendar
    (the local date that holds the exact moment of the full moon). Needs Sky (src/sky.js).
-   Used by the secret reading (/tarot/full-moon/) and by the tarot page, which shows a small moon only then. */
+   Used by the secret reading (/tarot/priestess/) and by the tarot page, which shows a small moon only then. */
 const CGGMoon = {
   dayKey(d) { return d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate(); },
   window(Sky, now) {

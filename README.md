@@ -37,7 +37,7 @@ The website at [www.chaoticgoodguild.com](https://www.chaoticgoodguild.com): an 
 | `/stories/` | Reynard's Stump |
 | `/market/` | The Galleon Market |
 | `/about/` | The Raising |
-| `/tarot/full-moon/` | Secret: The Priestess by Moonlight, the High Priestess Spread. Opens only on the day of the full moon (the visitor's local date); not in menus or the sitemap. Preview with `?preview=fullmoon` |
+| `/tarot/priestess/` | Secret: The Priestess by Moonlight, the High Priestess Spread. Opens only on the day of the full moon (the visitor's local date); not in menus or the sitemap. Preview with `?preview=fullmoon` |
 | `/alignment-test/` | The City of Red: the alignment test |
 | `/alignment-test/<alignment>/` | One page for each of the nine alignments, e.g. `/alignment-test/chaotic-good/` |
 

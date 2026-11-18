@@ -1,8 +1,8 @@
 {
-  "_about": "The secret full-moon reading: The High Priestess Spread, laid like the High Priestess card itself (the cross at her heart, three moons above, a pillar on each side, the scroll in her lap, the crescent at her feet). Ryan's spread; words are drafts for Ryan to rewrite. Positions: x and y are percent of the table, rot is the card's tilt in degrees. The reading only opens on the day of the full moon, by the visitor's own calendar. Preview it any time with ?preview=fullmoon on the page's address.",
+  "_about": "The secret full-moon reading: The High Priestess Spread, laid like the High Priestess card itself (the cross at her heart, three moons above, a pillar on each side, the scroll in her lap, the crescent at her feet). Ryan's spread; words are drafts for Ryan to rewrite. Positions: x and y are percent of the table, rot is the card's tilt in degrees. The reading only opens on the day of the full moon, by the visitor's own calendar. Preview it any time with ?preview=fullmoon on the page's address. Visitors are never told when it opens: it's meant to be stumbled on.",
   "name": "The High Priestess Spread",
   "title": "The Priestess by Moonlight",
-  "who": "A secret reading, under a full moon",
+  "who": "A secret reading, deep in the forest",
   "desc": "Deep in the forest, by the still water, Mira sits as the High Priestess between her pillars. Nine cards, laid the way she sits. The last is her secret, and she shares it only when she chooses.",
   "card_width": 15,
   "positions": [
@@ -106,8 +106,7 @@
   },
   "sealed": {
     "title": "The forest path is dark",
-    "text": "The Priestess reads only beneath a full moon. Come back when the moon is round and bright, and she'll be waiting by the water.",
-    "next": "The next full moon rises"
+    "text": "The Priestess isn't by the water tonight. Some paths only open when they're ready to be found."
   },
   "reflection": "This mirror reflects; it doesn't predict. The moon only borrows its light, and so does this reading: it can make a feeling look larger than life, or bend it out of shape. Take what rings true, leave what doesn't, and remember that the next step is always yours to choose.",
   "reversed": "A reversed card means its energy is out of balance: too much of it, or not enough."

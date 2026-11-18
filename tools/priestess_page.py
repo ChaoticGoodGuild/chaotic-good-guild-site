@@ -1,13 +1,13 @@
-"""The secret full-moon reading (/tarot/full-moon/): The High Priestess Spread, in an enchanted forest.
+"""The secret full-moon reading (/tarot/priestess/): The High Priestess Spread, in an enchanted forest.
 
 Not linked from the menus, the sitemap or llms.txt. The tarot page shows a small moon that leads here, but only on the day of the
 full moon (src/moonwindow.js). Words in src/priestess.json; behavior in src/priestess.js.
-Preview it outside a full moon at /tarot/full-moon/?preview=fullmoon
+Preview it outside a full moon at /tarot/priestess/?preview=fullmoon
 """
 import json, os, random
 import build as B
 
-PATH = "/tarot/full-moon/"
+PATH = "/tarot/priestess/"
 
 
 def pillar(x, dark, letter):
@@ -111,10 +111,9 @@ def build(cards, back, defs):
   <section class="hp-sealed" id="hpSealed" hidden>
     <h2 class="sp-h">{e(P['sealed']['title'])}</h2>
     <p>{e(P['sealed']['text'])}</p>
-    <p class="hp-next" id="hpNext"></p>
     <p><a class="back-btn" href="/tarot/">Back to Mira's tent</a></p>
   </section>
-  <noscript><p class="raising">This reading needs JavaScript turned on, and a full moon.</p></noscript>
+  <noscript><p class="raising">This reading needs JavaScript turned on.</p></noscript>
 
   <div id="hpOpen" hidden>
     <p class="sp-prompt hp-prompt" id="hpPrompt" aria-live="polite">{e(P['prompts']['idle'])}</p>
@@ -171,7 +170,7 @@ def build(cards, back, defs):
 </body>
 </html>
 """
-    B.write("tarot/full-moon/index.html", page)
+    B.write("tarot/priestess/index.html", page)
     for f in ("priestess.js", "moonwindow.js", "forestsound.js"):
         B.write("assets/" + f, open(os.path.join(B.SRC, f)).read())
     os.makedirs(os.path.join(B.SITE, "assets"), exist_ok=True)

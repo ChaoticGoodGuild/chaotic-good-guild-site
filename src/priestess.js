@@ -105,7 +105,6 @@ if (typeof module !== "undefined") module.exports = CGGPriestess;
   const w = CGGMoon.window(Sky, new Date());
   if (!w.open && !preview) {
     $("hpSealed").hidden = false;
-    $("hpNext").textContent = `${D.sealed.next} ${w.full.toLocaleDateString(undefined, { weekday: "long", month: "long", day: "numeric" })}.`;
     return;
   }
   $("hpOpen").hidden = false;

@@ -53,7 +53,7 @@ def build(p):
       <circle class="sp-ring" pathLength="1" cx="{cx}" cy="{cy}" r="39"/>{segs}
     </svg>
     <div class="sp-tip" id="spTip" role="tooltip" hidden></div>
-    <a class="sp-fullmoon" id="spMoon" href="/tarot/full-moon/" hidden aria-label="The moon is full. Follow it into the forest."
+    <a class="sp-fullmoon" id="spMoon" href="/tarot/priestess/" hidden aria-label="The moon is full. Follow it into the forest."
        title="The moon is full. Someone is waiting in the forest."><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="15"/></svg></a>
     <button type="button" class="sp-deck idle" id="spDeck" style="left:{cx}%;top:{cy}%;width:{SPREAD['card_width']}%" aria-label="The deck. Touch to shuffle."></button>
   </div>
