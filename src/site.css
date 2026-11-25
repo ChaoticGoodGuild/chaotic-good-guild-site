@@ -849,3 +849,7 @@ html.moonday .td-moontext .cj-keeprow { text-align: center; }
 .app-btn:hover { transform: translateY(-2px); background: rgba(233,215,1,.12); }
 @media (max-width: 520px) { .app-btn, .join-btn { font-size: 16px; padding: 5px 12px; } }
 html.in-app .app-btn { display: none; }
+.app-steps { list-style: none; display: flex; justify-content: center; gap: 10px; padding: 0; margin: 12px 0 0; counter-reset: s; }
+.app-steps li { flex: 1; max-width: 120px; display: flex; flex-direction: column; align-items: center; gap: 6px; font-size: 14px; line-height: 1.25; counter-increment: s; }
+.app-steps li::before { content: counter(s); font-family: var(--display); color: var(--gold); font-size: 18px; }
+.app-steps svg { width: 34px; height: 34px; padding: 6px; border-radius: 10px; background: rgba(233,215,1,.12); fill: none; stroke: var(--gold); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }

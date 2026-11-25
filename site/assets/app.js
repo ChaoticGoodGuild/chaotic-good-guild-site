@@ -93,8 +93,18 @@
   function openBox() {
     const how = $("appHow"), go = $("appGo");
     go.hidden = !deferred;
-    how.textContent = deferred ? "" : W.install[platform()];
+    const pf = platform();
+    how.textContent = deferred ? "" : W.install[pf];
     how.hidden = !!deferred;
+    if (!deferred && (pf === "ios" || pf === "ios_chrome") && W.install.ios_steps) {
+      const icons = [
+        '<svg viewBox="0 0 24 24"><path d="M12 3v12M8 7l4-4 4 4"/><path d="M6 11H5v10h14V11h-1"/></svg>',
+        '<svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v8M8 12h8"/></svg>',
+        '<svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>'];
+      const ol = document.createElement("ol"); ol.className = "app-steps";
+      W.install.ios_steps.forEach((t, i) => { const li = document.createElement("li"); li.innerHTML = icons[i]; li.appendChild(document.createTextNode(t)); ol.appendChild(li); });
+      how.appendChild(ol);
+    }
     box.hidden = false; (deferred ? go : $("appClose")).focus();
   }
   const closeBox = () => { box.hidden = true; };
