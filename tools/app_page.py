@@ -252,7 +252,7 @@ self.addEventListener("fetch", ev => {
     if (url.pathname.startsWith("/.netlify/")) return;
     if (req.mode === "navigate") return ev.respondWith(page(req, url));
     if (url.pathname.startsWith("/tarot/cards/")) return ev.respondWith(cacheFirst(req, CARDBOX));
-    return ev.respondWith(fresh(req, STATIC));
+    return ev.respondWith(networkFirst(req, STATIC));
   }
   if (url.hostname === "fonts.googleapis.com" || url.hostname === "fonts.gstatic.com") return ev.respondWith(fresh(req, FONTS));
 });
@@ -273,7 +273,18 @@ async function cacheFirst(req, box) {
   if (hit) return hit;
   const r = await fetch(req); if (r.ok) c.put(req, r.clone()); return r;
 }
-// everything else: the saved copy at once, refreshed in the background
+// the site's own styles, scripts and pictures: the newest from the network (so an update shows at once); the saved copy offline
+async function networkFirst(req, box) {
+  const c = await caches.open(box);
+  try {
+    const r = await fetch(req);
+    if (r.ok) c.put(req, r.clone());
+    return r;
+  } catch (e) {
+    return (await c.match(req, { ignoreSearch: true })) || Response.error();
+  }
+}
+// fonts from Google: the saved copy at once, refreshed in the background
 async function fresh(req, box) {
   const c = await caches.open(box), hit = await c.match(req, { ignoreSearch: box === STATIC });
   const net = fetch(req).then(r => { if (r.ok || r.type === "opaque") c.put(req, r.clone()); return r; }).catch(() => null);
