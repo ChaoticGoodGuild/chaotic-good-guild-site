@@ -245,7 +245,7 @@ def build_home():
     page += f"""
 <header class="top">
   <a class="brand" href="/" aria-label="{NAME} home"><img src="/assets/logo.png" alt="{NAME}" width="345" height="360"></a>
-  <a class="join-btn" href="/guild-hall/">Enter the Hall</a>
+  <nav class="top-btns"><a class="app-btn" href="#" data-install>Get the app</a><a class="join-btn" href="/guild-hall/">Enter the Hall</a></nav>
 </header>
 
 <div class="scene-wrap" id="sceneWrap">

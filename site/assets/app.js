@@ -72,9 +72,11 @@
   const box = $("appBox");
   if (!box || !W) return;
   document.querySelectorAll("[data-install]").forEach(a => {
-    if (standalone) { a.hidden = true; return; }
-    a.addEventListener("click", e => { e.preventDefault(); openBox(); });
+    if (standalone) { if (a.tagName === "A") a.hidden = true; return; }
+    a.addEventListener("click", e => { e.preventDefault(); e.stopPropagation(); openBox(); });
+    a.addEventListener("keydown", e => { if ((e.key === "Enter" || e.key === " ") && a.tagName !== "A") { e.preventDefault(); openBox(); } });
   });
+  window.CGGInstall = { open: () => openBox() };
   function platform() {
     const ua = navigator.userAgent;
     if (/Instagram|FBAN|FBAV|musical_ly|TikTok|BytedanceWebview|Snapchat|Twitter|LinkedInApp/i.test(ua)) return "inapp";
