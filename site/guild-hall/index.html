@@ -7,8 +7,10 @@
 <meta name="description" content="Knock thrice and name yourself. The Hall keeps a hearth, a ledger, and a place for every kind of rebel.">
 <link rel="canonical" href="https://www.chaoticgoodguild.com/guild-hall/">
 <link rel="icon" type="image/png" href="/assets/star.png">
-<link rel="apple-touch-icon" href="/assets/star.png">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#0d0418">
+<meta name="apple-mobile-web-app-title" content="The Guild">
 <meta property="og:site_name" content="Chaotic Good Guild">
 <meta property="og:type" content="website">
 <meta property="og:title" content="The Guild Hall · Chaotic Good Guild">
@@ -52,8 +54,21 @@
   <a href="/" aria-label="Chaotic Good Guild home"><img class="foot-logo" src="/assets/logo.png" alt="Chaotic Good Guild" width="345" height="360" loading="lazy"></a>
   <nav aria-label="Rooms of the village"><ul class="foot-nav"><li><a href="/tarot/">The Chaotic Good Spread</a></li><li><a href="/calendar/">The Guild Calendar</a></li><li><a href="/notice-board/">The Notice Board</a></li><li><a href="/guild-hall/">The Guild Hall</a></li><li><a href="/stories/">Reynard&#x27;s Stump</a></li><li><a href="/market/">The Galleon Market</a></li><li><a href="/about/">The Raising</a></li><li><a href="/alignment-test/">The City of Red</a></li></ul></nav>
   <p class="foot-join"><a href="/join/">Join the Guild</a> · <a href="/privacy/">Privacy</a></p>
+  <p class="foot-app"><a href="/today/">Today's card</a> · <a href="/journal/">Your journal</a> · <a href="#" data-install>Bring the Guild home</a></p>
   &copy; 2026 Chaotic Good Guild. Made by misfits, for misfits.
 </footer>
 <script src="/assets/join.js" defer></script>
+<div class="sp-light app-box" id="appBox" role="dialog" aria-modal="true" aria-labelledby="appTitle" hidden>
+  <div class="app-card">
+    <img src="/assets/icons/icon-192.png" alt="" width="96" height="96">
+    <h2 id="appTitle">Bring the Guild home</h2>
+    <p>Put the Guild on your home screen or desktop: its own icon, its own window, a card from Mira each day, and most of the village works even without a connection.</p>
+    <p class="app-how" id="appHow"></p>
+    <p class="app-go"><button type="button" class="back-btn" id="appGo" hidden>Install the Guild</button>
+      <button type="button" class="sp-ghost" id="appClose">Close</button></p>
+  </div>
+</div>
+<script type="application/json" id="app-words">{"keep": {"button": "Keep this in your journal", "kept": "Kept in your journal.", "open": "Open your journal", "full": "Your journal couldn't save this. Your browser may be blocking storage for this site."}, "install": {"link": "Bring the Guild home", "title": "Bring the Guild home", "lede": "Put the Guild on your home screen or desktop: its own icon, its own window, a card from Mira each day, and most of the village works even without a connection.", "button": "Install the Guild", "ios": "On iPhone or iPad, open this page in Safari, tap the Share button, then choose Add to Home Screen.", "android": "In Chrome, open the menu (the three dots) and choose Install app, or Add to Home screen.", "mac_safari": "In Safari, open the File menu and choose Add to Dock.", "firefox": "Firefox can't install sites as apps. Open chaoticgoodguild.com in Chrome, Edge or Safari, and install it from there.", "desktop": "Look for the install icon at the right end of the address bar, or open the browser menu and choose Install.", "done": "Welcome home. The Guild is on your device now.", "close": "Close"}}</script>
+<script src="/assets/app.js"></script>
 </body>
 </html>

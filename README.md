@@ -37,6 +37,9 @@ The website at [www.chaoticgoodguild.com](https://www.chaoticgoodguild.com): an 
 | `/stories/` | Reynard's Stump |
 | `/market/` | The Galleon Market |
 | `/about/` | The Raising |
+| `/today/` | The app: Mira's card for today (the installed app opens here) |
+| `/journal/` | The app: readings kept on the visitor's own device, with their notes. Never sent anywhere |
+| `/offline/` | The app: shown offline when a page isn't saved yet |
 | `/tarot/priestess/` | Secret: The Priestess by Moonlight, the High Priestess Spread. Opens only on the day of the full moon (the visitor's local date); not in menus or the sitemap. Preview with `?preview=fullmoon` |
 | `/alignment-test/` | The City of Red: the alignment test |
 | `/alignment-test/<alignment>/` | One page for each of the nine alignments, e.g. `/alignment-test/chaotic-good/` |
@@ -46,3 +49,11 @@ The website at [www.chaoticgoodguild.com](https://www.chaoticgoodguild.com): an 
 1. Edit the files in `src/` or `tools/`.
 2. Run `python3 tools/build.py` (and `node tools/test_alignment.js` if you changed the test) (and `python3 tools/share_images.py` if the artwork changed).
 3. Commit and push. Netlify publishes the new version within a minute or two.
+
+## The Guild app
+
+The website installs as an app on phones and computers (no app store). `tools/app_page.py` builds the manifest
+(`/manifest.webmanifest`: name, colours, icons in `src/icons/`, shortcuts), the service worker (`/sw.js`: pages work
+offline; inside the installed app the whole village and all 78 cards are saved), `/today/`, `/journal/` and `/offline/`.
+Words are in `src/app.json`. `src/app.js` runs on every page: the journal, the "Keep this in your journal" buttons and the
+"Bring the Guild home" install help in the footer.

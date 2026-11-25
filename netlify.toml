@@ -9,3 +9,15 @@
 # so Netlify stores the answers without the visitor's IP address.
 [functions]
   directory = "netlify/functions"
+
+# The app's service worker must always be checked for updates, and the manifest needs its own type.
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
+    Service-Worker-Allowed = "/"
+[[headers]]
+  for = "/manifest.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json"
+    Cache-Control = "no-cache"

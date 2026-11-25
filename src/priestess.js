@@ -255,6 +255,10 @@ if (typeof module !== "undefined") module.exports = CGGPriestess;
     const notes = $("hpNotes"); notes.innerHTML = "";
     r.notes.forEach(t => notes.appendChild(el("li", null, t)));
     summary.hidden = false;
+    window.CGGKeep = { kind: "priestess", title: "The Priestess by Moonlight", reading: r.paras,
+                       cards: dealt.map((x, k) => ({ id: k === SECRET && !shown ? "" : x.card.id, reversed: k === SECRET && !shown ? false : !!x.card.reversed,
+                                                    name: k === SECRET && !shown ? "Sealed (the Priestess kept her secret)" : x.card.name, pos: x.pos.title })) };
+    document.dispatchEvent(new Event("cgg:reading"));
   }
   btnRead.addEventListener("click", () => summary.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" }));
 
@@ -263,6 +267,7 @@ if (typeof module !== "undefined") module.exports = CGGPriestess;
     dealt = []; state = "idle"; say("idle");
     deck.className = "sp-deck idle"; deck.setAttribute("aria-label", "The deck. Touch to shuffle.");
     btnAll.hidden = true; btnRead.hidden = true; btnAgain.hidden = true; summary.hidden = true;
+    window.CGGKeep = null; document.dispatchEvent(new Event("cgg:reading"));
     buildList();
   });
 

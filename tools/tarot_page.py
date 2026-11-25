@@ -8,6 +8,7 @@ import build as B
 import deck
 import cards as K
 import priestess_page
+import app_page
 
 
 
@@ -71,7 +72,8 @@ def build(p):
     <div class="sp-sumtext" id="spSummaryText"></div>
     <details class="sp-how"><summary>How Mira read this</summary><ul id="spNotes"></ul>
       <p class="sp-howend">These are the threads Mira pulled this time. With practice you'll find your own.</p></details>
-    <p class="sp-sharerow"><button type="button" class="back-btn" data-share hidden>Share this reading as a picture</button></p>
+    <p class="sp-sharerow"><button type="button" class="back-btn" data-share hidden>Share this reading as a picture</button>
+      <button type="button" class="sp-ghost" data-keep hidden>Keep this in your journal</button></p>
   </section>
 
   <h2 class="sp-h">Card by card</h2>
@@ -129,6 +131,7 @@ def build(p):
 """
     B.write("tarot/index.html", page)
     priestess_page.build(cards, back, defs)
+    app_page.build_pages(cards, back, defs)
     B.write("assets/spread.js", open(os.path.join(B.SRC, "spread.js")).read())
     write_review_doc()
 

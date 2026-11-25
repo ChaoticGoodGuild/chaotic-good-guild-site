@@ -1,0 +1,88 @@
+{
+  "id": "/",
+  "name": "Chaotic Good Guild",
+  "short_name": "The Guild",
+  "description": "Mira's card for today, readings for reflection, the Guild calendar and the moon, and a private journal that stays on your device.",
+  "start_url": "/today/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0d0418",
+  "theme_color": "#0d0418",
+  "categories": [
+    "lifestyle",
+    "entertainment"
+  ],
+  "icons": [
+    {
+      "src": "/assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Draw today's card",
+      "short_name": "Today's card",
+      "url": "/today/",
+      "icons": [
+        {
+          "src": "/assets/icons/icon-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Tonight's sky",
+      "short_name": "Tonight's sky",
+      "url": "/calendar/",
+      "icons": [
+        {
+          "src": "/assets/icons/icon-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Take the test",
+      "short_name": "The test",
+      "url": "/alignment-test/",
+      "icons": [
+        {
+          "src": "/assets/icons/icon-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Your journal",
+      "short_name": "Journal",
+      "url": "/journal/",
+      "icons": [
+        {
+          "src": "/assets/icons/icon-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}

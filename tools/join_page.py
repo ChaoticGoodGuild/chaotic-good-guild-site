@@ -58,6 +58,11 @@ Your browser also remembers your final alignment so the Guild Hall can offer it 
 "Forget my result." Tarot readings are dealt in your browser and aren't saved anywhere.
 A reading or result you share as a picture is made on your device and goes only where you send it.</p>
 
+<h2>Your journal and the app</h2>
+<p>Readings you keep in your journal, your notes on them, and today's card are stored only in your own browser, on your own device.
+They are never sent to us or anyone else, and we can't see them. Installing the Guild as an app saves pages on your device so they work
+without a connection. Clearing your browser's data for this site removes all of it.</p>
+
 <h2>Visits to the site</h2>
 <p>We may count visits with Cloudflare Web Analytics, which uses no cookies and doesn't follow you around the web. It tells us things like which
 pages are read and which countries visitors come from, never who you are. We don't use advertising trackers.</p>

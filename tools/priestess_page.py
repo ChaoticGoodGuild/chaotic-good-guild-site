@@ -132,6 +132,7 @@ def build(cards, back, defs):
       <p class="sp-sumlede">A story for reflection, not a fortune.</p>
       <div class="sp-sumtext" id="hpSummaryText"></div>
       <details class="sp-how"><summary>How Mira read this</summary><ul id="hpNotes"></ul></details>
+      <p class="sp-sharerow"><button type="button" class="back-btn" data-keep hidden>Keep this in your journal</button></p>
     </section>
 
     <h2 class="sp-h">Card by card</h2>

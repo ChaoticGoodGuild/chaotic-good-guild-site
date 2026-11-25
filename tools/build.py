@@ -22,6 +22,7 @@ import calendar_page  # noqa: E402
 import stump_page  # noqa: E402
 import about_page  # noqa: E402
 import join_page  # noqa: E402
+import app_page  # noqa: E402
 
 SITE = os.path.join(ROOT, "site")
 SRC = os.path.join(ROOT, "src")
@@ -120,8 +121,10 @@ def head(title, desc, path, image, extra=""):
 <meta name="description" content="{e(desc)}">
 <link rel="canonical" href="{url}">
 <link rel="icon" type="image/png" href="/assets/star.png">
-<link rel="apple-touch-icon" href="/assets/star.png">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#0d0418">
+<meta name="apple-mobile-web-app-title" content="The Guild">
 <meta property="og:site_name" content="{NAME}">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{e(title)}">
@@ -144,10 +147,11 @@ def foot():
   <a href="/" aria-label="{NAME} home"><img class="foot-logo" src="/assets/logo.png" alt="{NAME}" width="345" height="360" loading="lazy"></a>
   <nav aria-label="Rooms of the village"><ul class="foot-nav">{links}</ul></nav>
   <p class="foot-join"><a href="/join/">Join the Guild</a> · <a href="/privacy/">Privacy</a></p>
+  <p class="foot-app"><a href="/today/">Today's card</a> · <a href="/journal/">Your journal</a> · <a href="#" data-install>Bring the Guild home</a></p>
   &copy; {datetime.date.today().year} {NAME}. Made by misfits, for misfits.
 </footer>
 <script src="/assets/join.js" defer></script>
-"""
+""" + __import__("app_page").foot_bits()
 
 
 def jsonld(obj):
@@ -338,7 +342,7 @@ def build_404():
 
 def build_meta():
     today = datetime.date.today().isoformat()
-    urls = ["/"] + [f"/{p['slug']}/" for p in PLACES] + [f"/alignment-test/{s}/" for s in alignment.DATA["results"]] + ["/join/", "/privacy/"]
+    urls = ["/"] + [f"/{p['slug']}/" for p in PLACES] + [f"/alignment-test/{s}/" for s in alignment.DATA["results"]] + ["/join/", "/privacy/", "/today/"]
     urls += [f"/stories/{x['slug']}/" for x in stump_page.load_essays()]
     sm = "".join(f"  <url><loc>{DOMAIN}{u}</loc><lastmod>{today}</lastmod></url>\n" for u in urls)
     write("sitemap.xml", f'<?xml version="1.0" encoding="UTF-8"?>\n'
@@ -394,6 +398,7 @@ def main():
     join_page.build()
     build_404()
     build_meta()
+    app_page.build_app()
     print("Built", len(PLACES) + 2, "pages into", SITE)
 
 

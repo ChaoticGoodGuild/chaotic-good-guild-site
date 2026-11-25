@@ -321,6 +321,9 @@ if (typeof module !== "undefined") module.exports = CGGRead;
     const notes = $("spNotes"); notes.innerHTML = "";
     r.notes.forEach(t => notes.appendChild(el("li", null, t)));
     summary.hidden = false;
+    window.CGGKeep = { kind: "spread", title: "The Chaotic Good Spread", reading: r.paras,
+                       cards: dealt.map(d => ({ id: d.card.id, name: d.card.name, reversed: !!d.card.reversed, pos: d.pos.title })) };
+    document.dispatchEvent(new Event("cgg:reading"));
   }
   btnRead.addEventListener("click", () => summary.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" }));
 
@@ -332,6 +335,7 @@ if (typeof module !== "undefined") module.exports = CGGRead;
     deck.classList.remove("gone"); deck.classList.add("idle");
     deck.setAttribute("aria-label", "The deck. Touch to shuffle.");
     btnAll.hidden = true; btnAgain.hidden = true; btnRead.hidden = true; summary.hidden = true;
+    window.CGGKeep = null; document.dispatchEvent(new Event("cgg:reading"));
     document.querySelectorAll("[data-share]").forEach(b => { b.hidden = true; });
     dealt = []; state = "idle";
     buildList(); say("idle");
