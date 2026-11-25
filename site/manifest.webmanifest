@@ -1,7 +1,7 @@
 {
   "id": "/",
   "name": "Chaotic Good Guild",
-  "short_name": "Chaotic Good Guild",
+  "short_name": "Chaotic Good",
   "description": "A card from Mira each day, three under a full moon, and a private journal for what they stir up. It stays on your device.",
   "start_url": "/today/",
   "scope": "/",

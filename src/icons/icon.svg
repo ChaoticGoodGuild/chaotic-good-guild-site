@@ -2,7 +2,7 @@
   <defs><radialGradient id="bg" cx="50%" cy="42%" r="70%"><stop offset="0" stop-color="#4a1590"/><stop offset=".6" stop-color="#26093f"/><stop offset="1" stop-color="#12051f"/></radialGradient>
   <radialGradient id="glow"><stop offset="0" stop-color="#f4c534" stop-opacity=".35"/><stop offset="1" stop-color="#f4c534" stop-opacity="0"/></radialGradient></defs>
   <rect width="512" height="512" rx="112" fill="url(#bg)"/>
-  <circle cx="256" cy="268" r="160" fill="url(#glow)"/>
-  <g stroke="#f4c534" stroke-linecap="round" stroke-width="10.9" opacity=".9"><line x1="311.6" y1="130.3" x2="321.2" y2="106.6"/><line x1="369.7" y1="172.6" x2="389.4" y2="156.1"/><line x1="404.1" y1="278.4" x2="429.7" y2="280.1"/><line x1="381.9" y1="346.7" x2="403.6" y2="360.2"/><line x1="256.0" y1="416.5" x2="256.0" y2="442.1"/><line x1="130.1" y1="346.7" x2="108.4" y2="360.2"/><line x1="107.9" y1="278.4" x2="82.3" y2="280.1"/><line x1="142.3" y1="172.6" x2="122.6" y2="156.1"/><line x1="200.4" y1="130.3" x2="190.8" y2="106.6"/></g>
-  <path d="M256.0,140.0 L331.2,371.6 L134.3,228.4 L377.7,228.4 L180.8,371.6 Z" fill="none" stroke="#f4c534" stroke-width="19.2" stroke-linejoin="round"/>
+  <circle cx="256" cy="274" r="174" fill="url(#glow)"/>
+  <g stroke="#f4c534" stroke-linecap="round" stroke-width="11.8" opacity=".92"><line x1="305.9" y1="171.8" x2="325.3" y2="132.0"/><line x1="337.8" y1="195.0" x2="369.7" y2="164.2"/><line x1="368.7" y1="289.8" x2="412.5" y2="296.0"/><line x1="356.4" y1="327.4" x2="395.5" y2="348.2"/><line x1="256.0" y1="375.1" x2="256.0" y2="420.9"/><line x1="155.6" y1="327.4" x2="116.5" y2="348.2"/><line x1="143.3" y1="289.8" x2="99.5" y2="296.0"/><line x1="174.2" y1="195.0" x2="142.3" y2="164.2"/><line x1="206.1" y1="171.8" x2="186.7" y2="132.0"/></g>
+  <path d="M256.0,116.0 L348.9,401.8 L105.7,225.2 L406.3,225.2 L163.1,401.8 Z" fill="none" stroke="#f4c534" stroke-width="20.5" stroke-linejoin="round"/>
 </svg>

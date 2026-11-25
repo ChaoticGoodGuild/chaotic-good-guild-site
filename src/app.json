@@ -1,7 +1,7 @@
 {
   "_about": "Words for the Guild app: the daily card (/today/) and its full-moon pull, the journal (/journal/), the install help in the footer, and the offline page. Drafts for Ryan to rewrite. The app itself is the website, installable, and inside the installed app it's just the daily card and the journal: see tools/app_page.py.",
   "name": "Chaotic Good Guild",
-  "short_name": "Chaotic Good Guild",
+  "short_name": "Chaotic Good",
   "app_description": "A card from Mira each day, three under a full moon, and a private journal for what they stir up. It stays on your device.",
   "today": {
     "who": "Today's card",

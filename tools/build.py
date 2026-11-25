@@ -124,7 +124,7 @@ def head(title, desc, path, image, extra=""):
 <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#0d0418">
-<meta name="apple-mobile-web-app-title" content="Chaotic Good Guild">
+<meta name="apple-mobile-web-app-title" content="Chaotic Good">
 <meta property="og:site_name" content="{NAME}">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{e(title)}">
