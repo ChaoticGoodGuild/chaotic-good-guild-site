@@ -4,7 +4,7 @@
   const J = window.CGGJournal;
   const $ = id => document.getElementById(id);
   const el = (tag, cls, text) => { const x = document.createElement(tag); if (cls) x.className = cls; if (text != null) x.textContent = text; return x; };
-  const KIND = { daily: "Today's card", spread: "The Chaotic Good Spread", priestess: "The Priestess by Moonlight" };
+  const KIND = { daily: "Today's card", moonday: "Mira by moonlight", spread: "The Chaotic Good Spread", priestess: "The Priestess by Moonlight" };
   const when = iso => new Date(iso).toLocaleString(undefined, { weekday: "short", month: "long", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit" });
   const list = $("jnList"), empty = $("jnEmpty"), tools = $("jnTools");
 
@@ -69,6 +69,31 @@
     a.download = "guild-journal-" + new Date().toISOString().slice(0, 10) + ".txt";
     document.body.appendChild(a); a.click(); a.remove();
   });
+  // ---- backups: a file you can keep anywhere, and restore on this device or a new one
+  const say = t => { $("jnMsg").textContent = t; };
+  $("jnBackup").addEventListener("click", async () => {
+    const data = JSON.stringify({ guild: "cgg-journal", version: 1, saved: new Date().toISOString(), entries: J.all() }, null, 1);
+    const name = "guild-journal-backup-" + new Date().toISOString().slice(0, 10) + ".json";
+    const file = new File([data], name, { type: "application/json" });
+    const phone = matchMedia("(pointer: coarse)").matches;
+    if (phone && navigator.canShare && navigator.canShare({ files: [file] })) {
+      try { await navigator.share({ files: [file], title: "Guild journal backup" }); return; } catch (e) { if (e && e.name === "AbortError") return; }
+    }
+    const a = document.createElement("a"); a.href = URL.createObjectURL(file); a.download = name;
+    document.body.appendChild(a); a.click(); a.remove();
+  });
+  $("jnRestore").addEventListener("change", async ev => {
+    const f = ev.target.files && ev.target.files[0]; ev.target.value = "";
+    if (!f) return;
+    try {
+      const d = JSON.parse(await f.text());
+      if (!d || d.guild !== "cgg-journal" || !Array.isArray(d.entries)) throw new Error("not a backup");
+      const n = J.restore(d.entries);
+      say(n ? W.restored.replace("{n}", n) : W.restore_none);
+      J.protect(); render();
+    } catch (e) { say(W.restore_bad); }
+  });
+  if (J.all().length) J.protect();
   window.addEventListener("hashchange", render);
   render();
 })();

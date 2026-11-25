@@ -794,3 +794,52 @@ body:has(main.hp-page) footer { background: rgba(2,12,16,.85); border-top-color:
 /* inside the installed app: no "install" link, and room for the phone's notch */
 html.in-app .foot-app [data-install] { display: none; }
 html.in-app body { padding-top: env(safe-area-inset-top); }
+
+/* ---------- the full-moon pull on the daily card ---------- */
+html.moonday { background: #04141a; }
+html.moonday body { background: transparent; }
+html.moonday .td .who, html.moonday .td h1 { color: #eaf9f7; text-shadow: 0 0 22px rgba(160,240,255,.45); }
+.td-moon { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(10px, 3vw, 26px); max-width: 620px; margin: 10px auto 18px; align-items: end; }
+.td-moon.arrive .td-mslot { animation: tdDeal .6s cubic-bezier(.2,.8,.2,1) both; }
+.td-moon.arrive .td-mslot:nth-child(2) { animation-delay: .25s; } .td-moon.arrive .td-mslot:nth-child(3) { animation-delay: .5s; }
+@keyframes tdDeal { from { opacity: 0; transform: translateY(30px) scale(.9); } to { opacity: 1; transform: none; } }
+.td-mslot { text-align: center; }
+.td-mslot:nth-child(2) { transform: translateY(-18px); }
+.td-mcard { position: relative; display: block; width: 100%; aspect-ratio: 700 / 1200; padding: 0; border: 0; background: none; cursor: pointer; perspective: 1000px; }
+.td-mcard .sp-inner { position: absolute; inset: 0; transform-style: preserve-3d; transition: transform .7s cubic-bezier(.2,.8,.2,1); }
+.td-mcard.flipped .sp-inner { transform: rotateY(180deg); }
+.td-mcard.instant .sp-inner { transition: none; }
+.td-mcard.reversed .sp-front svg { transform: rotate(180deg); }
+.td-mcard:focus-visible { outline: 3px solid #dff6f2; outline-offset: 6px; border-radius: 10px; }
+.td-secret.beckon .sp-face { animation: hpBeckon 2.2s ease-in-out infinite; }
+.td-secret.nudge { animation: hpNudge .45s ease; }
+.td-secret.revealed .sp-face { box-shadow: 0 0 0 3px #f6e98a, 0 0 40px rgba(246,233,138,.9); }
+.td-secret.kept { cursor: default; }
+.td-secret.kept::after { content: ""; position: absolute; left: 50%; top: 50%; width: 46%; aspect-ratio: 1; transform: translate(-50%, -50%); border-radius: 50%;
+  background: radial-gradient(circle at 62% 50%, transparent 38%, #cfeef2 40%, #cfeef2 58%, transparent 60%), radial-gradient(circle, #1d5b62 0 70%, #0c2f34 72%);
+  box-shadow: 0 0 0 3px #cfeef2, 0 0 18px rgba(170,245,255,.6); }
+.td-mlabel { margin: 10px 0 0; font-size: 15px; line-height: 1.35; }
+.td-mlabel b { display: block; font-family: var(--display); font-weight: 400; font-size: clamp(17px, 2.4vw, 22px); color: #eaf9f7; }
+.td-mlabel span { color: var(--muted); }
+.td-moontext { max-width: 62ch; margin: 0 auto; }
+.td-moontext p { font-size: 18px; }
+
+/* ---------- the installed app: just the daily card and the journal ---------- */
+.app-tabs { display: none; }
+html.in-app .app-tabs { position: fixed; z-index: 35; left: 0; right: 0; bottom: 0; display: flex; justify-content: space-around;
+  padding: 6px 8px calc(6px + env(safe-area-inset-bottom)); background: rgba(13,4,24,.94); border-top: 1px solid rgba(233,215,1,.3); backdrop-filter: blur(6px); }
+.app-tabs a { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 4px 0; font-size: 13px; color: var(--muted); text-decoration: none; }
+.app-tabs svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linejoin: round; }
+.app-tabs a[aria-current="page"] { color: var(--gold); }
+html.in-app body { padding-bottom: calc(70px + env(safe-area-inset-bottom)); }
+html.in-app footer, html.in-app .td-more, html.in-app .top .back-link { display: none; }
+html.in-app .top .brand { pointer-events: none; }
+html.moonday.in-app .app-tabs { background: rgba(2,14,18,.92); border-top-color: rgba(207,238,242,.3); }
+.jn-backup { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.jn-backup button { border: 0; cursor: pointer; }
+.jn-restore { position: relative; cursor: pointer; }
+.jn-restore input { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; }
+.jn-restore:focus-within { outline: 2px solid var(--gold); outline-offset: 3px; }
+.jn-msg { color: var(--muted); min-height: 1.3em; }
+html.moonday .td-moontext #tdMoonText:not([hidden]) { padding: 18px 20px 6px; border-radius: 18px; background: rgba(3,16,22,.82); border: 1px solid rgba(207,238,242,.3); }
+html.moonday .td-moontext .cj-keeprow { text-align: center; }

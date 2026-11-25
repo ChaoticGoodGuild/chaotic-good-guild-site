@@ -38,10 +38,20 @@
     <p class="desc">The readings you&#x27;ve kept, and what you made of them. Your journal lives only on this device: nothing here is sent anywhere, and nobody but you can read it.</p>
   </section>
   <p class="jn-empty" id="jnEmpty" hidden>Nothing kept yet. Draw today&#x27;s card, or ask Mira for a reading, and keep the ones that speak to you.<br><a class="back-btn" href="/today/">Today's card</a> <a class="sp-ghost" href="/tarot/">Ask Mira for a reading</a></p>
-  <div class="jn-tools" id="jnTools" hidden><p id="jnCount"></p><button type="button" class="sp-ghost" id="jnDownload">Download a copy</button></div>
+  <div class="jn-tools" id="jnTools" hidden><p id="jnCount"></p><button type="button" class="sp-ghost" id="jnDownload">Download a readable copy</button></div>
   <div class="jn-list" id="jnList"></div>
-  <p class="jn-fine">Clearing your browser&#x27;s data for this site clears your journal too. Download a copy now and then if you&#x27;d like to keep it.</p>
+  <section class="jn-safe">
+    <p class="jn-fine">Your journal stays on this device through app updates. Deleting the app, or clearing this site&#x27;s data, erases it, and it won&#x27;t move to a new phone by itself. Save a backup now and then; on a new device, restore it here.</p>
+    <p class="jn-backup"><button type="button" class="back-btn" id="jnBackup">Save a backup</button>
+      <label class="sp-ghost jn-restore">Restore from a backup<input type="file" id="jnRestore" accept=".json,application/json"></label></p>
+    <p class="jn-msg" id="jnMsg" role="status"></p>
+  </section>
 </main>
+<nav class="app-tabs" aria-label="The Guild app">
+  <a href="/today/"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M12 8l1.2 2.6 2.8.3-2.1 1.9.6 2.8L12 14.2 9.5 15.6l.6-2.8L8 10.9l2.8-.3z"/></svg>Today</a>
+  <a href="/journal/" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg>Journal</a>
+  <a href="https://www.chaoticgoodguild.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg>The Guild</a>
+</nav>
 
 <footer>
   <a href="/" aria-label="Chaotic Good Guild home"><img class="foot-logo" src="/assets/logo.png" alt="Chaotic Good Guild" width="345" height="360" loading="lazy"></a>
@@ -55,15 +65,15 @@
   <div class="app-card">
     <img src="/assets/icons/icon-192.png" alt="" width="96" height="96">
     <h2 id="appTitle">Bring the Guild home</h2>
-    <p>Put the Guild on your home screen or desktop: its own icon, its own window, a card from Mira each day, and most of the village works even without a connection.</p>
+    <p>Put the Guild in your pocket: a card from Mira each day, three under a full moon, and a private journal for what they stir up. It works even without a connection.</p>
     <p class="app-how" id="appHow"></p>
     <p class="app-go"><button type="button" class="back-btn" id="appGo" hidden>Install the Guild</button>
       <button type="button" class="sp-ghost" id="appClose">Close</button></p>
   </div>
 </div>
-<script type="application/json" id="app-words">{"keep": {"button": "Keep this in your journal", "kept": "Kept in your journal.", "open": "Open your journal", "full": "Your journal couldn't save this. Your browser may be blocking storage for this site."}, "install": {"link": "Bring the Guild home", "title": "Bring the Guild home", "lede": "Put the Guild on your home screen or desktop: its own icon, its own window, a card from Mira each day, and most of the village works even without a connection.", "button": "Install the Guild", "ios": "On iPhone or iPad, open this page in Safari, tap the Share button, then choose Add to Home Screen.", "android": "In Chrome, open the menu (the three dots) and choose Install app, or Add to Home screen.", "mac_safari": "In Safari, open the File menu and choose Add to Dock.", "firefox": "Firefox can't install sites as apps. Open chaoticgoodguild.com in Chrome, Edge or Safari, and install it from there.", "desktop": "Look for the install icon at the right end of the address bar, or open the browser menu and choose Install.", "done": "Welcome home. The Guild is on your device now.", "close": "Close"}}</script>
+<script type="application/json" id="app-words">{"keep": {"button": "Keep this in your journal", "kept": "Kept in your journal.", "open": "Open your journal", "full": "Your journal couldn't save this. Your browser may be blocking storage for this site."}, "install": {"link": "Bring the Guild home", "title": "Bring the Guild home", "lede": "Put the Guild in your pocket: a card from Mira each day, three under a full moon, and a private journal for what they stir up. It works even without a connection.", "button": "Install the Guild", "ios": "In Safari, tap the Share button, then choose Add to Home Screen.", "android": "In Chrome, open the menu (the three dots) and choose Install app, or Add to Home screen.", "mac_safari": "In Safari, open the File menu and choose Add to Dock.", "firefox": "Firefox can't install sites as apps. Open chaoticgoodguild.com in Chrome, Edge or Safari, and install it from there.", "desktop": "Look for the install icon at the right end of the address bar, or open the browser menu and choose Install.", "done": "Welcome home. The Guild is on your device now.", "close": "Close", "ios_chrome": "In Chrome, tap the Share button in the address bar at the top, then choose Add to Home Screen. (If the address bar is hidden, scroll up a little.)", "ios_other": "Open chaoticgoodguild.com in Safari or Chrome, tap Share, then choose Add to Home Screen.", "inapp": "You're inside another app's browser. Open chaoticgoodguild.com in your phone's own browser (Safari or Chrome), then install it from there."}}</script>
 <script src="/assets/app.js"></script>
-<script type="application/json" id="journal-data">{"who": "Kept by you, for you", "title": "Your Journal", "desc": "The readings you've kept, and what you made of them. Your journal lives only on this device: nothing here is sent anywhere, and nobody but you can read it.", "empty": "Nothing kept yet. Draw today's card, or ask Mira for a reading, and keep the ones that speak to you.", "prompts": ["What stood out to you?", "What felt true, and what didn't?", "What will you do with this?", "What surprised you?"], "saved": "Saved", "let_go": "Let it go", "let_go_sure": "Let it go for good", "download": "Download a copy", "fine": "Clearing your browser's data for this site clears your journal too. Download a copy now and then if you'd like to keep it."}</script>
+<script type="application/json" id="journal-data">{"who": "Kept by you, for you", "title": "Your Journal", "desc": "The readings you've kept, and what you made of them. Your journal lives only on this device: nothing here is sent anywhere, and nobody but you can read it.", "empty": "Nothing kept yet. Draw today's card, or ask Mira for a reading, and keep the ones that speak to you.", "prompts": ["What stood out to you?", "What felt true, and what didn't?", "What will you do with this?", "What surprised you?"], "saved": "Saved", "let_go": "Let it go", "let_go_sure": "Let it go for good", "fine": "Your journal stays on this device through app updates. Deleting the app, or clearing this site's data, erases it, and it won't move to a new phone by itself. Save a backup now and then; on a new device, restore it here.", "backup": "Save a backup", "restore": "Restore from a backup", "restored": "Restored {n} readings.", "restore_none": "Everything in that backup is already here.", "restore_bad": "That file isn't a Guild journal backup.", "download": "Download a readable copy"}</script>
 <script src="/assets/journal.js"></script>
 </body>
 </html>

@@ -18,7 +18,16 @@
     },
     update(id, patch) { const list = J.all(); const e = list.find(x => x.id === id); if (e) { Object.assign(e, patch); J.write(list); } },
     remove(id) { J.write(J.all().filter(x => x.id !== id)); },
-    has(key) { return !!key && J.all().some(x => x.key === key); }
+    has(key) { return !!key && J.all().some(x => x.key === key); },
+    // ask the browser to treat the journal as worth keeping, so it isn't cleared to save space
+    protect() { try { if (navigator.storage && navigator.storage.persist) navigator.storage.persist(); } catch (e) {} },
+    // merge a backup's entries in; returns how many were new
+    restore(entries) {
+      const list = J.all(), have = new Set(list.map(x => x.id));
+      const fresh = entries.filter(x => x && x.id && x.at && Array.isArray(x.cards) && !have.has(x.id));
+      if (fresh.length) J.write(list.concat(fresh).sort((a, b) => (a.at < b.at ? 1 : -1)));
+      return fresh.length;
+    }
   };
 
   // ---------- "Keep this in your journal": a page sets window.CGGKeep to its reading and fires "cgg:reading"
@@ -43,6 +52,7 @@
     try {
       const id = J.add(JSON.parse(JSON.stringify(window.CGGKeep)));
       btn.hidden = true; keptNote(btn, id);
+      J.protect();
     } catch (e) {
       const p = document.createElement("span"); p.className = "cj-keepfail"; p.textContent = W.keep.full; btn.after(p);
     }
@@ -67,7 +77,12 @@
   });
   function platform() {
     const ua = navigator.userAgent;
-    if (/iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)) return "ios";
+    if (/Instagram|FBAN|FBAV|musical_ly|TikTok|BytedanceWebview|Snapchat|Twitter|LinkedInApp/i.test(ua)) return "inapp";
+    if (/iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)) {
+      if (/CriOS|EdgiOS/.test(ua)) return "ios_chrome";
+      if (/FxiOS|OPiOS|DuckDuckGo/.test(ua)) return "ios_other";
+      return "ios";
+    }
     if (/Android/.test(ua)) return "android";
     if (/Firefox\//.test(ua)) return "firefox";
     if (/Macintosh/.test(ua) && /Safari\//.test(ua) && !/Chrome|Chromium|Edg\//.test(ua)) return "mac_safari";

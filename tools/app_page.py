@@ -10,6 +10,7 @@ Words in src/app.json. Behavior in src/app.js (every page), src/today.js, src/jo
 """
 import hashlib, json, os
 import build as B
+import priestess_page
 
 _W = {}
 
@@ -31,21 +32,42 @@ def top(back="/", label="The village"):
 """
 
 
+def tabs(here):
+    """The installed app's own tab bar: just the daily card and the journal, plus a way out to the website."""
+    cur = lambda k: ' aria-current="page"' if k == here else ""
+    return f"""<nav class="app-tabs" aria-label="The Guild app">
+  <a href="/today/"{cur("today")}><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M12 8l1.2 2.6 2.8.3-2.1 1.9.6 2.8L12 14.2 9.5 15.6l.6-2.8L8 10.9l2.8-.3z"/></svg>Today</a>
+  <a href="/journal/"{cur("journal")}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg>Journal</a>
+  <a href="https://www.chaoticgoodguild.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg>The Guild</a>
+</nav>"""
+
+
 def build_pages(cards, back, defs):
     W = words()
     T = W["today"]
-    data = json.dumps({"cards": cards, "words": T})
+    PR = json.load(open(os.path.join(B.SRC, "priestess.json"), encoding="utf-8"))
+    SP = json.load(open(os.path.join(B.SRC, "spread.json"), encoding="utf-8"))
+    pos = {p["key"]: {"title": p["title"], "question": p["question"]} for p in PR["positions"]}
+    data = json.dumps({"cards": cards, "words": T, "moon": W["moonday"], "secret": PR["secret"], "reflection": PR["reflection"],
+                       "suits": SP["suits"], "priestess": {"dark": pos["dark"], "light": pos["light"], "secret": pos["secret"]}})
+    mcard = lambda k, cls="": (f'<div class="td-mslot"><button type="button" class="td-mcard{cls}" aria-label="Face down">'
+                               f'<span class="sp-inner"><span class="sp-face sp-back">{back}</span><span class="sp-face sp-front"></span></span></button>'
+                               f'<p class="td-mlabel"><b></b><span></span></p></div>')
     page = B.head(f"{T['title']} · {B.NAME}", T["desc"], "/today/", "tarot")
-    page += f"""<svg width="0" height="0" style="position:absolute" aria-hidden="true">{defs}</svg>
+    page += f"""<div class="hp-sky" id="tdSky" aria-hidden="true" hidden><div class="hp-flies">{priestess_page.fireflies(18)}</div></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">{defs}</svg>
 {top()}
 <main class="td">
   <section class="sp-intro">
-    <p class="who">{e(T['who'])} · <span id="tdDate"></span></p>
-    <h1>{e(T['title'])}</h1>
-    <p class="desc">{e(T['desc'])}</p>
+    <p class="who"><span id="tdWho">{e(T['who'])}</span> · <span id="tdDate"></span></p>
+    <h1 id="tdTitle">{e(T['title'])}</h1>
+    <p class="desc" id="tdDesc">{e(T['desc'])}</p>
   </section>
   <p class="sp-prompt" id="tdPrompt" aria-live="polite">{e(T['idle'])}</p>
-  <div class="td-table">
+  <div class="td-moon" id="tdMoon" hidden>{mcard(0)}{mcard(1, " td-secret")}{mcard(2)}</div>
+  <section class="td-moontext" aria-live="polite"><div id="tdMoonText" hidden></div>
+    <p class="cj-keeprow" id="tdMoonKeep" hidden><button type="button" class="back-btn" data-keep hidden>{e(W['keep']['button'])}</button></p></section>
+  <div class="td-table" id="tdTable">
     <button type="button" class="td-deck" id="tdDeck" aria-label="The deck. Touch to draw today's card.">
       {''.join(f'<span class="sp-stackcard" style="--i:{i}">{back}</span>' for i in range(6))}
     </button>
@@ -65,9 +87,13 @@ def build_pages(cards, back, defs):
     <a class="sp-ghost" href="/journal/">Your journal</a>
     <a class="sp-ghost" href="/calendar/">Tonight's sky</a>
   </nav>
+  {priestess_page.rite()}
 </main>
-
+{tabs("today")}
 {B.foot()}<script type="application/json" id="today-data">{data}</script>
+<script src="/assets/sky.js"></script>
+<script src="/assets/moonwindow.js"></script>
+<script src="/assets/priestess-read.js"></script>
 <script src="/assets/today.js"></script>
 </body>
 </html>
@@ -86,8 +112,14 @@ def build_pages(cards, back, defs):
   <p class="jn-empty" id="jnEmpty" hidden>{e(J['empty'])}<br><a class="back-btn" href="/today/">Today's card</a> <a class="sp-ghost" href="/tarot/">Ask Mira for a reading</a></p>
   <div class="jn-tools" id="jnTools" hidden><p id="jnCount"></p><button type="button" class="sp-ghost" id="jnDownload">{e(J['download'])}</button></div>
   <div class="jn-list" id="jnList"></div>
-  <p class="jn-fine">{e(J['fine'])}</p>
+  <section class="jn-safe">
+    <p class="jn-fine">{e(J['fine'])}</p>
+    <p class="jn-backup"><button type="button" class="back-btn" id="jnBackup">{e(J['backup'])}</button>
+      <label class="sp-ghost jn-restore">{e(J['restore'])}<input type="file" id="jnRestore" accept=".json,application/json"></label></p>
+    <p class="jn-msg" id="jnMsg" role="status"></p>
+  </section>
 </main>
+{tabs("journal")}
 
 {B.foot()}<script type="application/json" id="journal-data">{json.dumps(J)}</script>
 <script src="/assets/journal.js"></script>
@@ -101,9 +133,9 @@ def build_pages(cards, back, defs):
     page += f"""{top()}
 <main class="jn">
   <section class="sp-intro"><h1>{e(O['title'])}</h1><p class="desc">{e(O['text'])}</p></section>
-  <p class="td-more"><a class="back-btn" href="/today/">Today's card</a> <a class="sp-ghost" href="/journal/">Your journal</a>
-     <a class="sp-ghost" href="/tarot/">Mira's spread</a> <a class="sp-ghost" href="/calendar/">The calendar</a></p>
+  <p class="td-more"><a class="back-btn" href="/today/">Today's card</a> <a class="sp-ghost" href="/journal/">Your journal</a></p>
 </main>
+{tabs("")}
 {B.foot()}</body>
 </html>
 """
@@ -151,8 +183,6 @@ def build_app():
         "icons": [icon("icon-192.png", "any"), icon("icon-512.png", "any"), icon("maskable-192.png", "maskable"), icon("maskable-512.png", "maskable")],
         "shortcuts": [
             {"name": "Draw today's card", "short_name": "Today's card", "url": "/today/", "icons": [{"src": "/assets/icons/icon-96.png", "sizes": "96x96"}]},
-            {"name": "Tonight's sky", "short_name": "Tonight's sky", "url": "/calendar/", "icons": [{"src": "/assets/icons/icon-96.png", "sizes": "96x96"}]},
-            {"name": "Take the test", "short_name": "The test", "url": "/alignment-test/", "icons": [{"src": "/assets/icons/icon-96.png", "sizes": "96x96"}]},
             {"name": "Your journal", "short_name": "Journal", "url": "/journal/", "icons": [{"src": "/assets/icons/icon-96.png", "sizes": "96x96"}]},
         ],
     }
@@ -168,15 +198,12 @@ def build_app():
                 continue
             with open(full, "rb") as fh:
                 h.update(rel.encode()); h.update(fh.read())
-            if rel.endswith("/index.html"):
-                p = rel[:-len("index.html")]
-                if not p.startswith("/stories/") or p == "/stories/":
-                    pages.append(p)
-            elif rel.startswith("/tarot/cards/"):
+            if rel.startswith("/tarot/cards/"):
                 cards.append(rel)
-            elif rel.startswith("/assets/") and not rel.startswith("/assets/share/") and not rel.endswith(".jpg"):
-                other.append(rel)
     version = h.hexdigest()[:12]
+    pages = ["/today/", "/journal/", "/offline/"]
+    other = ["/assets/sky.js", "/assets/moonwindow.js", "/assets/priestess-read.js", "/assets/forest-night.webp",
+             "/assets/icons/icon-512.png", "/assets/icons/maskable-192.png"]
     core = ["/today/", "/journal/", "/offline/", "/assets/site.css", "/assets/app.js", "/assets/join.js", "/assets/today.js",
             "/assets/journal.js", "/assets/logo.png", "/assets/star.png", "/assets/icons/icon-192.png", "/manifest.webmanifest"]
     sw = SW.replace("__VERSION__", version).replace("__CORE__", json.dumps(core)) \
@@ -189,7 +216,7 @@ def build_app():
 SW = r"""/* The Guild's service worker: keeps the village working without a connection. Built by tools/app_page.py. */
 const VERSION = "__VERSION__";
 const CORE = __CORE__;                 // saved for every visitor: the app's own pages and the essentials
-const PAGES = __PAGES__, CARDS = __CARDS__, OTHER = __OTHER__;   // saved inside the installed app ("save-all")
+const PAGES = __PAGES__, CARDS = __CARDS__, OTHER = __OTHER__;   // saved inside the installed app ("save-all"): its two pages and all 78 cards
 const STATIC = "cgg-static-" + VERSION, HTML = "cgg-pages-" + VERSION, CARDBOX = "cgg-cards", FONTS = "cgg-fonts";
 
 self.addEventListener("install", ev => {

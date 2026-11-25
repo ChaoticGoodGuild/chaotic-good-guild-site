@@ -1,8 +1,8 @@
 {
-  "_about": "Words for the Guild app: the daily card (/today/), the journal (/journal/), the install help in the footer, and the offline page. Drafts for Ryan to rewrite. The app itself is the website, installable: see tools/app_page.py.",
+  "_about": "Words for the Guild app: the daily card (/today/) and its full-moon pull, the journal (/journal/), the install help in the footer, and the offline page. Drafts for Ryan to rewrite. The app itself is the website, installable, and inside the installed app it's just the daily card and the journal: see tools/app_page.py.",
   "name": "Chaotic Good Guild",
   "short_name": "The Guild",
-  "app_description": "Mira's card for today, readings for reflection, the Guild calendar and the moon, and a private journal that stays on your device.",
+  "app_description": "A card from Mira each day, three under a full moon, and a private journal for what they stir up. It stays on your device.",
   "today": {
     "who": "Today's card",
     "title": "Mira's card for today",
@@ -17,12 +17,22 @@
     "title": "Your Journal",
     "desc": "The readings you've kept, and what you made of them. Your journal lives only on this device: nothing here is sent anywhere, and nobody but you can read it.",
     "empty": "Nothing kept yet. Draw today's card, or ask Mira for a reading, and keep the ones that speak to you.",
-    "prompts": ["What stood out to you?", "What felt true, and what didn't?", "What will you do with this?", "What surprised you?"],
+    "prompts": [
+      "What stood out to you?",
+      "What felt true, and what didn't?",
+      "What will you do with this?",
+      "What surprised you?"
+    ],
     "saved": "Saved",
     "let_go": "Let it go",
     "let_go_sure": "Let it go for good",
-    "download": "Download a copy",
-    "fine": "Clearing your browser's data for this site clears your journal too. Download a copy now and then if you'd like to keep it."
+    "fine": "Your journal stays on this device through app updates. Deleting the app, or clearing this site's data, erases it, and it won't move to a new phone by itself. Save a backup now and then; on a new device, restore it here.",
+    "backup": "Save a backup",
+    "restore": "Restore from a backup",
+    "restored": "Restored {n} readings.",
+    "restore_none": "Everything in that backup is already here.",
+    "restore_bad": "That file isn't a Guild journal backup.",
+    "download": "Download a readable copy"
   },
   "keep": {
     "button": "Keep this in your journal",
@@ -33,18 +43,32 @@
   "install": {
     "link": "Bring the Guild home",
     "title": "Bring the Guild home",
-    "lede": "Put the Guild on your home screen or desktop: its own icon, its own window, a card from Mira each day, and most of the village works even without a connection.",
+    "lede": "Put the Guild in your pocket: a card from Mira each day, three under a full moon, and a private journal for what they stir up. It works even without a connection.",
     "button": "Install the Guild",
-    "ios": "On iPhone or iPad, open this page in Safari, tap the Share button, then choose Add to Home Screen.",
+    "ios": "In Safari, tap the Share button, then choose Add to Home Screen.",
     "android": "In Chrome, open the menu (the three dots) and choose Install app, or Add to Home screen.",
     "mac_safari": "In Safari, open the File menu and choose Add to Dock.",
     "firefox": "Firefox can't install sites as apps. Open chaoticgoodguild.com in Chrome, Edge or Safari, and install it from there.",
     "desktop": "Look for the install icon at the right end of the address bar, or open the browser menu and choose Install.",
     "done": "Welcome home. The Guild is on your device now.",
-    "close": "Close"
+    "close": "Close",
+    "ios_chrome": "In Chrome, tap the Share button in the address bar at the top, then choose Add to Home Screen. (If the address bar is hidden, scroll up a little.)",
+    "ios_other": "Open chaoticgoodguild.com in Safari or Chrome, tap Share, then choose Add to Home Screen.",
+    "inapp": "You're inside another app's browser. Open chaoticgoodguild.com in your phone's own browser (Safari or Chrome), then install it from there."
   },
   "offline": {
     "title": "Off the map",
-    "text": "You're out of signal, and this page wasn't saved on your device yet. These still work without a connection:"
+    "text": "You're out of signal, and this page isn't saved on your device. Your daily card and your journal still work:"
+  },
+  "moonday": {
+    "who": "The moon is full",
+    "title": "Mira by moonlight",
+    "desc": "Tonight Mira lays three cards, the way the High Priestess sits: a pillar on each side, and her secret between them.",
+    "idle": "Touch the deck when you're ready. Three cards tonight.",
+    "dealt": "Turn the two pillars. The scroll between them stays sealed until they're read.",
+    "early": "Not yet. The Priestess keeps her scroll until both pillars are turned.",
+    "ready": "Both pillars are turned. Touch the scroll when you're ready for her secret.",
+    "done": "The moon has had her say. Carry it with you tonight.",
+    "note_prompt": "What do the pillars, and the secret, stir in you?"
   }
 }

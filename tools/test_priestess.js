@@ -2,7 +2,7 @@
 const assert = require("assert");
 const Sky = require("../src/sky.js");
 const CGGMoon = require("../src/moonwindow.js");
-const P = require("../src/priestess.js");
+const P = require("../src/priestess-read.js");
 const D = Object.assign(require("../src/priestess.json"), { suits: require("../src/spread.json").suits });
 const M = require("../src/meanings.json"), T = require("../src/tarot.json");
 // Run in Michigan time (tools run this with TZ=America/Detroit). The full moon of 24 November 2026 is 9:53 AM there.
@@ -31,7 +31,7 @@ const deck = T.map(c => ({ id: c.id, name: c.name, suit: c.suit, rank: c.rank, .
 let seed = 3; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
 for (let i = 0; i < 3000; i++) {
   const pool = deck.slice(); const picks = [];
-  for (let k = 0; k < 9; k++) picks.push({ ...pool.splice(Math.floor(rnd() * pool.length), 1)[0], reversed: rnd() < .5 });
+  for (let k = 0; k < 9; k++) { const c = pool.splice(Math.floor(rnd() * pool.length), 1)[0]; picks.push({ ...c, reversed: rnd() < .5 && !(k === 8 && c.suit === "major") }); }
   const shown = P.isMajor(picks[8]);
   const r = P.summarize(picks, D.positions, D, shown);
   const text = r.paras.join(" ");
@@ -43,3 +43,21 @@ for (let i = 0; i < 3000; i++) {
   assert.ok(text.indexOf("waning moon holds") < text.indexOf("full moon holds") && text.indexOf("full moon holds") < text.indexOf("waxing moon holds"));
 }
 console.log("all priestess tests passed");
+
+// the app's three-card full-moon pull
+{
+  const PJ = require("../src/priestess.json");
+  const pos = Object.fromEntries(PJ.positions.map(p => [p.key, p]));
+  for (let i = 0; i < 2000; i++) {
+    const pool = deck.slice(), take = () => pool.splice(Math.floor(rnd() * pool.length), 1)[0];
+    const dark = { ...take(), reversed: rnd() < .5 }, lite = { ...take(), reversed: rnd() < .5 }, s = take();
+    const shown = s.suit === "major", secret = { ...s, reversed: !shown && rnd() < .5 };
+    const paras = P.moonDay([dark, lite, secret], pos, D, shown), text = paras.join(" ");
+    assert.ok(!/undefined|NaN|\[object/.test(text), text);
+    assert.ok(text.includes(dark.name) && text.includes(lite.name));
+    if (shown) assert.ok(text.includes("showed you her secret") && text.includes(s.name));
+    else assert.ok(text.includes("scroll stayed sealed") && !text.includes(s.name));
+    assert.ok(!/rebellion/i.test(text));
+  }
+  console.log("all moon-day tests passed");
+}

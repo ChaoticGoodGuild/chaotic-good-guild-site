@@ -166,13 +166,14 @@ def build(cards, back, defs):
 {B.foot()}<script type="application/json" id="priestess-data">{data}</script>
 <script src="/assets/sky.js"></script>
 <script src="/assets/moonwindow.js"></script>
+<script src="/assets/priestess-read.js"></script>
 <script src="/assets/priestess.js"></script>
 <script src="/assets/forestsound.js"></script>
 </body>
 </html>
 """
     B.write("tarot/priestess/index.html", page)
-    for f in ("priestess.js", "moonwindow.js", "forestsound.js"):
+    for f in ("priestess-read.js", "priestess.js", "moonwindow.js", "forestsound.js"):
         B.write("assets/" + f, open(os.path.join(B.SRC, f)).read())
     os.makedirs(os.path.join(B.SITE, "assets"), exist_ok=True)
     with open(os.path.join(B.SRC, "forest-night.webp"), "rb") as fi, open(os.path.join(B.SITE, "assets", "forest-night.webp"), "wb") as fo:
